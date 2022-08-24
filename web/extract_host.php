@@ -11,7 +11,7 @@ echo '   <!DOCTYPE html>
         <title>List HOST</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="w3.css">
+        <link rel="stylesheet" href="ollie.css">
         <h1>Lista HOST</h1>
         <table class="styled-table" border="1" cellspacing="2" cellpadding="2">
          <tr>
