@@ -11,7 +11,7 @@ try:
     conn = mariadb.connect(
         user="operator",
         password="!d3f3n510!",
-        host='192.168.1.246',
+        host='localhost',
         port=3306,
         database="defensio"
 
@@ -39,12 +39,14 @@ for (id_job, name, ip, netmask) in cur:
     ip_net = ip + '/' + netmask
     print('Job n°:%s\tName:%s\tIp Target:%s' % (id_j, name_j, ip_net))
 # selezione da cli del job da eseguire
-n_job = input("select Job:")
+n_job = '2'
+    #input("select Job:")
 # estrazione parametri del job selezionato
 cur.execute(
-    'SELECT ip,netmask FROM job  WHERE id_job=%s' % (n_job))
-for (ip, netmask) in cur:
+    'SELECT id_job,ip,netmask FROM job  WHERE id_job=%s' % (n_job))
+for (id_job,ip, netmask) in cur:
     # costruzione stringa ip/netmask
+    id_j = id_job
     ip_net = ip + '/' + netmask
 
 # genera la stringa di inizio del job
