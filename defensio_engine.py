@@ -31,7 +31,6 @@ while True:
     cur = conn.cursor()
 
     cur.execute('SELECT id_job,ip,netmask FROM job  WHERE abilitato="on" AND esecuzione="off"')
-    print(cur.rowcount)
     if cur.rowcount != 0:
         result = cur.fetchone()
         print(result)
@@ -51,7 +50,7 @@ while True:
         nm = nmap.PortScanner()
 
         # scansione secondo parametri del job
-        nm.scan(hosts=ip_net, arguments='-sV -p20-1024')
+        nm.scan(hosts=ip_net, arguments='-sV -p20-65535')
         for host in nm.all_hosts():
             print(host)
             # inserimento SQL nella tabella HOST
@@ -85,5 +84,4 @@ while True:
         conn.commit()
         cur.close()
         conn.close()
-    print("fineciclo")
     time.sleep(5)
