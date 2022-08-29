@@ -75,4 +75,5 @@ echo '   </table>';
 echo'</body>';
 echo '</html>';
 $mysqli->close();
+header("Refresh:10");
 ?>

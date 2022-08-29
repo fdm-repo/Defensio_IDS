@@ -10,9 +10,11 @@ echo '   <!DOCTYPE html>
         <html>
         <title>List HOST</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="stylesheet" href="ollie.css">
+        <head>
+            <link rel="stylesheet" href="ollie.css">
+        </head>
         <body>
+
         <div id="hormenu"><!-- div che contiene il menu -->
         <ul> <!-- lista principale: definisce il menu nella sua interezza -->
             <li>
@@ -60,4 +62,5 @@ echo '   </table>';
 echo'</body>';
 echo '</html>';
 $mysqli->close();
+header("Refresh:10");
 ?>
