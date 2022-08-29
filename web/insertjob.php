@@ -53,5 +53,6 @@ if ($conn->query($sql) === TRUE) {
 
 
 $conn->close();
+header("Refresh:4; url=extract_host.php");
 ?>
 </body> </html>
