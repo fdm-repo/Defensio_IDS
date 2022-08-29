@@ -13,12 +13,21 @@ echo '   <!DOCTYPE html>
 
         <link rel="stylesheet" href="ollie.css">
         <body>
-        <ul id="menu">
-            <li><a href=index.html>Main</a></li>
-            <li><a href=form_job.html>Inserisci nuovo Job</a></li>
-            <li><a href=extract_host.php>Elenco HOST Job</a></li>
-            <li><a href=extract_service.php>Elenco SERVIZI Job</a></li>
+        <div id="hormenu"><!-- div che contiene il menu -->
+        <ul> <!-- lista principale: definisce il menu nella sua interezza -->
+            <li>
+            <a href="#">DEFENSIO SYSTEM </a> <!-- primo list-item, prima voce del menu -->
+            <ul> <!-- Lista annidata: voci del sotto-menu -->
+
+                <li><a href="index.html">Main Page</a></li>
+                <li><a href="form_job.html">Inserimento JOB</a></li>
+                <li><a href="extract_host.php">Lista HOST</a></li>
+                <li><a href="extract_service.php">Lista Servizi</a></li>
+                <li><a href="#">test</a></li>
+            </ul> <!-- Fine del sotto-menu -->
+            </li> <!-- Chiudo il list-item -->
         </ul>
+    </div>
         <h1>Lista HOST</h1>
         <table class="styled-table" border="1" cellspacing="2" cellpadding="2">
          <tr>
