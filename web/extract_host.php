@@ -9,8 +9,10 @@ $query = "SELECT * FROM host";
 echo '   <!DOCTYPE html>
         <html>
         <title>List HOST</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta http-equiv="refresh" content="10" >
             <link rel="stylesheet" href="ollie.css">
         </head>
         <body>

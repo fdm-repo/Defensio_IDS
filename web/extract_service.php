@@ -11,6 +11,7 @@ echo '   <!DOCTYPE html>
         <head>
         <title>List SERVICE</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="refresh" content="10" >
         <link rel="stylesheet" href="ollie.css">
         </head>
         <body>

@@ -41,7 +41,7 @@ if ($conn->connect_error) {
 
 
 
-$sql = "INSERT INTO job (id_job, nome, ip, netmask, abilitato)VALUES (NULL,'$var1','$var2','$var3','$var4')";
+$sql = "INSERT INTO job (id_job, nome, ip, netmask, abilitato, esecuzione)VALUES (NULL,'$var1','$var2','$var3','$var4','off')";
 
 
 
