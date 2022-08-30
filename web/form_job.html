@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 <html>
  <head>
      <link rel="stylesheet" href="ollie.css">
@@ -17,7 +17,7 @@
                 <li><a href="form_job.html">Inserimento JOB</a></li>
                 <li><a href="extract_host.php">Lista HOST</a></li>
                 <li><a href="extract_service.php">Lista Servizi</a></li>
-                <li><a href="#">test</a></li>
+                <li><a href="extract_job.php">Job</a></li>
             </ul> <!-- Fine del sotto-menu -->
             </li> <!-- Chiudo il list-item -->
         </ul>
@@ -30,12 +30,13 @@
           <div>
             <input type="text" name="nome" placeholder="Nome" />
             <input type="text" name="ip" placeholder="IP" />
-            <input type="text" name="netmask" placeholder="Netmask" />
-            <input type="radio" id="enable" name="enable" ><label for="enable">Abilitazione</label><br>
+            <input type="text" name="netmask" placeholder="Netmask" /><br>
+            <input type="checkbox" id="enable" name="enable" ><label for="enable">Nmap</label><br>
+            <input type="checkbox" id="enable_arachni" name="enable_arachni" ><label for="enable_arachni">Arachni</label><br>
           </div>
         </div>
-        <div>
-          <input type="submit" name="inserisci" value="Invia" />
+        <div align ="center">
+            <input type="submit" name="inserisci" value="Invia" />
         </div>
       </form>
     </div>

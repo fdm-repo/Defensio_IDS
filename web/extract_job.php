@@ -3,12 +3,12 @@ $username = "operator";
 $password = "!d3f3n510!";
 $database = "defensio";
 $mysqli = new mysqli("localhost", $username, $password, $database);
-$query = "SELECT * FROM host";
+$query = "SELECT * FROM job";
 
 
 echo '   <!DOCTYPE html>
         <html>
-        <title>List HOST</title>
+        <title>Job List</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="refresh" content="10" >
         <head>
@@ -31,23 +31,27 @@ echo '   <!DOCTYPE html>
             </li> <!-- Chiudo il list-item -->
         </ul>
     </div>
-        <h1>Lista HOST</h1>
+        <h1>Lista JOB</h1>
         <table class="styled-table" border="1" cellspacing="2" cellpadding="2">
          <tr>
-          <td> <font face="Arial">ID</font> </td>
           <td> <font face="Arial">ID_JOB</font> </td>
-          <td> <font face="Arial">START</font> </td>
+          <td> <font face="Arial">NOME</font> </td>
           <td> <font face="Arial">IP</font> </td>
-          <td> <font face="Arial">HOSTNAME</font> </td>
+          <td> <font face="Arial">NETMASK</font> </td>
+          <td> <font face="Arial">NMAP</font> </td>
+          <td> <font face="Arial">NMAP eseguito</font> </td>
+          <td> <font face="Arial">ARACHNI</font> </td>
         </tr>';
 
 if ($result = $mysqli->query($query)) {
     while ($row = $result->fetch_assoc()) {
-        $field1name = $row["id"];
-        $field2name = $row["id_job"];
-        $field3name = $row["start_job"];
-        $field4name = $row["ip"];
-        $field5name = $row["hostname"];
+        $field1name = $row["id_job"];
+        $field2name = $row["nome"];
+        $field3name = $row["ip"];
+        $field4name = $row["netmask"];
+        $field5name = $row["abilitato"];
+        $field6name = $row["esecuzione"];
+        $field7name = $row["arachni"];
 
         echo '<tr>
                   <td>'.$field1name.'</td>
@@ -55,6 +59,8 @@ if ($result = $mysqli->query($query)) {
                   <td>'.$field3name.'</td>
                   <td>'.$field4name.'</td>
                   <td>'.$field5name.'</td>
+                  <td>'.$field6name.'</td>
+                  <td>'.$field7name.'</td>
               </tr>';
     }
     $result->free();

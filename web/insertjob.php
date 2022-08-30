@@ -14,7 +14,7 @@
                 <li><a href="form_job.html">Inserimento JOB</a></li>
                 <li><a href="extract_host.php">Lista HOST</a></li>
                 <li><a href="extract_service.php">Lista Servizi</a></li>
-                <li><a href="#">test</a></li>
+                <li><a href="extract_job.php">Job</a></li>
             </ul> <!-- Fine del sotto-menu -->
             </li> <!-- Chiudo il list-item -->
         </ul>
@@ -25,9 +25,15 @@ $var1= $_POST['nome'];
 $var2= $_POST['ip'];
 $var3= $_POST['netmask'];
 $var4= $_POST['enable'];
+$var5= $_POST['enable_arachni'];
+
+if ($var4 == '')
+  $var4='off';
+if ($var5 == '')
+  $var5='off';
 
 
-echo "<h3>Valori inseriti:Nome Job: $var1  Indirizzo IP:  $var2  Netmask:  $var3  Abilitazione:  $var4 </h3>";
+echo "<h3>Valori inseriti:Nome Job: $var1  Indirizzo IP:  $var2  Netmask:  $var3  Abilitazione:  $var4 Arachni:  $var5 </h3>";
 
 $username = "operator";
 $password = "!d3f3n510!";
@@ -41,7 +47,7 @@ if ($conn->connect_error) {
 
 
 
-$sql = "INSERT INTO job (id_job, nome, ip, netmask, abilitato)VALUES (NULL,'$var1','$var2','$var3','$var4')";
+$sql = "INSERT INTO job (id_job, nome, ip, netmask, abilitato, esecuzione, arachni )VALUES (NULL,'$var1','$var2','$var3','$var4','off','$var5')";
 
 
 
