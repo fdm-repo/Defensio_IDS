@@ -3,12 +3,12 @@ $username = "operator";
 $password = "!d3f3n510!";
 $database = "defensio";
 $mysqli = new mysqli("localhost", $username, $password, $database);
-$query = "SELECT * FROM host";
+$query = "SELECT arachni_report.id_arac_report, job.id_job, job.nome, job.ip FROM `arachni_report`INNER JOIN job WHERE arachni_report.id_job = job.id_job;";
 
 
 echo '   <!DOCTYPE html>
         <html>
-        <title>List HOST</title>
+        <title>ARACHNI Report List</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="refresh" content="10" >
         <head>
@@ -32,31 +32,30 @@ echo '   <!DOCTYPE html>
             </li> <!-- Chiudo il list-item -->
         </ul>
     </div>
-        <h1>Lista HOST</h1>
+        <h1>Lista ARACHNI Report</h1>
         <table class="styled-table" border="1" cellspacing="2" cellpadding="2">
          <tr>
-          <td> <font face="Arial">ID</font> </td>
-          <td> <font face="Arial">ID_JOB</font> </td>
-          <td> <font face="Arial">START</font> </td>
+          <td> <font face="Arial">ID_REPORT</font> </td>
+          <td> <font face="Arial">ID JOB</font> </td>
+          <td> <font face="Arial">NOME</font> </td>
           <td> <font face="Arial">IP</font> </td>
-          <td> <font face="Arial">HOSTNAME</font> </td>
-        </tr>';
+          <td> <font face="Arial">LINK</font> </td>
+    </tr>';
 
 if ($result = $mysqli->query($query)) {
     while ($row = $result->fetch_assoc()) {
-        $field1name = $row["id"];
+        $field1name = $row["id_arac_report"];
         $field2name = $row["id_job"];
-        $field3name = $row["start_job"];
+        $field3name = $row["nome"];
         $field4name = $row["ip"];
-        $field5name = $row["hostname"];
 
         echo '<tr>
                   <td>'.$field1name.'</td>
                   <td>'.$field2name.'</td>
                   <td>'.$field3name.'</td>
                   <td>'.$field4name.'</td>
-                  <td>'.$field5name.'</td>
-              </tr>';
+                  <td><a href="../report/'.$field2name.'/Arachni_http/index.html">Report Job '.$field2name.'</a></td>
+             </tr>';
     }
     $result->free();
 }

@@ -29,7 +29,7 @@ class arachni_class:
 
     def arachni_http(self, id_target, ip, port_n):
 
-        repDir = "./"+str(id_target)
+        repDir = str(id_target)
         ipScan = ip
         port = port_n
         print(repDir+' '+ipScan+' '+port)
@@ -42,6 +42,8 @@ class arachni_class:
                             Fore.YELLOW + "\nExecute Arachni (HTTP mode) on port " + port + " .\n" + Style.RESET_ALL)
                         cmd = subprocess.run(["mkdir", repDir])
                         cmd = subprocess.run(["mkdir", repDir + "/Arachni_http"])
+                        cmd = subprocess.run(["mkdir", "/var/www/html/report/" + repDir])
+                        cmd = subprocess.run(["mkdir", "/var/www/html/report/" + repDir + "/Arachni_http"])
                         cmd = subprocess.run(["./arachni/bin/arachni", "--output-verbose", "--scope-include-subdomains",
                                               "http://" + ipScan + ":" + port,
                                               "--report-save-path=" + repDir + "/Arachni_http/Arachni_http.afr"])
@@ -50,7 +52,7 @@ class arachni_class:
                                               "--reporter=html:outfile=" + repDir + "/Arachni_http/Arachni_http.zip"])
                         cmd = subprocess.run(["unzip",
                                               repDir + "/Arachni_http/Arachni_http.zip",
-                                              "-d", repDir + "/Arachni_http"])
+                                              "-d", "/var/www/html/report/" + repDir + "/Arachni_http"])
 
         except KeyboardInterrupt:
             sys.exit()
@@ -69,6 +71,7 @@ class arachni_class:
                             Fore.YELLOW + "\nExecute Arachni (HTTPS mode) on port " + port + " .\n" + Style.RESET_ALL)
                         cmd = subprocess.run(["mkdir", repDir])
                         cmd = subprocess.run(["mkdir", repDir + "/Arachni_https"])
+                        cmd = subprocess.run(["mkdir", "/var/www/html/report/"+repDir + "/Arachni_https"])
                         cmd = subprocess.run(["./arachni/bin/arachni", "--output-verbose", "--scope-include-subdomains",
                                               "https://" + ipScan + ":" + port,
                                               "--report-save-path=" + repDir + "/Arachni_https/Arachni_https.afr"])
@@ -77,6 +80,6 @@ class arachni_class:
                                               "--reporter=html:outfile=" + repDir + "/Arachni_https/Arachni_https.zip"])
                         cmd = subprocess.run(["unzip",
                                               repDir + "/Arachni_https/Arachni_https.zip",
-                                              "-d", repDir + "/Arachni_https"])
+                                              "-d", "/var/www/html/report/"+repDir + "/Arachni_https"])
         except KeyboardInterrupt:
             sys.exit()

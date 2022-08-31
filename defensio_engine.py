@@ -83,6 +83,8 @@ while True:
         arac = conn.cursor()
         arac.execute("SELECT Port.id_job, Port.ip,port_n FROM `Port` INNER JOIN job ON job.id_job=Port.id_job WHERE Port.name='http' AND job.arachni='on';")
 
+
+
         if arac.rowcount != 0:
             result = arac.fetchone()
             print(result)
@@ -92,7 +94,17 @@ while True:
 
             obj = arachni.arachni_class()
             obj.arachni_http(id_j,ip_target, port_target)
+            arachni_sql_report = "INSERT INTO arachni_report (id_arac_report, id_job) VALUES (NULL, %s);"
+            bho = list()
+            bho.append(id_j)
+            arac.execute(arachni_sql_report, bho)
 
+        sql_update_query = """UPDATE job SET arachni = %s WHERE id_job  = %s"""
+        input_data = ('off', result[0])
+        arac.execute(sql_update_query, input_data)
+
+
+        conn.commit()
         arac.close()
 
 
