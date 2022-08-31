@@ -55,8 +55,8 @@ class arachni_class:
         except KeyboardInterrupt:
             sys.exit()
 
-    def arachni_https(id_j, ip, port_n):
-        repDir = str(id_j)
+    def arachni_https(self, id_target, ip, port_n):
+        repDir = str(id_target)
         ipScan = ip
         port = port_n
         print(Fore.CYAN + '''
@@ -67,15 +67,16 @@ class arachni_class:
 
                         print(
                             Fore.YELLOW + "\nExecute Arachni (HTTPS mode) on port " + port + " .\n" + Style.RESET_ALL)
-                        cmd = subprocess.run(["mkdir", repDir + "/Arachni_https_" + ipScan + "_" + port])
+                        cmd = subprocess.run(["mkdir", repDir])
+                        cmd = subprocess.run(["mkdir", repDir + "/Arachni_https"])
                         cmd = subprocess.run(["./arachni/bin/arachni", "--output-verbose", "--scope-include-subdomains",
                                               "https://" + ipScan + ":" + port,
-                                              "--report-save-path=" + repDir + "/Arachni_https_" + ipScan + "_" + port + "/Arachni_https_" + ipScan + "_" + port + ".afr"])
+                                              "--report-save-path=" + repDir + "/Arachni_https/Arachni_https.afr"])
                         cmd = subprocess.run(["./arachni/bin/arachni_reporter",
-                                              repDir + "/Arachni_https_" + ipScan + "_" + port + "/Arachni_https_" + ipScan + "_" + port + ".afr",
-                                              "--reporter=html:outfile=" + repDir + "/Arachni_https_" + ipScan + "_" + port + "/Arachni_https_" + ipScan + "_" + port + ".zip"])
+                                              repDir + "/Arachni_https/Arachni_https.afr",
+                                              "--reporter=html:outfile=" + repDir + "/Arachni_https/Arachni_https.zip"])
                         cmd = subprocess.run(["unzip",
-                                              repDir + "/Arachni_https_" + ipScan + "_" + port + "/Arachni_https_" + ipScan + "_" + port + ".zip",
-                                              "-d", repDir + "/Arachni_https_" + ipScan + "_" + port])
+                                              repDir + "/Arachni_https/Arachni_https.zip",
+                                              "-d", repDir + "/Arachni_https"])
         except KeyboardInterrupt:
             sys.exit()
