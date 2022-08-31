@@ -15,6 +15,7 @@
                 <li><a href="extract_host.php">Lista HOST</a></li>
                 <li><a href="extract_service.php">Lista Servizi</a></li>
                 <li><a href="extract_job.php">Job</a></li>
+                <li><a href="extract_report_arachni.php">Report Arachni</a></li>
             </ul> <!-- Fine del sotto-menu -->
             </li> <!-- Chiudo il list-item -->
         </ul>
