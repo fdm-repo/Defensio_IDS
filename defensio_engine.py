@@ -1,15 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Module Imports
+import sys
+import time
+from datetime import datetime
+import arachni
 import mariadb
 import nmap
-import time
-import sys
-import os
-from datetime import datetime
-
-
-
-
 
 while True:
     try:
@@ -86,6 +82,21 @@ while True:
 
         arac = conn.cursor()
         arac.execute("SELECT Port.id_job, Port.ip,port_n FROM `Port` INNER JOIN job ON job.id_job=Port.id_job WHERE Port.name='http' AND job.arachni='on';")
+
+        if arac.rowcount != 0:
+            result = arac.fetchone()
+            print(result)
+            id_j = result[0]
+            ip_target = result[1]
+            port_target = result[2]
+
+            obj = arachni.arachni_class()
+            obj.arachni_http(id_j,ip_target, port_target)
+
+        arac.close()
+
+
+
 
         arac.close()
         conn.close()
