@@ -83,5 +83,10 @@ while True:
         cur.execute(sql_update_query, input_data)
         conn.commit()
         cur.close()
+
+        arac = conn.cursor()
+        arac.execute("SELECT Port.id_job, Port.ip,port_n FROM `Port` INNER JOIN job ON job.id_job=Port.id_job WHERE Port.name='http' AND job.arachni='on';")
+
+        arac.close()
         conn.close()
     time.sleep(5)
