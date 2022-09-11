@@ -7,6 +7,7 @@ import arachni
 import mariadb
 import nmap
 
+
 class database_connect:
 
     def database_connection(self, utente, password, ip_db, port_server, db):
@@ -16,8 +17,8 @@ class database_connect:
                 user=utente,
                 password=password,
                 host=ip_db,
-                port=port_server,
-                database=db
+                database=db,
+                port=port_server
             )
             return conn
         except mariadb.Error as e:
