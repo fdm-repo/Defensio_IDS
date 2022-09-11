@@ -4,22 +4,14 @@ import sys
 import time
 from datetime import datetime
 import arachni
+import DB_connect
 import mariadb
 import nmap
 
 while True:
-    try:
-        conn = mariadb.connect(
-            user="operator",
-            password="!d3f3n510!",
-            host='localhost',
-            port=3306,
-            database="defensio"
 
-        )
-    except mariadb.Error as e:
-        print(f"Error connecting to MariaDB Platform: {e}")
-        sys.exit(1)
+    connessione = DB_connect.database_connect()
+    conn=connessione.database_connection("operator","!d3f3n510!", '185.245.183.75', 3306, "defensio")
 
     id_j=''
     # estrazione parametri del job selezionato
@@ -46,7 +38,7 @@ while True:
         nm = nmap.PortScanner()
 
         # scansione secondo parametri del job
-        nm.scan(hosts=ip_net, arguments='-sV -p20-65535')
+        nm.scan(hosts=ip_net, arguments='-sV -p20-1024')
         for host in nm.all_hosts():
             print(host)
             # inserimento SQL nella tabella HOST
