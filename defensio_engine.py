@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 # Module Imports
+import subprocess
 import sys
 import time
 from datetime import datetime
 import arachni
 import DB_connect
+import enum4linux_read_json
 import mariadb
 import nmap
 
@@ -38,7 +40,7 @@ while True:
         nm = nmap.PortScanner()
 
         # scansione secondo parametri del job
-        nm.scan(hosts=ip_net, arguments='-sV -p20-1024')
+        nm.scan(hosts=ip_net, arguments='-sV -p130-447')
         for host in nm.all_hosts():
             print(host)
             # inserimento SQL nella tabella HOST
@@ -104,4 +106,13 @@ while True:
 
         arac.close()
         conn.close()
+        file_name = str(id_j)+'_'+ip
+        print(file_name)
+        cmd = subprocess.run(["./enumforlinux/enum4linux-ng.py", "-A", ip, "-oJ", file_name])
+
+
+        obj_enum4linux_json = enum4linux_read_json.enum4linux_read_json_class()
+        obj_enum4linux_json.enum4linux_read_json(id_j,start_job,file_name+'.json' )
+
+
     time.sleep(5)
