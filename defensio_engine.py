@@ -101,18 +101,32 @@ while True:
         conn.commit()
         arac.close()
 
+        #enumforlinux module
+
+        enum4linuxqueryjob = conn.cursor()
+        enum4linuxqueryjob.execute("SELECT Port.id_job, Port.ip, port_n FROM `Port` INNER JOIN job ON job.id_job = Port.id_job WHERE Port.name = 'netbios-ssn' AND job.enumforlinux = 'on';")
+
+        if enum4linuxqueryjob.rowcount != 0:
+
+            result_enum_job = enum4linuxqueryjob.fetchone()
+            print(result_enum_job)
+            id_j = result_enum_job[0]
+            ip_target = result_enum_job[1]
 
 
+            file_name = str(id_j)+'_'+ip_target
+            print(file_name)
+            cmd = subprocess.run(["./enumforlinux/enum4linux-ng.py", "-A", ip_target, "-oJ", file_name])
 
-        arac.close()
+
+            obj_enum4linux_json = enum4linux_read_json.enum4linux_read_json_class()
+            obj_enum4linux_json.enum4linux_read_json(id_j,start_job,file_name+'.json' )
+
+            sql_update_query = """UPDATE job SET enumforlinux = %s WHERE id_job  = %s"""
+            input_data = ('off', result[0])
+            enum4linuxqueryjob.execute(sql_update_query, input_data)
+
+        enum4linuxqueryjob.close()
         conn.close()
-        file_name = str(id_j)+'_'+ip
-        print(file_name)
-        cmd = subprocess.run(["./enumforlinux/enum4linux-ng.py", "-A", ip, "-oJ", file_name])
-
-
-        obj_enum4linux_json = enum4linux_read_json.enum4linux_read_json_class()
-        obj_enum4linux_json.enum4linux_read_json(id_j,start_job,file_name+'.json' )
-
 
     time.sleep(5)
