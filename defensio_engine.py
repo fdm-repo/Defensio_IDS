@@ -122,10 +122,10 @@ while True:
             obj_enum4linux_json = enum4linux_read_json.enum4linux_read_json_class()
             obj_enum4linux_json.enum4linux_read_json(id_j,start_job,file_name+'.json' )
 
-            sql_update_query = """UPDATE job SET enumforlinux = %s WHERE id_job  = %s"""
-            input_data = ('off', result[0])
-            enum4linuxqueryjob.execute(sql_update_query, input_data)
-
+        sql_update_query = """UPDATE job SET enumforlinux = %s WHERE id_job  = %s"""
+        input_data = ('off', result[0])
+        enum4linuxqueryjob.execute(sql_update_query, input_data)
+        conn.commit()
         enum4linuxqueryjob.close()
         conn.close()
 
