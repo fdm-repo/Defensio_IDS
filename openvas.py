@@ -13,7 +13,51 @@ username = 'admin'
 password = 'porcodio'
 
 
+# definizione della funzione che estrae i valori dall'interrogazione sullo stato di progressione di una funzione
+def statusscan(task):
+    id_task=task
 
+    # crea file xml di status
+    status_buffer = open("status_scan.xml", "a")
+
+    # crea la stringa xml monitorare la scansione con gvm-cli
+    stringxmlscan = "<get_tasks task_id=\"" + id_task + "\"/>"
+
+    # esegue il subprocesso sul docker gvm utilizzando gvm-cli e la stringa per monitorare il task, il risultato lo salva nel file xml di buffer
+    cmd = subprocess.run(["docker", "exec", "-t", "-u", "gvm", "openvas", "/usr/local/bin/gvm-cli", "--gmp-username", username, "--gmp-password", password, "tls", "--xml", stringxmlscan], stdout=status_buffer)
+    # chiude il file xml di buffer
+    status_buffer.close()
+
+    try:
+        statustxml = ET.parse('status_scan.xml').getroot()
+
+        # identifica la root del file xml
+        # root = tree.getroot()
+
+        # estrae l'attributo ID del task creato e lo salva nella variabile id_task
+        due = statustxml.attrib['status_text']
+        print("Status (testo): " + due)
+        quattro = statustxml[1].attrib['id']
+        print("Task ID: " + quattro)
+        sei = statustxml[1][1].text
+        print("Nome: " + sei)
+        sette = statustxml[1][14].text
+        print("Stato scansione: " + sette)
+        otto = statustxml[1][15].text
+        print("Progressione scansione: " + otto)
+
+
+    except:
+        print("non funziona")
+
+        # cancella il file xml di buffer
+    try:
+        scan_buffer.close()
+        os.remove("status_scan.xml")
+    except:
+        print("not remove Buffer")
+
+    return sette
 
 while True:
 
@@ -148,6 +192,20 @@ while True:
                     os.remove("scan_buffer.xml")
                 except:
                     print("not remove Buffer")
+
+
+                #ciclo while che verifica lo status della scansione ogni 5 secondi
+
+                status_scan="running"
+
+                while (status_scan != "Done"):
+
+                    try:
+                        status_scan = statusscan(id_task)
+                    except:
+                        print("non funziona")
+
+                    time.sleep(5)
 
         # scrive il tag esecuzione sul record del job
         sql_update_query = """UPDATE job SET openvas = %s WHERE id_job  = %s"""
