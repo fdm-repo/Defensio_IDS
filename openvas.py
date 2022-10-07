@@ -46,6 +46,15 @@ def statusscan(task):
         otto = statustxml[1][15].text
         print("Progressione scansione: " + otto)
 
+        #aggiorna i valori della scansione sul DB di defensio
+
+        # UPDATE `openvas_scan` SET `status` = 'remove', `progression` = '10' WHERE `openvas_scan`.`id_job` = '89';
+
+        sql_update_openvas_scan_query = """UPDATE openvas_scan SET status = %s, progression = %s WHERE openvas_scan.id_task = %s; """
+        input_data = (sette, otto, quattro)
+        cur.execute(sql_update_openvas_scan_query, input_data)
+        conn.commit()
+
 
     except:
         print("non funziona")
@@ -69,19 +78,19 @@ while True:
 
     cur = conn.cursor()
 
-    cur.execute('SELECT id_job,ip,netmask FROM job  WHERE abilitato="on" AND openvas="off"')
+    cur.execute('SELECT id_job,ip,netmask FROM job  WHERE abilitato="on" AND openvas="on" AND eseguito_openvas="off"' )
     if cur.rowcount != 0:
         result = cur.fetchone()
-        print(result)
+        print("Scansione OPENVAS")
 
         id_j=result[0]
         ip=result[1]
         netmask=result[2]
         ip_net=ip+'/'+netmask
-        print(ip_net)
+        print("Target: "+ip_net)
         # genera la stringa di inizio del job
         start_job = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        print(start_job)
+        print("StartJob: "+start_job)
         # variabile None da utilizzare nelle interrogazioni SQL per i campi autoincrementali
         vuoto = None
 
@@ -183,7 +192,7 @@ while True:
                     id_report = reportxml[0].text
                     print("ID_report: " + id_report)
                 except:
-                    print("non funziona")
+                    print("Task non creato")
 
 
                 # cancella il file xml di buffer
@@ -194,7 +203,17 @@ while True:
                     print("not remove Buffer")
 
 
-                #ciclo while che verifica lo status della scansione ogni 5 secondi
+
+                ##############################################crea il task sul DB defensio ##############################
+
+                sql_insert_openvas_scan_query = """INSERT INTO `openvas_scan` (`id_job`, `id_task`, `status`, `progression`) VALUES (%s, %s, %s, %s); """
+                input_data = (id_j,id_task,'running','0')
+                cur.execute(sql_insert_openvas_scan_query, input_data)
+                conn.commit()
+
+
+
+                #ciclo while che verifica lo status della scansione ogni 10 secondi
 
                 status_scan="running"
 
@@ -203,15 +222,18 @@ while True:
                     try:
                         status_scan = statusscan(id_task)
                     except:
-                        print("non funziona")
+                        print("Status scansione non disponibile")
 
-                    time.sleep(5)
+                    time.sleep(10)
 
         # scrive il tag esecuzione sul record del job
-        sql_update_query = """UPDATE job SET openvas = %s WHERE id_job  = %s"""
+
+
+
+        sql_update_query = """UPDATE job SET eseguito_openvas = %s WHERE id_job  = %s"""
         input_data = ('on', result[0])
-        #cur.execute(sql_update_query, input_data)
-        #conn.commit()
+        cur.execute(sql_update_query, input_data)
+        conn.commit()
         cur.close()
 
 
