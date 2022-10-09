@@ -41,7 +41,7 @@ for record in root:
                         print(record2.tag, ":", record2.attrib["id"])
 
                 for record3 in record2:
-                        id_result = ''
+
                         if record3.tag == "scan_start":
                                 scan_start = record3.text
                                 print(record3.tag, ":", record3.text)
@@ -51,12 +51,11 @@ for record in root:
 
                         for record4 in record3:
                                  if record4.tag == "result":
-                                        name_vul = host = port = nvt = threat = severity = description = family = type_verification =''
                                         print("###############################################################################################################")
                                         id_result = record4.attrib['id']
                                         print(record4.tag, record4.attrib['id'])
                                         for record5 in record4:
-                                                tags = solution = solution_type = ''
+                                                tags = solution = solution_type = family = type_verification = ''
                                                 if record5.tag == "name":
                                                         name_vul = record5.text
                                                         print(record5.tag,":",  record5.text)
@@ -71,15 +70,15 @@ for record in root:
                                                         print(record5.tag,":",  record5.attrib['oid'])
                                                 if record5.tag == "threat":
                                                         threat = record5.text
-                                                        print(record5.tag,":",  record5.text)
+                                                        print(record5.tag,":key:",  record5.text)
                                                 if record5.tag == "severity":
                                                         severity = record5.text
-                                                        print(record5.tag,":",  record5.text)
+                                                        print(record5.tag,":sev:",  record5.text)
                                                 if record5.tag == "description":
                                                         description = record5.text
                                                         print(record5.tag,":",  record5.text)
                                                 for record6 in record5:
-                                                        ref=''
+
                                                         if record6.tag == "type":
                                                                 type_verification = record6.text
                                                                 print(record6.tag,":",  record6.text)
@@ -108,7 +107,7 @@ for record in root:
                                                                                  `description`, `tags`, `solution_type`,
                                                                                  `solution`, `ref`)
                                                                 VALUES(NULL,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"""
-                                                                input_data = (id_job,id_report,id_task,scan_start,scan_end,id_result,name_vul,host,port,type_verification,nvt,family,threat,severity,description,tags,solution_type,solution,ref)
+                                                                input_data = (id_job,id_report,id_task,scan_start,scan_end,id_result,name_vul,host,port,type_verification,nvt,family,str(threat),str(severity),str(description),tags,solution_type,solution,ref)
                                                                 cur.execute(sql_update_query, input_data)
                                                                 conn.commit()
 conn.close()
