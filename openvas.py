@@ -15,8 +15,10 @@ password = 'porcodio'
 
 # definizione della funzione che estrae i valori dall'interrogazione sullo stato di progressione di una funzione
 def statusscan(task):
-    id_task=task
 
+
+    id_task=task
+    print("####################### Stato e progessione della scansione "+id_task+" #######################")
     # crea file xml di status
     status_buffer = open("status_scan.xml", "a")
 
@@ -68,6 +70,35 @@ def statusscan(task):
 
     return sette
 
+
+def report_scan(task, report):
+
+    #sudo  docker exec -t -u gvm openvas /usr/local/bin/gvm-cli  --gmp-username admin --gmp-password porcodio tls --xml "<get_reports report_id=\"57212fa8-9297-47e6-b0d1-991a827e3131\" format_id=\"5057e5cc-b825-11e4-9d0e-28d24461215b\"/>"
+    print("ciao")
+    id_task = task
+    id_report = report
+    print("####################### Report della scansione " + id_task + " #######################")
+    # crea file xml di status
+    report_buffer = open("report_scan+"+id_report+".xml", "a")
+
+    # crea la stringa xml monitorare la scansione con gvm-cli
+    stringxmlreport = "<get_reports details='5' report_id=\"" + id_report + "\" format_id=\"5057e5cc-b825-11e4-9d0e-28d24461215b\"/>"
+
+    # esegue il subprocesso sul docker gvm utilizzando gvm-cli e la stringa per monitorare il task, il risultato lo salva nel file xml di buffer
+    cmd = subprocess.run(
+        ["docker", "exec", "-t", "-u", "gvm", "openvas", "/usr/local/bin/gvm-cli", "--gmp-username", username,
+         "--gmp-password", password, "tls", "--xml", stringxmlreport], stdout=report_buffer)
+    # chiude il file xml di buffer
+    report_buffer.close()
+
+
+
+
+
+
+
+
+
 while True:
 
     connessione = DB_connect.database_connect()
@@ -108,7 +139,7 @@ while True:
         target_buffer = open("target_buffer.xml", "a")
 
         #crea la stringa xml per creare il target con gvm-cli
-        stringxmltarget="<create_target><name>"+str(id_j)+"</name><hosts>"+ip+"</hosts><port_list id=\"33d0cd82-57c6-11e1-8ed1-406186ea4fc5\"></port_list></create_target>"
+        stringxmltarget="<create_target><name>"+str(id_j)+"</name><hosts>"+ip_net+"</hosts><port_list id=\"33d0cd82-57c6-11e1-8ed1-406186ea4fc5\"></port_list></create_target>"
 
         #esegue il subprocesso sul docker gvm utilizzando gvm-cli e la stringa per creare il target, il risultato lo salva nel file xml di buffer
         cmd = subprocess.run(["docker", "exec", "-t", "-u", "gvm", "openvas", "/usr/local/bin/gvm-cli",  "--gmp-username",username, "--gmp-password",password,"tls", "--xml",stringxmltarget], stdout=target_buffer)
@@ -204,7 +235,7 @@ while True:
 
 
 
-                ##############################################crea il task sul DB defensio ##############################
+                ############################################## crea il record della scansione sul DB defensio ##############################
 
                 sql_insert_openvas_scan_query = """INSERT INTO `openvas_scan` (`id_job`, `id_task`, `status`, `progression`) VALUES (%s, %s, %s, %s); """
                 input_data = (id_j,id_task,'running','0')
@@ -225,6 +256,12 @@ while True:
                         print("Status scansione non disponibile")
 
                     time.sleep(10)
+
+                if (status_scan == "Done"):
+                    try:
+                        report_scan(id_task, id_report)
+                    except:
+                        print("Report non disponibile o errore")
 
         # scrive il tag esecuzione sul record del job
 
