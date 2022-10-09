@@ -82,7 +82,7 @@ def report_scan(task, report):
     report_buffer = open("report_scan+"+id_report+".xml", "a")
 
     # crea la stringa xml monitorare la scansione con gvm-cli
-    stringxmlreport = "<get_reports details='5' report_id=\"" + id_report + "\" format_id=\"5057e5cc-b825-11e4-9d0e-28d24461215b\"/>"
+    stringxmlreport = "<get_reports details='True' report_id=\"" + id_report + "\" format_id=\"a994b278-1f62-11e1-96ac-406186ea4fc5\"/>"
 
     # esegue il subprocesso sul docker gvm utilizzando gvm-cli e la stringa per monitorare il task, il risultato lo salva nel file xml di buffer
     cmd = subprocess.run(
