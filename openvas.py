@@ -139,7 +139,7 @@ while True:
         target_buffer = open("target_buffer.xml", "a")
 
         #crea la stringa xml per creare il target con gvm-cli
-        stringxmltarget="<create_target><name>"+str(id_j)+"</name><hosts>"+ip_net+"</hosts><port_list id=\"33d0cd82-57c6-11e1-8ed1-406186ea4fc5\"></port_list></create_target>"
+        stringxmltarget="<create_target><name>"+str(id_j)+"</name><hosts>"+ip+"</hosts><port_list id=\"33d0cd82-57c6-11e1-8ed1-406186ea4fc5\"></port_list></create_target>"
 
         #esegue il subprocesso sul docker gvm utilizzando gvm-cli e la stringa per creare il target, il risultato lo salva nel file xml di buffer
         cmd = subprocess.run(["docker", "exec", "-t", "-u", "gvm", "openvas", "/usr/local/bin/gvm-cli",  "--gmp-username",username, "--gmp-password",password,"tls", "--xml",stringxmltarget], stdout=target_buffer)
