@@ -96,6 +96,7 @@ def report_scan(task, report):
     obj = parsing_xml_report_NetScanner()
     obj.parsing_report_to_DB(nomefile)
 
+    #test
 
 
 
