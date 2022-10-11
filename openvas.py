@@ -6,6 +6,8 @@ from datetime import datetime
 import DB_connect
 import os
 import xml.etree.ElementTree as ET
+import parsing_xml_report_NetScanner
+import xmltodict
 
 #username e password per il docker GVM
 
@@ -79,7 +81,8 @@ def report_scan(task, report):
     id_report = report
     print("####################### Report della scansione " + id_task + " #######################")
     # crea file xml di status
-    report_buffer = open("report_scan+"+id_report+".xml", "a")
+    nomefile = "report_scan+"+id_report+".xml"
+    report_buffer = open(nomefile, "a")
 
     # crea la stringa xml monitorare la scansione con gvm-cli
     stringxmlreport = "<get_reports details='True' report_id=\"" + id_report + "\" format_id=\"a994b278-1f62-11e1-96ac-406186ea4fc5\"/>"
@@ -90,7 +93,8 @@ def report_scan(task, report):
          "--gmp-password", password, "tls", "--xml", stringxmlreport], stdout=report_buffer)
     # chiude il file xml di buffer
     report_buffer.close()
-
+    obj = parsing_xml_report_NetScanner()
+    obj.parsing_report_to_DB(nomefile)
 
 
 
@@ -264,8 +268,6 @@ while True:
                         print("Report non disponibile o errore")
 
         # scrive il tag esecuzione sul record del job
-
-
 
         sql_update_query = """UPDATE job SET eseguito_openvas = %s WHERE id_job  = %s"""
         input_data = ('on', result[0])
