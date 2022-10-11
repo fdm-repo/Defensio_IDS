@@ -11,9 +11,9 @@ from xml.etree import ElementTree as ET
 import xmltodict
 
 class parsing_xml_Netscanner:
-    def parsing_report_to_DB(report_XML_NetScanner):
+    def parsing_report_to_DB(self, report_XML_NS):
 
-        file_xml = report_XML_NetScanner
+        file_xml = report_XML_NS
         try:
             connessione = DB_connect.database_connect()
             conn = connessione.database_connection("operator", "!d3f3n510!", '185.245.183.75', 3306, "defensio")

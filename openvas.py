@@ -92,10 +92,17 @@ def report_scan(task, report):
         ["docker", "exec", "-t", "-u", "gvm", "openvas", "/usr/local/bin/gvm-cli", "--gmp-username", username,
          "--gmp-password", password, "tls", "--xml", stringxmlreport], stdout=report_buffer)
     # chiude il file xml di buffer
-    report_buffer.close()
-    obj = parsing_xml_report_NetScanner()
-    obj.parsing_report_to_DB(nomefile)
 
+    report_buffer.close()
+
+    # richiama la funzione di parsing del file parsing_xml_report_Netscanner
+
+    try:
+        obj_pars = parsing_xml_report_NetScanner.parsing_xml_Netscanner()
+        obj_pars.parsing_report_to_DB(nomefile)
+
+    except:
+        print("errore nell'esecuzione del parsing sul file xml di report ")
     #test
 
 
@@ -140,11 +147,17 @@ while True:
 
        ###################################################### crea target ########################################################
 
+        if int(netmask) > 30 or int(netmask) < 20:
+            host_target = ip
+        else:
+            host_target = ip_net
+
+
         #crea file xml buffer target
         target_buffer = open("target_buffer.xml", "a")
 
         #crea la stringa xml per creare il target con gvm-cli
-        stringxmltarget="<create_target><name>"+str(id_j)+"</name><hosts>"+ip+"</hosts><port_list id=\"33d0cd82-57c6-11e1-8ed1-406186ea4fc5\"></port_list></create_target>"
+        stringxmltarget="<create_target><name>"+str(id_j)+"</name><hosts>"+host_target+"</hosts><port_list id=\"33d0cd82-57c6-11e1-8ed1-406186ea4fc5\"></port_list></create_target>"
 
         #esegue il subprocesso sul docker gvm utilizzando gvm-cli e la stringa per creare il target, il risultato lo salva nel file xml di buffer
         cmd = subprocess.run(["docker", "exec", "-t", "-u", "gvm", "openvas", "/usr/local/bin/gvm-cli",  "--gmp-username",username, "--gmp-password",password,"tls", "--xml",stringxmltarget], stdout=target_buffer)
@@ -257,6 +270,7 @@ while True:
 
                     try:
                         status_scan = statusscan(id_task)
+
                     except:
                         print("Status scansione non disponibile")
 
