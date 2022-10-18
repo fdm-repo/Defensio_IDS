@@ -121,7 +121,7 @@ while True:
 
     cur = conn.cursor()
 
-    cur.execute('SELECT id_job,ip,netmask FROM job  WHERE abilitato="on" AND openvas="on" AND eseguito_openvas="off"' )
+    cur.execute('SELECT id_job,ip,netmask FROM job  WHERE abilitato="on" AND esecuzione="on" AND openvas="on" AND eseguito_openvas="off"' )
     if cur.rowcount != 0:
         result = cur.fetchone()
         print("Scansione OPENVAS")

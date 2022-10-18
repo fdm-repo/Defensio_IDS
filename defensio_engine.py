@@ -114,16 +114,7 @@ while True:
         except:
             print('errore nell\'update della tabella statistica')
 
-
-        # scrive il tag esecuzione sul record del job
-        sql_update_query = """UPDATE job SET esecuzione = %s WHERE id_job  = %s"""
-        input_data = ('on', result[0])
-        cur.execute(sql_update_query, input_data)
-        conn.commit()
-        cur.close()
-
-
-
+        #esegue la scansione con arachni
 
         try:
             arac = conn.cursor()
@@ -153,7 +144,7 @@ while True:
             print('errore in arachni')
 
 
-        #enumforlinux module
+        #esegue la scansione con enum4linux
 
         try:
             enum4linuxqueryjob = conn.cursor()
@@ -181,5 +172,14 @@ while True:
             conn.close()
         except:
             print('errore in enum4linux')
+
+
+
+        # scrive il tag esecuzione sul record del job
+        sql_update_query = """UPDATE job SET esecuzione = %s WHERE id_job  = %s"""
+        input_data = ('on', result[0])
+        cur.execute(sql_update_query, input_data)
+        conn.commit()
+        cur.close()
 
     time.sleep(5)
