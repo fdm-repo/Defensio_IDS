@@ -1,11 +1,7 @@
 #!/usr/bin/env python3
 # Module Imports
 import sys
-import time
-from datetime import datetime
-import arachni
 import mariadb
-import nmap
 
 
 class database_connect:
