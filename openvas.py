@@ -273,6 +273,7 @@ while True:
 
                     except:
                         print("Status scansione non disponibile")
+                        break
 
                     time.sleep(10)
 

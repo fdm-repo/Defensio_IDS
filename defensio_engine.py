@@ -169,17 +169,18 @@ while True:
             enum4linuxqueryjob.execute(sql_update_query, input_data)
             conn.commit()
             enum4linuxqueryjob.close()
-            conn.close()
+
         except:
             print('errore in enum4linux')
 
 
 
         # scrive il tag esecuzione sul record del job
+        cur = conn.cursor()
         sql_update_query = """UPDATE job SET esecuzione = %s WHERE id_job  = %s"""
         input_data = ('on', result[0])
         cur.execute(sql_update_query, input_data)
         conn.commit()
         cur.close()
-
+        conn.close()
     time.sleep(5)
