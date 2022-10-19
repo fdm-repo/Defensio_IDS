@@ -57,7 +57,7 @@ while True:
 
     cur = conn.cursor()
 
-    cur.execute('SELECT id_job,ip,netmask FROM job  WHERE abilitato="on" AND esecuzione="off"')
+    cur.execute('SELECT id_job,ip,netmask FROM job  WHERE abilitato="on" AND net_discovery="off"')
     if cur.rowcount != 0:
         result = cur.fetchone()
         print(result)
@@ -177,7 +177,7 @@ while True:
 
         # scrive il tag esecuzione sul record del job
         cur = conn.cursor()
-        sql_update_query = """UPDATE job SET esecuzione = %s WHERE id_job  = %s"""
+        sql_update_query = """UPDATE job SET net_discovery = %s WHERE id_job  = %s"""
         input_data = ('on', result[0])
         cur.execute(sql_update_query, input_data)
         conn.commit()

@@ -20,7 +20,7 @@ def statusscan(task):
 
 
     id_task=task
-    print("####################### Stato e progessione della scansione "+id_task+" #######################")
+
     # crea file xml di status
     status_buffer = open("status_scan.xml", "a")
 
@@ -40,15 +40,11 @@ def statusscan(task):
 
         # estrae l'attributo ID del task creato e lo salva nella variabile id_task
         due = statustxml.attrib['status_text']
-        print("Status (testo): " + due)
         quattro = statustxml[1].attrib['id']
-        print("Task ID: " + quattro)
         sei = statustxml[1][1].text
-        print("Nome: " + sei)
         sette = statustxml[1][14].text
-        print("Stato scansione: " + sette)
         otto = statustxml[1][15].text
-        print("Progressione scansione: " + otto)
+        print("Status (testo): " + due + " Task ID: " + quattro + " Nome: " + sei + " Stato scansione: " + sette + " Progressione scansione: " + otto  )
 
         #aggiorna i valori della scansione sul DB di defensio
 
@@ -100,11 +96,44 @@ def report_scan(task, report):
     try:
         obj_pars = parsing_xml_report_NetScanner.parsing_xml_Netscanner()
         obj_pars.parsing_report_to_DB(nomefile)
+        update_statistic_vul(id_j)
 
     except:
         print("errore nell'esecuzione del parsing sul file xml di report ")
     #test
 
+def update_statistic_vul(id_j):
+
+    id_job=id_j
+
+    job_data = list()
+    job_data.append(id_job)
+
+    stat_host = conn.cursor()
+
+    #estrae il numero di vuln di tipo Log trovati per lo specifico job
+    sql_query_host_for_job = """ SELECT COUNT(openvas_result.threat) FROM openvas_result JOIN openvas_report ON openvas_result.id_report = openvas_report.id_report WHERE openvas_report.id_job = %s AND openvas_result.threat = 'Log'; """
+    stat_host.execute(sql_query_host_for_job, job_data)
+    result = stat_host.fetchone()
+    Log_vuln = result[0]
+
+    # estrae il numero di vuln di tipo Medium trovati per lo specifico job
+    sql_query_host_for_job = """ SELECT COUNT(openvas_result.threat) FROM openvas_result JOIN openvas_report ON openvas_result.id_report = openvas_report.id_report WHERE openvas_report.id_job = %s AND openvas_result.threat = 'Medium'; """
+    stat_host.execute(sql_query_host_for_job, job_data)
+    result = stat_host.fetchone()
+    Medium_vuln = result[0]
+
+    # estrae il numero di vuln di tipo High trovati per lo specifico job
+    sql_query_host_for_job = """ SELECT COUNT(openvas_result.threat) FROM openvas_result JOIN openvas_report ON openvas_result.id_report = openvas_report.id_report WHERE openvas_report.id_job = %s AND openvas_result.threat = 'High'; """
+    stat_host.execute(sql_query_host_for_job, job_data)
+    result = stat_host.fetchone()
+    High_vuln = result[0]
+
+    #aggiorna la tabella statistic_job del DB
+    sql_update_query = """UPDATE statistic_job SET Log = %s, Medium = %s, High = %s WHERE statistic_job.id_job = %s; """
+    update_data = (Log_vuln, Medium_vuln, High_vuln, id_job)
+    stat_host.execute(sql_update_query, update_data)
+    conn.commit()
 
 
 
@@ -121,7 +150,7 @@ while True:
 
     cur = conn.cursor()
 
-    cur.execute('SELECT id_job,ip,netmask FROM job  WHERE abilitato="on" AND esecuzione="on" AND openvas="on" AND eseguito_openvas="off"' )
+    cur.execute('SELECT id_job,ip,netmask FROM job  WHERE abilitato="on" AND net_discovery="on" AND openvas="on" AND eseguito_openvas="off"' )
     if cur.rowcount != 0:
         result = cur.fetchone()
         print("Scansione OPENVAS")
@@ -265,7 +294,7 @@ while True:
                 #ciclo while che verifica lo status della scansione ogni 10 secondi
 
                 status_scan="running"
-
+                print("####################### Stato e progessione della scansione " + id_task + " #######################")
                 while (status_scan != "Done"):
 
                     try:
