@@ -79,7 +79,7 @@ while True:
             nm = nmap.PortScanner()
 
             # scansione secondo parametri del job
-            nm.scan(hosts=ip_net, arguments='-sV -p130-447')
+            nm.scan(hosts=ip_net, arguments='-sV -p50-447')
             for host in nm.all_hosts():
                 print(host)
                 # inserimento SQL nella tabella HOST
@@ -119,7 +119,7 @@ while True:
         try:
             arac = conn.cursor()
             arac.execute(
-                "SELECT Port.id_job, Port.ip,port_n FROM `Port` INNER JOIN job ON job.id_job=Port.id_job WHERE Port.name='http' AND job.arachni='on';")
+                "SELECT Port.id_job, Port.ip,port_n FROM `Port` INNER JOIN job ON job.id_job=Port.id_job WHERE (Port.name='http' OR Port.port_n = '80') AND job.arachni='on';")
             if arac.rowcount != 0:
                 result = arac.fetchone()
                 print(result)
