@@ -8,6 +8,7 @@ import os
 import xml.etree.ElementTree as ET
 import parsing_xml_report_NetScanner
 import json
+import sys
 
 #username e password per il docker GVM
 
@@ -140,7 +141,12 @@ def update_statistic_vul(id_j):
 
 while True:
 
-    data = json.load(open("eng_conf.json"))
+    try:
+        data = json.load(open("eng_conf.json"))
+    except:
+        print("Engine non inizializzato! eseguire: ./inizializzazione_engine.py ")
+        sys.exit(1)
+
 
     connessione = DB_connect.database_connect()
     conn = connessione.database_connection(data['user_db'], data['password_db'], data['host_db'], int(data['port_db']),
