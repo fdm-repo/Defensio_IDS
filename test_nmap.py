@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Module Imports
 import nmap
 import xml
@@ -6,22 +6,19 @@ import time
 import sys
 import os
 from datetime import datetime
-
-#ip=input("Insert IP Target: ")
-#netmask=input("Insert Netmask: ")
-ip = 'localhost'
-netmask = '32'
-
-ip_net=ip+'/'+netmask
-
+from libnmap.process import NmapProcess
+from time import sleep
+import subprocess
+ipnet = "192.168.1.0/24"
 nm = nmap.PortScanner()
+nm.scan(ipnet, '22-44')
+print(nm.command_line())
+print(nm.scaninfo())
+print(nm.all_hosts())
+print(nm.scanstats())
+output_file = open()
 
-# scansione secondo parametri del job
-nm.scan(hosts=ip_net, arguments='-sV --script vulners -p80')
-
-
-
-
+'''
 for host in nm.all_hosts():
     print('Host: '+host)
     lista=list(nm[host].values())
@@ -38,7 +35,7 @@ for host in nm.all_hosts():
 
 
     # ciclo for per i protocolli riscontrati
-    '''for proto in nm[host].all_protocols():
+        for proto in nm[host].all_protocols():
         print('Protocollo: '+proto)
         # creazione di una lista di porte trovate nella scansione
         localport = nm[host][proto].keys()

@@ -9,6 +9,7 @@ import DB_connect
 import enum4linux_read_json
 import mariadb
 import nmap
+from libnmap.process import NmapProcess
 
 def update_statistic_host(id_j):
 
@@ -81,7 +82,7 @@ while True:
         print("Scansione attiva sulle porte: "+port_target)
 
         argument="-sV -p"+port_target
-        print(argument)
+
         # genera la stringa di inizio del job
         start_job = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         print("Time avvio job: "+str(start_job))
@@ -94,6 +95,7 @@ while True:
             nm = nmap.PortScanner()
 
             # scansione secondo parametri del job
+
             nm.scan(hosts=ip_net, arguments= argument)
             for host in nm.all_hosts():
                 print("** Host trovato: "+host)
@@ -112,7 +114,7 @@ while True:
 
                     # ciclo for sulle porte scoperte
                     for port in localport:
-                        print("      L____ Servizio attivo sulla porta: "+str(port)+" | Servizio: "+nm[host][proto][port]['name']+" | Stato:"+nm[host][proto][port]['state'])
+                        print("      L____ Servizio sulla porta: "+str(port)+" | Tipo servizio: "+nm[host][proto][port]['name']+" | Stato:"+nm[host][proto][port]['state'])
                         # inserimento SQL nella tabella Port
                         try:
                             cur.execute(
