@@ -136,7 +136,9 @@ def update_statistic_vul(id_j):
     conn.commit()
 
 
-
+id_ass = input("inserisci il numero di assetto:")
+id_asset = list()
+id_asset.append(id_ass)
 
 
 
@@ -150,14 +152,14 @@ while True:
 
     cur = conn.cursor()
 
-    cur.execute('SELECT id_job,ip,netmask FROM job  WHERE abilitato="on" AND net_discovery="on" AND openvas="on" AND eseguito_openvas="off"' )
+    cur.execute('SELECT id_job,id_asset,ip,netmask FROM job  WHERE abilitato="on" AND net_discovery="off" AND id_asset = %s',(id_asset))
     if cur.rowcount != 0:
         result = cur.fetchone()
         print("Scansione OPENVAS")
 
         id_j=result[0]
-        ip=result[1]
-        netmask=result[2]
+        ip=result[2]
+        netmask=result[3]
         ip_net=ip+'/'+netmask
         print("Target: "+ip_net)
         # genera la stringa di inizio del job
