@@ -9,12 +9,12 @@ import DB_connect
 import enum4linux_read_json
 import mariadb
 import nmap
-from libnmap.process import NmapProcess
+import json
+
 
 def update_statistic_host(id_j):
-
-    id_job=id_j
-    #crea il record della statistica del job
+    id_job = id_j
+    # crea il record della statistica del job
 
     stat_host = conn.cursor()
     sql_insert_query = """INSERT INTO statistic_job (id_statistic, id_job, Log, Medium, High, N_host, N_service) VALUES (NULL, %s, NULL, NULL, NULL, NULL, NULL); """
@@ -25,14 +25,13 @@ def update_statistic_host(id_j):
     stat_host.execute(sql_insert_query, job_data)
     conn.commit()
 
-
-    #estrae il numero di host trovati per lo specifico job
+    # estrae il numero di host trovati per lo specifico job
     sql_query_host_for_job = """ SELECT COUNT(ip) FROM host WHERE id_job= %s; """
     stat_host.execute(sql_query_host_for_job, job_data)
     result = stat_host.fetchone()
     n_host = result[0]
 
-    #estrae i servizi(porte) trovate aperte in un job
+    # estrae i servizi(porte) trovate aperte in un job
     sql_query_service_for_job = """SELECT COUNT(port_n) FROM Port WHERE id_job = %s;"""
     stat_host.execute(sql_query_service_for_job, job_data)
     result = stat_host.fetchone()
@@ -44,34 +43,45 @@ def update_statistic_host(id_j):
     conn.commit()
 
 
-id_ass = input("inserisci il numero di assetto:")
-id_asset = list()
-id_asset.append(id_ass)
-
+# setup di configurazione all avvio dell'engine
 
 
 while True:
 
-    connessione = DB_connect.database_connect()
-    conn=connessione.database_connection("operator","!d3f3n510!", '185.245.183.75', 3306, "defensio")
+    data = json.load(open("eng_conf.json"))
 
-    id_j=''
+    connessione = DB_connect.database_connect()
+    conn = connessione.database_connection(data['user_db'], data['password_db'], data['host_db'], int(data['port_db']),
+                                           data['database'])
+
+    id_ass = data['id_ass']
+    id_asset = list()
+    id_asset.append(id_ass)
+
+    id_j = ''
     # estrazione parametri del job selezionato
 
     cur = conn.cursor()
 
-
-
-    cur.execute('SELECT id_job,id_asset,ip,netmask, single_port, low_port, high_port FROM job  WHERE abilitato="on" AND net_discovery="off" AND id_asset = %s',(id_asset))
+    cur.execute(
+        'SELECT id_job,id_asset,ip,netmask, single_port, low_port, high_port FROM job  WHERE abilitato="on" AND net_discovery="off" AND id_asset = %s',
+        id_asset)
     if cur.rowcount != 0:
         result = cur.fetchone()
-        print("*************************************************************************************************************************************")
-        print("Scansione Defensio Engine in esecuzione: Job n° "+str(result[0])+" | Assetto n° "+str(result[1])+" ! Target "+str(result[2])+" | Netmask "+str(result[3]))
+        print(
+            "*************************************************************************************************************************************")
+        print("Scansione Defensio Engine in esecuzione: Job n° " + str(result[0]) + " | Assetto n° " + str(
+            result[1]) + " ! Target " + str(result[2]) + " | Netmask " + str(result[3]))
 
-        id_j=result[0]
-        ip=result[2]
-        netmask=result[3]
-        ip_net=ip+'/'+netmask
+        # chiude la connessione per evitare timeout durante la scansione di nmap
+        cur.close()
+        conn.close()
+
+        # estrae i dati dell interrogazione sul job
+        id_j = result[0]
+        ip = result[2]
+        netmask = result[3]
+        ip_net = ip + '/' + netmask
         single_port = str(result[4])
         low_port = result[5]
         high_port = result[6]
@@ -79,13 +89,13 @@ while True:
             port_target = single_port
         else:
             port_target = str(low_port) + "-" + str(high_port)
-        print("Scansione attiva sulle porte: "+port_target)
+        print("Scansione attiva sulle porte: " + port_target)
 
-        argument="-sV -p"+port_target
+        argument = "-sV -p" + port_target
 
         # genera la stringa di inizio del job
         start_job = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        print("Time avvio job: "+str(start_job))
+        print("Time avvio job: " + str(start_job))
         # variabile None da utilizzare nelle interrogazioni SQL per i campi autoincrementali
         vuoto = None
 
@@ -96,16 +106,25 @@ while True:
 
             # scansione secondo parametri del job
 
-            nm.scan(hosts=ip_net, arguments= argument)
+            nm.scan(hosts=ip_net, arguments=argument)
+
+            # crea la connessione per caricare i dati sul DB
+            connessione = DB_connect.database_connect()
+            conn = connessione.database_connection(data['user_db'], data['password_db'], data['host_db'],
+                                                   int(data['port_db']), data['database'])
+
+            cur = conn.cursor()
+
+            # ciclo for di estrazione dei dati raccolti dalla scansione
             for host in nm.all_hosts():
-                print("** Host trovato: "+host)
+                print("** Host trovato: " + host)
                 # inserimento SQL nella tabella HOST
                 cur.execute("INSERT INTO host (id,id_job,start_job,ip,hostname) VALUES (%s,%s,%s,%s,%s)",
                             (vuoto, id_j, start_job, host, nm[host].hostname()))
 
                 # ciclo for per i protocolli riscontrati
                 for proto in nm[host].all_protocols():
-                    print("  L____ Protocollo attivo: "+proto)
+                    print("  L____ Protocollo attivo: " + proto)
                     # creazione di una lista di porte trovate nella scansione
                     localport = nm[host][proto].keys()
 
@@ -114,27 +133,28 @@ while True:
 
                     # ciclo for sulle porte scoperte
                     for port in localport:
-                        print("      L____ Servizio sulla porta: "+str(port)+" | Tipo servizio: "+nm[host][proto][port]['name']+" | Stato:"+nm[host][proto][port]['state'])
+                        print("      L____ Servizio sulla porta: " + str(port) + " | Tipo servizio: " +
+                              nm[host][proto][port]['name'] + " | Stato:" + nm[host][proto][port]['state'])
                         # inserimento SQL nella tabella Port
                         try:
                             cur.execute(
                                 "INSERT INTO Port (id_port,id_job,ip,port_n,name,state,reason,product,version,info) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
-                            (vuoto, id_j, host, port, nm[host][proto][port]['name'], nm[host][proto][port]['state'],
-                             nm[host][proto][port]['reason'], nm[host][proto][port]['product'],
-                             nm[host][proto][port]['version'], nm[host][proto][port]['extrainfo']))
+                                (vuoto, id_j, host, port, nm[host][proto][port]['name'], nm[host][proto][port]['state'],
+                                 nm[host][proto][port]['reason'], nm[host][proto][port]['product'],
+                                 nm[host][proto][port]['version'], nm[host][proto][port]['extrainfo']))
                         except:
                             print("errore nell inserimento dei risultati nella tabella port")
         except:
             print('errore in nmap')
 
-        #aggiorna la statistica del job della tabella statistic_job
+        # aggiorna la statistica del job della tabella statistic_job
 
         try:
             update_statistic_host(id_j)
         except:
             print('errore nell\'update della tabella statistica')
 
-        #esegue la scansione con arachni
+        # esegue la scansione con arachni
 
         try:
             arac = conn.cursor()
@@ -163,8 +183,7 @@ while True:
         except:
             print('errore in arachni')
 
-
-        #esegue la scansione con enum4linux
+        # esegue la scansione con enum4linux
 
         try:
             enum4linuxqueryjob = conn.cursor()
@@ -193,14 +212,27 @@ while True:
         except:
             print('errore in enum4linux')
 
-
-
         # scrive il tag esecuzione sul record del job
         cur = conn.cursor()
         sql_update_query = """UPDATE job SET net_discovery = %s WHERE id_job  = %s"""
-        input_data = ('on', result[0])
+        input_data = ('on', id_j)
         cur.execute(sql_update_query, input_data)
         conn.commit()
         cur.close()
         conn.close()
     time.sleep(5)
+    print("Net_Discovery Active...Waiting for Jobs...  ZZZZZZ...ZZZZZ..ZZZ...")
+    check = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+    conn_check = DB_connect.database_connect()
+    conn2 = conn_check.database_connection(data['user_db'], data['password_db'], data['host_db'],
+                                           int(data['port_db']), data['database'])
+
+    cur2 = conn2.cursor()
+
+    sql_update_query = """UPDATE engines SET last_check_ND = %s WHERE engines.codeword = %s; """
+    input_data = (check, id_ass)
+    cur2.execute(sql_update_query, input_data)
+    conn2.commit()
+    cur2.close()
+    conn2.close()

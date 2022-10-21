@@ -9,18 +9,21 @@ import bz2
 import xml.etree.ElementTree as ET
 from xml.etree import ElementTree as ET
 import xmltodict
+import json
 
 class parsing_xml_Netscanner:
     def parsing_report_to_DB(self, report_XML_NS):
 
         file_xml = report_XML_NS
-        try:
-            connessione = DB_connect.database_connect()
-            conn = connessione.database_connection("operator", "!d3f3n510!", '185.245.183.75', 3306, "defensio")
 
-            cur = conn.cursor()
-        except:
-            print("problemi con la connessione al database")
+        data = json.load(open("eng_conf.json"))
+
+        connessione = DB_connect.database_connect()
+        conn = connessione.database_connection(data['user_db'], data['password_db'], data['host_db'],
+                                               int(data['port_db']), data['database'])
+
+        cur = conn.cursor()
+
         ################### genera l'oggetto relativo al file xml in forma dizionario##############
 
         with open(file_xml, 'r') as filereport:
@@ -255,5 +258,5 @@ class parsing_xml_Netscanner:
                     a += 1  # incremento ciclo result
             except:
                 print("ERROR no result")
-
+        os.remove(file_xml)
         conn.close()

@@ -7,7 +7,7 @@ import DB_connect
 import os
 import xml.etree.ElementTree as ET
 import parsing_xml_report_NetScanner
-import xmltodict
+import json
 
 #username e password per il docker GVM
 
@@ -136,23 +136,26 @@ def update_statistic_vul(id_j):
     conn.commit()
 
 
-id_ass = input("inserisci il numero di assetto:")
-id_asset = list()
-id_asset.append(id_ass)
-
 
 
 while True:
 
+    data = json.load(open("eng_conf.json"))
+
     connessione = DB_connect.database_connect()
-    conn=connessione.database_connection("operator","!d3f3n510!", '185.245.183.75', 3306, "defensio")
+    conn = connessione.database_connection(data['user_db'], data['password_db'], data['host_db'], int(data['port_db']),
+                                           data['database'])
+
+    id_ass = data['id_ass']
+    id_asset = list()
+    id_asset.append(id_ass)
 
     id_j=''
     # estrazione parametri del job selezionato
 
     cur = conn.cursor()
 
-    cur.execute('SELECT id_job,id_asset,ip,netmask FROM job  WHERE abilitato="on" AND net_discovery="off" AND id_asset = %s',(id_asset))
+    cur.execute('SELECT id_job,id_asset,ip,netmask FROM job  WHERE abilitato="on" AND net_discovery="on" AND openvas = "on" AND eseguito_openvas="off" AND id_asset = %s',(id_asset))
     if cur.rowcount != 0:
         result = cur.fetchone()
         print("Scansione OPENVAS")
@@ -307,6 +310,7 @@ while True:
                         break
 
                     time.sleep(10)
+                #genera il report della scansione
 
                 if (status_scan == "Done"):
                     try:
@@ -324,3 +328,18 @@ while True:
 
 
     time.sleep(5)
+    print("Vulnerability Assesment Active...Waiting for Jobs...  ZZZZZZ...ZZZZZ..ZZZ...")
+    check = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+    conn_check = DB_connect.database_connect()
+    conn2 = conn_check.database_connection(data['user_db'], data['password_db'], data['host_db'],
+                                           int(data['port_db']), data['database'])
+
+    cur2 = conn2.cursor()
+
+    sql_update_query = """UPDATE engines SET last_check_VA = %s WHERE engines.codeword = %s; """
+    input_data = (check, id_ass)
+    cur2.execute(sql_update_query, input_data)
+    conn2.commit()
+    cur2.close()
+    conn2.close()

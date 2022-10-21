@@ -13,10 +13,16 @@ import json
 
 
 #Database connection
+try:
+    data = json.load(open("eng_conf.json"))
 
-connessione = DB_connect.database_connect()
-connDB = connessione.database_connection("operator", "!d3f3n510!", '185.245.183.75', 3306, "defensio")
-enumDB = connDB.cursor()
+    connessione = DB_connect.database_connect()
+    connDB = connessione.database_connection(data['user_db'], data['password_db'], data['host_db'],
+                                             int(data['port_db']),
+                                             data['database'])
+    enumDB = connDB.cursor()
+except:
+    print("enum4linux: errore connessione database" )
 
 class enum4linux_read_json_class:
 
