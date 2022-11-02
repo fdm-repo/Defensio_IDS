@@ -169,10 +169,29 @@ class parsing_xml_Netscanner:
                         print('CVSS non disponibile')
                         cvss_base = 'NULL'
 
-                    # estrae TAGS
+                    # estrae TAGS e decompone gli elementi
                     try:
                         tags = result[a]['nvt']['tags']
                         print('Tags: ', tags)
+                        single_tag = tags.split("|")
+                        for x in single_tag:
+                            uguale_split = x.split("=")
+                            if (uguale_split[0] == 'cvss_base_vector'):
+                               t_cvss_base_vector = uguale_split[1]
+                            if (uguale_split[0] == 'summary'):
+                                t_summary = uguale_split[1]
+                            if (uguale_split[0] == 'insight'):
+                                t_insight = uguale_split[1]
+                            if (uguale_split[0] == 'affected'):
+                                t_affected = uguale_split[1]
+                            if (uguale_split[0] == 'impact'):
+                                t_impact = uguale_split[1]
+                            if (uguale_split[0] == 'solution'):
+                                t_solution = uguale_split[1]
+                            if (uguale_split[0] == 'vuldetect'):
+                                t_vuldetect = uguale_split[1]
+                            if (uguale_split[0] == 'solution_type'):
+                                t_solution_type = uguale_split[1]
                     except:
                         print('TAGS non disponibile')
                         tags = 'NULL'
@@ -219,14 +238,16 @@ class parsing_xml_Netscanner:
 
                     # __ qui si mette il codice SQL per caricare il record nella tabella "openvas_result"___
                     try:
-                        sql_update_query = """INSERT INTO `openvas_result`(`id_result_DB`, `id_report`, `id_result`, `name_vul`, `host`,`port`, `type_verification`, `nvt`,`family`, `threat`, `severity`,
-                                                                                                                                                         `description`, `tags`, `solution_type`,
-                                                                                                                                                         `solution`)
-                                                                                                                                        VALUES(NULL,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"""
+
+                        sql_update_query = """INSERT INTO `openvas_result`(`id_result_DB`, `id_report`, `id_result`, `name_vul`, `host`, `port`, `nvt`, `threat`,
+                                                                     `severity`, `description`, `type_verification`, `family`, `t_summary`, `t_insight`,
+                                                                     `t_affected`, `t_impact`, `t_solution`, `t_vuldetect`, `t_solution_type`, `solution`,
+                                                                     `solution_type`) VALUES(NULL,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"""
                         input_data = (
-                            id_report, id_result, name_vul, host, port, type_verification, nvt, family, threat,
-                            severity,
-                            description, tags, solution_type, solution)
+                            id_report, id_result, name_vul, host, port, nvt, threat, severity, description,
+                            type_verification, family,
+                            t_summary, t_insight, t_affected, t_impact, t_solution,
+                            t_vuldetect, t_solution_type, solution, solution_type)
                         cur.execute(sql_update_query, input_data)
                         conn.commit()
                     except:
