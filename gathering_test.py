@@ -1,71 +1,53 @@
 #!/bin/python3
 
 # dependency check for the modules
+import subprocess
+import sys
+import time
+from datetime import datetime
+import arachni
+import DB_connect
+import enum4linux_read_json
+import mariadb
+import nmap
+import json
+import whois
+import whois
 
-ip = "scanme.nmap.org"
+try:
+    data = json.load(open("eng_conf.json"))
+except:
+    print("Engine non inizializzato! eseguire: ./inizializzazione_engine.py ")
+    sys.exit(1)
 
-import bane
+connessione = DB_connect.database_connect()
+conn = connessione.database_connection(data['user_db'], data['password_db'], data['host_db'], int(data['port_db']),
+                                       data['database'])
 
-site_info = bane.info(ip, timeout=1)
-print(site_info)
+cur = conn.cursor()
 
-keys = list(site_info.keys())
-print(keys)
-
-uno = keys[0]
-due = keys[1]
-tre = keys[2]
-
-print("*****************" + uno + "******************")
-print(site_info[uno]["IP address"])
-print(site_info[uno]["Host name"])
-print(site_info[uno]["IP range"])
-print(site_info[uno]["ISP"])
-print(site_info[uno]["Organization"])
-print(site_info[uno]["Country"])
-print(site_info[uno]["Region"])
-print(site_info[uno]["City"])
-print(site_info[uno]["Time zone"])
-print(site_info[uno]["Local time"])
-print(site_info[uno]["Postal Code"])
-print("*****************" + due + "******************")
-print(site_info[due]["IP address"])
-print(site_info[due]["Host name"])
-print(site_info[due]["IP range"])
-print(site_info[due]["ISP"])
-print(site_info[due]["Organization"])
-print(site_info[due]["Country"])
-print(site_info[due]["Region"])
-print(site_info[due]["City"])
-print(site_info[due]["Time zone"])
-print(site_info[due]["Local time"])
-print(site_info[due]["Postal Code"])
-print("*****************" + tre + "******************")
-print(site_info[tre]["IP address"])
-print(site_info[tre]["Host name"])
-print(site_info[tre]["IP range"])
-print(site_info[tre]["ISP"])
-print(site_info[tre]["Organization"])
-print(site_info[tre]["Country"])
-print(site_info[tre]["Region"])
-print(site_info[tre]["City"])
-print(site_info[tre]["Time zone"])
-print(site_info[tre]["Local time"])
-print(site_info[tre]["Postal Code"])
-
-whois = bane.whois(ip)
-
-print(whois)
+id_job = 149
 
 
-link = "http://nmap.org/"
+job = list()
+job.append(id_job)
 
-link_pages = bane.crawl(link, timeout=10)
+sql_select = """SELECT ip,public_ip FROM job where id_job = %s; """
+cur.execute(sql_select, job)
+result = cur.fetchone()
+domain = result[0]
+print(domain)
+public_ip = result[1]
+print(public_ip)
 
-print(link_pages)
+if public_ip == 'on':
+    print(domain)
+    result_whois = whois.whois(domain).text
+    print(result_whois)
+    print("porco")
+    sql_update_query = """INSERT INTO `whois_result` (`id_result_whois`, `id_job`, `ip_domain`, `result`) VALUES (NULL,%s,%s,%s);"""
+    input_data = (id_job, domain, result_whois)
 
-from badpy import * # importing badpy module
-
-print(locate("185.245.183.75","operator"))
-
+    cur.execute(sql_update_query, input_data)
+    conn.commit()
 

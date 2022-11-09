@@ -10,6 +10,34 @@ import enum4linux_read_json
 import mariadb
 import nmap
 import json
+import whois
+
+
+def whois_public_ip(id_j):
+    id_job=id_j
+
+
+    job = list()
+    job.append(id_job)
+
+    job = list()
+    job.append(id_job)
+
+    sql_select = """SELECT ip,public_ip FROM job where id_job = %s; """
+    cur.execute(sql_select, job)
+    result = cur.fetchone()
+    domain = result[0]
+    public_ip = result[1]
+
+    if public_ip == 'on':
+        print(domain)
+        result_whois = whois.whois(domain).text
+        print(result_whois)
+        sql_update_query = """INSERT INTO `whois_result` (`id_result_whois`, `id_job`, `ip_domain`, `result`) VALUES (NULL,%s,%s,%s);"""
+        input_data = (id_job, domain, result_whois)
+
+        cur.execute(sql_update_query, input_data)
+        conn.commit()
 
 
 def update_statistic_host(id_j):
@@ -150,6 +178,18 @@ while True:
                             print("errore nell inserimento dei risultati nella tabella port")
         except:
             print('errore in nmap')
+
+
+        #whois per ip_pubblici
+
+        try:
+            whois_public_ip(id_j)
+        except:
+            print("WHOIS not possible")
+
+
+
+
 
         # aggiorna la statistica del job della tabella statistic_job
 
