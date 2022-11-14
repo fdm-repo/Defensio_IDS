@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+
+#this file is connector between suricata and mysql db
+
+
 # Module Imports
 import subprocess
 import sys
