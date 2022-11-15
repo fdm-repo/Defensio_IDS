@@ -40,7 +40,7 @@ print(domain)
 public_ip = result[1]
 print(public_ip)
 
-if public_ip == 'on':
+if public_ip == 'si':
     print(domain)
     result_whois = whois.whois(domain).text
     print(result_whois)

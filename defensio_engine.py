@@ -218,14 +218,44 @@ while True:
                 bho.append(id_j)
                 arac.execute(arachni_sql_report, bho)
 
+
+        except:
+            print('errore in arachni su servizio http')
+
+        try:
+            arac = conn.cursor()
+            arac.execute(
+                "SELECT Port.id_job, Port.ip,port_n FROM `Port` INNER JOIN job ON job.id_job=Port.id_job WHERE (Port.name='https' OR Port.port_n = '443') AND job.arachni='on';")
+            if arac.rowcount != 0:
+                result = arac.fetchone()
+                print(result)
+                id_j = result[0]
+                ip_target = result[1]
+                port_target = result[2]
+
+                obj = arachni.arachni_class()
+                obj.arachni_https(id_j, ip_target, port_target)
+                arachni_sql_report = "INSERT INTO arachni_report (id_arac_report, id_job) VALUES (NULL, %s);"
+                bho = list()
+                bho.append(id_j)
+                arac.execute(arachni_sql_report, bho)
+
             sql_update_query = """UPDATE job SET arachni = %s WHERE id_job  = %s"""
             input_data = ('off', result[0])
             arac.execute(sql_update_query, input_data)
 
             conn.commit()
+
+            sql_update_query = """UPDATE job SET eseguito_arachni = %s WHERE id_job  = %s"""
+            input_data = ('on', result[0])
+            arac.execute(sql_update_query, input_data)
+
+            conn.commit()
             arac.close()
         except:
-            print('errore in arachni')
+            print('errore in arachni su servizio https')
+
+
 
         # esegue la scansione con enum4linux
 

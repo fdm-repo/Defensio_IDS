@@ -13,7 +13,12 @@ import json
 
 
 class parsing_xml_webscanner:
-    def parsing_report_to_DB(report_XML_NS):
+    def parsing_report_to_DB(report_XML_NS,id_j,ip_j,port_j):
+
+        id_job = id_j
+        ip = ip_j
+        port = port_j
+
 
         file_xml = report_XML_NS
 
@@ -27,7 +32,6 @@ class parsing_xml_webscanner:
 
         ################### genera l'oggetto relativo al file xml in forma dizionario##############
 
-        id_job = 546
 
         tree = ET.parse(file_xml)
         root = tree.getroot()
@@ -115,8 +119,8 @@ class parsing_xml_webscanner:
                         cur.execute(sql_update_query, input_data)
                         conn.commit()
 
-        sql_update_query = """INSERT INTO web_scanner_report(id_report_web, id_job, start_scan, finish_scan, id_report_seed) VALUES(NULL,%s,%s,%s,%s);"""
-        input_data = (id_job,  start_datetime, finish_datetime, seed)
+        sql_update_query = """INSERT INTO web_scanner_report(id_report_web, id_job, ip, port, start_scan, finish_scan, id_report_seed) VALUES(NULL,%s,%s,%s,%s,%s,%s);"""
+        input_data = (id_job, ip, port, start_datetime, finish_datetime, seed)
 
         cur.execute(sql_update_query, input_data)
         conn.commit()
@@ -129,6 +133,5 @@ class parsing_xml_webscanner:
 
 
 
-obj_pars = parsing_xml_webscanner
-obj_pars.parsing_report_to_DB("Arachni_xml.xml")
+
 

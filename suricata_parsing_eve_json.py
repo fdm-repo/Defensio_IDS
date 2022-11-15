@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-
-#this file is connector between suricata and mysql db
-
-
 # Module Imports
 import subprocess
 import sys
@@ -32,6 +28,8 @@ while True :
                     if json_data[x]["event_type"] == 'alert':
                         print('+++++++++++++++++++++++ record +++++++++++++++++++++++++')
                         timestamp = json_data[x]['timestamp']
+                        timestamp_limit = timestamp
+
                         print('Time: ' + timestamp)
                         src_ip = json_data[x]['src_ip']
                         print('Source IP: ' + src_ip)
@@ -75,7 +73,7 @@ while True :
 
                         sql_insert_record = "INSERT INTO `suricata_alert` (`id_result_alert`, `id_asset`, `timestamp`, `src_ip`, `src_port`, `dest_ip`, `dest_port`, `proto`, `action`, `gid`, `signature_id`, `rev`, `signature`, `category`, `severity`) VALUES (NULL,%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s );"
 
-                        input_data = (id_asset,timestamp,src_ip,src_port,dest_ip,dest_port,proto,action,gid,signature_id,rev,signature,category,severity)
+                        input_data = (id_asset, timestamp,src_ip,src_port,dest_ip,dest_port,proto,action,gid,signature_id,rev,signature,category,severity)
                         suricataDB.execute(sql_insert_record, input_data)
                         connDB.commit()
 
@@ -83,9 +81,9 @@ while True :
                         connDB.close()
 
 
-                        timestamp_limit = timestamp
-        print('SURICATA ACTIVE....  Last record: ' + timestamp_limit+'...ZZZzzzz.....zzz...zz...z..')
-        time.sleep(20)
+
+            print('SURICATA ACTIVE....  Last record: ' + timestamp_limit+'...ZZZzzzz.....zzz...zz...z..')
+            time.sleep(20)
     except:
         print("errore: file /var/log/suricata/eve.json no found")
 
