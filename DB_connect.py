@@ -3,22 +3,30 @@
 import sys
 import os
 import time
+import json
 
 import mariadb
 
 
 class database_connect:
 
-    def database_connection(self, utente, password, ip_db, port_server, db):
+    def database_connection(self):
+
+        try:
+            data = json.load(open("eng_conf.json"))
+        except:
+            print("Engine non inizializzato! eseguire: ./inizializzazione_engine.py ")
+            sys.exit(1)
+
 
         for i in range(4):
             try:
                 conn = mariadb.connect(
-                    user=utente,
-                    password=password,
-                    host=ip_db,
-                    database=db,
-                    port=port_server
+                    user=data['user_db'],
+                    password=data['password_db'],
+                    host=data['host_db'],
+                    database=data['database'],
+                    port=int(data['port_db'])
                 )
                 return conn
                 break

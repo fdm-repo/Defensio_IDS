@@ -14,12 +14,9 @@ import json
 
 #Database connection
 try:
-    data = json.load(open("eng_conf.json"))
 
     connessione = DB_connect.database_connect()
-    connDB = connessione.database_connection(data['user_db'], data['password_db'], data['host_db'],
-                                             int(data['port_db']),
-                                             data['database'])
+    connDB = connessione.database_connection()
     enumDB = connDB.cursor()
 except:
     print("enum4linux: errore connessione database" )
@@ -145,19 +142,43 @@ class enum4linux_read_json_class:
                         "listing": "n/a"                                                                                                                                                                                                                                  
                     }                                                                                                                                                                                                                                                     
             """
-            for share in enum_smb['shares']:
-                share_type = str(enum_smb['shares'][share]['type'])
-                share_comment = str(enum_smb['shares'][share]['comment'])
-                share_mapping = str(enum_smb['shares'][share]['access']['mapping'])
-                share_listing = str(enum_smb['shares'][share]['access']['listing'])
 
+            name_share = list(enum_smb['shares'].keys())
+            print(len(name_share))
+            for item in name_share:
+
+                nome_condivisione = item
+                print(nome_condivisione)
+
+                try:
+                    share_type = str(enum_smb['shares'][item]['type'])
+                    print(share_type)
+                except:
+                    share_type = ''
+
+                try:
+                    share_comment = str(enum_smb['shares'][item]['comment'])
+                    print(share_comment)
+                except:
+                    share_comment = ''
+                try:
+                    share_mapping = str(enum_smb['shares'][item]['access']['mapping'])
+                    print(share_mapping)
+                except:
+                    share_mapping = ''
+                try:
+                    share_listing = str(enum_smb['shares'][item]['access']['listing'])
+                    print(share_listing)
+                except:
+                    share_listing = ''
                 # insert share in db
 
-                sql_insert_share = """INSERT INTO `smb_share` (`id_smb_share`, `job`, `host`, `id_smb_enum`, `type`, `comment`, `mapping`, `listing`) VALUES (NULL, %s, %s, %s, %s,%s, %s, %s);"""
-                input_data = (job, target, start_job, share_type, share_comment, share_mapping, share_listing)
+                sql_insert_share = """INSERT INTO `smb_share` (`id_smb_share`, `job`, `host`, `id_smb_enum`, nome_condivisione ,`type`, `comment`, `mapping`, `listing`) VALUES (NULL, %s, %s, %s, %s, %s,%s, %s, %s);"""
+                input_data = (job, target, start_job, nome_condivisione, share_type, share_comment, share_mapping, share_listing)
 
                 enumDB.execute(sql_insert_share, input_data)
                 connDB.commit()
+
 
             """                                                                                                                                                                                                                                                           
             "policy": {                                                                                                                                                                                                                                                   
@@ -257,15 +278,19 @@ class enum4linux_read_json_class:
                 enumDB.execute(sql_insert_error, input_data)
                 connDB.commit()
 
-            for i in range(len(enum_smb['errors']['sessions']['enum_sessions'])):
-                error_enum_sessions = str(enum_smb['errors']['sessions']['enum_sessions'][i])
+            try:
+                for i in range(len(enum_smb['errors']['sessions']['enum_sessions'])):
+                    error_enum_sessions = str(enum_smb['errors']['sessions']['enum_sessions'][i])
 
-                # insert error sessions in db
-                sql_insert_error = """INSERT INTO `smb_errors` (`id_smb_error`, `job`, `host`, `id_smb_enum`, `services`, `sessions`) VALUES (NULL, %s, %s, %s, NULL, %s);"""
-                input_data = (job, target, start_job, error_enum_sessions)
+                    # insert error sessions in db
+                    sql_insert_error = """INSERT INTO `smb_errors` (`id_smb_error`, `job`, `host`, `id_smb_enum`, `services`, `sessions`) VALUES (NULL, %s, %s, %s, NULL, %s);"""
+                    input_data = (job, target, start_job, error_enum_sessions)
 
-                enumDB.execute(sql_insert_error, input_data)
-                connDB.commit()
+                    enumDB.execute(sql_insert_error, input_data)
+                    connDB.commit()
+            except:
+                print("no sessions errors")
+
 
             # prepara la query
 

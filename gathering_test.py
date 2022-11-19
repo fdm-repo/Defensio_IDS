@@ -14,15 +14,10 @@ import json
 import whois
 import whois
 
-try:
-    data = json.load(open("eng_conf.json"))
-except:
-    print("Engine non inizializzato! eseguire: ./inizializzazione_engine.py ")
-    sys.exit(1)
+
 
 connessione = DB_connect.database_connect()
-conn = connessione.database_connection(data['user_db'], data['password_db'], data['host_db'], int(data['port_db']),
-                                       data['database'])
+conn = connessione.database_connection()
 
 cur = conn.cursor()
 

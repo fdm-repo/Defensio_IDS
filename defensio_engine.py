@@ -11,6 +11,10 @@ import mariadb
 import nmap
 import json
 import whois
+from threading import Thread
+
+
+
 
 
 def whois_public_ip(id_j):
@@ -23,35 +27,44 @@ def whois_public_ip(id_j):
     job = list()
     job.append(id_job)
 
+    connessione_whois = DB_connect.database_connect()
+    conn_whois = connessione_whois.database_connection()
+
+    cur_whois = conn_whois.cursor()
     sql_select = """SELECT ip,public_ip FROM job where id_job = %s; """
-    cur.execute(sql_select, job)
-    result = cur.fetchone()
+    cur_whois.execute(sql_select, job)
+    result = cur_whois.fetchone()
     domain = result[0]
     public_ip = result[1]
 
-    if public_ip == 'on':
+    if public_ip == 'si':
         print(domain)
         result_whois = whois.whois(domain).text
         print(result_whois)
         sql_update_query = """INSERT INTO `whois_result` (`id_result_whois`, `id_job`, `ip_domain`, `result`) VALUES (NULL,%s,%s,%s);"""
         input_data = (id_job, domain, result_whois)
 
-        cur.execute(sql_update_query, input_data)
-        conn.commit()
+        cur_whois.execute(sql_update_query, input_data)
+        conn_whois.commit()
 
+    cur_whois.close()
+    conn_whois.close()
 
 def update_statistic_host(id_j):
     id_job = id_j
     # crea il record della statistica del job
 
-    stat_host = conn.cursor()
+    connessione_stat_host = DB_connect.database_connect()
+    conn_stat_host = connessione_stat_host.database_connection()
+
+    stat_host = conn_stat_host.cursor()
     sql_insert_query = """INSERT INTO statistic_job (id_statistic, id_job, Log, Medium, High, N_host, N_service) VALUES (NULL, %s, NULL, NULL, NULL, NULL, NULL); """
 
     job_data = list()
     job_data.append(id_job)
 
     stat_host.execute(sql_insert_query, job_data)
-    conn.commit()
+    conn_stat_host.commit()
 
     # estrae il numero di host trovati per lo specifico job
     sql_query_host_for_job = """ SELECT COUNT(ip) FROM host WHERE id_job= %s; """
@@ -68,23 +81,68 @@ def update_statistic_host(id_j):
     sql_update_query = """UPDATE statistic_job SET N_host = %s , N_service = %s WHERE statistic_job.id_job = %s; """
     update_data = (n_host, n_service, id_job)
     stat_host.execute(sql_update_query, update_data)
-    conn.commit()
+    conn_stat_host.commit()
+
+    stat_host.close()
+    conn_stat_host.close()
 
 
 # setup di configurazione all avvio dell'engine
 
 
+token_ver = ''
+def test():
+
+    global token_ver
+    while True:
+        conn_check = DB_connect.database_connect()
+        conn = conn_check.database_connection()
+        cur = conn.cursor()
+
+        id_ass = "144"
+        id_asset = list()
+        id_asset.append(id_ass)
+
+        try:
+            sql_query_token = """SELECT token FROM engines WHERE engines.codeword = %s; """
+            input_data = id_asset
+            cur.execute(sql_query_token, input_data)
+
+            token = cur.fetchone()
+            token = token[0]
+
+        except:
+            print("nessun token rilevato")
+
+        if token_ver != token:
+            try:
+                sql_update_query = """UPDATE engines SET active_defensio = %s WHERE engines.codeword = %s; """
+                input_data = (token, id_ass)
+                cur.execute(sql_update_query, input_data)
+                conn.commit()
+                token_ver = token
+            except:
+                print("verifica token non effettuata")
+
+        print(datetime.now())
+        print("\ntoken attuale verificato: "+token)
+        time.sleep(10)
+
+t = Thread(target=test)
+t.start()
+
 while True:
+
+
+
+    connessione = DB_connect.database_connect()
+    conn = connessione.database_connection()
 
     try:
         data = json.load(open("eng_conf.json"))
     except:
         print("Engine non inizializzato! eseguire: ./inizializzazione_engine.py ")
         sys.exit(1)
-
-    connessione = DB_connect.database_connect()
-    conn = connessione.database_connection(data['user_db'], data['password_db'], data['host_db'], int(data['port_db']),
-                                           data['database'])
 
     id_ass = data['id_ass']
     id_asset = list()
@@ -142,8 +200,7 @@ while True:
 
             # crea la connessione per caricare i dati sul DB
             connessione = DB_connect.database_connect()
-            conn = connessione.database_connection(data['user_db'], data['password_db'], data['host_db'],
-                                                   int(data['port_db']), data['database'])
+            conn = connessione.database_connection()
 
             cur = conn.cursor()
 
@@ -153,7 +210,7 @@ while True:
                 # inserimento SQL nella tabella HOST
                 cur.execute("INSERT INTO host (id,id_job,start_job,ip,hostname) VALUES (%s,%s,%s,%s,%s)",
                             (vuoto, id_j, start_job, host, nm[host].hostname()))
-
+                conn.commit()
                 # ciclo for per i protocolli riscontrati
                 for proto in nm[host].all_protocols():
                     print("  L____ Protocollo attivo: " + proto)
@@ -174,6 +231,7 @@ while True:
                                 (vuoto, id_j, host, port, nm[host][proto][port]['name'], nm[host][proto][port]['state'],
                                  nm[host][proto][port]['reason'], nm[host][proto][port]['product'],
                                  nm[host][proto][port]['version'], nm[host][proto][port]['extrainfo']))
+                            conn.commit()
                         except:
                             print("errore nell inserimento dei risultati nella tabella port")
         except:
@@ -200,7 +258,11 @@ while True:
 
         # esegue la scansione con arachni
 
+        eseguito_arachni=''
+
         try:
+            connessione = DB_connect.database_connect()
+            conn = connessione.database_connection()
             arac = conn.cursor()
             arac.execute(
                 "SELECT Port.id_job, Port.ip,port_n FROM `Port` INNER JOIN job ON job.id_job=Port.id_job WHERE (Port.name='http' OR Port.port_n = '80') AND job.arachni='on';")
@@ -210,19 +272,34 @@ while True:
                 id_j = result[0]
                 ip_target = result[1]
                 port_target = result[2]
-
+                arac.close()
+                conn.close()
                 obj = arachni.arachni_class()
                 obj.arachni_http(id_j, ip_target, port_target)
+
+
+
+
+                connessione = DB_connect.database_connect()
+                conn = connessione.database_connection()
+                arac = conn.cursor()
                 arachni_sql_report = "INSERT INTO arachni_report (id_arac_report, id_job) VALUES (NULL, %s);"
                 bho = list()
                 bho.append(id_j)
                 arac.execute(arachni_sql_report, bho)
+                arac.close()
+                conn.close()
+                eseguito_arachni = 'on'
+
 
 
         except:
             print('errore in arachni su servizio http')
 
+
         try:
+            connessione = DB_connect.database_connect()
+            conn = connessione.database_connection()
             arac = conn.cursor()
             arac.execute(
                 "SELECT Port.id_job, Port.ip,port_n FROM `Port` INNER JOIN job ON job.id_job=Port.id_job WHERE (Port.name='https' OR Port.port_n = '443') AND job.arachni='on';")
@@ -232,14 +309,38 @@ while True:
                 id_j = result[0]
                 ip_target = result[1]
                 port_target = result[2]
+                arac.close()
+                conn.close()
 
                 obj = arachni.arachni_class()
                 obj.arachni_https(id_j, ip_target, port_target)
+
+
+
+                connessione = DB_connect.database_connect()
+                conn = connessione.database_connection()
+                arac = conn.cursor()
                 arachni_sql_report = "INSERT INTO arachni_report (id_arac_report, id_job) VALUES (NULL, %s);"
                 bho = list()
                 bho.append(id_j)
                 arac.execute(arachni_sql_report, bho)
+                conn.commit()
+                arac.close()
+                conn.close()
+                eseguito_arachni = 'on'
 
+
+
+
+        except:
+            print('errore in arachni su servizio https')
+
+        #ciclo if che si esegue solo se c'è stata una scansione con arachni e modifica i valori nel record del job
+
+        if eseguito_arachni == 'on':
+            connessione = DB_connect.database_connect()
+            conn = connessione.database_connection()
+            arac = conn.cursor()
             sql_update_query = """UPDATE job SET arachni = %s WHERE id_job  = %s"""
             input_data = ('off', result[0])
             arac.execute(sql_update_query, input_data)
@@ -252,39 +353,44 @@ while True:
 
             conn.commit()
             arac.close()
-        except:
-            print('errore in arachni su servizio https')
-
 
 
         # esegue la scansione con enum4linux
 
-        try:
-            enum4linuxqueryjob = conn.cursor()
-            enum4linuxqueryjob.execute(
-                "SELECT Port.id_job, Port.ip, port_n FROM `Port` INNER JOIN job ON job.id_job = Port.id_job WHERE Port.name = 'netbios-ssn' AND job.enumforlinux = 'on';")
+        #try:
+        connessione = DB_connect.database_connect()
+        conn = connessione.database_connection()
 
-            if enum4linuxqueryjob.rowcount != 0:
-                result_enum_job = enum4linuxqueryjob.fetchone()
-                print(result_enum_job)
-                id_j = result_enum_job[0]
-                ip_target = result_enum_job[1]
+        enum4linuxqueryjob = conn.cursor()
+        enum4linuxqueryjob.execute(
+            "SELECT Port.id_job, Port.ip, port_n FROM `Port` INNER JOIN job ON job.id_job = Port.id_job WHERE Port.name = 'netbios-ssn' AND job.enumforlinux = 'on';")
 
-                file_name = str(id_j) + '_' + ip_target
-                print(file_name)
-                cmd = subprocess.run(["./enumforlinux/enum4linux-ng.py", "-A", ip_target, "-oJ", file_name])
+        if enum4linuxqueryjob.rowcount != 0:
+            result_enum_job = enum4linuxqueryjob.fetchone()
+            print(result_enum_job)
+            id_j = result_enum_job[0]
+            ip_target = result_enum_job[1]
 
-                obj_enum4linux_json = enum4linux_read_json.enum4linux_read_json_class()
-                obj_enum4linux_json.enum4linux_read_json(id_j, start_job, file_name + '.json')
+            file_name = str(id_j) + '_' + ip_target
+            print(file_name)
+            cmd = subprocess.run(["./enumforlinux/enum4linux-ng.py", "-A", ip_target, "-oJ", file_name])
 
-            sql_update_query = """UPDATE job SET enumforlinux = %s WHERE id_job  = %s"""
-            input_data = ('off', result[0])
-            enum4linuxqueryjob.execute(sql_update_query, input_data)
-            conn.commit()
-            enum4linuxqueryjob.close()
+            obj_enum4linux_json = enum4linux_read_json.enum4linux_read_json_class()
+            obj_enum4linux_json.enum4linux_read_json(id_j, start_job, file_name + '.json')
 
-        except:
-            print('errore in enum4linux')
+        sql_update_query = """UPDATE job SET enumforlinux = %s WHERE id_job  = %s"""
+        input_data = ('off', result[0])
+        enum4linuxqueryjob.execute(sql_update_query, input_data)
+        conn.commit()
+        enum4linuxqueryjob.close()
+        conn.close()
+
+        #except:
+        #    print('errore in enum4linux')
+
+        connessione = DB_connect.database_connect()
+        conn = connessione.database_connection()
+
 
         # scrive il tag esecuzione sul record del job
         cur = conn.cursor()
@@ -299,8 +405,7 @@ while True:
     check = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     conn_check = DB_connect.database_connect()
-    conn2 = conn_check.database_connection(data['user_db'], data['password_db'], data['host_db'],
-                                           int(data['port_db']), data['database'])
+    conn2 = conn_check.database_connection()
 
     cur2 = conn2.cursor()
 

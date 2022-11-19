@@ -44,7 +44,7 @@ class arachni_class:
                             Fore.YELLOW + "\nExecute Arachni (HTTP mode) on port " + port + " .\n" + Style.RESET_ALL)
                         cmd = subprocess.run(["mkdir", repDir])
 
-                        cmd = subprocess.run(["./arachni/bin/arachni", "--output-verbose", "--scope-include-subdomains",
+                        cmd = subprocess.run(["./arachni/bin/arachni", "--output-verbose","--check=*" ,
                                               "http://" + ipScan + ":" + port,
                                               "--report-save-path=" + repDir + "/Arachni_http.afr"])
                         cmd = subprocess.run(["./arachni/bin/arachni_reporter",
@@ -73,7 +73,7 @@ class arachni_class:
                             Fore.YELLOW + "\nExecute Arachni (HTTPS mode) on port " + port + " .\n" + Style.RESET_ALL)
                         cmd = subprocess.run(["mkdir", repDir])
 
-                        cmd = subprocess.run(["./arachni/bin/arachni", "--output-verbose", "--scope-include-subdomains",
+                        cmd = subprocess.run(["./arachni/bin/arachni", "--output-verbose", "--scope-include-subdomains","--check=*" ,
                                               "https://" + ipScan + ":" + port,
                                               "--report-save-path=" + repDir + "/Arachni_https.afr"])
 

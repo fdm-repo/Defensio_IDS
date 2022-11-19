@@ -6,5 +6,6 @@
     <mapping directory="$PROJECT_DIR$/enum4linux-ng" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/h8mail" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/pwnedOrNot" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/temp_folder/VulnWebScan" vcs="Git" />
   </component>
 </project>

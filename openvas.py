@@ -149,8 +149,9 @@ while True:
 
 
     connessione = DB_connect.database_connect()
-    conn = connessione.database_connection(data['user_db'], data['password_db'], data['host_db'], int(data['port_db']),
-                                           data['database'])
+    conn = connessione.database_connection()
+
+
 
     id_ass = data['id_ass']
     id_asset = list()
@@ -338,8 +339,7 @@ while True:
     check = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     conn_check = DB_connect.database_connect()
-    conn2 = conn_check.database_connection(data['user_db'], data['password_db'], data['host_db'],
-                                           int(data['port_db']), data['database'])
+    conn2 = conn_check.database_connection()
 
     cur2 = conn2.cursor()
 
