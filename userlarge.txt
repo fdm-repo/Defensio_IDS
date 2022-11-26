@@ -1,0 +1,85 @@
+ EAdmin
+ Inc"
+ Ltd"
+ UAMIS_
+ UNITY_
+ UOMNI_
+ UVPIM_
+!root
+$ALOC$
+$SRV
+$system
+(any 3 characters)
+(any 3 chars)
+(any 3characters)
+(any)
+(created)
+(hostname/ipaddress)
+(null)
+**23646
+**266344
+**ADMIN(**23646)
+0
+1
+1.1
+11111
+111111
+11111111
+12.x
+123
+1234
+12345
+123456
+12345678
+1502
+18140815
+18364
+1nstaller
+2
+22222222
+266344
+2800
+30
+TURBINE
+Tasman
+anon
+anonymous
+any
+anya
+ao
+aozt
+apache
+sun123
+super
+super.super
+superadmin
+superdba
+superman
+superuser
+superviso
+tellabs
+temp1
+test
+testing
+user_publisher
+username
+username123
+utentesamba
+uucp
+uucpadm
+uwmadmin
+vagrant
+vcr
+veda
+wlseuser
+wpsadmin
+wradmin
+write
+www
+www-data
+xbox
+xd
+xmi_demo
+zabbix
+zhaowei
+zxin10
