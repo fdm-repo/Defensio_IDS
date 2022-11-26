@@ -12,18 +12,22 @@ import json
 
 
 
-#Database connection
-try:
 
-    connessione = DB_connect.database_connect()
-    connDB = connessione.database_connection()
-    enumDB = connDB.cursor()
-except:
-    print("enum4linux: errore connessione database" )
 
 class enum4linux_read_json_class:
 
     def enum4linux_read_json(self, job_enum, start_job, file_json):
+
+        # Database connection
+        try:
+
+            connessione = DB_connect.database_connect()
+            connDB = connessione.database_connection()
+            enumDB = connDB.cursor()
+        except:
+            print("enum4linux: errore connessione database")
+
+
         job = job_enum
         start_job = start_job
         file_json = file_json
