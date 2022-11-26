@@ -2,6 +2,7 @@
 # Module Imports
 import subprocess
 import sys
+import os
 import time
 from datetime import datetime
 import arachni
@@ -357,6 +358,8 @@ while True:
 
         # esegue la scansione con enum4linux
 
+        eseguito_enum4linux = ''
+
         #try:
         connessione = DB_connect.database_connect()
         conn = connessione.database_connection()
@@ -377,16 +380,40 @@ while True:
 
             obj_enum4linux_json = enum4linux_read_json.enum4linux_read_json_class()
             obj_enum4linux_json.enum4linux_read_json(id_j, start_job, file_name + '.json')
+            eseguito_enum4linux = 'on'
+            try:
+                os.remove(file_name+".json")
+            except:
+                print("not remove Buffer")
 
-        sql_update_query = """UPDATE job SET enumforlinux = %s WHERE id_job  = %s"""
-        input_data = ('off', result[0])
-        enum4linuxqueryjob.execute(sql_update_query, input_data)
-        conn.commit()
         enum4linuxqueryjob.close()
         conn.close()
 
         #except:
         #    print('errore in enum4linux')
+
+        #ciclo if che si esegue solo se c'è stata una scansione con arachni e modifica i valori nel record del job
+
+        if eseguito_enum4linux == 'on':
+            connessione = DB_connect.database_connect()
+            conn = connessione.database_connection()
+            enum4 = conn.cursor()
+            sql_update_query = """UPDATE job SET enumforlinux = %s WHERE id_job  = %s"""
+            input_data = ('off', result[0])
+            enum4.execute(sql_update_query, input_data)
+
+            conn.commit()
+
+            sql_update_query = """UPDATE job SET eseguito_enum4linux = %s WHERE id_job  = %s"""
+            input_data = ('on', id_j)
+            enum4.execute(sql_update_query, input_data)
+
+            conn.commit()
+            enum4.close()
+
+
+
+
 
         connessione = DB_connect.database_connect()
         conn = connessione.database_connection()

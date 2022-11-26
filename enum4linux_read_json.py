@@ -27,7 +27,6 @@ class enum4linux_read_json_class:
         job = job_enum
         start_job = start_job
         file_json = file_json
-        job = 'prova'
         with open(file_json, 'r') as json_file:
             enum_smb = json.load(json_file)
             target = str(enum_smb['target']['host'])
