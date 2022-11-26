@@ -8,6 +8,7 @@ from datetime import datetime
 import arachni
 import DB_connect
 import enum4linux_read_json
+import SMBRUTE
 import mariadb
 import nmap
 import json
@@ -360,37 +361,49 @@ while True:
 
         eseguito_enum4linux = ''
 
-        #try:
-        connessione = DB_connect.database_connect()
-        conn = connessione.database_connection()
+        try:
+            connessione = DB_connect.database_connect()
+            conn = connessione.database_connection()
 
-        enum4linuxqueryjob = conn.cursor()
-        enum4linuxqueryjob.execute(
-            "SELECT Port.id_job, Port.ip, port_n FROM `Port` INNER JOIN job ON job.id_job = Port.id_job WHERE Port.name = 'netbios-ssn' AND job.enumforlinux = 'on';")
+            enum4linuxqueryjob = conn.cursor()
+            enum4linuxqueryjob.execute(
+                "SELECT Port.id_job, Port.ip, port_n FROM `Port` INNER JOIN job ON job.id_job = Port.id_job WHERE Port.name = 'netbios-ssn' AND job.enumforlinux = 'on';")
 
-        if enum4linuxqueryjob.rowcount != 0:
-            result_enum_job = enum4linuxqueryjob.fetchone()
-            print(result_enum_job)
-            id_j = result_enum_job[0]
-            ip_target = result_enum_job[1]
+            if enum4linuxqueryjob.rowcount != 0:
+                result_enum_job = enum4linuxqueryjob.fetchone()
+                print(result_enum_job)
+                id_j = result_enum_job[0]
+                ip_target = result_enum_job[1]
 
-            file_name = str(id_j) + '_' + ip_target
-            print(file_name)
-            cmd = subprocess.run(["./enumforlinux/enum4linux-ng.py", "-A", ip_target, "-oJ", file_name])
+                file_name = str(id_j) + '_' + ip_target
+                print(file_name)
+                cmd = subprocess.run(["./enumforlinux/enum4linux-ng.py", "-A", ip_target, "-oJ", file_name])
 
-            obj_enum4linux_json = enum4linux_read_json.enum4linux_read_json_class()
-            obj_enum4linux_json.enum4linux_read_json(id_j, start_job, file_name + '.json')
-            eseguito_enum4linux = 'on'
-            try:
-                os.remove(file_name+".json")
-            except:
-                print("not remove Buffer")
+                obj_enum4linux_json = enum4linux_read_json.enum4linux_read_json_class()
+                obj_enum4linux_json.enum4linux_read_json(id_j, start_job, file_name + '.json')
+                eseguito_enum4linux = 'on'
+                try:
+                    os.remove(file_name + ".json")
+                except:
+                    print("not remove Buffer")
 
-        enum4linuxqueryjob.close()
-        conn.close()
 
-        #except:
-        #    print('errore in enum4linux')
+
+
+
+            enum4linuxqueryjob.close()
+            conn.close()
+
+
+
+        except:
+            print('errore in enum4linux')
+
+        fileusers = "userlarge.txt"
+        filepass = "passsmall.txt"
+
+        bruteforce = SMBRUTE.smbbruteforce()
+        bruteforce.bruteforce(ip_target, fileusers, filepass)
 
         #ciclo if che si esegue solo se c'è stata una scansione con arachni e modifica i valori nel record del job
 
