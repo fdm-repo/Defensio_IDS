@@ -9,7 +9,6 @@ import arachni
 import DB_connect
 import enum4linux_read_json
 import SMBRUTE
-import extrac_dir_file_bruteforce
 import mariadb
 import nmap
 import json
@@ -248,10 +247,6 @@ while True:
         except:
             print("WHOIS not possible")
 
-
-
-
-
         # aggiorna la statistica del job della tabella statistic_job
 
         try:
@@ -259,153 +254,51 @@ while True:
         except:
             print('errore nell\'update della tabella statistica')
 
-        # esegue la scansione con arachni
-
-        eseguito_arachni=''
-
-        try:
-            connessione = DB_connect.database_connect()
-            conn = connessione.database_connection()
-            arac = conn.cursor()
-            arac.execute(
-                "SELECT Port.id_job, Port.ip,port_n FROM `Port` INNER JOIN job ON job.id_job=Port.id_job WHERE (Port.name='http' OR Port.port_n = '80') AND job.arachni='on';")
-            if arac.rowcount != 0:
-                result = arac.fetchone()
-                print(result)
-                id_j = result[0]
-                ip_target = result[1]
-                port_target = result[2]
-                arac.close()
-                conn.close()
-                obj = arachni.arachni_class()
-                obj.arachni_http(id_j, ip_target, port_target)
-
-
-
-
-                connessione = DB_connect.database_connect()
-                conn = connessione.database_connection()
-                arac = conn.cursor()
-                arachni_sql_report = "INSERT INTO arachni_report (id_arac_report, id_job) VALUES (NULL, %s);"
-                bho = list()
-                bho.append(id_j)
-                arac.execute(arachni_sql_report, bho)
-                arac.close()
-                conn.close()
-                eseguito_arachni = 'on'
-
-
-
-        except:
-            print('errore in arachni su servizio http')
-
-
-        try:
-            connessione = DB_connect.database_connect()
-            conn = connessione.database_connection()
-            arac = conn.cursor()
-            arac.execute(
-                "SELECT Port.id_job, Port.ip,port_n FROM `Port` INNER JOIN job ON job.id_job=Port.id_job WHERE (Port.name='https' OR Port.port_n = '443') AND job.arachni='on';")
-            if arac.rowcount != 0:
-                result = arac.fetchone()
-                print(result)
-                id_j = result[0]
-                ip_target = result[1]
-                port_target = result[2]
-                arac.close()
-                conn.close()
-
-                obj = arachni.arachni_class()
-                obj.arachni_https(id_j, ip_target, port_target)
-
-
-
-                connessione = DB_connect.database_connect()
-                conn = connessione.database_connection()
-                arac = conn.cursor()
-                arachni_sql_report = "INSERT INTO arachni_report (id_arac_report, id_job) VALUES (NULL, %s);"
-                bho = list()
-                bho.append(id_j)
-                arac.execute(arachni_sql_report, bho)
-                conn.commit()
-                arac.close()
-                conn.close()
-                eseguito_arachni = 'on'
-
-
-
-
-        except:
-            print('errore in arachni su servizio https')
-
-        #ciclo if che si esegue solo se c'è stata una scansione con arachni e modifica i valori nel record del job
-
-        if eseguito_arachni == 'on':
-            connessione = DB_connect.database_connect()
-            conn = connessione.database_connection()
-            arac = conn.cursor()
-            sql_update_query = """UPDATE job SET arachni = %s WHERE id_job  = %s"""
-            input_data = ('off', result[0])
-            arac.execute(sql_update_query, input_data)
-
-            conn.commit()
-
-            sql_update_query = """UPDATE job SET eseguito_arachni = %s WHERE id_job  = %s"""
-            input_data = ('on', result[0])
-            arac.execute(sql_update_query, input_data)
-
-            conn.commit()
-            arac.close()
-
-
         # esegue la scansione con enum4linux
 
         eseguito_enum4linux = ''
 
-        try:
-            connessione = DB_connect.database_connect()
-            conn = connessione.database_connection()
+        #try:
+        connessione = DB_connect.database_connect()
+        conn = connessione.database_connection()
 
-            enum4linuxqueryjob = conn.cursor()
-            enum4linuxqueryjob.execute(
-                "SELECT Port.id_job, Port.ip, port_n FROM `Port` INNER JOIN job ON job.id_job = Port.id_job WHERE Port.name = 'netbios-ssn' AND job.enumforlinux = 'on';")
+        enum4linuxqueryjob = conn.cursor()
+        enum4linuxqueryjob.execute(
+            "SELECT Port.id_job, Port.ip, port_n FROM `Port` INNER JOIN job ON job.id_job = Port.id_job WHERE Port.name = 'netbios-ssn' AND job.enumforlinux = 'on';")
 
-            if enum4linuxqueryjob.rowcount != 0:
-                result_enum_job = enum4linuxqueryjob.fetchone()
-                print(result_enum_job)
-                id_j = result_enum_job[0]
-                ip_target = result_enum_job[1]
+        if enum4linuxqueryjob.rowcount != 0:
+            result_enum_job = enum4linuxqueryjob.fetchone()
+            print(result_enum_job)
+            id_j = result_enum_job[0]
+            ip_target = result_enum_job[1]
 
-                file_name = str(id_j) + '_' + ip_target
-                print(file_name)
-                cmd = subprocess.run(["./enumforlinux/enum4linux-ng.py", "-A", ip_target, "-oJ", file_name])
+            file_name = str(id_j) + '_' + ip_target
+            print(file_name)
+            cmd = subprocess.run(["./enumforlinux/enum4linux-ng.py", "-A", ip_target, "-oJ", file_name])
 
-                obj_enum4linux_json = enum4linux_read_json.enum4linux_read_json_class()
-                obj_enum4linux_json.enum4linux_read_json(id_j, start_job, file_name + '.json')
-                eseguito_enum4linux = 'on'
-                try:
-                    os.remove(file_name + ".json")
-                except:
-                    print("not remove Buffer")
+            obj_enum4linux_json = enum4linux_read_json.enum4linux_read_json_class()
+            obj_enum4linux_json.enum4linux_read_json(id_j, start_job, file_name + '.json')
+            eseguito_enum4linux = 'on'
+            try:
+                os.remove(file_name + ".json")
+            except:
+                print("not remove Buffer")
 
-                fileusers = "userlarge.txt"
-                filepass = "passsmall.txt"
+            fileusers = "userlarge.txt"
+            filepass = "passsmall.txt"
 
-                bruteforce = SMBRUTE.smbbruteforce()
-                bruteforce.bruteforce(ip_target, fileusers, filepass)
-
-                parsing_sqlmap = extrac_dir_file_bruteforce.parsing_sqlmap()
-                parsing_sqlmap.parsing_sqlmap_report()
+            bruteforce = SMBRUTE.smbbruteforce()
+            bruteforce.bruteforce(id_j,ip_target, fileusers, filepass)
 
 
 
-            enum4linuxqueryjob.close()
-            conn.close()
+        enum4linuxqueryjob.close()
+        conn.close()
 
 
 
-        except:
-            print('errore in enum4linux')
+        #except:
+            #print('errore in enum4linux')
 
 
 

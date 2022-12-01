@@ -10,3 +10,4 @@ ftp123
 ftpuser
 marketing
 utentesamba
+Passw0rd!
