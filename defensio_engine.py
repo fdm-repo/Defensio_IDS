@@ -9,6 +9,7 @@ import arachni
 import DB_connect
 import enum4linux_read_json
 import SMBRUTE
+import extrac_dir_file_bruteforce
 import mariadb
 import nmap
 import json
@@ -387,7 +388,14 @@ while True:
                 except:
                     print("not remove Buffer")
 
+                fileusers = "userlarge.txt"
+                filepass = "passsmall.txt"
 
+                bruteforce = SMBRUTE.smbbruteforce()
+                bruteforce.bruteforce(ip_target, fileusers, filepass)
+
+                parsing_sqlmap = extrac_dir_file_bruteforce.parsing_sqlmap()
+                parsing_sqlmap.parsing_sqlmap_report()
 
 
 
@@ -399,11 +407,7 @@ while True:
         except:
             print('errore in enum4linux')
 
-        fileusers = "userlarge.txt"
-        filepass = "passsmall.txt"
 
-        bruteforce = SMBRUTE.smbbruteforce()
-        bruteforce.bruteforce(ip_target, fileusers, filepass)
 
         #ciclo if che si esegue solo se c'è stata una scansione con arachni e modifica i valori nel record del job
 

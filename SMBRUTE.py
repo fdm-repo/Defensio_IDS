@@ -48,7 +48,7 @@ class smbbruteforce:
                 u = x.split(":")[0]
                 p = x.split(":")[1]
                 print("[*] SHARES FOR USER : \033[30;42m {} \033[m  AND PASSWORD : \033[30;42m {} \033[m".format(u, p))
-                os.system("smbmap -R -u {} -p {} -H {}".format(u, p, ip, ))
+                os.system("smbmap -R -u {} -p {} -H {} -g > report_brute.txt".format(u, p, ip, ))
                 print("+----------------------------------------------------------------------+")
 
         print("\n")
