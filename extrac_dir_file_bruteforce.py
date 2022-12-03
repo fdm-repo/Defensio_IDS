@@ -11,8 +11,6 @@ class parsing_sqlmap():
         user = user
         password = password
 
-        connessione = DB_connect.database_connect()
-        conn = connessione.database_connection()
 
         with open('report_brute_smb.csv', newline='') as csvfile:
             spamreader = csv.reader(csvfile, delimiter=',', quotechar='|')
