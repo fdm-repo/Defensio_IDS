@@ -288,7 +288,7 @@ while True:
             filepass = "passsmall.txt"
 
             bruteforce = SMBRUTE.smbbruteforce()
-            bruteforce.bruteforce(id_j,ip_target, fileusers, filepass)
+            bruteforce.bruteforce(id_j, ip_target, fileusers, filepass)
 
 
 
