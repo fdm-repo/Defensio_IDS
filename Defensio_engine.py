@@ -183,7 +183,7 @@ while True:
             port_target = str(low_port) + "-" + str(high_port)
         print("Scansione attiva sulle porte: " + port_target)
 
-        argument = "-sV -p" + port_target
+        argument = "-O -sV -p" + port_target
 
         # genera la stringa di inizio del job
         start_job = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -209,9 +209,45 @@ while True:
             # ciclo for di estrazione dei dati raccolti dalla scansione
             for host in nm.all_hosts():
                 print("** Host trovato: " + host)
+                try:
+                    os_name = nm[host]['osmatch'][0]['name']
+                    print("OS: "+os_name )
+                except:
+                    os_name = ''
+
+                try:
+                    os_accuracy = nm[host]['osmatch'][0]['accuracy']
+                    print(os_accuracy)
+                except:
+                    os_accuracy=''
+
+                try:
+                    type = nm[host]['osmatch'][0]['osclass'][0]['type']
+                    print(type)
+                except:
+                    type = ''
+
+                try:
+                    vendor = nm[host]['osmatch'][0]['osclass'][0]['vendor']
+                    print(vendor)
+                except:
+                    vendor = ''
+
+                try:
+                    osfamily = nm[host]['osmatch'][0]['osclass'][0]['osfamily']
+                    print(osfamily)
+                except:
+                    osfamily = ''
+
+                try:
+                    osgen = nm[host]['osmatch'][0]['osclass'][0]['osgen']
+                    print(osgen)
+                except:
+                    osgen = ''
+
                 # inserimento SQL nella tabella HOST
-                cur.execute("INSERT INTO host (id,id_job,start_job,ip,hostname) VALUES (%s,%s,%s,%s,%s)",
-                            (vuoto, id_j, start_job, host, nm[host].hostname()))
+                cur.execute("INSERT INTO host (id, id_job, start_job, ip, hostname, os_name, os_accuracy, type, vendor, osfamily, osgen) VALUES (NULL,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+                            (id_j, start_job, host, nm[host].hostname(),os_name, os_accuracy, type, vendor, osfamily, osgen))
                 conn.commit()
                 # ciclo for per i protocolli riscontrati
                 for proto in nm[host].all_protocols():
