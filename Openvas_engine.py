@@ -9,6 +9,7 @@ import xml.etree.ElementTree as ET
 import parsing_xml_report_NetScanner
 import json
 import sys
+from threading import Thread
 
 #username e password per il docker GVM
 
@@ -140,11 +141,17 @@ def test():
 
     global token_ver
     while True:
+        try:
+            data = json.load(open("eng_conf.json"))
+        except:
+            print("Engine non inizializzato! eseguire: ./inizializzazione_engine.py ")
+            sys.exit(1)
+        id_ass = data['id_ass']
+
         conn_check = DB_connect.database_connect()
         conn = conn_check.database_connection()
         cur = conn.cursor()
 
-        id_ass = "144"
         id_asset = list()
         id_asset.append(id_ass)
 

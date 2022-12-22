@@ -27,8 +27,12 @@ def test():
         conn_check = DB_connect.database_connect()
         conn = conn_check.database_connection()
         cur = conn.cursor()
-
-        id_ass = "144"
+        try:
+            data = json.load(open("eng_conf.json"))
+        except:
+            print("Engine non inizializzato! eseguire: ./inizializzazione_engine.py ")
+            sys.exit(1)
+        id_ass = data['id_ass']
         id_asset = list()
         id_asset.append(id_ass)
 

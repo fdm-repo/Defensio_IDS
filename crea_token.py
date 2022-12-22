@@ -15,17 +15,14 @@ try:
 except:
     print("Engine non inizializzato! eseguire: ./inizializzazione_engine.py ")
     sys.exit(1)
-
+id_ass = data['id_ass']
 
 conn_check = DB_connect.database_connect()
-conn = conn_check.database_connection(data['user_db'], data['password_db'], data['host_db'],
-                                           int(data['port_db']), data['database'])
-
+conn = conn_check.database_connection()
 cur = conn.cursor()
 
 
 length_of_string = 12
-id_ass = "144"
 
 while True:
     stringa = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length_of_string))
