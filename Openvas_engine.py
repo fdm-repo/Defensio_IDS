@@ -137,6 +137,7 @@ def update_statistic_vul(id_j):
     stat_host.execute(sql_update_query, update_data)
     conn.commit()
 
+token_ver = ''
 def test():
 
     global token_ver
