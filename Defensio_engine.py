@@ -182,16 +182,22 @@ while True:
         netmask = result[3]
         ip_net = ip + '/' + netmask
         single_port = str(result[4])
+        print(single_port)
+        if single_port == 'None':
+            single_port =''
+
         low_port = result[5]
         high_port = result[6]
-        if single_port != 'None':
+        if single_port != '':
             port_target = single_port
         else:
             port_target = str(low_port) + "-" + str(high_port)
+
         print("Scansione attiva sulle porte: " + port_target)
 
         argument = "-O -sV -p" + port_target
 
+        print(argument)
         # genera la stringa di inizio del job
         start_job = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         print("Time avvio job: " + str(start_job))
@@ -200,87 +206,88 @@ while True:
 
         # oggetto portscanner
 
-        try:
-            nm = nmap.PortScanner()
+        #try:
+        nm = nmap.PortScanner()
 
-            # scansione secondo parametri del job
+        # scansione secondo parametri del job
 
-            nm.scan(hosts=ip_net, arguments=argument)
+        nm.scan(hosts=ip_net, arguments=argument)
 
-            # crea la connessione per caricare i dati sul DB
-            connessione = DB_connect.database_connect()
-            conn = connessione.database_connection()
+        # crea la connessione per caricare i dati sul DB
+        connessione = DB_connect.database_connect()
+        conn = connessione.database_connection()
 
-            cur = conn.cursor()
+        cur = conn.cursor()
 
-            # ciclo for di estrazione dei dati raccolti dalla scansione
-            for host in nm.all_hosts():
-                print("** Host trovato: " + host)
-                try:
-                    os_name = nm[host]['osmatch'][0]['name']
-                    print("OS: "+os_name )
-                except:
-                    os_name = ''
+        # ciclo for di estrazione dei dati raccolti dalla scansione
+        for host in nm.all_hosts():
+            print("** Host trovato: " + host)
+            try:
+                os_name = nm[host]['osmatch'][0]['name']
+                print("OS: " + os_name)
+            except:
+                os_name = ''
 
-                try:
-                    os_accuracy = nm[host]['osmatch'][0]['accuracy']
-                    print(os_accuracy)
-                except:
-                    os_accuracy=''
+            try:
+                os_accuracy = nm[host]['osmatch'][0]['accuracy']
+                print(os_accuracy)
+            except:
+                os_accuracy = ''
 
-                try:
-                    type = nm[host]['osmatch'][0]['osclass'][0]['type']
-                    print(type)
-                except:
-                    type = ''
+            try:
+                type = nm[host]['osmatch'][0]['osclass'][0]['type']
+                print(type)
+            except:
+                type = ''
 
-                try:
-                    vendor = nm[host]['osmatch'][0]['osclass'][0]['vendor']
-                    print(vendor)
-                except:
-                    vendor = ''
+            try:
+                vendor = nm[host]['osmatch'][0]['osclass'][0]['vendor']
+                print(vendor)
+            except:
+                vendor = ''
 
-                try:
-                    osfamily = nm[host]['osmatch'][0]['osclass'][0]['osfamily']
-                    print(osfamily)
-                except:
-                    osfamily = ''
+            try:
+                osfamily = nm[host]['osmatch'][0]['osclass'][0]['osfamily']
+                print(osfamily)
+            except:
+                osfamily = ''
 
-                try:
-                    osgen = nm[host]['osmatch'][0]['osclass'][0]['osgen']
-                    print(osgen)
-                except:
-                    osgen = ''
+            try:
+                osgen = nm[host]['osmatch'][0]['osclass'][0]['osgen']
+                print(osgen)
+            except:
+                osgen = ''
 
-                # inserimento SQL nella tabella HOST
-                cur.execute("INSERT INTO host (id, id_job, start_job, ip, hostname, os_name, os_accuracy, type, vendor, osfamily, osgen) VALUES (NULL,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
-                            (id_j, start_job, host, nm[host].hostname(),os_name, os_accuracy, type, vendor, osfamily, osgen))
-                conn.commit()
-                # ciclo for per i protocolli riscontrati
-                for proto in nm[host].all_protocols():
-                    print("  L____ Protocollo attivo: " + proto)
-                    # creazione di una lista di porte trovate nella scansione
-                    localport = nm[host][proto].keys()
+            # inserimento SQL nella tabella HOST
+            cur.execute(
+                "INSERT INTO host (id, id_job, start_job, ip, hostname, os_name, os_accuracy, type, vendor, osfamily, osgen) VALUES (NULL,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+                (id_j, start_job, host, nm[host].hostname(), os_name, os_accuracy, type, vendor, osfamily, osgen))
+            conn.commit()
+            # ciclo for per i protocolli riscontrati
+            for proto in nm[host].all_protocols():
+                print("  L____ Protocollo attivo: " + proto)
+                # creazione di una lista di porte trovate nella scansione
+                localport = nm[host][proto].keys()
 
-                    # ordine delle porte scoperte
-                    sorted(localport)
+                # ordine delle porte scoperte
+                sorted(localport)
 
-                    # ciclo for sulle porte scoperte
-                    for port in localport:
-                        print("      L____ Servizio sulla porta: " + str(port) + " | Tipo servizio: " +
-                              nm[host][proto][port]['name'] + " | Stato:" + nm[host][proto][port]['state'])
-                        # inserimento SQL nella tabella Port
-                        try:
-                            cur.execute(
-                                "INSERT INTO Port (id_port,id_job,ip,port_n,name,state,reason,product,version,info) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
-                                (vuoto, id_j, host, port, nm[host][proto][port]['name'], nm[host][proto][port]['state'],
-                                 nm[host][proto][port]['reason'], nm[host][proto][port]['product'],
-                                 nm[host][proto][port]['version'], nm[host][proto][port]['extrainfo']))
-                            conn.commit()
-                        except:
-                            print("errore nell inserimento dei risultati nella tabella port")
-        except:
-            print('errore in nmap')
+                # ciclo for sulle porte scoperte
+                for port in localport:
+                    print("      L____ Servizio sulla porta: " + str(port) + " | Tipo servizio: " +
+                          nm[host][proto][port]['name'] + " | Stato:" + nm[host][proto][port]['state'])
+                    # inserimento SQL nella tabella Port
+                    try:
+                        cur.execute(
+                            "INSERT INTO Port (id_port,id_job,ip,port_n,name,state,reason,product,version,info) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+                            (vuoto, id_j, host, port, nm[host][proto][port]['name'], nm[host][proto][port]['state'],
+                             nm[host][proto][port]['reason'], nm[host][proto][port]['product'],
+                             nm[host][proto][port]['version'], nm[host][proto][port]['extrainfo']))
+                        conn.commit()
+                    except:
+                        print("errore nell inserimento dei risultati nella tabella port")
+        #except:
+            #print('errore in nmap')
 
 
         #whois per ip_pubblici
