@@ -314,7 +314,7 @@ while True:
 
         enum4linuxqueryjob = conn.cursor()
         enum4linuxqueryjob.execute(
-            "SELECT Port.id_job, Port.ip, port_n FROM `Port` INNER JOIN job ON job.id_job = Port.id_job WHERE Port.name = 'netbios-ssn' AND job.enumforlinux = 'on';")
+            "SELECT Port.id_job, Port.ip, port_n FROM `Port` INNER JOIN job ON job.id_job = Port.id_job WHERE Port.name = 'netbios-ssn' AND job.enumforlinux = 'on' AND job.net_discovery='off';")
 
         if enum4linuxqueryjob.rowcount != 0:
             result_enum_job = enum4linuxqueryjob.fetchone()
@@ -352,15 +352,12 @@ while True:
 
 
 
-        #ciclo if che si esegue solo se c'è stata una scansione con arachni e modifica i valori nel record del job
+
 
         if eseguito_enum4linux == 'on':
             connessione = DB_connect.database_connect()
             conn = connessione.database_connection()
             enum4 = conn.cursor()
-            sql_update_query = """UPDATE job SET enumforlinux = %s WHERE id_job  = %s"""
-            input_data = ('off', result[0])
-            enum4.execute(sql_update_query, input_data)
 
             conn.commit()
 
