@@ -64,6 +64,15 @@ while True:
             monthday = job_schedulated[6]
             print("Abilitata scansione mensile: " + en_monthday + " Giorno: " + monthday + " Orario: " + orario)
 
+            if (en_day == 'on' and orario == ora_attuale):
+                print("***************job giornaliero attivato*****************")
+            if (en_weekday == 'on' and orario == ora_attuale and weekday == giorno_settimana):
+                print("*****    ***********    job settimanale attivato   *****    ***********")
+            if (en_monthday == 'on' and orario == ora_attuale and monthday == giorno_mese):
+                print("*****++++++++***********    job mensile attivato   *****+++++++++***********")
+
+
+
 
 
     time.sleep(10)
