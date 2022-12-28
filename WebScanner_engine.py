@@ -184,7 +184,7 @@ while True:
 
     cur2 = conn2.cursor()
 
-    sql_update_query = """UPDATE engines SET last_check_ND = %s WHERE engines.codeword = %s; """
+    sql_update_query = """UPDATE engines SET last_check_WS = %s WHERE engines.codeword = %s; """
     input_data = (check, id_ass)
     cur2.execute(sql_update_query, input_data)
     conn2.commit()
