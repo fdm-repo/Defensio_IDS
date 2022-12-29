@@ -6,7 +6,7 @@ import time
 import random
 import string
 import DB_connect
-
+import os
 import json
 import whois
 
@@ -26,12 +26,14 @@ length_of_string = 12
 
 while True:
     stringa = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length_of_string))
+    print("-------------DEFENSIO Token generato------------------")
     print(stringa)
     sql_update_query = """UPDATE engines SET token = %s WHERE engines.codeword = %s; """
     input_data = (stringa, id_ass)
     cur.execute(sql_update_query, input_data)
     conn.commit()
     time.sleep(60)
+    os.system('clear')
 cur.close()
 conn.close()
 

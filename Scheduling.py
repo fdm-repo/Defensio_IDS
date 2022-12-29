@@ -52,7 +52,7 @@ while True:
         for job_schedulated in risultati:
 
             id_job = job_schedulated[1]
-            print("\n____________Scheduling in coda per l'assetto " + str(id_ass) + " ______________\n")
+            print("\n____________DEFENSIO Scheduling in coda per l'assetto " + str(id_ass) + " ______________\n")
             print("id job: " + str(id_job))
             en_day = job_schedulated[4]
             orario = job_schedulated[7]
@@ -65,11 +65,61 @@ while True:
             print("Abilitata scansione mensile: " + en_monthday + " Giorno: " + monthday + " Orario: " + orario)
 
             if (en_day == 'on' and orario == ora_attuale):
-                print("***************job giornaliero attivato*****************")
+                print("***************job "+ str(id_job) +" giornaliero attivato*****************")
+
+                connessione2 = DB_connect.database_connect()
+                conn2 = connessione2.database_connection()
+
+                # scrive il tag esecuzione sul record del job
+                cur2 = conn2.cursor()
+                sql_update_query = """UPDATE job SET net_discovery = %s WHERE id_job  = %s"""
+                input_data = ('off', id_job)
+                cur2.execute(sql_update_query, input_data)
+                conn2.commit()
+                cur2.close()
+                conn2.close()
+                avvio_job_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                print("----> Job "+str(id_job)+" avviato alle: "+avvio_job_time)
+                time.sleep(60)
+
+
+
             if (en_weekday == 'on' and orario == ora_attuale and weekday == giorno_settimana):
-                print("*****    ***********    job settimanale attivato   *****    ***********")
+                print("*****    ***********    job "+ str(id_job) +" settimanale attivato   *****    ***********")
+
+                connessione2 = DB_connect.database_connect()
+                conn2 = connessione2.database_connection()
+
+                # scrive il tag esecuzione sul record del job
+                cur2 = conn2.cursor()
+                sql_update_query = """UPDATE job SET net_discovery = %s WHERE id_job  = %s"""
+                input_data = ('off', id_job)
+                cur2.execute(sql_update_query, input_data)
+                conn2.commit()
+                cur2.close()
+                conn2.close()
+                avvio_job_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                print("----> Job " + str(id_job) + " avviato alle: " + avvio_job_time)
+                time.sleep(60)
+
             if (en_monthday == 'on' and orario == ora_attuale and monthday == giorno_mese):
-                print("*****++++++++***********    job mensile attivato   *****+++++++++***********")
+                print("*****++++++++***********    job "+ str(id_job) +" mensile attivato   *****+++++++++***********")
+
+                connessione2 = DB_connect.database_connect()
+                conn2 = connessione2.database_connection()
+
+                # scrive il tag esecuzione sul record del job
+                cur2 = conn2.cursor()
+                sql_update_query = """UPDATE job SET net_discovery = %s WHERE id_job  = %s"""
+                input_data = ('off', id_job)
+                cur2.execute(sql_update_query, input_data)
+                conn2.commit()
+                cur2.close()
+                conn2.close()
+                avvio_job_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                print("----> Job " + str(id_job) + " avviato alle: " + avvio_job_time)
+                time.sleep(60)
+
 
 
 
