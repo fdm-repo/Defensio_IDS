@@ -56,13 +56,16 @@ while True:
             print("id job: " + str(id_job))
             en_day = job_schedulated[4]
             orario = job_schedulated[7]
-            print("Abilitata scansione giornaliera: " + en_day + " Orario: " + orario)
+            if en_day == 'on':
+                print("Abilitata scansione giornaliera  Orario: " + orario)
             en_weekday = job_schedulated[2]
             weekday = job_schedulated[5]
-            print("Abilitata scansione settimanale: " + en_weekday + " Giorno: " + weekday + " Orario: " + orario)
+            if en_weekday == 'on':
+                print("Abilitata scansione settimanale  Giorno: " + weekday + " Orario: " + orario)
             en_monthday = job_schedulated[3]
             monthday = job_schedulated[6]
-            print("Abilitata scansione mensile: " + en_monthday + " Giorno: " + monthday + " Orario: " + orario)
+            if en_monthday == 'on':
+                print("Abilitata scansione mensile  Giorno: " + monthday + " Orario: " + orario)
 
             id_job_list = list()
             id_job_list.append(id_job)
