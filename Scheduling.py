@@ -64,14 +64,33 @@ while True:
             monthday = job_schedulated[6]
             print("Abilitata scansione mensile: " + en_monthday + " Giorno: " + monthday + " Orario: " + orario)
 
+            id_job_list = list()
+            id_job_list.append(id_job)
+
             if (en_day == 'on' and orario == ora_attuale):
                 print("***************job "+ str(id_job) +" giornaliero attivato*****************")
 
                 connessione2 = DB_connect.database_connect()
                 conn2 = connessione2.database_connection()
 
-                # scrive il tag esecuzione sul record del job
+
                 cur2 = conn2.cursor()
+
+                sql_delete_query = "DELETE FROM host WHERE id_job = %s"
+                cur2.execute(sql_delete_query, id_job_list)
+                conn2.commit()
+                print(cur2.rowcount, "host record(s) deleted")
+
+                sql_delete2_query = "DELETE FROM Port WHERE id_job = %s"
+                cur2.execute(sql_delete2_query, id_job_list)
+                conn2.commit()
+                print(cur2.rowcount, "service record(s) deleted")
+
+
+                print("*->record assets pregressi eliminati")
+
+                # scrive il tag esecuzione sul record del job
+
                 sql_update_query = """UPDATE job SET net_discovery = %s WHERE id_job  = %s"""
                 input_data = ('off', id_job)
                 cur2.execute(sql_update_query, input_data)
@@ -92,6 +111,19 @@ while True:
 
                 # scrive il tag esecuzione sul record del job
                 cur2 = conn2.cursor()
+
+                sql_delete_query = "DELETE FROM host WHERE id_job = %s"
+                cur2.execute(sql_delete_query, id_job_list)
+                conn2.commit()
+                print(cur2.rowcount, "host record(s) deleted")
+
+                sql_delete2_query = "DELETE FROM Port WHERE id_job = %s"
+                cur2.execute(sql_delete2_query, id_job_list)
+                conn2.commit()
+                print(cur2.rowcount, "service record(s) deleted")
+
+                print("*->record assets pregressi eliminati")
+
                 sql_update_query = """UPDATE job SET net_discovery = %s WHERE id_job  = %s"""
                 input_data = ('off', id_job)
                 cur2.execute(sql_update_query, input_data)
@@ -110,6 +142,19 @@ while True:
 
                 # scrive il tag esecuzione sul record del job
                 cur2 = conn2.cursor()
+
+                sql_delete_query = "DELETE FROM host WHERE id_job = %s"
+                cur2.execute(sql_delete_query, id_job_list)
+                conn2.commit()
+                print(cur2.rowcount, "host record(s) deleted")
+
+                sql_delete2_query = "DELETE FROM Port WHERE id_job = %s"
+                cur2.execute(sql_delete2_query, id_job_list)
+                conn2.commit()
+                print(cur2.rowcount, "service record(s) deleted")
+
+                print("*->record assets pregressi eliminati")
+
                 sql_update_query = """UPDATE job SET net_discovery = %s WHERE id_job  = %s"""
                 input_data = ('off', id_job)
                 cur2.execute(sql_update_query, input_data)
@@ -127,8 +172,4 @@ while True:
 
     time.sleep(10)
     os.system('clear')
-    print("Scheduling Active...Waiting for Jobs...  ZZZZZZ...ZZZZZ..ZZZ...")
-    check = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    print(check)
-    time.sleep(10)
-    os.system('clear')
+
