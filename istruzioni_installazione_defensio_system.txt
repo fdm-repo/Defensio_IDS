@@ -57,13 +57,13 @@ installation should now be secure.
 Thanks for using MariaDB!
 
 
-7) installazione phpmyadmin : esegui ./Installazione PHPmyAdmin.sh (se occore dare diritti di esecuzione  sudo chmod 777 Installazione PHPmyAdmin.sh)
-8) accedi a phpmyadmin con root e la password inserita nella fare 6  (accedi da http://localhost/phpmyadmin)
+7) installazione phpmyadmin : esegui ./Installazione_PHPmyAdmin.sh (se occore dare diritti di esecuzione  sudo chmod 777 Installazione_PHPmyAdmin.sh)
+8) accedi a phpmyadmin con root e la password inserita nella fase 6  (accedi da http://localhost/phpmyadmin)
 9) crea un database chiamato defensio
 10)clicca sul database defensio e dalla barra superiore orizzontale clicca su importa, poi sfoglia e seleziona il file defensio.sql (nella cartella defensio scaricata con git)
 11) una volta importata la struttura del database, inserisci un record nella tabella engines relativa al nuovo sensore che si vuole abilitare (importante il valore codeword che identifica l'engine)
-12)tornando sulla shell di defensio eseguire sudo ./Imstallation.sh (installa tutte le dipendenze, arachni portainer e openvas)
-13)eseguire ./Start.sh (non da root) e inserire l'iser root, password (quella inserita al punto 6), indirizzo ip (127.0.0.1), porta 3306, database defensio, e id asset (il codeword inserito nella tabella engines)
+12)tornando sulla shell di defensio eseguire sudo ./Installation.sh (installa tutte le dipendenze, arachni, portainer e openvas)
+13)eseguire ./Start.sh (non da root) e inserire l'user root, password (quella inserita al punto 6), indirizzo ip (127.0.0.1), porta 3306, database defensio, e id asset (il codeword inserito nella tabella engines)
 14) inserire le password di root (della macchina) nelle shell che si aprono (alcune non lo chiedono)
 
 
