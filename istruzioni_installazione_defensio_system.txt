@@ -1,0 +1,69 @@
+1) creare cartella defensio su /home/user/
+2) Installare GIT da apt (sudo apt get install git)
+3) eseguire   git clone https://github.com/n3tSh4d3/defensio.git   per scaricare dal repository github defensio
+4) spostarsi dentro la cartella defensio
+5) eseguire sudo ./installazione_DB_Apache_PHP.sh (se occore dare diritti di esecuzione  sudo chmod 777 installazione_DB_Apache_PHP.sh)
+6) eseguire sudo mysql_secure_installation
+
+impostare i seguenti valori nella configurazione guidata:
+
+NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
+      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
+In order to log into MariaDB to secure it, we'll need the current
+password for the root user. If you've just installed MariaDB, and
+haven't set the root password yet, you should just press enter here.
+
+Enter current password for root (enter for none): << Just Press Enter  (inizialmente la password è nulla, quindi premere ENTER)
+OK, successfully used password, moving on...
+Setting the root password or using the unix_socket ensures that nobody
+can log into the MariaDB root user without the proper authorisation.
+You already have your root account protected, so you can safely answer 'n'.
+Switch to unix_socket authentication [Y/n] N  << Disable Unix Socket Authentication (disabilita l'accesso Socket)
+ ... skipping.
+You already have your root account protected, so you can safely answer 'n'.
+
+Change the root password? [Y/n] Y << Set MariaDB root password (cambia la password da root del DB)
+New password: xxx << Enter new MariaDB root password (Inserisci la password la prima volta)
+Re-enter new password: xxx << Re-enter new MariaDB root password (re-inserisci la password)
+Password updated successfully!
+Reloading privilege tables..
+ ... Success!
+By default, a MariaDB installation has an anonymous user, allowing anyone
+to log into MariaDB without having to have a user account created for
+them.  This is intended only for testing, and to make the installation
+go a bit smoother.  You should remove them before moving into a
+production environment.
+Remove anonymous users? [Y/n] Y << Remove Anonymous Users (rimuovi l'acceso anonimo al DB)
+ ... Success!
+Normally, root should only be allowed to connect from 'localhost'.  This
+ensures that someone cannot guess at the root password from the network.
+Disallow root login remotely? [Y/n] n << Disallow root login remotely  (inserisci no per consentire l'acceso da rete al DB * anche localhost *)
+ ... Success!
+By default, MariaDB comes with a database named 'test' that anyone can
+access.  This is also intended only for testing, and should be removed
+before moving into a production environment.
+Remove test database and access to it? [Y/n] Y << Remove test database (rimuovi il DB di test che crea mysql in fase di installazione)
+ - Dropping test database...
+ ... Success!
+ - Removing privileges on test database...
+ ... Success!
+Reloading the privilege tables will ensure that all changes made so far
+will take effect immediately.
+Reload privilege tables now? [Y/n] Y << Reload privilege tables (ricarica le impostazioni)
+ ... Success!
+Cleaning up...
+All done!  If you've completed all of the above steps, your MariaDB
+installation should now be secure.
+Thanks for using MariaDB!
+
+
+7) installazione phpmyadmin : esegui ./Installazione PHPmyAdmin.sh (se occore dare diritti di esecuzione  sudo chmod 777 Installazione PHPmyAdmin.sh)
+8) accedi a phpmyadmin con root e la password inserita nella fare 6  (accedi da http://localhost/phpmyadmin)
+9) crea un database chiamato defensio
+10)clicca sul database defensio e dalla barra superiore orizzontale clicca su importa, poi sfoglia e seleziona il file defensio.sql (nella cartella defensio scaricata con git)
+11) una volta importata la struttura del database, inserisci un record nella tabella engines relativa al nuovo sensore che si vuole abilitare (importante il valore codeword che identifica l'engine)
+12)tornando sulla shell di defensio eseguire sudo ./Imstallation.sh (installa tutte le dipendenze, arachni portainer e openvas)
+13)eseguire ./Start.sh (non da root) e inserire l'iser root, password (quella inserita al punto 6), indirizzo ip (127.0.0.1), porta 3306, database defensio, e id asset (il codeword inserito nella tabella engines)
+14) inserire le password di root (della macchina) nelle shell che si aprono (alcune non lo chiedono)
+
+
