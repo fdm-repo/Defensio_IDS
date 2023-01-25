@@ -71,12 +71,13 @@ def statusscan(task):
     return sette
 
 
-def report_scan(task, report):
+def report_scan(task, id_j, report):
 
     #sudo  docker exec -t -u gvm openvas /usr/local/bin/gvm-cli  --gmp-username admin --gmp-password porcodio tls --xml "<get_reports report_id=\"57212fa8-9297-47e6-b0d1-991a827e3131\" format_id=\"5057e5cc-b825-11e4-9d0e-28d24461215b\"/>"
     print("ciao")
     id_task = task
     id_report = report
+    id_job = id_j
     print("####################### Report della scansione " + id_task + " #######################")
     # crea file xml di status
     nomefile = "report_scan+"+id_report+".xml"
@@ -97,7 +98,7 @@ def report_scan(task, report):
 
     try:
         obj_pars = parsing_xml_report_NetScanner.parsing_xml_Netscanner()
-        obj_pars.parsing_report_to_DB(nomefile)
+        obj_pars.parsing_report_to_DB(id_job, nomefile)
         update_statistic_vul(id_j)
 
     except:
@@ -208,7 +209,7 @@ while True:
 
     cur = conn.cursor()
 
-    cur.execute('SELECT id_job,id_asset,ip,netmask FROM job  WHERE abilitato="on" AND net_discovery="on" AND openvas = "on" AND eseguito_openvas="off" AND id_asset = %s',(id_asset))
+    cur.execute('SELECT id_job,id_asset,ip,netmask,exclude_ip FROM job  WHERE abilitato="on" AND net_discovery="on" AND openvas = "on" AND eseguito_openvas="off" AND id_asset = %s',(id_asset))
     if cur.rowcount != 0:
         result = cur.fetchone()
         print("Scansione OPENVAS")
@@ -217,7 +218,16 @@ while True:
         ip=result[2]
         netmask=result[3]
         ip_net=ip+'/'+netmask
-        print("Target: "+ip_net)
+        print("Target: " + ip_net)
+        white_ip = result[4]
+        print("Host esclusi: " + white_ip)
+        if white_ip == 'none':
+            white_ip = ''
+        else:
+            white_ip = "<exclude_hosts>"+str(white_ip)+"</exclude_hosts>"
+
+
+
         # genera la stringa di inizio del job
         start_job = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         print("StartJob: "+start_job)
@@ -244,7 +254,7 @@ while True:
         target_buffer = open("target_buffer.xml", "a")
 
         #crea la stringa xml per creare il target con gvm-cli
-        stringxmltarget="<create_target><name>"+str(id_j)+"</name><hosts>"+host_target+"</hosts><exclude_host>192.168.1.254</exclude_host><port_list id=\"33d0cd82-57c6-11e1-8ed1-406186ea4fc5\"></port_list></create_target>"
+        stringxmltarget="<create_target><name>"+str(id_j)+"_"+start_job+"</name><hosts>"+host_target+"</hosts>"+white_ip+"<port_list id=\"33d0cd82-57c6-11e1-8ed1-406186ea4fc5\"></port_list></create_target>"
 
         #esegue il subprocesso sul docker gvm utilizzando gvm-cli e la stringa per creare il target, il risultato lo salva nel file xml di buffer
         cmd = subprocess.run(["docker", "exec", "-t", "-u", "gvm", "openvas", "/usr/local/bin/gvm-cli",  "--gmp-username",username, "--gmp-password",password,"tls", "--xml",stringxmltarget], stdout=target_buffer)
@@ -278,7 +288,7 @@ while True:
             task_buffer = open("task_buffer.xml", "a")
 
             # crea la stringa xml per creare il target con gvm-cli
-            stringxmltask = "<create_task><name>"+str(id_j)+"</name><target id=\""+id_target+"\"/><config id=\"daba56c8-73ec-11df-a475-002264764cea\"/><scanner id=\"08b69003-5fc2-4037-a479-93b440211c73\"/></create_task>"
+            stringxmltask = "<create_task><name>"+str(id_j)+"_"+start_job+"</name><target id=\""+id_target+"\"/><config id=\"daba56c8-73ec-11df-a475-002264764cea\"/><scanner id=\"08b69003-5fc2-4037-a479-93b440211c73\"/></create_task>"
 
             # esegue il subprocesso sul docker gvm utilizzando gvm-cli e la stringa per creare il task, il risultato lo salva nel file xml di buffer
             cmd = subprocess.run(["docker", "exec", "-t", "-u", "gvm", "openvas", "/usr/local/bin/gvm-cli", "--gmp-username", username,"--gmp-password", password, "tls", "--xml", stringxmltask], stdout=task_buffer)

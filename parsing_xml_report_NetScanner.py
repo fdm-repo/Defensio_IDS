@@ -12,9 +12,10 @@ import xmltodict
 import json
 
 class parsing_xml_Netscanner:
-    def parsing_report_to_DB(self, report_XML_NS):
+    def parsing_report_to_DB(self, id_j, report_XML_NS):
 
         file_xml = report_XML_NS
+        id_job = id_j
 
         data = json.load(open("eng_conf.json"))
 
@@ -40,13 +41,6 @@ class parsing_xml_Netscanner:
                 print("id_report non disponibile")
                 id_report = 'NULL'
 
-            # estrae il JOB
-            try:
-                id_job = obj["get_reports_response"]['report']['report']['task']['name']
-                print('id_job: ', id_job)
-            except:
-                print("id_job non disponibile")
-                id_job = 'NULL'
 
             # estrae il Task
             try:

@@ -32,7 +32,7 @@ while True:
     input_data = (stringa, id_ass)
     cur.execute(sql_update_query, input_data)
     conn.commit()
-    time.sleep(60)
+    time.sleep(300)
     os.system('clear')
 cur.close()
 conn.close()
