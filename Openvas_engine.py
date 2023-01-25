@@ -377,7 +377,7 @@ while True:
 
                 if (status_scan == "Done"):
                     try:
-                        report_scan(id_task, id_report)
+                        report_scan(id_task, id_j, id_report)
                     except:
                         print("Report non disponibile o errore")
 
