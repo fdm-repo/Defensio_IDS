@@ -9,28 +9,24 @@ from datetime import datetime
 from libnmap.process import NmapProcess
 from time import sleep
 import subprocess
-ipnet = "localhost/32"
-port_target = '20-1024'
+import socket
 
-argument = "-O -sV -p" + port_target
+def verifica_porta(host, port):
+    try:
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.settimeout(5)
+        result = sock.connect_ex((host, port))
+        if result == 0:
+            print(f"La porta {port} è aperta sull'host {host}")
+            sock.sendall(b"USER anonymous\r\n")
+            response = sock.recv(1024)
+            print(response)
+        else:
+            print(f"La porta {port} è chiusa sull'host {host}")
+    except socket.gaierror:
+        print(f"Impossibile stabilire una connessione con l'host {host}")
+    finally:
+        sock.close()
 
-
-nm = nmap.PortScanner()
-nm.scan(hosts=ipnet, arguments=argument)
-print(nm.command_line())
-print(nm.scaninfo())
-print(nm.all_hosts())
-print(nm.scanstats())
-
-
-for host in nm.all_hosts():
-    print('Host: '+host)
-    lista=list(nm[host].values())
-    print(lista)
-    os = nm[host]['osmatch'][0]['name']
-    print(os)
-    os_accuracy = nm[host]['osmatch'][0]['accuracy']
-    print(os_accuracy)
-    type = nm[host]['osmatch'][0]['osclass'][0]['type']
-    print(type)
+verifica_porta("www.google.com", 21)
 

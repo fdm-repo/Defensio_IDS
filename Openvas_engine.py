@@ -372,6 +372,15 @@ while True:
                         print("Status scansione non disponibile")
                         break
 
+                    if (status_scan == "Interrupted"):
+                        break
+                    if (status_scan == "Stopped"):
+                        break
+                    if (status_scan == "Stop Requested"):
+                        break
+
+
+
                     time.sleep(10)
                 #genera il report della scansione
 
