@@ -65,5 +65,6 @@ Thanks for using MariaDB!
 12)tornando sulla shell di defensio eseguire sudo ./Installation.sh (installa tutte le dipendenze, arachni, portainer e openvas)
 13)eseguire ./Start.sh (non da root) e inserire l'user root, password (quella inserita al punto 6), indirizzo ip (127.0.0.1), porta 3306, database defensio, e id asset (il codeword inserito nella tabella engines)
 14) inserire le password di root (della macchina) nelle shell che si aprono (alcune non lo chiedono)
+15) da terminale avviare la prima volta    [pwned apiKey <key> ] dove come key si inserisce l'API di HBP
 
 

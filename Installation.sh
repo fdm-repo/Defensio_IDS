@@ -1,12 +1,13 @@
 #!/usr/bin/bash
 
 echo "Install Nmap, Nikto and SmbMap\n";
-sudo apt install -y docker.io pip git nmap nikto smbmap wapiti ldap-utils polenum smbclient wget ncrack arp-scan xsltproc wkhtmltopdf libmariadb-dev ;
+sudo apt install -y docker.io pip npm git nmap nikto smbmap wapiti ldap-utils polenum smbclient wget ncrack arp-scan xsltproc wkhtmltopdf libmariadb-dev ;
 sudo pip install python-nmap python-libnmap pdfkit XlsxWriter json2html flask impacket xmltodict ldap3 PyYAML>=5.1;
 sudo pip3 install schedule mariadb whois;
 
 pip install python-nmap python-libnmap pdfkit XlsxWriter json2html flask impacket xmltodict ldap3 PyYAML>=5.1;
 pip3 install schedule mariadb whois;
+npm install pwned -g
 
 echo "\nDownload Arachni \n";
 mkdir temp_folder;

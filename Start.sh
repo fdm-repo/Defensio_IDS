@@ -4,6 +4,7 @@
 gnome-terminal -- ./crea_token.py
 gnome-terminal -- ./WebScanner_engine.py
 gnome-terminal -- ./Scheduling.py
+gnome-terminal -- ./Email_Leaks.py
 
 gnome-terminal -- sudo ./Defensio_engine.py
 
