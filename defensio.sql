@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Creato il: Gen 26, 2023 alle 16:19
+-- Creato il: Gen 27, 2023 alle 00:16
 -- Versione del server: 10.6.7-MariaDB-2ubuntu1.1
 -- Versione PHP: 8.1.2
 
@@ -35,6 +35,33 @@ CREATE TABLE `arachni_report` (
 -- --------------------------------------------------------
 
 --
+-- Struttura della tabella `email_leak_result`
+--
+
+CREATE TABLE `email_leak_result` (
+  `Id_leak_result` int(11) NOT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `Id_leak_HBP` varchar(1000) DEFAULT NULL,
+  `source` varchar(1000) DEFAULT NULL,
+  `title` varchar(500) DEFAULT NULL,
+  `date` varchar(200) DEFAULT NULL,
+  `emailcount` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `email_leak_target`
+--
+
+CREATE TABLE `email_leak_target` (
+  `Id_leak_target` int(11) NOT NULL,
+  `email` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Struttura della tabella `engines`
 --
 
@@ -59,7 +86,7 @@ CREATE TABLE `engines` (
 --
 
 INSERT INTO `engines` (`id_engines_DB`, `identity`, `token`, `location`, `last_check_ND`, `last_check_VA`, `last_check_SS`, `last_check_WS`, `codeword`, `active_defensio`, `active_webscanner`, `active_openvas`, `active_suricata`) VALUES
-(1, 'HomeAdry', 'nxH8tJLAtZHK', 'Istrana', '2023-01-26 16:19:10', '2023-01-26 16:19:10', '2023-01-26 16:19:12', '2023-01-26 16:19:10', '133', 'nxH8tJLAtZHK', 'nxH8tJLAtZHK', 'nxH8tJLAtZHK', NULL),
+(1, 'HomeAdry', 'L1o62i8f2DHz', 'Istrana', '2023-01-26 16:25:51', '2023-01-26 16:25:41', '2023-01-26 16:25:49', '2023-01-27 00:13:48', '133', 'aWMSu5dBAtCQ', 'L1o62i8f2DHz', 'aWMSu5dBAtCQ', NULL),
 (2, 'fidem_soc', 'DIdXmNmU6Fbl', 'verona', '2023-01-04 16:37:11', '2023-01-04 16:37:05', NULL, NULL, '145', 'rKjxlhHZPDwT', 'DIdXmNmU6Fbl', 'DIdXmNmU6Fbl', NULL),
 (3, 'fixAdry', 'vc9niRVZXY5R', 'Istrana', '2023-01-02 23:46:31', '2023-01-02 23:46:27', '2023-01-02 23:46:27', '2023-01-02 23:46:33', '144', '7vZJvdcughSN', '7vZJvdcughSN', '0g9g8JgM8h68', NULL),
 (34, 'VM_Istrana', 'aJLaKVZ2DM2W', 'Istrana', '2022-12-22 14:16:44', '2022-12-22 14:16:49', NULL, NULL, '33', '0YK8Q9CWLZfF', 'OS66Mpc3716A', 'OS66Mpc3716A', NULL);
@@ -82,36 +109,6 @@ CREATE TABLE `host` (
   `vendor` varchar(200) DEFAULT NULL,
   `osfamily` varchar(200) DEFAULT NULL,
   `osgen` varchar(200) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Struttura della tabella `identity_protection`
---
-
-CREATE TABLE `identity_protection` (
-  `id_result_identity_protection` int(11) NOT NULL,
-  `id_job_identity_protection` int(11) NOT NULL,
-  `time` varchar(50) NOT NULL,
-  `titolo` varchar(200) DEFAULT NULL,
-  `dominio` varchar(200) DEFAULT NULL,
-  `email` varchar(200) DEFAULT NULL,
-  `username` varchar(200) DEFAULT NULL,
-  `ip` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Struttura della tabella `identity_protection_job`
---
-
-CREATE TABLE `identity_protection_job` (
-  `id_job_identity_protection` int(11) NOT NULL,
-  `method` varchar(50) NOT NULL,
-  `query` varchar(200) NOT NULL,
-  `abilitato` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -498,21 +495,6 @@ CREATE TABLE `user_pass` (
   `password` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dump dei dati per la tabella `user_pass`
---
-
-INSERT INTO `user_pass` (`id_user_pass`, `username`, `password`) VALUES
-(1, 'ciao', 'ciao2'),
-(2, 'adriano.condro@gmail.com', 'provapassword'),
-(3, 'adriano.condro@gmail.com', 'provapassword'),
-(4, 'adriano.condro@gmail.com', 'provapassword'),
-(5, 'adriano.condro@gmail.com', 'provapassword'),
-(6, 'lillo@gmail.com', 'pdpdpd'),
-(7, 'lillo@gmail.com', 'PDPDPD'),
-(8, 'pdpdpdpdp', 'Xla_MAfiga'),
-(9, 'wwww', 'trty');
-
 -- --------------------------------------------------------
 
 --
@@ -587,6 +569,18 @@ ALTER TABLE `arachni_report`
   ADD PRIMARY KEY (`id_arac_report`);
 
 --
+-- Indici per le tabelle `email_leak_result`
+--
+ALTER TABLE `email_leak_result`
+  ADD PRIMARY KEY (`Id_leak_result`);
+
+--
+-- Indici per le tabelle `email_leak_target`
+--
+ALTER TABLE `email_leak_target`
+  ADD PRIMARY KEY (`Id_leak_target`);
+
+--
 -- Indici per le tabelle `engines`
 --
 ALTER TABLE `engines`
@@ -597,18 +591,6 @@ ALTER TABLE `engines`
 --
 ALTER TABLE `host`
   ADD PRIMARY KEY (`id`);
-
---
--- Indici per le tabelle `identity_protection`
---
-ALTER TABLE `identity_protection`
-  ADD PRIMARY KEY (`id_result_identity_protection`);
-
---
--- Indici per le tabelle `identity_protection_job`
---
-ALTER TABLE `identity_protection_job`
-  ADD PRIMARY KEY (`id_job_identity_protection`);
 
 --
 -- Indici per le tabelle `job`
@@ -760,6 +742,18 @@ ALTER TABLE `arachni_report`
   MODIFY `id_arac_report` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT per la tabella `email_leak_result`
+--
+ALTER TABLE `email_leak_result`
+  MODIFY `Id_leak_result` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT per la tabella `email_leak_target`
+--
+ALTER TABLE `email_leak_target`
+  MODIFY `Id_leak_target` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT per la tabella `engines`
 --
 ALTER TABLE `engines`
@@ -770,18 +764,6 @@ ALTER TABLE `engines`
 --
 ALTER TABLE `host`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT per la tabella `identity_protection`
---
-ALTER TABLE `identity_protection`
-  MODIFY `id_result_identity_protection` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT per la tabella `identity_protection_job`
---
-ALTER TABLE `identity_protection_job`
-  MODIFY `id_job_identity_protection` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT per la tabella `job`
@@ -883,7 +865,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT per la tabella `user_pass`
 --
 ALTER TABLE `user_pass`
-  MODIFY `id_user_pass` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_user_pass` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT per la tabella `web_scanner_ref`
