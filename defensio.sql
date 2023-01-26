@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Creato il: Gen 03, 2023 alle 14:55
+-- Creato il: Gen 26, 2023 alle 16:19
 -- Versione del server: 10.6.7-MariaDB-2ubuntu1.1
 -- Versione PHP: 8.1.2
 
@@ -53,6 +53,16 @@ CREATE TABLE `engines` (
   `active_openvas` varchar(12) DEFAULT NULL,
   `active_suricata` varchar(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dump dei dati per la tabella `engines`
+--
+
+INSERT INTO `engines` (`id_engines_DB`, `identity`, `token`, `location`, `last_check_ND`, `last_check_VA`, `last_check_SS`, `last_check_WS`, `codeword`, `active_defensio`, `active_webscanner`, `active_openvas`, `active_suricata`) VALUES
+(1, 'HomeAdry', 'nxH8tJLAtZHK', 'Istrana', '2023-01-26 16:19:10', '2023-01-26 16:19:10', '2023-01-26 16:19:12', '2023-01-26 16:19:10', '133', 'nxH8tJLAtZHK', 'nxH8tJLAtZHK', 'nxH8tJLAtZHK', NULL),
+(2, 'fidem_soc', 'DIdXmNmU6Fbl', 'verona', '2023-01-04 16:37:11', '2023-01-04 16:37:05', NULL, NULL, '145', 'rKjxlhHZPDwT', 'DIdXmNmU6Fbl', 'DIdXmNmU6Fbl', NULL),
+(3, 'fixAdry', 'vc9niRVZXY5R', 'Istrana', '2023-01-02 23:46:31', '2023-01-02 23:46:27', '2023-01-02 23:46:27', '2023-01-02 23:46:33', '144', '7vZJvdcughSN', '7vZJvdcughSN', '0g9g8JgM8h68', NULL),
+(34, 'VM_Istrana', 'aJLaKVZ2DM2W', 'Istrana', '2022-12-22 14:16:44', '2022-12-22 14:16:49', NULL, NULL, '33', '0YK8Q9CWLZfF', 'OS66Mpc3716A', 'OS66Mpc3716A', NULL);
 
 -- --------------------------------------------------------
 
@@ -128,7 +138,8 @@ CREATE TABLE `job` (
   `eseguito_openvas` varchar(3) NOT NULL DEFAULT 'off',
   `eseguito_arachni` varchar(3) DEFAULT 'off',
   `eseguito_enum4linux` varchar(3) DEFAULT 'off',
-  `utente` varchar(50) DEFAULT NULL
+  `utente` varchar(50) DEFAULT NULL,
+  `exclude_ip` varchar(2000) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -487,6 +498,21 @@ CREATE TABLE `user_pass` (
   `password` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dump dei dati per la tabella `user_pass`
+--
+
+INSERT INTO `user_pass` (`id_user_pass`, `username`, `password`) VALUES
+(1, 'ciao', 'ciao2'),
+(2, 'adriano.condro@gmail.com', 'provapassword'),
+(3, 'adriano.condro@gmail.com', 'provapassword'),
+(4, 'adriano.condro@gmail.com', 'provapassword'),
+(5, 'adriano.condro@gmail.com', 'provapassword'),
+(6, 'lillo@gmail.com', 'pdpdpd'),
+(7, 'lillo@gmail.com', 'PDPDPD'),
+(8, 'pdpdpdpdp', 'Xla_MAfiga'),
+(9, 'wwww', 'trty');
+
 -- --------------------------------------------------------
 
 --
@@ -737,7 +763,7 @@ ALTER TABLE `arachni_report`
 -- AUTO_INCREMENT per la tabella `engines`
 --
 ALTER TABLE `engines`
-  MODIFY `id_engines_DB` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_engines_DB` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT per la tabella `host`
@@ -857,7 +883,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT per la tabella `user_pass`
 --
 ALTER TABLE `user_pass`
-  MODIFY `id_user_pass` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user_pass` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT per la tabella `web_scanner_ref`
