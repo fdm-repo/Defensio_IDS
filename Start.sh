@@ -1,14 +1,12 @@
 #!/usr/bin/bash
 ./inizializzazione_engine.py
 
-gnome-terminal -- ./crea_token.py
-gnome-terminal -- ./WebScanner_engine.py
-gnome-terminal -- ./Scheduling.py
-gnome-terminal -- ./Email_Leaks.py
-
-gnome-terminal -- sudo ./Defensio_engine.py
-
-gnome-terminal -- sudo ./Openvas_engine.py
-
-gnome-terminal -- sudo ./ShareScanner_engine.py
+gnome-terminal \
+--tab --title="GenerazioneToken" -e "./crea_token.py" \
+--tab --title="WebScanner" -e "./WebScanner_engine.py" \
+--tab --title="Scheduling" -e "./Scheduling.py" \
+--tab --title="DPI" -e "./Email_Leaks.py" \
+--tab --title="NetScanner" -e "sudo ./Defensio_engine.py" \
+--tab --title="VulnScan" -e "sudo ./Openvas_engine.py" \
+--tab --title="ShareScan" -e "sudo ./ShareScanner_engine.py --tab"
 
