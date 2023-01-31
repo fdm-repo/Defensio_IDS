@@ -12,7 +12,6 @@ cur = conn.cursor()
 
 id_job = 149
 
-
 job = list()
 job.append(id_job)
 
@@ -34,4 +33,3 @@ if public_ip == 'si':
 
     cur.execute(sql_update_query, input_data)
     conn.commit()
-
