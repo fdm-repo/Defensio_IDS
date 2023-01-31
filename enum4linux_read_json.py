@@ -18,7 +18,6 @@ class enum4linux_read_json_class:
         except:
             print("enum4linux: errore connessione database")
 
-
         job = job_enum
         start_job = start_job
         file_json = file_json
@@ -27,8 +26,8 @@ class enum4linux_read_json_class:
             try:
                 target = str(enum_smb['target']['host'])
             except:
-                print( "no target value")
-                target =  ''
+                print("no target value")
+                target = ''
             try:
                 credential = str(enum_smb['credentials']['user'])
             except:
@@ -116,7 +115,7 @@ class enum4linux_read_json_class:
             try:
                 sessions_null = str(enum_smb['sessions']['null'])
             except:
-                print( "no sessions null value")
+                print("no sessions null value")
                 sessions_null = ''
             try:
                 sessions_password = str(enum_smb['sessions']['password'])
@@ -132,12 +131,12 @@ class enum4linux_read_json_class:
                 sessions_nthash = str(enum_smb['sessions']['nthash'])
             except:
                 print(" no sessions nthash value")
-                sessions_nthash =''
+                sessions_nthash = ''
             try:
                 sessions_random_user = str(enum_smb['sessions']['random_user'])
             except:
                 print(" no random user value")
-                sessions_random_user =''
+                sessions_random_user = ''
 
             """                                                                                                                                                                                                                                                           
             "rpc_domain_info": {                                                                                                                                                                                                                                          
@@ -158,7 +157,7 @@ class enum4linux_read_json_class:
             try:
                 rpc_membership = str(enum_smb['rpc_domain_info']['Membership'])
             except:
-                print( "no rpc domain info value")
+                print("no rpc domain info value")
                 rpc_membership = ''
 
             """                                                                                                                                                                                                                                                           
@@ -182,7 +181,7 @@ class enum4linux_read_json_class:
                 os_version = str(enum_smb['os_info']['OS version'])
             except:
                 print(" no os version value")
-                os_version =''
+                os_version = ''
             try:
                 os_release = str(enum_smb['os_info']['OS release'])
             except:
@@ -241,8 +240,7 @@ class enum4linux_read_json_class:
                     enumDB.execute(sql_insert_users, input_data)
                     connDB.commit()
             except:
-                print( "no smb users")
-
+                print("no smb users")
 
             """                                                                                                                                                                                                                                                           
             "groups": {},                                                                                                                                                                                                                                                 
@@ -300,14 +298,13 @@ class enum4linux_read_json_class:
 
                     sql_insert_share = """INSERT INTO `smb_share` (`id_smb_share`, `job`, `host`, `id_smb_enum`, nome_condivisione ,`type`, `comment`, `mapping`, `listing`) VALUES (NULL, %s, %s, %s, %s, %s,%s, %s, %s);"""
                     input_data = (
-                    job, target, start_job, nome_condivisione, share_type, share_comment, share_mapping, share_listing)
+                        job, target, start_job, nome_condivisione, share_type, share_comment, share_mapping,
+                        share_listing)
 
                     enumDB.execute(sql_insert_share, input_data)
                     connDB.commit()
             except:
                 print("no share value")
-
-
 
             """                                                                                                                                                                                                                                                           
             "policy": {                                                                                                                                                                                                                                                   
@@ -384,7 +381,6 @@ class enum4linux_read_json_class:
             except:
                 print(" no policies domain values")
 
-
             # insert password rules in db
             try:
                 sql_insert_password_rules = """INSERT INTO `smb_password_rules` (`id_smb_password_rules`, `job`, `host`, `id_smb_enum`, `domain_pass_complex`, `domain_pass_no_anon_change`, `domain_pass_no_clear_change`, `domain_pass_lockhout_admins`, `domain_pass_store_cleartext`, `domain_password_refuse_change`) VALUES (NULL, %s, %s, %s, %s, %s, %s, %s, %s, %s);"""
@@ -420,7 +416,6 @@ class enum4linux_read_json_class:
                 print("no policy force logoff time")
                 policy_force_logoff_time = ''
 
-
             """                                                                                                                                                                                                                                                           
             "printers": {},                                                                                                                                                                                                                                               
             "errors": {                                                                                                                                                                                                                                                   
@@ -455,7 +450,6 @@ class enum4linux_read_json_class:
             except:
                 print(" no errors services value")
 
-
             try:
                 for i in range(len(enum_smb['errors']['sessions']['enum_sessions'])):
                     error_enum_sessions = str(enum_smb['errors']['sessions']['enum_sessions'][i])
@@ -468,7 +462,6 @@ class enum4linux_read_json_class:
                     connDB.commit()
             except:
                 print("no sessions errors")
-
 
             # prepara la query
 
@@ -485,14 +478,14 @@ class enum4linux_read_json_class:
             # dati per la query
 
             input_data = (
-            start_job, job, target, credential, ldap, samba, dominio, computer_name, domain_name, dns_domain, fqdn,
-            derived_membership, derived_domain, sessions_possible, sessions_null, sessions_password,
-            sessions_kerberos, sessions_nthash, sessions_random_user, rpc_domain, rpc_domain_sid,
-            rpc_membership, os_os, os_version, os_release, os_build, os_native, os_lan_manager_native,
-            os_platform_id, os_server_type, os_server_type_string, groups, policy_password_history_length,
-            policy_minimun_password_length, policy_maximun_password_age,
-            policy_lockout_observation_window, policy_lockout_duration,
-            policy_lockout_threshold, policy_force_logoff_time, printers_enum)
+                start_job, job, target, credential, ldap, samba, dominio, computer_name, domain_name, dns_domain, fqdn,
+                derived_membership, derived_domain, sessions_possible, sessions_null, sessions_password,
+                sessions_kerberos, sessions_nthash, sessions_random_user, rpc_domain, rpc_domain_sid,
+                rpc_membership, os_os, os_version, os_release, os_build, os_native, os_lan_manager_native,
+                os_platform_id, os_server_type, os_server_type_string, groups, policy_password_history_length,
+                policy_minimun_password_length, policy_maximun_password_age,
+                policy_lockout_observation_window, policy_lockout_duration,
+                policy_lockout_threshold, policy_force_logoff_time, printers_enum)
 
             # invia query
 
