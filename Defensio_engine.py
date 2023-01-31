@@ -14,8 +14,7 @@ import DB_connect
 
 
 def whois_public_ip(id_j):
-    id_job=id_j
-
+    id_job = id_j
 
     job = list()
     job.append(id_job)
@@ -45,6 +44,7 @@ def whois_public_ip(id_j):
 
     cur_whois.close()
     conn_whois.close()
+
 
 def update_statistic_host(id_j):
     id_job = id_j
@@ -87,8 +87,9 @@ def update_statistic_host(id_j):
 
 
 token_ver = ''
-def test():
 
+
+def test():
     global token_ver
     while True:
         try:
@@ -101,7 +102,6 @@ def test():
         conn_check = DB_connect.database_connect()
         conn = conn_check.database_connection()
         cur = conn.cursor()
-
 
         id_asset = list()
         id_asset.append(id_ass)
@@ -127,17 +127,16 @@ def test():
             except:
                 print("!!! Verifica token non effettuata")
         print("++++++++++++++++++++++++++++++++++++++")
-        print("DataTime: "+str(datetime.now()))
-        print("Token attuale verificato: "+token)
+        print("DataTime: " + str(datetime.now()))
+        print("Token attuale verificato: " + token)
         print("++++++++++++++++++++++++++++++++++++++")
         time.sleep(13)
+
 
 t = Thread(target=test)
 t.start()
 
 while True:
-
-
 
     connessione = DB_connect.database_connect()
     conn = connessione.database_connection()
@@ -179,7 +178,7 @@ while True:
         single_port = str(result[4])
         print(single_port)
         if single_port == 'None':
-            single_port =''
+            single_port = ''
 
         low_port = result[5]
         high_port = result[6]
@@ -201,7 +200,7 @@ while True:
 
         # oggetto portscanner
 
-        #try:
+        # try:
         nm = nmap.PortScanner()
 
         # scansione secondo parametri del job
@@ -281,11 +280,10 @@ while True:
                         conn.commit()
                     except:
                         print("errore nell inserimento dei risultati nella tabella port")
-        #except:
-            #print('errore in nmap')
+        # except:
+        # print('errore in nmap')
 
-
-        #whois per ip_pubblici
+        # whois per ip_pubblici
 
         try:
             whois_public_ip(id_j)
@@ -302,7 +300,6 @@ while True:
         connessione = DB_connect.database_connect()
         conn = connessione.database_connection()
 
-
         # scrive il tag esecuzione sul record del job
         cur = conn.cursor()
         sql_update_query = """UPDATE job SET net_discovery = %s WHERE id_job  = %s"""
@@ -312,16 +309,15 @@ while True:
         cur.close()
         conn.close()
 
-
     print(
-    """
-  _   _          _     ____                                               
- | \ | |   ___  | |_  / ___|    ___    __ _   _ __    _ __     ___   _ __ 
- |  \| |  / _ \ | __| \___ \   / __|  / _` | | '_ \  | '_ \   / _ \ | '__|
- | |\  | |  __/ | |_   ___) | | (__  | (_| | | | | | | | | | |  __/ | |   
- |_| \_|  \___|  \__| |____/   \___|  \__,_| |_| |_| |_| |_|  \___| |_|   
-                                                                          
-.........Net_Discovery Active...Waiting for Jobs...  ZZZZZZ...ZZZZZ..ZZZ...\n""")
+        """
+      _   _          _     ____                                               
+     | \ | |   ___  | |_  / ___|    ___    __ _   _ __    _ __     ___   _ __ 
+     |  \| |  / _ \ | __| \___ \   / __|  / _` | | '_ \  | '_ \   / _ \ | '__|
+     | |\  | |  __/ | |_   ___) | | (__  | (_| | | | | | | | | | |  __/ | |   
+     |_| \_|  \___|  \__| |____/   \___|  \__,_| |_| |_| |_| |_|  \___| |_|   
+                                                                              
+    .........Net_Discovery Active...Waiting for Jobs...  ZZZZZZ...ZZZZZ..ZZZ...\n""")
     time.sleep(20)
     os.system('clear')
 
