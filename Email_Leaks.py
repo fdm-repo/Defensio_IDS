@@ -31,7 +31,7 @@ by DEFENSIO Scanner
         )
         for i in result:
             email = i[0]
-            print("Email in esame: "+email)
+            print("Email in esame: " + email)
             f = open(email, "a")
             try:
                 cmd = subprocess.run(["pwned", "pa", email, "-r"], stdout=f)
@@ -85,18 +85,7 @@ by DEFENSIO Scanner
 
 
     .........DPI Check...Waiting for Jobs...  ZZZZZZ...ZZZZZ..ZZZ...\n""")
-    print("Orario ultima esecuzione: "+str(datetime.datetime.now()))
+    print("Orario ultima esecuzione: " + str(datetime.datetime.now()))
     print("PROSSIMA ESECUZIONE.... TRA 24 ORE...")
     time.sleep(86400)
     os.system('clear')
-
-
-
-
-
-
-
-
-
-
-
