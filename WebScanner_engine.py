@@ -1,20 +1,14 @@
 #!/usr/bin/env python3
 # Module Imports
-import subprocess
-import sys
+import json
 import os
+import sys
 import time
 from datetime import datetime
-import arachni
-import DB_connect
-import enum4linux_read_json
-import SMBRUTE
-import extrac_dir_file_bruteforce
-import mariadb
-import nmap
-import json
-import whois
 from threading import Thread
+
+import DB_connect
+import arachni
 
 # setup di configurazione all avvio dell'engine
 

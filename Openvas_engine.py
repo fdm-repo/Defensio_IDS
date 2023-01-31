@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 # Module Imports
-import subprocess
-import time
-from datetime import datetime
-import DB_connect
-import os
-import xml.etree.ElementTree as ET
-import parsing_xml_report_NetScanner
 import json
+import os
+import subprocess
 import sys
+import time
+import xml.etree.ElementTree as ET
+from datetime import datetime
 from threading import Thread
+
+import DB_connect
+import parsing_xml_report_NetScanner
 
 #username e password per il docker GVM
 

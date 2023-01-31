@@ -1,18 +1,9 @@
 #!/usr/bin/env python3
 # Module Imports
-import subprocess
-import sys
-import time
-from datetime import datetime
-import DB_connect
-import mariadb
-import nmap
 import json
-import yaml
+import time
 
-
-
-
+import DB_connect
 
 timestamp_limit = ''
 

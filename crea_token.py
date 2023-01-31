@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
 # Module Imports
-import subprocess
-import sys
-import time
+import json
+import os
 import random
 import string
+import sys
+import time
+
 import DB_connect
-import os
-import json
-import whois
 
 try:
     data = json.load(open("eng_conf.json"))

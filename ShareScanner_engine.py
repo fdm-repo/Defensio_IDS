@@ -1,19 +1,16 @@
 #!/usr/bin/env python3
 # Module Imports
+import json
+import os
 import subprocess
 import sys
-import os
 import time
 from datetime import datetime
-import arachni
-import DB_connect
-import enum4linux_read_json
-import SMBRUTE
-import mariadb
-import nmap
-import json
-import whois
 from threading import Thread
+
+import DB_connect
+import SMBRUTE
+import enum4linux_read_json
 
 token_ver = ''
 def test():

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # Module Imports
-import sys
-import os
-import time
 import json
+import os
+import sys
+import time
 
 import mariadb
 

@@ -1,14 +1,5 @@
 #!/usr/bin/env python3
 # Module Imports
-import nmap
-import xml
-import time
-import sys
-import os
-from datetime import datetime
-from libnmap.process import NmapProcess
-from time import sleep
-import subprocess
 import socket
 
 def verifica_porta(host, port):

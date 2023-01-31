@@ -1,20 +1,9 @@
 #!/bin/python3
 
+import whois
+
 # dependency check for the modules
-import subprocess
-import sys
-import time
-from datetime import datetime
-import arachni
 import DB_connect
-import enum4linux_read_json
-import mariadb
-import nmap
-import json
-import whois
-import whois
-
-
 
 connessione = DB_connect.database_connect()
 conn = connessione.database_connection()

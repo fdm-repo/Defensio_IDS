@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
 
-import os
-import argparse
-import sys
 import SMBRUTE
 
 id_j = "168"

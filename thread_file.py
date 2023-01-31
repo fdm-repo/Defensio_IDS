@@ -1,16 +1,12 @@
 #!/usr/bin/env python3
 # Module Imports
 import datetime
-import subprocess
+import json
 import sys
 import time
-import random
-import string
-import DB_connect
-import time
 from threading import Thread
-import json
-import whois
+
+import DB_connect
 
 try:
     data = json.load(open("eng_conf.json"))

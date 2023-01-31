@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 
 import os
-import argparse
 import sys
-import extrac_dir_file_bruteforce
+
 import DB_connect
+import extrac_dir_file_bruteforce
+
 
 class smbbruteforce:
     def bruteforce(self, id_j ,ip, username, password):

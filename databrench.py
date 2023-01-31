@@ -1,19 +1,11 @@
 #!/usr/bin/env python3
 # Module Imports
+import json
 import subprocess
-import sys
-import os
 import time
 from datetime import datetime
-import arachni
-import DB_connect
-import enum4linux_read_json
-import SMBRUTE
-import mariadb
-import nmap
-import json
-import whois
 
+import DB_connect
 
 while True:
 

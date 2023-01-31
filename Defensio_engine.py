@@ -1,22 +1,16 @@
 #!/usr/bin/env python3
 # Module Imports
-import subprocess
-import sys
+import json
 import os
+import sys
 import time
 from datetime import datetime
-import arachni
-import DB_connect
-import enum4linux_read_json
-import SMBRUTE
-import mariadb
-import nmap
-import json
-import whois
 from threading import Thread
 
+import nmap
+import whois
 
-
+import DB_connect
 
 
 def whois_public_ip(id_j):

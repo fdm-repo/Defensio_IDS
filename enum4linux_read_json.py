@@ -1,17 +1,8 @@
 #!/usr/bin/env python3
 # Module Imports
-import sys
-import time
-from datetime import datetime
-import DB_connect
-import mariadb
-import nmap
 import json
 
-
-
-
-
+import DB_connect
 
 
 class enum4linux_read_json_class:

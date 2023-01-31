@@ -1,17 +1,12 @@
 #!/usr/bin/env python3
 
 import datetime
-import subprocess
-import DB_connect
 import json
 import os
+import subprocess
 import time
 
-
-
-
-
-
+import DB_connect
 
 while True:
     connessione = DB_connect.database_connect()

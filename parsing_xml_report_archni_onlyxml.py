@@ -1,15 +1,9 @@
 #!/usr/bin/env python3
 # Module Imports
-import subprocess
-import time
-from datetime import datetime
-import DB_connect
-import os
-import bz2
-import xml.etree.ElementTree as ET
-from xml.etree import ElementTree as ET
-import xmltodict
 import json
+from xml.etree import ElementTree as ET
+
+import DB_connect
 
 
 class parsing_xml_webscanner:
