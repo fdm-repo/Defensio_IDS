@@ -54,11 +54,13 @@ def test():
                 conn.commit()
                 token_ver = token
             except:
-                print("verifica token non effettuata")
+                print("Verifica token non effettuata")
 
-        print(datetime.now())
-        print("\ntoken attuale verificato: "+token)
-        time.sleep(10)
+        print("++++++++++++++++++++++++++++++++++++")
+        print("DataTime: " + str(datetime.now()))
+        print("Token attuale verificato: " + token)
+        print("++++++++++++++++++++++++++++++++++++")
+        time.sleep(11)
 
 t = Thread(target=test)
 t.start()
@@ -145,8 +147,20 @@ while True:
 
     # except:
     # print('errore in enum4linux')
-    time.sleep(5)
-    print("Sharing_Discovery Active...Waiting for Jobs...  ZZZZZZ...ZZZZZ..ZZZ...")
+
+    print(
+        """
+  ____    _                      _                     ____    _                                                    
+ / ___|  | |__     __ _   _ __  (_)  _ __     __ _    |  _ \  (_)  ___    ___    ___   __   __   ___   _ __   _   _ 
+ \___ \  | '_ \   / _` | | '__| | | | '_ \   / _` |   | | | | | | / __|  / __|  / _ \  \ \ / /  / _ \ | '__| | | | |
+  ___) | | | | | | (_| | | |    | | | | | | | (_| |   | |_| | | | \__ \ | (__  | (_) |  \ V /  |  __/ | |    | |_| |
+ |____/  |_| |_|  \__,_| |_|    |_| |_| |_|  \__, |   |____/  |_| |___/  \___|  \___/    \_/    \___| |_|     \__, |
+                                             |___/                                                            |___/ 
+
+    .........Sharing_Discovery Active...Waiting for Jobs...  ZZZZZZ...ZZZZZ..ZZZ...\n""")
+    time.sleep(20)
+    os.system('clear')
+
     check = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     conn_check = DB_connect.database_connect()

@@ -100,7 +100,7 @@ def test():
         try:
             data = json.load(open("eng_conf.json"))
         except:
-            print("Engine non inizializzato! eseguire: ./inizializzazione_engine.py ")
+            print("!!! Engine non inizializzato! eseguire: ./inizializzazione_engine.py ")
             sys.exit(1)
         id_ass = data['id_ass']
 
@@ -121,7 +121,7 @@ def test():
             token = token[0]
 
         except:
-            print("nessun token rilevato")
+            print("!!! Nessun token rilevato")
 
         if token_ver != token:
             try:
@@ -131,11 +131,12 @@ def test():
                 conn.commit()
                 token_ver = token
             except:
-                print("verifica token non effettuata")
-
-        print(datetime.now())
-        print("\ntoken attuale verificato: "+token)
-        time.sleep(10)
+                print("!!! Verifica token non effettuata")
+        print("++++++++++++++++++++++++++++++++++++++")
+        print("DataTime: "+str(datetime.now()))
+        print("Token attuale verificato: "+token)
+        print("++++++++++++++++++++++++++++++++++++++")
+        time.sleep(13)
 
 t = Thread(target=test)
 t.start()
@@ -150,7 +151,7 @@ while True:
     try:
         data = json.load(open("eng_conf.json"))
     except:
-        print("Engine non inizializzato! eseguire: ./inizializzazione_engine.py ")
+        print("!!! Engine non inizializzato! eseguire: ./inizializzazione_engine.py ")
         sys.exit(1)
 
     id_ass = data['id_ass']
@@ -316,8 +317,20 @@ while True:
         conn.commit()
         cur.close()
         conn.close()
-    time.sleep(5)
-    print("Net_Discovery Active...Waiting for Jobs...  ZZZZZZ...ZZZZZ..ZZZ...")
+
+
+    print(
+    """
+  _   _          _     ____                                               
+ | \ | |   ___  | |_  / ___|    ___    __ _   _ __    _ __     ___   _ __ 
+ |  \| |  / _ \ | __| \___ \   / __|  / _` | | '_ \  | '_ \   / _ \ | '__|
+ | |\  | |  __/ | |_   ___) | | (__  | (_| | | | | | | | | | |  __/ | |   
+ |_| \_|  \___|  \__| |____/   \___|  \__,_| |_| |_| |_| |_|  \___| |_|   
+                                                                          
+.........Net_Discovery Active...Waiting for Jobs...  ZZZZZZ...ZZZZZ..ZZZ...\n""")
+    time.sleep(20)
+    os.system('clear')
+
     check = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     conn_check = DB_connect.database_connect()

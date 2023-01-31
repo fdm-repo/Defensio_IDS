@@ -34,9 +34,19 @@ while True:
 
     cur.execute('SELECT * FROM scheduling JOIN job ON job.id_job = scheduling.id_job WHERE job.id_asset = %s', id_asset)
     if cur.rowcount != 0:
+        print("""
+  ____           _                  _           _   _                 
+ / ___|    ___  | |__     ___    __| |  _   _  | | (_)  _ __     __ _ 
+ \___ \   / __| | '_ \   / _ \  / _` | | | | | | | | | | '_ \   / _` |
+  ___) | | (__  | | | | |  __/ | (_| | | |_| | | | | | | | | | | (_| |
+ |____/   \___| |_| |_|  \___|  \__,_|  \__,_| |_| |_| |_| |_|  \__, |
+                                                                |___/ 
+by DEFENSIO Scanner
+
+        """)
         adesso = datetime.now()
         time_totale = adesso.strftime('%Y-%m-%d %H:%M:%S')
-
+        print("#############################################")
         print("\nOrario attuale: " + time_totale)
 
         ora_attuale = adesso.strftime('%H:%M')
@@ -47,25 +57,25 @@ while True:
 
         giorno_mese = adesso.strftime('%d')
         print("Giorno del mese: " + giorno_mese)
-
+        print("#############################################")
         risultati = cur.fetchall()
         for job_schedulated in risultati:
 
             id_job = job_schedulated[1]
-            print("\n____________DEFENSIO Scheduling in coda per l'assetto " + str(id_ass) + " ______________\n")
-            print("id job: " + str(id_job))
+
+            print("\nId job: " + str(id_job))
             en_day = job_schedulated[4]
             orario = job_schedulated[7]
             if en_day == 'on':
-                print("Abilitata scansione giornaliera  Orario: " + orario)
+                print("* Abilitata scansione giornaliera  Orario: " + orario)
             en_weekday = job_schedulated[2]
             weekday = job_schedulated[5]
             if en_weekday == 'on':
-                print("Abilitata scansione settimanale  Giorno: " + weekday + " Orario: " + orario)
+                print("* Abilitata scansione settimanale  Giorno: " + weekday + " Orario: " + orario)
             en_monthday = job_schedulated[3]
             monthday = job_schedulated[6]
             if en_monthday == 'on':
-                print("Abilitata scansione mensile  Giorno: " + monthday + " Orario: " + orario)
+                print("* Abilitata scansione mensile  Giorno: " + monthday + " Orario: " + orario)
 
             id_job_list = list()
             id_job_list.append(id_job)
@@ -107,7 +117,7 @@ while True:
 
 
             if (en_weekday == 'on' and orario == ora_attuale and weekday == giorno_settimana):
-                print("*****    ***********    job "+ str(id_job) +" settimanale attivato   *****    ***********")
+                print("*****     ***********    job "+ str(id_job) +" settimanale attivato   *****    ***********")
 
                 connessione2 = DB_connect.database_connect()
                 conn2 = connessione2.database_connection()

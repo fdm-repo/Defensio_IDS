@@ -178,9 +178,11 @@ def test():
             except:
                 print("verifica token non effettuata")
 
-        print(datetime.now())
-        print("\ntoken attuale verificato: "+token)
-        time.sleep(10)
+        print("++++++++++++++++++++++++++++++++++++++")
+        print("DataTime: " + str(datetime.now()))
+        print("Token attuale verificato: " + token)
+        print("++++++++++++++++++++++++++++++++++++++")
+        time.sleep(15)
 
 t = Thread(target=test)
 t.start()
@@ -398,9 +400,19 @@ while True:
         conn.commit()
         cur.close()
 
+    print(
+        """
+ __     __          _                   ____                                               
+ \ \   / /  _   _  | |  _ __    ___    / ___|    ___    __ _   _ __    _ __     ___   _ __ 
+  \ \ / /  | | | | | | | '_ \  / __|   \___ \   / __|  / _` | | '_ \  | '_ \   / _ \ | '__|
+   \ V /   | |_| | | | | | | | \__ \    ___) | | (__  | (_| | | | | | | | | | |  __/ | |   
+    \_/     \__,_| |_| |_| |_| |___/   |____/   \___|  \__,_| |_| |_| |_| |_|  \___| |_|   
+                                                                                           
 
-    time.sleep(5)
-    print("Vulnerability Assesment Active...Waiting for Jobs...  ZZZZZZ...ZZZZZ..ZZZ...")
+
+    .........Vulnerability Scanner Active...Waiting for Jobs...  ZZZZZZ...ZZZZZ..ZZZ...\n""")
+    time.sleep(20)
+    os.system('clear')
     check = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     conn_check = DB_connect.database_connect()

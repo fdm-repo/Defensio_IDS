@@ -57,9 +57,11 @@ def test():
             except:
                 print("verifica token non effettuata")
 
-        print(datetime.now())
-        print("\ntoken attuale verificato: "+token)
-        time.sleep(10)
+        print("++++++++++++++++++++++++++++++++++++++")
+        print("DataTime: " + str(datetime.now()))
+        print("Token attuale verificato: " + token)
+        print("++++++++++++++++++++++++++++++++++++++")
+        time.sleep(14)
 
 t = Thread(target=test)
 t.start()
@@ -172,11 +174,19 @@ while True:
         arac.close()
 
 
+    print(
+        """
+ __        __  _____   ____      ____                                               
+ \ \      / / | ____| | __ )    / ___|    ___    __ _   _ __    _ __     ___   _ __ 
+  \ \ /\ / /  |  _|   |  _ \    \___ \   / __|  / _` | | '_ \  | '_ \   / _ \ | '__|
+   \ V  V /   | |___  | |_) |    ___) | | (__  | (_| | | | | | | | | | |  __/ | |   
+    \_/\_/    |_____| |____/    |____/   \___|  \__,_| |_| |_| |_| |_|  \___| |_|   
+                                                                                    
 
+    .........Web Scanner Active...Waiting for Jobs...  ZZZZZZ...ZZZZZ..ZZZ...\n""")
+    time.sleep(20)
+    os.system('clear')
 
-
-    time.sleep(5)
-    print("Web Scanner Active...Waiting for Jobs...  ZZZZZZ...ZZZZZ..ZZZ...")
     check = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     conn_check = DB_connect.database_connect()

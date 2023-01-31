@@ -22,6 +22,18 @@ while True:
     cur.execute("SELECT email FROM email_leak_target")
     result = cur.fetchall()
     if cur.rowcount != 0:
+        print(
+            """
+ _______                _                                _     ___  _                  ______   ______   _ 
+(_______)              (_)                              (_)   / __)(_)                (______) (_____ \ | |
+ _______  _   _  _   _  _   ___     _   _  _____   ____  _  _| |__  _   ____  _____    _     _  _____) )| |
+|  ___  || | | || | | || | / _ \   | | | || ___ | / ___)| |(_   __)| | / ___)(____ |  | |   | ||  ____/ | |
+| |   | | \ V /  \ V / | || |_| |   \ V / | ____|| |    | |  | |   | |( (___ / ___ |  | |__/ / | |      | |
+|_|   |_|  \_/    \_/  |_| \___/     \_/  |_____)|_|    |_|  |_|   |_| \____)\_____|  |_____/  |_|      |_|
+                                                                                                           
+by DEFENSIO Scanner        
+            """
+        )
         for i in result:
             email = i[0]
             print("Email in esame: "+email)
@@ -29,7 +41,7 @@ while True:
             try:
                 cmd = subprocess.run(["pwned", "pa", email, "-r"], stdout=f)
             except:
-                print("errore.. prossimo tentativo....")
+                print("Errore.. prossimo tentativo....")
             f.close()
 
             email_list = list()
@@ -67,10 +79,21 @@ while True:
             print("*^^^^^^****_____****^^^$$$****************")
             time.sleep(10)
     os.system('clear')
+    print(
+        """
+  ____    ____    ___      ____   _                     _    
+ |  _ \  |  _ \  |_ _|    / ___| | |__     ___    ___  | | __
+ | | | | | |_) |  | |    | |     | '_ \   / _ \  / __| | |/ /
+ | |_| | |  __/   | |    | |___  | | | | |  __/ | (__  |   < 
+ |____/  |_|     |___|    \____| |_| |_|  \___|  \___| |_|\_\
+                                                             
+
+
+    .........DPI Check...Waiting for Jobs...  ZZZZZZ...ZZZZZ..ZZZ...\n""")
     print("Orario ultima esecuzione: "+str(datetime.datetime.now()))
     print("PROSSIMA ESECUZIONE.... TRA 24 ORE...")
     time.sleep(86400)
-
+    os.system('clear')
 
 
 

@@ -26,8 +26,19 @@ length_of_string = 12
 
 while True:
     stringa = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length_of_string))
-    print("-------------DEFENSIO Token generato------------------")
-    print(stringa)
+    print("""
+  ____            __                        _             _____    ___    _  __  _____   _   _ 
+ |  _ \    ___   / _|   ___   _ __    ___  (_)   ___     |_   _|  / _ \  | |/ / | ____| | \ | |
+ | | | |  / _ \ | |_   / _ \ | '_ \  / __| | |  / _ \      | |   | | | | | ' /  |  _|   |  \| |
+ | |_| | |  __/ |  _| |  __/ | | | | \__ \ | | | (_) |     | |   | |_| | | . \  | |___  | |\  |
+ |____/   \___| |_|    \___| |_| |_| |___/ |_|  \___/      |_|    \___/  |_|\_\ |_____| |_| \_|
+                                                                                               
+    
+    """
+          )
+    print("++++++++++++++++++++++++++++++++")
+    print("\nToken generato: "+stringa)
+    print("++++++++++++++++++++++++++++++++")
     sql_update_query = """UPDATE engines SET token = %s WHERE engines.codeword = %s; """
     input_data = (stringa, id_ass)
     cur.execute(sql_update_query, input_data)
