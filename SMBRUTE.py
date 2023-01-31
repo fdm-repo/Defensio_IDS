@@ -8,12 +8,10 @@ import extrac_dir_file_bruteforce
 
 
 class smbbruteforce:
-    def bruteforce(self, id_j ,ip, username, password):
+    def bruteforce(self, id_j, ip, username, password):
 
         id_job = id_j
         target = ip
-
-
 
         found = []
         try:
@@ -38,7 +36,7 @@ class smbbruteforce:
                 if os.system("smbclient -L {} -U {}%{}".format(ip, u, p)) == 256:
                     for p in passwd:
                         try:
-                            print("test "+ u +" on password "+ p)
+                            print("test " + u + " on password " + p)
                             if os.system("smbclient -L {} -U {}%{}".format(ip, u, p)) != 256:
                                 found.append("{}:{}".format(u, p))
                         except:
@@ -58,14 +56,15 @@ class smbbruteforce:
                 u = x.split(":")[0]
                 p = x.split(":")[1]
                 print("[*] SHARES FOR USER : \033[30;42m {} \033[m  AND PASSWORD : \033[30;42m {} \033[m".format(u, p))
-                os.system("./smbmap/smbmap.py  --no-banner --no-update --no-color  -u {} -p {} -H {} -r --csv report_brute_smb.csv".format(u, p, ip, ))
+                os.system(
+                    "./smbmap/smbmap.py  --no-banner --no-update --no-color  -u {} -p {} -H {} -r --csv report_brute_smb.csv".format(
+                        u, p, ip, ))
                 print("+----------------------------------------------------------------------+")
 
                 connessione_brute = DB_connect.database_connect()
                 conn_brute = connessione_brute.database_connection()
 
                 cur_brute = conn_brute.cursor()
-
 
                 sql_update_query = """INSERT INTO`smb_bruteforce`(`id_bruteforce`, `id_job`, `ip_host` ,`user`, `password`) VALUES (NULL,%s,%s,%s,%s);"""
                 input_data = (id_job, target, u, p)
@@ -75,7 +74,6 @@ class smbbruteforce:
                 conn_brute.close()
 
                 parsing_sqlmap = extrac_dir_file_bruteforce.parsing_sqlmap()
-                parsing_sqlmap.parsing_sqlmap_report(id_j,u,p)
+                parsing_sqlmap.parsing_sqlmap_report(id_j, u, p)
 
         print("\n")
-

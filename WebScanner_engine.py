@@ -14,8 +14,9 @@ import arachni
 
 
 token_ver = ''
-def test():
 
+
+def test():
     global token_ver
     while True:
         conn_check = DB_connect.database_connect()
@@ -56,6 +57,7 @@ def test():
         print("Token attuale verificato: " + token)
         print("++++++++++++++++++++++++++++++++++++++")
         time.sleep(14)
+
 
 t = Thread(target=test)
 t.start()
@@ -166,7 +168,6 @@ while True:
 
         conn.commit()
         arac.close()
-
 
     print(
         """

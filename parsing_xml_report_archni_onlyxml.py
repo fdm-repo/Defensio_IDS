@@ -7,12 +7,11 @@ import DB_connect
 
 
 class parsing_xml_webscanner:
-    def parsing_report_to_DB(report_XML_NS,id_j,ip_j,port_j):
+    def parsing_report_to_DB(report_XML_NS, id_j, ip_j, port_j):
 
         id_job = id_j
         ip = ip_j
         port = port_j
-
 
         file_xml = report_XML_NS
 
@@ -24,7 +23,6 @@ class parsing_xml_webscanner:
         cur = conn.cursor()
 
         ################### genera l'oggetto relativo al file xml in forma dizionario##############
-
 
         tree = ET.parse(file_xml)
         root = tree.getroot()
@@ -42,13 +40,9 @@ class parsing_xml_webscanner:
                 print(child.text)
                 finish_datetime = child.text
 
-
-
-
-
             if child.tag == 'issues':
                 for child2 in child:
-                    if(child2.tag == 'issue'):
+                    if (child2.tag == 'issue'):
 
                         for child3 in child2:
                             if child3.tag == "name":
@@ -70,9 +64,7 @@ class parsing_xml_webscanner:
                                 print(child3.text)
                                 digest = child3.text
 
-
-
-                            if(child3.tag == 'references'):
+                            if (child3.tag == 'references'):
                                 for child4 in child3:
                                     print("____reference____")
                                     print(child4.attrib["title"])
@@ -85,9 +77,6 @@ class parsing_xml_webscanner:
 
                                     cur.execute(sql_update_query, input_data)
                                     conn.commit()
-
-
-
 
                             if (child3.tag == 'vector'):
                                 for child4 in child3:
@@ -106,8 +95,8 @@ class parsing_xml_webscanner:
 
                         sql_update_query = """INSERT INTO `web_scanner_result` (`id_result`, `seed`, `name`, `description`, `remedy_guidance`, `severity`, `cwe`, `digest`, `vector_class`, `vector_type`, `vector_url`, `vector_action`) VALUES (NULL,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);"""
                         input_data = (
-                        seed, name, description, remedy_guidance, severity, cwe, digest, vector_class, vector_type,
-                        vector_url, vector_action)
+                            seed, name, description, remedy_guidance, severity, cwe, digest, vector_class, vector_type,
+                            vector_url, vector_action)
 
                         cur.execute(sql_update_query, input_data)
                         conn.commit()
@@ -118,13 +107,4 @@ class parsing_xml_webscanner:
         cur.execute(sql_update_query, input_data)
         conn.commit()
 
-
-
         conn.close()
-
-
-
-
-
-
-

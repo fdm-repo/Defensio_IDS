@@ -38,7 +38,6 @@ class parsing_xml_Netscanner:
                 print("id_report non disponibile")
                 id_report = 'NULL'
 
-
             # estrae il Task
             try:
                 id_task = obj["get_reports_response"]['report']['report']['task']['@id']

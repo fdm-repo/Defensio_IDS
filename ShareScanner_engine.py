@@ -13,8 +13,9 @@ import SMBRUTE
 import enum4linux_read_json
 
 token_ver = ''
-def test():
 
+
+def test():
     global token_ver
     while True:
         try:
@@ -27,7 +28,6 @@ def test():
         conn_check = DB_connect.database_connect()
         conn = conn_check.database_connection()
         cur = conn.cursor()
-
 
         id_asset = list()
         id_asset.append(id_ass)
@@ -59,13 +59,11 @@ def test():
         print("++++++++++++++++++++++++++++++++++++")
         time.sleep(11)
 
+
 t = Thread(target=test)
 t.start()
 
-
 while True:
-
-
 
     connessione = DB_connect.database_connect()
     conn = connessione.database_connection()
@@ -103,7 +101,6 @@ while True:
         start_job = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         print("Time avvio job: " + str(start_job))
 
-
         result_enum_job = enum4linuxqueryjob.fetchone()
         print(result_enum_job)
         id_j = result_enum_job[0]
@@ -128,7 +125,6 @@ while True:
         bruteforce.bruteforce(id_j, ip_target, fileusers, filepass)
 
         if eseguito_enum4linux == 'on':
-
             enum4 = conn.cursor()
 
             sql_update_query = """UPDATE job SET eseguito_enum4linux = %s WHERE id_job  = %s"""
@@ -137,7 +133,6 @@ while True:
 
             conn.commit()
             enum4.close()
-
 
     enum4linuxqueryjob.close()
     conn.close()
@@ -171,4 +166,3 @@ while True:
     conn2.commit()
     cur2.close()
     conn2.close()
-

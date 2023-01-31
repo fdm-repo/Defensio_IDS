@@ -2,6 +2,7 @@
 # Module Imports
 import socket
 
+
 def verifica_porta(host, port):
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -19,5 +20,5 @@ def verifica_porta(host, port):
     finally:
         sock.close()
 
-verifica_porta("www.google.com", 21)
 
+verifica_porta("www.google.com", 21)

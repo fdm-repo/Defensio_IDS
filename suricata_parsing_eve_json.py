@@ -7,7 +7,7 @@ import DB_connect
 
 timestamp_limit = ''
 
-while True :
+while True:
 
     file_json = "/var/log/suricata/eve.json"
 
@@ -63,8 +63,9 @@ while True :
                     sql_insert_record = "INSERT INTO `suricata_alert` (`id_result_alert`, `id_asset`, `timestamp`, `src_ip`, `src_port`, `dest_ip`, `dest_port`, `proto`, `action`, `gid`, `signature_id`, `rev`, `signature`, `category`, `severity`) VALUES (NULL,%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s );"
 
                     input_data = (
-                    id_asset, timestamp, src_ip, src_port, dest_ip, dest_port, proto, action, gid, signature_id, rev,
-                    signature, category, severity)
+                        id_asset, timestamp, src_ip, src_port, dest_ip, dest_port, proto, action, gid, signature_id,
+                        rev,
+                        signature, category, severity)
                     suricataDB.execute(sql_insert_record, input_data)
                     connDB.commit()
 
@@ -73,14 +74,3 @@ while True :
 
         print('SURICATA ACTIVE....  Last record: ' + timestamp_limit + '...ZZZzzzz.....zzz...zz...z..')
         time.sleep(20)
-
-
-
-    
-
-
-
-
-
-
-

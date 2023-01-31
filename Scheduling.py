@@ -74,11 +74,10 @@ by DEFENSIO Scanner
             id_job_list.append(id_job)
 
             if (en_day == 'on' and orario == ora_attuale):
-                print("***************job "+ str(id_job) +" giornaliero attivato*****************")
+                print("***************job " + str(id_job) + " giornaliero attivato*****************")
 
                 connessione2 = DB_connect.database_connect()
                 conn2 = connessione2.database_connection()
-
 
                 cur2 = conn2.cursor()
 
@@ -92,7 +91,6 @@ by DEFENSIO Scanner
                 conn2.commit()
                 print(cur2.rowcount, "service record(s) deleted")
 
-
                 print("*->record assets pregressi eliminati")
 
                 # scrive il tag esecuzione sul record del job
@@ -104,13 +102,11 @@ by DEFENSIO Scanner
                 cur2.close()
                 conn2.close()
                 avvio_job_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                print("----> Job "+str(id_job)+" avviato alle: "+avvio_job_time)
+                print("----> Job " + str(id_job) + " avviato alle: " + avvio_job_time)
                 time.sleep(60)
 
-
-
             if (en_weekday == 'on' and orario == ora_attuale and weekday == giorno_settimana):
-                print("*****     ***********    job "+ str(id_job) +" settimanale attivato   *****    ***********")
+                print("*****     ***********    job " + str(id_job) + " settimanale attivato   *****    ***********")
 
                 connessione2 = DB_connect.database_connect()
                 conn2 = connessione2.database_connection()
@@ -141,7 +137,8 @@ by DEFENSIO Scanner
                 time.sleep(60)
 
             if (en_monthday == 'on' and orario == ora_attuale and monthday == giorno_mese):
-                print("*****++++++++***********    job "+ str(id_job) +" mensile attivato   *****+++++++++***********")
+                print(
+                    "*****++++++++***********    job " + str(id_job) + " mensile attivato   *****+++++++++***********")
 
                 connessione2 = DB_connect.database_connect()
                 conn2 = connessione2.database_connection()
@@ -171,11 +168,5 @@ by DEFENSIO Scanner
                 print("----> Job " + str(id_job) + " avviato alle: " + avvio_job_time)
                 time.sleep(60)
 
-
-
-
-
-
     time.sleep(10)
     os.system('clear')
-

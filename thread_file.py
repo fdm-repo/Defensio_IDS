@@ -14,14 +14,10 @@ except:
     print("Engine non inizializzato! eseguire: ./inizializzazione_engine.py ")
     sys.exit(1)
 
-
-
-token_ver=''
-
+token_ver = ''
 
 
 def test():
-
     global token_ver
     while True:
         conn_check = DB_connect.database_connect()
@@ -55,11 +51,9 @@ def test():
                 print("verifica token non effettuata")
 
         print(datetime.datetime.now())
-        print("\ntoken attuale verificato: "+token)
+        print("\ntoken attuale verificato: " + token)
         time.sleep(10)
+
 
 t = Thread(target=test)
 t.start()
-
-
-
