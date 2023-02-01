@@ -119,7 +119,7 @@ def test():
 
         id_asset = list()
         id_asset.append(id_ass)
-
+        token = ''
         try:
             sql_query_token = """SELECT token FROM engines WHERE engines.codeword = %s; """
             input_data = id_asset
