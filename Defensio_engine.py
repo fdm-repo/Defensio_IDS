@@ -6,13 +6,16 @@ import sys
 import time
 from datetime import datetime
 from threading import Thread
-import crealog
+
 import nmap
 import whois
 
 import DB_connect
+import crealog
 
 idprocess = "Defensio_engine"
+
+
 def whois_public_ip(id_j):
     id_job = id_j
 
@@ -34,8 +37,7 @@ def whois_public_ip(id_j):
 
     log = crealog.log_event()
     log.crealog(idprocess,
-                "Esecuzione Whois IP Pubblico "+str(domain)+" del Job "+str(id_job))
-
+                "Esecuzione Whois IP Pubblico " + str(domain) + " del Job " + str(id_job))
 
     if public_ip == 'si':
         print(domain)
@@ -44,14 +46,14 @@ def whois_public_ip(id_j):
 
         log = crealog.log_event()
         log.crealog(idprocess,
-                    "Risultato Whois IP Pubblico "+str(public_ip)+" del Job "+str(id_job))
+                    "Risultato Whois IP Pubblico " + str(public_ip) + " del Job " + str(id_job))
 
         sql_update_query = """INSERT INTO `whois_result` (`id_result_whois`, `id_job`, `ip_domain`, `result`) VALUES (NULL,%s,%s,%s);"""
         input_data = (id_job, domain, result_whois)
 
         log = crealog.log_event()
         log.crealog(idprocess,
-                    "Inserito risultato Whois IP Pubblico "+str(domain)+" del Job "+str(id_job)+" nel Database")
+                    "Inserito risultato Whois IP Pubblico " + str(domain) + " del Job " + str(id_job) + " nel Database")
 
         cur_whois.execute(sql_update_query, input_data)
         conn_whois.commit()
@@ -186,8 +188,7 @@ while True:
         log = crealog.log_event()
         log.crealog(idprocess,
                     "Scansione Defensio Engine in esecuzione: Job n° " + str(result[0]) + " | Assetto n° " + str(
-            result[1]) + " ! Target " + str(result[2]) + " | Netmask " + str(result[3]))
-
+                        result[1]) + " ! Target " + str(result[2]) + " | Netmask " + str(result[3]))
 
         # chiude la connessione per evitare timeout durante la scansione di nmap
         cur.close()
@@ -289,7 +290,7 @@ while True:
             conn.commit()
             log = crealog.log_event()
             log.crealog(idprocess,
-                        "Caricamento risultati tabella HOST:"+str(host))
+                        "Caricamento risultati tabella HOST:" + str(host))
             # ciclo for per i protocolli riscontrati
             for proto in nm[host].all_protocols():
                 print("  L____ Protocollo attivo: " + proto)
@@ -330,7 +331,7 @@ while True:
             print("WHOIS not possible")
             log = crealog.log_event()
             log.crealog(idprocess,
-                        "ERRORE WHOIS su job "+str(id_j)+" non disponibile")
+                        "ERRORE WHOIS su job " + str(id_j) + " non disponibile")
 
         # aggiorna la statistica del job della tabella statistic_job
 
@@ -340,7 +341,7 @@ while True:
             print('errore nell\'update della tabella statistica')
             log = crealog.log_event()
             log.crealog(idprocess,
-                        "ERRORE update tabella statistica su job"+str(id_j)+" non disponibile")
+                        "ERRORE update tabella statistica su job" + str(id_j) + " non disponibile")
 
         connessione = DB_connect.database_connect()
         conn = connessione.database_connection()
