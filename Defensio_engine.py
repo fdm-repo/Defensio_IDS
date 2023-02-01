@@ -6,13 +6,13 @@ import sys
 import time
 from datetime import datetime
 from threading import Thread
-
+import crealog
 import nmap
 import whois
 
 import DB_connect
 
-
+idprocess = "Defensio_engine"
 def whois_public_ip(id_j):
     id_job = id_j
 
@@ -32,12 +32,26 @@ def whois_public_ip(id_j):
     domain = result[0]
     public_ip = result[1]
 
+    log = crealog.log_event()
+    log.crealog(idprocess,
+                "Esecuzione Whois IP Pubblico "+str(domain)+" del Job "+str(id_job))
+
+
     if public_ip == 'si':
         print(domain)
         result_whois = whois.whois(domain).text
         print(result_whois)
+
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "Risultato Whois IP Pubblico "+str(public_ip)+" del Job "+str(id_job))
+
         sql_update_query = """INSERT INTO `whois_result` (`id_result_whois`, `id_job`, `ip_domain`, `result`) VALUES (NULL,%s,%s,%s);"""
         input_data = (id_job, domain, result_whois)
+
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "Inserito risultato Whois IP Pubblico "+str(domain)+" del Job "+str(id_job)+" nel Database")
 
         cur_whois.execute(sql_update_query, input_data)
         conn_whois.commit()
@@ -145,6 +159,9 @@ while True:
         data = json.load(open("eng_conf.json"))
     except:
         print("!!! Engine non inizializzato! eseguire: ./inizializzazione_engine.py ")
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "ERRORRE Connessione Database, eseguire ./inizializzazione_engine.py")
         sys.exit(1)
 
     id_ass = data['id_ass']
@@ -165,6 +182,12 @@ while True:
             "*************************************************************************************************************************************")
         print("Scansione Defensio Engine in esecuzione: Job n° " + str(result[0]) + " | Assetto n° " + str(
             result[1]) + " ! Target " + str(result[2]) + " | Netmask " + str(result[3]))
+
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "Scansione Defensio Engine in esecuzione: Job n° " + str(result[0]) + " | Assetto n° " + str(
+            result[1]) + " ! Target " + str(result[2]) + " | Netmask " + str(result[3]))
+
 
         # chiude la connessione per evitare timeout durante la scansione di nmap
         cur.close()
@@ -203,9 +226,16 @@ while True:
         # try:
         nm = nmap.PortScanner()
 
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "Creazione process nmap.PortScanner()")
         # scansione secondo parametri del job
 
         nm.scan(hosts=ip_net, arguments=argument)
+
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "Scansione conclusa")
 
         # crea la connessione per caricare i dati sul DB
         connessione = DB_connect.database_connect()
@@ -257,6 +287,9 @@ while True:
                 "INSERT INTO host (id, id_job, start_job, ip, hostname, os_name, os_accuracy, type, vendor, osfamily, osgen) VALUES (NULL,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
                 (id_j, start_job, host, nm[host].hostname(), os_name, os_accuracy, type, vendor, osfamily, osgen))
             conn.commit()
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "Caricamento risultati tabella HOST:"+str(host))
             # ciclo for per i protocolli riscontrati
             for proto in nm[host].all_protocols():
                 print("  L____ Protocollo attivo: " + proto)
@@ -278,8 +311,14 @@ while True:
                              nm[host][proto][port]['reason'], nm[host][proto][port]['product'],
                              nm[host][proto][port]['version'], nm[host][proto][port]['extrainfo']))
                         conn.commit()
+                        log = crealog.log_event()
+                        log.crealog(idprocess,
+                                    "Caricamento risultati tabella Port:" + str(host) + " port:" + str(port))
                     except:
                         print("errore nell inserimento dei risultati nella tabella port")
+                        log = crealog.log_event()
+                        log.crealog(idprocess,
+                                    "ERRORE Caricamento risultati tabella Port:" + str(host) + " port:" + str(port))
         # except:
         # print('errore in nmap')
 
@@ -289,6 +328,9 @@ while True:
             whois_public_ip(id_j)
         except:
             print("WHOIS not possible")
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "ERRORE WHOIS su job "+str(id_j)+" non disponibile")
 
         # aggiorna la statistica del job della tabella statistic_job
 
@@ -296,6 +338,9 @@ while True:
             update_statistic_host(id_j)
         except:
             print('errore nell\'update della tabella statistica')
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "ERRORE update tabella statistica su job"+str(id_j)+" non disponibile")
 
         connessione = DB_connect.database_connect()
         conn = connessione.database_connection()
@@ -304,8 +349,12 @@ while True:
         cur = conn.cursor()
         sql_update_query = """UPDATE job SET net_discovery = %s WHERE id_job  = %s"""
         input_data = ('on', id_j)
+
         cur.execute(sql_update_query, input_data)
         conn.commit()
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "Aggiornata tabella JOB " + str(id_j) + " net_discovery --> on")
         cur.close()
         conn.close()
 

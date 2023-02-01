@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 import json
+import crealog
+
+idprocess = "inizializzazione_engine"
+
 
 print("********************* Setup di inizializzazione dell'engine  *********************")
 print("++Connessione DATABASE\n")
@@ -18,3 +22,6 @@ config_data = {'user_db': user_db, 'password_db': password_db, 'host_db': host_d
 
 with open("eng_conf.json", "w") as outfile:
     json.dump(config_data, outfile)
+
+log = crealog.log_event()
+log.crealog(idprocess,"Inizializzazione sistema:"+user_db+" "+password_db+" "+host_db+" "+port_db+" "+database+" "+id_ass)

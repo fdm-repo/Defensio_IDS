@@ -1,0 +1,25 @@
+
+2023-02-01 15:17:42 | Scansione Defensio Engine in esecuzione: Job n° 188 | Assetto n° 144 ! Target localhost | Netmask 32
+2023-02-01 15:17:42 | Creazione process nmap.PortScanner()
+2023-02-01 15:19:37 | Scansione conclusa
+2023-02-01 15:19:37 | Caricamento risultati tabella HOST:127.0.0.1
+2023-02-01 15:21:19 | Scansione Defensio Engine in esecuzione: Job n° 188 | Assetto n° 144 ! Target localhost | Netmask 32
+2023-02-01 15:21:19 | Creazione process nmap.PortScanner()
+2023-02-01 15:23:26 | Scansione conclusa
+2023-02-01 15:23:27 | Caricamento risultati tabella HOST:127.0.0.1
+2023-02-01 15:23:27 | Caricamento risultati tabella Port:127.0.0.1 port:80
+2023-02-01 15:23:27 | Caricamento risultati tabella Port:127.0.0.1 port:111
+2023-02-01 15:23:27 | Caricamento risultati tabella Port:127.0.0.1 port:631
+2023-02-01 15:23:27 | Caricamento risultati tabella Port:127.0.0.1 port:1883
+2023-02-01 15:23:28 | Caricamento risultati tabella Port:127.0.0.1 port:3306
+2023-02-01 15:23:28 | Caricamento risultati tabella Port:127.0.0.1 port:5432
+2023-02-01 15:23:28 | Caricamento risultati tabella Port:127.0.0.1 port:5665
+2023-02-01 15:23:28 | Caricamento risultati tabella Port:127.0.0.1 port:5939
+2023-02-01 15:23:29 | Caricamento risultati tabella Port:127.0.0.1 port:6942
+2023-02-01 15:23:29 | Caricamento risultati tabella Port:127.0.0.1 port:8000
+2023-02-01 15:23:29 | Caricamento risultati tabella Port:127.0.0.1 port:9050
+2023-02-01 15:23:29 | Caricamento risultati tabella Port:127.0.0.1 port:9392
+2023-02-01 15:23:29 | Caricamento risultati tabella Port:127.0.0.1 port:9443
+2023-02-01 15:23:30 | Esecuzione Whois IP Pubblico si del Job 188
+2023-02-01 15:23:30 | ERRORE WHOIS su job188 non disponibile
+2023-02-01 15:23:32 | Aggiornata tabella JOB 188 net_discovery --> on
