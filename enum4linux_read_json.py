@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # Module Imports
 import json
-
+import crealog
 import DB_connect
 
-
+idprocess = "enum4linux_read_json"
 class enum4linux_read_json_class:
 
     def enum4linux_read_json(self, job_enum, start_job, file_json):
@@ -18,9 +18,18 @@ class enum4linux_read_json_class:
         except:
             print("enum4linux: errore connessione database")
 
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "ERRORE connessione aal database non riuscita")
+
         job = job_enum
         start_job = start_job
         file_json = file_json
+
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "Apertura del file "+str(file_json)+" relativo al Job "+str(job)+" avviato alle "+str(start_job))
+
         with open(file_json, 'r') as json_file:
             enum_smb = json.load(json_file)
             try:
@@ -239,8 +248,15 @@ class enum4linux_read_json_class:
 
                     enumDB.execute(sql_insert_users, input_data)
                     connDB.commit()
+
+
+
             except:
                 print("no smb users")
+
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "Inserimento dei risultati nella tabella smb_user")
 
             """                                                                                                                                                                                                                                                           
             "groups": {},                                                                                                                                                                                                                                                 
@@ -303,8 +319,15 @@ class enum4linux_read_json_class:
 
                     enumDB.execute(sql_insert_share, input_data)
                     connDB.commit()
+
+
+
             except:
                 print("no share value")
+
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "Inserimento dei risultati nella tabella smb_share")
 
             """                                                                                                                                                                                                                                                           
             "policy": {                                                                                                                                                                                                                                                   
@@ -394,6 +417,11 @@ class enum4linux_read_json_class:
             except:
                 print(" no update DB value smb_password_rules")
 
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "Inserimento dei risultati nella tabella smb_password_rules")
+
+
             try:
                 policy_lockout_observation_window = str(enum_smb['policy']['Domain lockout information'][
                                                             'Lockout observation window'])
@@ -450,6 +478,11 @@ class enum4linux_read_json_class:
             except:
                 print(" no errors services value")
 
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "Inserimento dei risultati nella tabella smb_error")
+
+
             try:
                 for i in range(len(enum_smb['errors']['sessions']['enum_sessions'])):
                     error_enum_sessions = str(enum_smb['errors']['sessions']['enum_sessions'][i])
@@ -462,6 +495,10 @@ class enum4linux_read_json_class:
                     connDB.commit()
             except:
                 print("no sessions errors")
+
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "Inserimento dei risultati nella tabella smb_error")
 
             # prepara la query
 
@@ -491,6 +528,8 @@ class enum4linux_read_json_class:
 
             enumDB.execute(sql_insert_enum_query, input_data)
             connDB.commit()
-
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "Inserimento dei risultati nella tabella smb_enum")
         enumDB.close()
         connDB.close()

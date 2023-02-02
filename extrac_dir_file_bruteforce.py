@@ -1,18 +1,28 @@
 #!/usr/bin/env python3
 
 import csv
-
+import crealog
 import DB_connect
 
-
+idprocess = "extrac_dir_file_bruteforce"
 class parsing_sqlmap():
     def parsing_sqlmap_report(self, id_job, user, password):
         id_job = id_job
         user = user
         password = password
 
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "Estrazione risultati bruteforce sqlmap del Job: "+str(id())+" User: "+str(user)+" Pass: "+password)
+
+
         with open('report_brute_smb.csv', newline='') as csvfile:
             spamreader = csv.reader(csvfile, delimiter=',', quotechar='|')
+
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "Aperture File report bruteforce")
+
 
             for row in spamreader:
                 print("____________________________")
@@ -43,3 +53,6 @@ class parsing_sqlmap():
                 cur_brute_sharing.execute(sql_update_query, input_data)
                 conn_brute_sharing.commit()
                 conn_brute_sharing.close()
+                log = crealog.log_event()
+                log.crealog(idprocess,
+                            "Inserimento risultati nella tabella smb_sharing_bruteforce")
