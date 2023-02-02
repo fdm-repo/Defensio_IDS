@@ -1,3 +1,0 @@
-2023-02-01 14:15:49 | porcodio2023-02-01 14:25:12 | Inizializzazione sistema:operator !d3f3n510! 185.254.183.75 3306 defensio 144
-2023-02-01 14:27:03 | Inizializzazione sistema:operator !d3f3n510! 185.254.183.75 3306 defensio 144
-2023-02-01 14:42:03 | Inizializzazione sistema:operator !d3f3n510! 185.245.183.75 3306 defensio 144
