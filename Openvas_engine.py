@@ -17,6 +17,8 @@ import parsing_xml_report_NetScanner
 username = 'admin'
 password = 'porcodio'
 
+idprocess = "Openvas_engine"
+
 
 # definizione della funzione che estrae i valori dall'interrogazione sullo stato di progressione di una funzione
 def statusscan(task):
