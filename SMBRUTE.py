@@ -97,6 +97,11 @@ class smbbruteforce:
             log.crealog(idprocess,
                         "Trovate corrispondenze USER PASS")
 
+
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "Avvio SMBMap sulle corrispondenze trovate")
+
             for x in found:
                 u = x.split(":")[0]
                 p = x.split(":")[1]
