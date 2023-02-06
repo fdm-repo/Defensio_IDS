@@ -101,57 +101,6 @@ def update_statistic_host(id_j):
 
 # setup di configurazione all avvio dell'engine
 
-
-token_ver = ''
-
-
-def test():
-    global token_ver
-    while True:
-        try:
-            data = json.load(open("eng_conf.json"))
-        except:
-            print("!!! Engine non inizializzato! eseguire: ./inizializzazione_engine.py ")
-            sys.exit(1)
-        id_ass = data['id_ass']
-
-        conn_check = DB_connect.database_connect()
-        conn = conn_check.database_connection()
-        cur = conn.cursor()
-
-        id_asset = list()
-        id_asset.append(id_ass)
-        token = ''
-        try:
-            sql_query_token = """SELECT token FROM engines WHERE engines.codeword = %s; """
-            input_data = id_asset
-            cur.execute(sql_query_token, input_data)
-
-            token = cur.fetchone()
-            token = token[0]
-
-        except:
-            print("!!! Nessun token rilevato")
-
-        if token_ver != token:
-            try:
-                sql_update_query = """UPDATE engines SET active_defensio = %s WHERE engines.codeword = %s; """
-                input_data = (token, id_ass)
-                cur.execute(sql_update_query, input_data)
-                conn.commit()
-                token_ver = token
-            except:
-                print("!!! Verifica token non effettuata")
-        print("++++++++++++++++++++++++++++++++++++++")
-        print("DataTime: " + str(datetime.now()))
-        print("Token attuale verificato: " + token)
-        print("++++++++++++++++++++++++++++++++++++++")
-        time.sleep(13)
-
-
-t = Thread(target=test)
-t.start()
-
 while True:
 
     connessione = DB_connect.database_connect()
