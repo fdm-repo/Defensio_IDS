@@ -6,12 +6,13 @@ import sys
 import time
 from datetime import datetime
 from threading import Thread
-
+import crealog
 import DB_connect
 import arachni
 
 # setup di configurazione all avvio dell'engine
 
+idprocess = "WebScanner_engine"
 
 token_ver = ''
 
@@ -62,6 +63,7 @@ def test():
 t = Thread(target=test)
 t.start()
 
+
 while True:
 
     connessione = DB_connect.database_connect()
@@ -95,24 +97,52 @@ while True:
             port_target = result[2]
             arac.close()
             conn.close()
+
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "Esecuzione del job " + str(id_j) + " sull'host " + str(ip_target)+" e sulla porta "+str(port_target))
+
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "Chiamata alla classe e alle funzioni del file ARACHNI")
+
             obj = arachni.arachni_class()
+
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "Esecuzione della funzione arachni_http(id_j, ip_target, port_target ")
+
             obj.arachni_http(id_j, ip_target, port_target)
 
             connessione = DB_connect.database_connect()
             conn = connessione.database_connection()
             arac = conn.cursor()
             arachni_sql_report = "INSERT INTO arachni_report (id_arac_report, id_job) VALUES (NULL, %s);"
+
+
             bho = list()
             bho.append(id_j)
             arac.execute(arachni_sql_report, bho)
+
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "Inserimento ID_Report nella tabella arachni_report del DB relativo al job " + str(
+                            id_j) + " sull'host " + str(ip_target) + " e sulla porta " + str(port_target))
+
             arac.close()
             conn.close()
             eseguito_arachni = 'on'
 
 
 
+
+
     except:
         print('errore in arachni su servizio http')
+
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "ERRORE nella scansione con arachni del servizio HTTP ")
 
     try:
         connessione = DB_connect.database_connect()
@@ -129,7 +159,20 @@ while True:
             arac.close()
             conn.close()
 
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "Esecuzione del job " + str(id_j) + " sull'host " + str(ip_target)+" e sulla porta "+str(port_target))
+
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "Chiamata alla classe e alle funzioni del file ARACHNI")
+
             obj = arachni.arachni_class()
+
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "Esecuzione della funzione arachni_http(id_j, ip_target, port_target ")
+
             obj.arachni_https(id_j, ip_target, port_target)
 
             connessione = DB_connect.database_connect()
@@ -140,6 +183,12 @@ while True:
             bho.append(id_j)
             arac.execute(arachni_sql_report, bho)
             conn.commit()
+
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "Inserimento ID_Report nella tabella arachni_report del DB relativo al job " + str(
+                            id_j) + " sull'host " + str(ip_target) + " e sulla porta " + str(port_target))
+
             arac.close()
             conn.close()
             eseguito_arachni = 'on'
@@ -149,6 +198,10 @@ while True:
 
     except:
         print('errore in arachni su servizio https')
+
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "ERRORE nella scansione con arachni del servizio HTTPS ")
 
     # ciclo if che si esegue solo se c'è stata una scansione con arachni e modifica i valori nel record del job
 
@@ -162,11 +215,20 @@ while True:
 
         conn.commit()
 
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "Aggiornamento su OFF del campo arachni della tabella job del DB  ")
+
         sql_update_query = """UPDATE job SET eseguito_arachni = %s WHERE id_job  = %s"""
         input_data = ('on', result[0])
         arac.execute(sql_update_query, input_data)
 
         conn.commit()
+
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "Aggiornamento su ON del campo eseguito_arachni della tabella job del DB  ")
+
         arac.close()
 
     print(

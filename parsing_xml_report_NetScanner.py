@@ -2,26 +2,47 @@
 # Module Imports
 import json
 import os
-
+import crealog
 import xmltodict
 
 import DB_connect
 
+idprocess = "parsing_xml_report_NetScanner"
 
 class parsing_xml_Netscanner:
     def parsing_report_to_DB(self, id_j, report_XML_NS):
 
+
+
         file_xml = report_XML_NS
         id_job = id_j
 
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "Definizione del file di report di Openvas: "+str(file_xml)+" relativo al job: "+str(id_job))
+
         data = json.load(open("eng_conf.json"))
+
+
+
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "Connessione al DB")
 
         connessione = DB_connect.database_connect()
         conn = connessione.database_connection()
 
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "Connessione aal database riuscita")
+
         cur = conn.cursor()
 
         ################### genera l'oggetto relativo al file xml in forma dizionario##############
+
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "Apertura del file e generazione di un oggetto a dizionario")
 
         with open(file_xml, 'r') as filereport:
             obj = xmltodict.parse(filereport.read())
@@ -30,13 +51,25 @@ class parsing_xml_Netscanner:
 
             print('######################## Inizio Header Report #######################')
 
+
+
             # estrae l'ID Report
             try:
                 id_report = obj["get_reports_response"]['report']['report']['@id']
                 print('id_report: ', id_report)
+
+                log = crealog.log_event()
+                log.crealog(idprocess,
+                            "Elaborazione del report: " + str(
+                                id_report))
+
             except:
                 print("id_report non disponibile")
                 id_report = 'NULL'
+
+                log = crealog.log_event()
+                log.crealog(idprocess,
+                            "ERRORE impossibile elaborare il report ")
 
             # estrae il Task
             try:
@@ -69,8 +102,21 @@ class parsing_xml_Netscanner:
                 input_data = (id_job, id_report, id_task, scan_start, str(scan_end))
                 cur.execute(sql_update_query, input_data)
                 conn.commit()
+
+                log = crealog.log_event()
+                log.crealog(idprocess,
+                            "Inserimento nella tabella openvas_report del report: " + str(id_report) + " relativo al job: " + str(
+                                id_job))
+
+
             except:
                 print("ERRORE:record in openvas_report non inserito")
+
+                log = crealog.log_event()
+                log.crealog(idprocess,
+                            "ERRORE nell'inserimento nella tabella openvas_report del report: " + str(
+                                id_report) + " relativo al job: " + str(
+                                id_job))
 
             # ____________________________________________________________________________________
 
@@ -90,9 +136,19 @@ class parsing_xml_Netscanner:
                     try:
                         id_result = result[a]['@id']
                         print('Id_result: ', id_result)
+
+                        log = crealog.log_event()
+                        log.crealog(idprocess,
+                                    "Elaborazione del result: " + str(
+                                        id_result))
+
                     except:
                         print('id_result non disponibile')
                         id_result = 'NULL'
+
+                        log = crealog.log_event()
+                        log.crealog(idprocess,
+                                    "ERRORE result non disponibile")
 
                     # estrae name
                     try:
@@ -239,8 +295,19 @@ class parsing_xml_Netscanner:
                             t_vuldetect, t_solution_type, solution, solution_type)
                         cur.execute(sql_update_query, input_data)
                         conn.commit()
+
+                        log = crealog.log_event()
+                        log.crealog(idprocess,
+                                    "Inserimento nella tabella openvas_result del result " + str(
+                                        id_result) + " relativo al report " + str(id_report) + " scoperto nell host " + str(host))
+
+
                     except:
                         print("ERRORE:record in openvas_result non inserito")
+
+                        log = crealog.log_event()
+                        log.crealog(idprocess,
+                                    "ERRORE impossibile inserire il record nella tabella openvas_result")
 
                     # ____________________________________________________________________________________
 
@@ -259,14 +326,40 @@ class parsing_xml_Netscanner:
                             input_data = (id_result, ref)
                             cur.execute(sql_update_query, input_data)
                             conn.commit()
+
+                            log = crealog.log_event()
+                            log.crealog(idprocess,
+                                        "Inserimento nella tabella openvas_ref del reference " + str(
+                                            ref) + " relativo al result " + str(
+                                            id_result))
+
+
                             # ____________________________________________________________________________________
 
                             b += 1
                     except:
                         print("not references")
 
+                        log = crealog.log_event()
+                        log.crealog(idprocess,
+                                    "Nessun reference per il result elaborato")
+
                     a += 1  # incremento ciclo result
             except:
                 print("ERROR no result")
+
+                log = crealog.log_event()
+                log.crealog(idprocess,
+                            "ERRORE nessun result disponibile")
+
         os.remove(file_xml)
+
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "Chiusura ed eliminazione del file di buffer: "+str(file_xml))
+
         conn.close()
+
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "Chiusura connessione al DB")

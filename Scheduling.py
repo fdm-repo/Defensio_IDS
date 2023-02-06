@@ -5,8 +5,14 @@ import os
 import sys
 import time
 from datetime import datetime
-
+import crealog
 import DB_connect
+
+idprocess = "Scheduling"
+
+log = crealog.log_event()
+log.crealog(idprocess,
+            "Verifica sul DB dei Job schedulati")
 
 while True:
 
@@ -27,6 +33,9 @@ while True:
 
     cur.execute('SELECT * FROM scheduling JOIN job ON job.id_job = scheduling.id_job WHERE job.id_asset = %s', id_asset)
     if cur.rowcount != 0:
+
+
+
         print("""
   ____           _                  _           _   _                 
  / ___|    ___  | |__     ___    __| |  _   _  | | (_)  _ __     __ _ 
@@ -76,6 +85,10 @@ by DEFENSIO Scanner
             if (en_day == 'on' and orario == ora_attuale):
                 print("***************job " + str(id_job) + " giornaliero attivato*****************")
 
+                log = crealog.log_event()
+                log.crealog(idprocess,
+                            "Avvio del job "+str(id_job)+" schedulato ogni giorno alle ore "+str(orario))
+
                 connessione2 = DB_connect.database_connect()
                 conn2 = connessione2.database_connection()
 
@@ -93,6 +106,10 @@ by DEFENSIO Scanner
 
                 print("*->record assets pregressi eliminati")
 
+                log = crealog.log_event()
+                log.crealog(idprocess,
+                            "Rimozione dei risultati pregressi ")
+
                 # scrive il tag esecuzione sul record del job
 
                 sql_update_query = """UPDATE job SET net_discovery = %s WHERE id_job  = %s"""
@@ -103,11 +120,20 @@ by DEFENSIO Scanner
                 conn2.close()
                 avvio_job_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                 print("----> Job " + str(id_job) + " avviato alle: " + avvio_job_time)
+
+                log = crealog.log_event()
+                log.crealog(idprocess,
+                            "Impostazione del campo net_discovery della tabella job su OFF")
+
                 time.sleep(60)
 
             if (en_weekday == 'on' and orario == ora_attuale and weekday == giorno_settimana):
                 print("*****     ***********    job " + str(id_job) + " settimanale attivato   *****    ***********")
 
+                log = crealog.log_event()
+                log.crealog(idprocess,
+                            "Avvio del job "+str(id_job)+" schedulato ogni settimana il "+str(weekday)+" alle ore "+str(orario))
+
                 connessione2 = DB_connect.database_connect()
                 conn2 = connessione2.database_connection()
 
@@ -134,12 +160,21 @@ by DEFENSIO Scanner
                 conn2.close()
                 avvio_job_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                 print("----> Job " + str(id_job) + " avviato alle: " + avvio_job_time)
+
+                log = crealog.log_event()
+                log.crealog(idprocess,
+                            "Impostazione del campo net_discovery della tabella job su OFF")
+
                 time.sleep(60)
 
             if (en_monthday == 'on' and orario == ora_attuale and monthday == giorno_mese):
                 print(
                     "*****++++++++***********    job " + str(id_job) + " mensile attivato   *****+++++++++***********")
 
+                log = crealog.log_event()
+                log.crealog(idprocess,
+                            "Avvio del job "+str(id_job)+" schedulato ogni mese il "+str(monthday)+" alle ore "+str(orario))
+
                 connessione2 = DB_connect.database_connect()
                 conn2 = connessione2.database_connection()
 
@@ -166,6 +201,11 @@ by DEFENSIO Scanner
                 conn2.close()
                 avvio_job_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                 print("----> Job " + str(id_job) + " avviato alle: " + avvio_job_time)
+
+                log = crealog.log_event()
+                log.crealog(idprocess,
+                            "Impostazione del campo net_discovery della tabella job su OFF")
+
                 time.sleep(60)
 
     time.sleep(10)

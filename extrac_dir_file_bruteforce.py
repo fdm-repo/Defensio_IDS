@@ -27,6 +27,11 @@ class parsing_sqlmap():
             for row in spamreader:
                 print("____________________________")
                 ip_target = row[0]
+
+                log = crealog.log_event()
+                log.crealog(idprocess,
+                            "Estrazione dei risultati per l'IP: "+str(ip_target))
+
                 print("Target: " + ip_target)
                 print("User: " + user)
                 print("Password: " + password)
@@ -41,10 +46,18 @@ class parsing_sqlmap():
                 dimensione = row[5]
                 print("Dimensione del File: " + dimensione)
 
+                log = crealog.log_event()
+                log.crealog(idprocess,
+                            "Tentativo di connessione al DB")
+
                 connessione_brute_sharing = DB_connect.database_connect()
                 conn_brute_sharing = connessione_brute_sharing.database_connection()
 
                 cur_brute_sharing = conn_brute_sharing.cursor()
+
+                log = crealog.log_event()
+                log.crealog(idprocess,
+                            "Connessione al DB accettata")
 
                 sql_update_query = """INSERT INTO `smb_sharing_bruteforce`(`id_share_bruteforce`, `id_job`, `ip_host`, `username`, `password`,`nome_condivisione`, `diritti`, `file_dir`, `percorso`, `dimensione_file`) VALUES (NULL,%s,%s,%s,%s,%s,%s,%s,%s,%s);"""
                 input_data = (
@@ -52,7 +65,12 @@ class parsing_sqlmap():
 
                 cur_brute_sharing.execute(sql_update_query, input_data)
                 conn_brute_sharing.commit()
-                conn_brute_sharing.close()
                 log = crealog.log_event()
                 log.crealog(idprocess,
                             "Inserimento risultati nella tabella smb_sharing_bruteforce")
+
+
+                conn_brute_sharing.close()
+                log = crealog.log_event()
+                log.crealog(idprocess,
+                            "Chiusura della connessione al DB")

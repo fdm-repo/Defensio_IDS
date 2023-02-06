@@ -1,45 +1,45 @@
-2023-02-02 21:55:29 | Inserito Risultato per email: mario@libero.it ID: Z6yjDzxs
-2023-02-02 21:55:29 | Inserito Risultato per email: mario@libero.it ID: Qk9zXX93
-2023-02-02 21:55:29 | Rimosso file risultato email
-2023-02-02 21:55:39 | Email in esame: pincopalla@yahoo.it
-2023-02-02 21:55:41 | Processo di ricerca concluso, creato file risultato email
-2023-02-02 21:55:41 | Record pregressi dell Email in esame cancellati
-2023-02-02 21:55:41 | Rimosso file risultato email
-2023-02-02 22:07:40 | Connessione al Database
-2023-02-02 22:07:40 | Ricerca Email da verificare
-2023-02-02 22:07:40 | Email in esame: mariorossi@libero.it
-2023-02-02 22:07:41 | Processo di ricerca concluso, creato file risultato email
-2023-02-02 22:07:41 | Record pregressi dell Email in esame cancellati
-2023-02-02 22:07:41 | N° 10 Risultati trovati
-2023-02-02 22:07:41 | Inserito Risultato per email: mariorossi@libero.it ID: http://siph0n.in/exploits.php?id=4156
-2023-02-02 22:07:41 | Inserito Risultato per email: mariorossi@libero.it ID: https://underground-revolution.eu/hacked/mac-torrents.txt
-2023-02-02 22:07:41 | Inserito Risultato per email: mariorossi@libero.it ID: http://demo.zeeroq.com/email/combos.vip-libero.it.txt
-2023-02-02 22:07:41 | Inserito Risultato per email: mariorossi@libero.it ID: http://185.177.126.72/api/storage/check/50a26261-5ee3-4bc5-a67e-196ab040d7a9/bads.txt
-2023-02-02 22:07:41 | Inserito Risultato per email: mariorossi@libero.it ID: http://upload.happy-team.org:8080/upserver/user_uploads/freehacxxb3ed/15_mil_sqli_email_combo.txt
-2023-02-02 22:07:41 | Inserito Risultato per email: mariorossi@libero.it ID: tFEnmix4
-2023-02-02 22:07:41 | Inserito Risultato per email: mariorossi@libero.it ID: suPshHZ1
-2023-02-02 22:07:41 | Inserito Risultato per email: mariorossi@libero.it ID: Uakfs7Z5
-2023-02-02 22:07:42 | Inserito Risultato per email: mariorossi@libero.it ID: U7PzdwjS
-2023-02-02 22:07:42 | Inserito Risultato per email: mariorossi@libero.it ID: QWTPc7w3
-2023-02-02 22:07:42 | Rimosso file risultato email
-2023-02-02 22:07:52 | Email in esame: mariorossi@aruba.net
-2023-02-02 22:07:53 | Processo di ricerca concluso, creato file risultato email
-2023-02-02 22:07:53 | Record pregressi dell Email in esame cancellati
-2023-02-02 22:07:53 | Rimosso file risultato email
-2023-02-02 22:08:03 | Email in esame: mario@libero.it
-2023-02-02 22:08:04 | Processo di ricerca concluso, creato file risultato email
-2023-02-02 22:08:04 | Record pregressi dell Email in esame cancellati
-2023-02-02 22:08:04 | N° 8 Risultati trovati
-2023-02-02 22:08:04 | Inserito Risultato per email: mario@libero.it ID: http://pxahb.xyz/emailpass/www.isoleborromee.com.txt
-2023-02-02 22:08:04 | Inserito Risultato per email: mario@libero.it ID: http://demo.zeeroq.com/email/combos.vip-libero.it.txt
-2023-02-02 22:08:04 | Inserito Risultato per email: mario@libero.it ID: http://upload.happy-team.org:8080/upserver/user_uploads/freehacxxb3ed/124kfreshusacombolist.txt
-2023-02-02 22:08:04 | Inserito Risultato per email: mario@libero.it ID: http://upload.happy-team.org:8080/upserver/user_uploads/freehacxxb3ed/15_mil_sqli_email_combo.txt
-2023-02-02 22:08:04 | Inserito Risultato per email: mario@libero.it ID: suPshHZ1
-2023-02-02 22:08:04 | Inserito Risultato per email: mario@libero.it ID: 54VYWtMA
-2023-02-02 22:08:04 | Inserito Risultato per email: mario@libero.it ID: Z6yjDzxs
-2023-02-02 22:08:04 | Inserito Risultato per email: mario@libero.it ID: Qk9zXX93
-2023-02-02 22:08:04 | Rimosso file risultato email
-2023-02-02 22:08:14 | Email in esame: pincopalla@yahoo.it
-2023-02-02 22:08:15 | Processo di ricerca concluso, creato file risultato email
-2023-02-02 22:08:15 | Record pregressi dell Email in esame cancellati
-2023-02-02 22:08:15 | Rimosso file risultato email
+2023-02-06 15:58:12 | Inserito Risultato per email: mario@libero.it ID: Z6yjDzxs
+2023-02-06 15:58:12 | Inserito Risultato per email: mario@libero.it ID: Qk9zXX93
+2023-02-06 15:58:12 | Rimosso file risultato email
+2023-02-06 15:58:22 | Email in esame: pincopalla@yahoo.it
+2023-02-06 15:58:23 | Processo di ricerca concluso, creato file risultato email
+2023-02-06 15:58:23 | Record pregressi dell Email in esame cancellati
+2023-02-06 15:58:23 | Rimosso file risultato email
+2023-02-06 16:06:16 | Connessione al Database
+2023-02-06 16:06:16 | Ricerca Email da verificare
+2023-02-06 16:06:16 | Email in esame: mariorossi@libero.it
+2023-02-06 16:06:17 | Processo di ricerca concluso, creato file risultato email
+2023-02-06 16:06:17 | Record pregressi dell Email in esame cancellati
+2023-02-06 16:06:17 | N° 10 Risultati trovati
+2023-02-06 16:06:17 | Inserito Risultato per email: mariorossi@libero.it ID: http://siph0n.in/exploits.php?id=4156
+2023-02-06 16:06:18 | Inserito Risultato per email: mariorossi@libero.it ID: https://underground-revolution.eu/hacked/mac-torrents.txt
+2023-02-06 16:06:18 | Inserito Risultato per email: mariorossi@libero.it ID: http://demo.zeeroq.com/email/combos.vip-libero.it.txt
+2023-02-06 16:06:18 | Inserito Risultato per email: mariorossi@libero.it ID: http://185.177.126.72/api/storage/check/50a26261-5ee3-4bc5-a67e-196ab040d7a9/bads.txt
+2023-02-06 16:06:18 | Inserito Risultato per email: mariorossi@libero.it ID: http://upload.happy-team.org:8080/upserver/user_uploads/freehacxxb3ed/15_mil_sqli_email_combo.txt
+2023-02-06 16:06:18 | Inserito Risultato per email: mariorossi@libero.it ID: tFEnmix4
+2023-02-06 16:06:18 | Inserito Risultato per email: mariorossi@libero.it ID: suPshHZ1
+2023-02-06 16:06:19 | Inserito Risultato per email: mariorossi@libero.it ID: Uakfs7Z5
+2023-02-06 16:06:19 | Inserito Risultato per email: mariorossi@libero.it ID: U7PzdwjS
+2023-02-06 16:06:19 | Inserito Risultato per email: mariorossi@libero.it ID: QWTPc7w3
+2023-02-06 16:06:19 | Rimosso file risultato email
+2023-02-06 16:06:29 | Email in esame: mariorossi@aruba.net
+2023-02-06 16:06:30 | Processo di ricerca concluso, creato file risultato email
+2023-02-06 16:06:30 | Record pregressi dell Email in esame cancellati
+2023-02-06 16:06:30 | Rimosso file risultato email
+2023-02-06 16:06:41 | Email in esame: mario@libero.it
+2023-02-06 16:06:41 | Processo di ricerca concluso, creato file risultato email
+2023-02-06 16:06:42 | Record pregressi dell Email in esame cancellati
+2023-02-06 16:06:42 | N° 8 Risultati trovati
+2023-02-06 16:06:42 | Inserito Risultato per email: mario@libero.it ID: http://pxahb.xyz/emailpass/www.isoleborromee.com.txt
+2023-02-06 16:06:42 | Inserito Risultato per email: mario@libero.it ID: http://demo.zeeroq.com/email/combos.vip-libero.it.txt
+2023-02-06 16:06:42 | Inserito Risultato per email: mario@libero.it ID: http://upload.happy-team.org:8080/upserver/user_uploads/freehacxxb3ed/124kfreshusacombolist.txt
+2023-02-06 16:06:42 | Inserito Risultato per email: mario@libero.it ID: http://upload.happy-team.org:8080/upserver/user_uploads/freehacxxb3ed/15_mil_sqli_email_combo.txt
+2023-02-06 16:06:43 | Inserito Risultato per email: mario@libero.it ID: suPshHZ1
+2023-02-06 16:06:43 | Inserito Risultato per email: mario@libero.it ID: 54VYWtMA
+2023-02-06 16:06:43 | Inserito Risultato per email: mario@libero.it ID: Z6yjDzxs
+2023-02-06 16:06:43 | Inserito Risultato per email: mario@libero.it ID: Qk9zXX93
+2023-02-06 16:06:43 | Rimosso file risultato email
+2023-02-06 16:06:53 | Email in esame: pincopalla@yahoo.it
+2023-02-06 16:06:54 | Processo di ricerca concluso, creato file risultato email
+2023-02-06 16:06:54 | Record pregressi dell Email in esame cancellati
+2023-02-06 16:06:54 | Rimosso file risultato email

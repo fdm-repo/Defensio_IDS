@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 # Module Imports
 import json
+import crealog
 from xml.etree import ElementTree as ET
 
 import DB_connect
 
+idprocess = "parsing_xml_report_archni_onlyxml"
 
 class parsing_xml_webscanner:
     def parsing_report_to_DB(report_XML_NS, id_j, ip_j, port_j):
@@ -15,16 +17,33 @@ class parsing_xml_webscanner:
 
         file_xml = report_XML_NS
 
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "Definizione del file di report: "+str(file_xml)+" relativo al job: "+str(id_job))
+
         data = json.load(open("eng_conf.json"))
+
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "Connessione al DB")
 
         connessione = DB_connect.database_connect()
         conn = connessione.database_connection()
+
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "Connessione aal database riuscita")
 
         cur = conn.cursor()
 
         ################### genera l'oggetto relativo al file xml in forma dizionario##############
 
         tree = ET.parse(file_xml)
+
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "Apertura del file e generazione di un oggetto a dizionario")
+
         root = tree.getroot()
 
         for child in root:
@@ -78,6 +97,10 @@ class parsing_xml_webscanner:
                                     cur.execute(sql_update_query, input_data)
                                     conn.commit()
 
+                                    log = crealog.log_event()
+                                    log.crealog(idprocess,
+                                                "Inserimento nella tabella web_scanner_ref del reference: "+str(digest)+" "+str(title)+" "+str(url_ref))
+
                             if (child3.tag == 'vector'):
                                 for child4 in child3:
                                     if child4.tag == "class":
@@ -98,8 +121,15 @@ class parsing_xml_webscanner:
                             seed, name, description, remedy_guidance, severity, cwe, digest, vector_class, vector_type,
                             vector_url, vector_action)
 
+
+
                         cur.execute(sql_update_query, input_data)
                         conn.commit()
+
+                        log = crealog.log_event()
+                        log.crealog(idprocess,
+                                    "Inserimento nella tabella web_scanner_result del result: " + str(
+                                        seed) + " " + str(name))
 
         sql_update_query = """INSERT INTO web_scanner_report(id_report_web, id_job, ip, port, start_scan, finish_scan, id_report_seed) VALUES(NULL,%s,%s,%s,%s,%s,%s);"""
         input_data = (id_job, ip, port, start_datetime, finish_datetime, seed)
@@ -107,4 +137,13 @@ class parsing_xml_webscanner:
         cur.execute(sql_update_query, input_data)
         conn.commit()
 
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "Inserimento nella tabella web_scanner_report del report: " + str(
+                        id_job) + " " + str(seed))
+
         conn.close()
+
+        log = crealog.log_event()
+        log.crealog(idprocess,
+                    "Chiusura della connessione al DB")
