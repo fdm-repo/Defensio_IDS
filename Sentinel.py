@@ -30,11 +30,11 @@ while True:
 
     if C2 == '':
 
-        net_scanner_token = "Disattivato"
-        web_scanner_token = "Disattivato"
-        vuln_scanner_token = "Disattivato"
-        share_scanner_token = "Disattivato"
-        print("Defensio DISATTIVATO")
+        net_scanner_token = "ERR_C2_OFF"
+        web_scanner_token = "ERR_C2_OFF"
+        vuln_scanner_token = "ERR_C2_OFF"
+        share_scanner_token = "ERR_C2_OFF"
+        print("Processo C2 Defensio DISATTIVATO")
 
         c2_connect = DB_connect.database_connect()
         c2_conn = c2_connect.database_connection()
@@ -48,7 +48,7 @@ while True:
         c2_conn.close()
 
     else:
-        print("Defensio ATTIVO")
+        print("Processo C2 Defensio ATTIVO")
 
 
     time.sleep(5)

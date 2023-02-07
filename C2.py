@@ -215,7 +215,7 @@ while True:
         c2_cur.execute(sql_update_query, input_data)
         c2_conn.commit()
 
-        print("Sistema DEFENSIO disattivato")
+        print("Sistema DEFENSIO disattivato dall'Amministratore")
 
 
 
