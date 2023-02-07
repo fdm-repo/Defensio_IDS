@@ -203,7 +203,21 @@ while True:
             sharescanner_engine = int(sharescanner_engine)
             os.kill(sharescanner_engine, signal.SIGKILL)
 
+        net_scanner_token = web_scanner_token = vuln_scanner_token = share_scanner_token = "Disattivato"
+
+        c2_connect = DB_connect.database_connect()
+        c2_conn = c2_connect.database_connection()
+
+        c2_cur = c2_conn.cursor()
+
+        sql_update_query = """UPDATE engines SET active_defensio = %s, active_webscanner = %s,active_openvas = %s,active_share_scanner=%s WHERE engines.codeword = %s; """
+        input_data = (net_scanner_token, web_scanner_token, vuln_scanner_token, share_scanner_token, id_ass)
+        c2_cur.execute(sql_update_query, input_data)
+        c2_conn.commit()
+
         print("Sistema DEFENSIO disattivato")
+
+
 
     else:
         print("ERRORE Nessuna operazione eseguibile.")
