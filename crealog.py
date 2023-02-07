@@ -12,7 +12,7 @@ class log_event:
         size = len(f.readlines())
         f.close()
 
-        if size > 45:
+        if size > 1000:
             with open("logs/" + id_process + ".txt", 'r+') as fp:
                 # read an store all lines into list
                 lines = fp.readlines()
