@@ -66,8 +66,11 @@ while True:
                         id_asset, timestamp, src_ip, src_port, dest_ip, dest_port, proto, action, gid, signature_id,
                         rev,
                         signature, category, severity)
-                    suricataDB.execute(sql_insert_record, input_data)
-                    connDB.commit()
+                    try:
+                        suricataDB.execute(sql_insert_record, input_data)
+                        connDB.commit()
+                    except:
+                        print("Record già presente")
 
                     suricataDB.close()
                     connDB.close()
