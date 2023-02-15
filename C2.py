@@ -140,13 +140,23 @@ while True:
             share_scanner_token = "Attivo"
             print("Processo ShareScanner_engine.py attivo con PID: " + str(sharescanner_engine))
 
+        IDS_engine = os.popen("pgrep -fx \"python3 ./IDS.py\"").read()
+
+        if IDS_engine == '':
+            ids_token = "Disattivato"
+            print("Avvio processo IDS_engine.py")
+            subprocess.run(["gnome-terminal", "--", "bash", "-c", "sudo ./IDS.py"])
+        else:
+            ids_token = "Attivo"
+            print("Processo IDS_engine.py attivo con PID: " + str(IDS_engine))
+
         c2_connect = DB_connect.database_connect()
         c2_conn = c2_connect.database_connection()
 
         c2_cur = c2_conn.cursor()
 
-        sql_update_query = """UPDATE engines SET active_defensio = %s, active_webscanner = %s,active_openvas = %s,active_share_scanner=%s WHERE engines.codeword = %s; """
-        input_data = (net_scanner_token, web_scanner_token, vuln_scanner_token, share_scanner_token, id_ass)
+        sql_update_query = """UPDATE engines SET active_defensio = %s, active_webscanner = %s,active_openvas = %s,active_share_scanner=%s, active_suricata = %s WHERE engines.codeword = %s; """
+        input_data = (net_scanner_token, web_scanner_token, vuln_scanner_token, share_scanner_token,ids_token , id_ass)
         c2_cur.execute(sql_update_query, input_data)
         c2_conn.commit()
 
@@ -203,15 +213,22 @@ while True:
             sharescanner_engine = int(sharescanner_engine)
             os.kill(sharescanner_engine, signal.SIGKILL)
 
-        net_scanner_token = web_scanner_token = vuln_scanner_token = share_scanner_token = "Disattivato"
+        IDS_engine = os.popen("pgrep -fx \"python3 ./IDS_engine.py\"").read()
+
+        if IDS_engine != '':
+            print("termina processo IDS_engine.py PID " + IDS_engine)
+            IDS_engine = int(IDS_engine)
+            os.kill(IDS_engine, signal.SIGKILL)
+
+        net_scanner_token = web_scanner_token = vuln_scanner_token = share_scanner_token = ids_token = "Disattivato"
 
         c2_connect = DB_connect.database_connect()
         c2_conn = c2_connect.database_connection()
 
         c2_cur = c2_conn.cursor()
 
-        sql_update_query = """UPDATE engines SET active_defensio = %s, active_webscanner = %s,active_openvas = %s,active_share_scanner=%s WHERE engines.codeword = %s; """
-        input_data = (net_scanner_token, web_scanner_token, vuln_scanner_token, share_scanner_token, id_ass)
+        sql_update_query = """UPDATE engines SET active_defensio = %s, active_webscanner = %s,active_openvas = %s,active_share_scanner=%s, active_suricata = %s WHERE engines.codeword = %s; """
+        input_data = (net_scanner_token, web_scanner_token, vuln_scanner_token, share_scanner_token, ids_token, id_ass)
         c2_cur.execute(sql_update_query, input_data)
         c2_conn.commit()
 
