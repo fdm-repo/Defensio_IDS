@@ -132,7 +132,7 @@ while True:
         print(
             "*************************************************************************************************************************************")
         print("Scansione Defensio Engine in esecuzione: Job n° " + str(result[0]) + " | Assetto n° " + str(
-            result[1]) + " ! Target " + str(result[2]) + " | Netmask " + str(result[3]))
+            result[1]) + " | Target " + str(result[2]) + " | Netmask " + str(result[3]))
 
         log = crealog.log_event()
         log.crealog(idprocess,
@@ -256,10 +256,10 @@ while True:
                     # inserimento SQL nella tabella Port
                     try:
                         cur.execute(
-                            "INSERT INTO Port (id_port,id_job,ip,port_n,name,state,reason,product,version,info) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+                            "INSERT INTO Port (id_port,id_job,ip,port_n,name,state,reason,product,version,info,start_job) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
                             (vuoto, id_j, host, port, nm[host][proto][port]['name'], nm[host][proto][port]['state'],
                              nm[host][proto][port]['reason'], nm[host][proto][port]['product'],
-                             nm[host][proto][port]['version'], nm[host][proto][port]['extrainfo']))
+                             nm[host][proto][port]['version'], nm[host][proto][port]['extrainfo'],start_job))
                         conn.commit()
                         log = crealog.log_event()
                         log.crealog(idprocess,
