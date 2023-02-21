@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Creato il: Gen 27, 2023 alle 00:16
+-- Creato il: Feb 21, 2023 alle 14:45
 -- Versione del server: 10.6.7-MariaDB-2ubuntu1.1
 -- Versione PHP: 8.1.2
 
@@ -78,18 +78,10 @@ CREATE TABLE `engines` (
   `active_defensio` varchar(12) DEFAULT NULL,
   `active_webscanner` varchar(12) DEFAULT NULL,
   `active_openvas` varchar(12) DEFAULT NULL,
-  `active_suricata` varchar(12) DEFAULT NULL
+  `active_suricata` varchar(12) DEFAULT NULL,
+  `active_share_scanner` varchar(20) DEFAULT NULL,
+  `defensio_ATTIVO` varchar(5) NOT NULL DEFAULT 'off'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dump dei dati per la tabella `engines`
---
-
-INSERT INTO `engines` (`id_engines_DB`, `identity`, `token`, `location`, `last_check_ND`, `last_check_VA`, `last_check_SS`, `last_check_WS`, `codeword`, `active_defensio`, `active_webscanner`, `active_openvas`, `active_suricata`) VALUES
-(1, 'HomeAdry', 'L1o62i8f2DHz', 'Istrana', '2023-01-26 16:25:51', '2023-01-26 16:25:41', '2023-01-26 16:25:49', '2023-01-27 00:13:48', '133', 'aWMSu5dBAtCQ', 'L1o62i8f2DHz', 'aWMSu5dBAtCQ', NULL),
-(2, 'fidem_soc', 'DIdXmNmU6Fbl', 'verona', '2023-01-04 16:37:11', '2023-01-04 16:37:05', NULL, NULL, '145', 'rKjxlhHZPDwT', 'DIdXmNmU6Fbl', 'DIdXmNmU6Fbl', NULL),
-(3, 'fixAdry', 'vc9niRVZXY5R', 'Istrana', '2023-01-02 23:46:31', '2023-01-02 23:46:27', '2023-01-02 23:46:27', '2023-01-02 23:46:33', '144', '7vZJvdcughSN', '7vZJvdcughSN', '0g9g8JgM8h68', NULL),
-(34, 'VM_Istrana', 'aJLaKVZ2DM2W', 'Istrana', '2022-12-22 14:16:44', '2022-12-22 14:16:49', NULL, NULL, '33', '0YK8Q9CWLZfF', 'OS66Mpc3716A', 'OS66Mpc3716A', NULL);
 
 -- --------------------------------------------------------
 
@@ -233,7 +225,8 @@ CREATE TABLE `Port` (
   `reason` varchar(20) NOT NULL,
   `product` varchar(50) NOT NULL,
   `version` varchar(50) NOT NULL,
-  `info` varchar(250) NOT NULL
+  `info` varchar(250) NOT NULL,
+  `start_job` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -429,8 +422,8 @@ CREATE TABLE `statistic_job` (
 
 CREATE TABLE `suricata_alert` (
   `id_result_alert` int(11) NOT NULL,
-  `id_asset` varchar(20) NOT NULL,
   `timestamp` varchar(80) DEFAULT NULL,
+  `id_asset` varchar(20) NOT NULL,
   `src_ip` varchar(50) DEFAULT NULL,
   `src_port` varchar(10) DEFAULT NULL,
   `dest_ip` varchar(50) DEFAULT NULL,
@@ -479,9 +472,12 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `fullname`, `password`, `email`, `active`, `categoria`, `avatar`) VALUES
-(2, 'adriano.condro@gmail.com', 'adriano condro', 'provapassword', 'adriano.condro@gmail.com', 1, 'administrator', NULL),
-(3, 'utente@gmail.com', 'utente medio', 'prova', 'utente@gmail.com', 1, 'user', 'avatar2'),
-(4, 'perla_madonna', 'perla madonna', 'perla', 'perlamadonnaçgmail.com', 1, 'administrator', 'avatar3_al cinema');
+(2, 'adriano.condro@gmail.com', 'Adriano Condro', '!?p4ssw0rd!?', 'adriano.condro@gmail.com', 1, 'Administrator', NULL),
+(3, 'demouser@fidemsrl.it', 'Demo User', '!?p4ssw0rd!?', 'demouser@fidemsrl.it', 1, 'User', ''),
+(4, 'carmine.buono@fidemsrl.it', 'Carmine Buono', '!?p4ssw0rd!?', 'carmine.buono@fidemsrl.it', 1, 'Administrator', NULL),
+(5, 'demis.menon@fidemsrl.it', 'Demis Menon', '!?p4ssw0rd!?', 'demis.menon@fidemsrl.it', 1, 'Administrator', NULL),
+(6, 'giovanni.finetto@fidemsrl.it', 'Giovanni Finetto', '!?p4ssw0rd!?', 'giovanni.finetto@fidemsrl.it', 1, 'Administrator', NULL),
+(7, 'soc-2@fidemsrl.it', 'Leonardo Tamellini', '!?p4ssw0rd!?', 'soc-2@fidemsrl.it', 1, 'Administrator', NULL);
 
 -- --------------------------------------------------------
 
@@ -687,7 +683,8 @@ ALTER TABLE `statistic_job`
 -- Indici per le tabelle `suricata_alert`
 --
 ALTER TABLE `suricata_alert`
-  ADD PRIMARY KEY (`id_result_alert`);
+  ADD PRIMARY KEY (`id_result_alert`),
+  ADD UNIQUE KEY `timestamp` (`timestamp`);
 
 --
 -- Indici per le tabelle `test_statistic_job`
@@ -757,7 +754,7 @@ ALTER TABLE `email_leak_target`
 -- AUTO_INCREMENT per la tabella `engines`
 --
 ALTER TABLE `engines`
-  MODIFY `id_engines_DB` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id_engines_DB` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT per la tabella `host`
@@ -859,7 +856,7 @@ ALTER TABLE `test_statistic_job`
 -- AUTO_INCREMENT per la tabella `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT per la tabella `user_pass`
