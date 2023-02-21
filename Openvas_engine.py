@@ -15,7 +15,7 @@ import parsing_xml_report_NetScanner
 # username e password per il docker GVM
 
 username = 'admin'
-password = '!d3f3n510!'
+password = 'D3f3n510'
 
 idprocess = "Openvas_engine"
 
