@@ -30,7 +30,7 @@ sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -
 
 echo "download  e start immauss\n"
 sudo docker pull immauss/openvas
-sudo docker run --detach --publish 8080:9392 -e PASSWORD="porcodio" --volume openvas:/data --name openvas immauss/openvas
+sudo docker run --detach --publish 8080:9392 -e PASSWORD="!d3f3n510!" --volume openvas:/data --name openvas immauss/openvas
 
 
 
