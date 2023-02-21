@@ -125,7 +125,7 @@ while True:
     cur = conn.cursor()
 
     cur.execute(
-        'SELECT id_job,id_asset,ip,netmask, single_port, low_port, high_port FROM job  WHERE abilitato="on" AND net_discovery="off" AND id_asset = %s',
+        'SELECT id_job,id_asset,ip,netmask, single_port, low_port, high_port FROM job  WHERE abilitato="on" AND openvas = "off" AND net_discovery="off" AND id_asset = %s',
         id_asset)
     if cur.rowcount != 0:
         result = cur.fetchone()

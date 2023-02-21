@@ -229,7 +229,7 @@ while True:
     cur = conn.cursor()
 
     cur.execute(
-        'SELECT id_job,id_asset,ip,netmask,exclude_ip FROM job  WHERE abilitato="on" AND net_discovery="on" AND openvas = "on" AND eseguito_openvas="off" AND id_asset = %s',
+        'SELECT id_job,id_asset,ip,netmask,exclude_ip FROM job  WHERE abilitato="on" AND openvas = "on" AND eseguito_openvas="off" AND id_asset = %s',
         (id_asset))
 
 
