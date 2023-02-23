@@ -106,7 +106,7 @@ def report_scan(task, id_j, report):
     log.crealog(idprocess,
                 "Generazione del file temporaneo "+str(nomefile))
     # crea la stringa xml monitorare la scansione con gvm-cli
-    stringxmlreport = "<get_reports details='True' report_id=\"" + id_report + "\" format_id=\"a994b278-1f62-11e1-96ac-406186ea4fc5\"/>"
+    stringxmlreport = "<get_reports details='True' report_id=\"" + id_report + "\" format_id=\"a994b278-1f62-11e1-96ac-406186ea4fc5\" filter=\"levels=hml\" ignore_pagination=\"1\"/>"
 
     log = crealog.log_event()
     log.crealog(idprocess,

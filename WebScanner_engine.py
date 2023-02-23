@@ -39,7 +39,7 @@ while True:
         conn = connessione.database_connection()
         arac = conn.cursor()
         arac.execute(
-            "SELECT Port.id_job, Port.ip,port_n FROM `Port` INNER JOIN job ON job.id_job=Port.id_job WHERE (Port.name='http' OR Port.port_n = '80') AND job.arachni='on'AND job.net_discovery='on';")
+            "SELECT Port.id_job, Port.ip,port_n FROM `Port` INNER JOIN job ON job.id_job=Port.id_job WHERE (Port.name='http' OR Port.port_n = '80') AND job.arachni='on' AND job.eseguito_arachni='off' AND job.net_discovery='on';")
         if arac.rowcount != 0:
             result = arac.fetchone()
             print(result)
@@ -100,7 +100,7 @@ while True:
         conn = connessione.database_connection()
         arac = conn.cursor()
         arac.execute(
-            "SELECT Port.id_job, Port.ip,port_n FROM `Port` INNER JOIN job ON job.id_job=Port.id_job WHERE (Port.name='https' OR Port.port_n = '443') AND job.arachni='on' AND job.net_discovery='on';")
+            "SELECT Port.id_job, Port.ip,port_n FROM `Port` INNER JOIN job ON job.id_job=Port.id_job WHERE (Port.name='https' OR Port.port_n = '443') AND job.arachni='on' AND job.eseguito_arachni='off' AND job.net_discovery='on';")
         if arac.rowcount != 0:
             result = arac.fetchone()
             print(result)
@@ -160,11 +160,7 @@ while True:
         connessione = DB_connect.database_connect()
         conn = connessione.database_connection()
         arac = conn.cursor()
-        sql_update_query = """UPDATE job SET arachni = %s WHERE id_job  = %s"""
-        input_data = ('off', result[0])
-        arac.execute(sql_update_query, input_data)
 
-        conn.commit()
 
         log = crealog.log_event()
         log.crealog(idprocess,
