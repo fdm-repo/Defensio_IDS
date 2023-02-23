@@ -15,7 +15,7 @@ import parsing_xml_report_NetScanner
 # username e password per il docker GVM
 
 username = 'admin'
-password = 'D3f3n510'
+password = 'porcodio'
 
 idprocess = "Openvas_engine"
 
@@ -245,7 +245,7 @@ while True:
         ip_net = ip + '/' + netmask
         print("Target: " + ip_net)
         white_ip = result[4]
-        print("Host esclusi: " + white_ip)
+        print("Host esclusi: " + str(white_ip))
         if white_ip == 'none':
             white_ip = ''
         else:
@@ -285,7 +285,7 @@ while True:
 
         log = crealog.log_event()
         log.crealog(idprocess,
-                    "Generaizone del file di Buffer target_buffer.xml  ")
+                    "Generazione del file di Buffer target_buffer.xml  ")
 
         # crea la stringa xml per creare il target con gvm-cli
         stringxmltarget = "<create_target><name>" + str(
@@ -309,7 +309,7 @@ while True:
 
         log = crealog.log_event()
         log.crealog(idprocess,
-                    "Chiusura del fiile target_buffer.xml  ")
+                    "Chiusura del file target_buffer.xml  ")
 
 
         # richiama il file xml di buffer

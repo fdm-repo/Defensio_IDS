@@ -89,7 +89,7 @@ while True:
             web_scanner_token = "Disattivato"
             print("Avvio processo WebScanner_engine.py")
             subprocess.run(
-                ["gnome-terminal", "--", "bash", "-c", "sudo -u " + user_no_admin + " ./WebScanner_engine.py"])
+                ["gnome-terminal", "--title=WEB_SCANNER", "--", "bash", "-c", "sudo -u " + user_no_admin + " ./WebScanner_engine.py"])
         else:
             web_scanner_token = "Attivo"
             print("Processo WebScanner_engine.py attivo con PID: " + str(web_scanner))
@@ -98,7 +98,7 @@ while True:
 
         if scheduling == '':
             print("Avvio processo Scheduling.py")
-            subprocess.run(["gnome-terminal", "--", "bash", "-c", "sudo -u " + user_no_admin + " ./Scheduling.py"])
+            subprocess.run(["gnome-terminal", "--title=SCHEDULING", "--", "bash", "-c", "sudo -u " + user_no_admin + " ./Scheduling.py"])
         else:
             print("Processo Scheduling.py attivo con PID: " + str(scheduling))
 
@@ -106,7 +106,7 @@ while True:
 
         if email_leak == '':
             print("Avvio processo Email_Leaks.py")
-            subprocess.run(["gnome-terminal", "--", "bash", "-c", "sudo -u " + user_no_admin + " ./Email_Leaks.py"])
+            subprocess.run(["gnome-terminal", "--title=EMAIL_LEAKS", "--", "bash", "-c", "sudo -u " + user_no_admin + " ./Email_Leaks.py"])
         else:
             print("Processo Email_Leaks.py attivo con PID: " + str(email_leak))
 
@@ -115,7 +115,7 @@ while True:
         if defensio_engine == '':
             net_scanner_token = "Disattivato"
             print("Avvio processo Defensio_engine.py")
-            subprocess.run(["gnome-terminal", "--", "bash", "-c", "sudo ./Defensio_engine.py"])
+            subprocess.run(["gnome-terminal", "--title=NET_SCANNER", "--", "bash", "-c", "sudo ./Defensio_engine.py"])
         else:
             net_scanner_token = "Attivo"
             print("Processo Defensio_engine.py attivo con PID: " + str(defensio_engine))
@@ -125,7 +125,7 @@ while True:
         if openvas_engine == '':
             vuln_scanner_token = "Disattivato"
             print("Avvio processo VulnScan_engine.py")
-            subprocess.run(["gnome-terminal", "--", "bash", "-c", "sudo ./Openvas_engine.py"])
+            subprocess.run(["gnome-terminal", "--title=VULNS_SCANNER", "--", "bash", "-c", "sudo ./Openvas_engine.py"])
         else:
             vuln_scanner_token = "Attivo"
             print("Processo VulnScan_engine.py attivo con PID: " + str(openvas_engine))
@@ -135,7 +135,7 @@ while True:
         if sharescanner_engine == '':
             share_scanner_token = "Disattivato"
             print("Avvio processo ShareScanner_engine.py")
-            subprocess.run(["gnome-terminal", "--", "bash", "-c", "sudo ./ShareScanner_engine.py"])
+            subprocess.run(["gnome-terminal", "--title=SHARE_SCANNER", "--", "bash", "-c", "sudo ./ShareScanner_engine.py"])
         else:
             share_scanner_token = "Attivo"
             print("Processo ShareScanner_engine.py attivo con PID: " + str(sharescanner_engine))
@@ -145,7 +145,7 @@ while True:
         if IDS_engine == '':
             ids_token = "Disattivato"
             print("Avvio processo IDS_engine.py")
-            subprocess.run(["gnome-terminal", "--", "bash", "-c", "sudo ./IDS.py"])
+            subprocess.run(["gnome-terminal", "--title=IDS", "--", "bash", "-c", "sudo ./IDS.py"])
         else:
             ids_token = "Attivo"
             print("Processo IDS_engine.py attivo con PID: " + str(IDS_engine))
