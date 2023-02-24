@@ -66,4 +66,12 @@ Thanks for using MariaDB!
 13)eseguire ./C2.py (da root) e inserire l'user root, password (quella inserita al punto 6), indirizzo ip (127.0.0.1), porta 3306, database defensio, e id asset (il codeword inserito nella tabella engines)
 
 
+14) installare suricata e modificare il file /etc/suricata/suricata.yaml  cambiando la denominazione dei file json
+
+  - eve-log:
+      enabled: yes
+      filetype: regular #regular|syslog|unix_dgram|unix_stream|redis
+      filename: eve-%Y-%m-%d-%H:%M.json
+      rotate-interval: minute
+
 
