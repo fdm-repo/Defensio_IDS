@@ -58,6 +58,9 @@ Thanks for using MariaDB!
 
 
 7) installazione phpmyadmin : esegui ./Installazione_PHPmyAdmin.sh (se occore dare diritti di esecuzione  sudo chmod 777 Installazione_PHPmyAdmin.sh)
+
+    alla richiesta : Configure database for phpmyadmin with dbconfig-common?    selezionare yes
+
 8) accedi a phpmyadmin con root e la password inserita nella fase 6  (accedi da http://localhost/phpmyadmin)
 9) crea un database chiamato defensio
 10)clicca sul database defensio e dalla barra superiore orizzontale clicca su importa, poi sfoglia e seleziona il file defensio.sql (nella cartella defensio scaricata con git)
