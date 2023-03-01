@@ -56,6 +56,8 @@ All done!  If you've completed all of the above steps, your MariaDB
 installation should now be secure.
 Thanks for using MariaDB!
 
+*** verificare se mysql è "running" con il comando : sudo systemctl status mysqld
+
 
 7) installazione phpmyadmin : esegui ./Installazione_PHPmyAdmin.sh (se occore dare diritti di esecuzione  sudo chmod 777 Installazione_PHPmyAdmin.sh)
 
