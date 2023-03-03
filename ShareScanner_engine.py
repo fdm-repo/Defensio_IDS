@@ -45,7 +45,7 @@ while True:
 
     enum4linuxqueryjob = conn.cursor()
     enum4linuxqueryjob.execute(
-        "SELECT Port.id_job, Port.ip, port_n FROM `Port` INNER JOIN job ON job.id_job = Port.id_job WHERE Port.port_n = '139' AND job.enumforlinux = 'on' AND job.net_discovery='on' AND job.eseguito_enum4linux='off' ;")
+        "SELECT Port.id_job, Port.ip, port_n FROM `Port` INNER JOIN job ON job.id_job = Port.id_job WHERE Port.port_n = '139' AND job.enumforlinux = 'on' AND job.net_discovery='on' AND job.eseguito_enum4linux='off' AND start_job = (SELECT start_job FROM `Port` INNER JOIN job ON job.id_job = Port.id_job WHERE Port.port_n = '139' AND job.enumforlinux = 'on' AND job.net_discovery='on' AND job.eseguito_enum4linux='off' ORDER BY start_job DESC LIMIT 1);")
 
     if enum4linuxqueryjob.rowcount != 0:
 
