@@ -57,7 +57,7 @@ while True:
    _|_|_|  _|_|_|_|      _|_|_|      _|_|_|  _|_|_|        _|_|    _|_|_|  _|    _|    _|  
                                          _|                                                
                                      _|_|                                                  
-        \n""")
+    Version 03/03/2023 n3TSh4d3 \n""")
 
     try:
         data = json.load(open("eng_conf.json"))
