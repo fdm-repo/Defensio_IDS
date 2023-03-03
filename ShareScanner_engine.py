@@ -45,91 +45,99 @@ while True:
 
     enum4linuxqueryjob = conn.cursor()
     enum4linuxqueryjob.execute(
-        "SELECT Port.id_job, Port.ip, port_n FROM `Port` INNER JOIN job ON job.id_job = Port.id_job WHERE Port.name = 'netbios-ssn' AND job.enumforlinux = 'on' AND job.net_discovery='on' AND job.eseguito_enum4linux='off' ;")
+        "SELECT Port.id_job, Port.ip, port_n FROM `Port` INNER JOIN job ON job.id_job = Port.id_job WHERE Port.port_n = '139' AND job.enumforlinux = 'on' AND job.net_discovery='on' AND job.eseguito_enum4linux='off' ;")
 
     if enum4linuxqueryjob.rowcount != 0:
 
+        start_scan = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-        # genera la stringa di inizio del job
-        start_job = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        print("Time avvio job: " + str(start_job))
+        for single_host in enum4linuxqueryjob:
 
-        result_enum_job = enum4linuxqueryjob.fetchone()
-        print(result_enum_job)
-        id_j = result_enum_job[0]
-        ip_target = result_enum_job[1]
+            # genera la stringa di inizio del job
+            start_job = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            print("Time avvio job: " + str(start_job))
 
-        log = crealog.log_event()
-        log.crealog(idprocess,
-                    "Estrazione dal DB del JOB da attivare:  "+str(id_j))
-
-        file_name = str(id_j) + '_' + ip_target
-        print(file_name)
-        cmd = subprocess.run(["./enumforlinux/enum4linux-ng.py", "-A", ip_target, "-oJ", file_name])
-
-        log = crealog.log_event()
-        log.crealog(idprocess,
-                    "Avvio del sottoprocesso enum4linux su iptarget:  "+str(ip_target)+ " e generazione del file json di report "+str(file_name))
-
-
-        obj_enum4linux_json = enum4linux_read_json.enum4linux_read_json_class()
-
-        log = crealog.log_event()
-        log.crealog(idprocess,
-                    "Chiamata alla classe e alle funzioni del file enum4linux_read_son")
-
-        obj_enum4linux_json.enum4linux_read_json(id_j, start_job, file_name + '.json')
-
-        log = crealog.log_event()
-        log.crealog(idprocess,
-                    "Estrazione dal file report dei risultati relativi al job "+str(id_j)+" e inserimento nelle tabelle del DB")
-
-        eseguito_enum4linux = 'on'
-        try:
-            os.remove(file_name + ".json")
+            result_enum_job = single_host
+            print(result_enum_job)
+            id_j = result_enum_job[0]
+            ip_target = result_enum_job[1]
 
             log = crealog.log_event()
             log.crealog(idprocess,
-                        "Rimozione del file json di report:" +str(file_name))
+                        "Estrazione dal DB del JOB da attivare:  " + str(id_j))
 
-        except:
-            print("not remove Buffer")
-
-            log = crealog.log_event()
-            log.crealog(idprocess,
-                        "ERRRORE nella rimozione del file json di report")
-
-        fileusers = "userlarge.txt"
-        filepass = "passsmall.txt"
-
-        log = crealog.log_event()
-        log.crealog(idprocess,
-                    "Chiamata alla classe e alle funzioni del file SMBRUTE")
-
-        bruteforce = SMBRUTE.smbbruteforce()
-        bruteforce.bruteforce(id_j, ip_target, fileusers, filepass, start_job)
-
-        log = crealog.log_event()
-        log.crealog(idprocess,
-                    "Processo di bruteforce sul target "+str(ip_target)+" concluso")
-
-        if eseguito_enum4linux == 'on':
-            enum4 = conn.cursor()
-
-            sql_update_query = """UPDATE job SET eseguito_enum4linux = %s WHERE id_job  = %s"""
-            input_data = ('on', id_j)
-            enum4.execute(sql_update_query, input_data)
+            file_name = str(id_j) + '_' + ip_target
+            print(file_name)
+            cmd = subprocess.run(["./enumforlinux/enum4linux-ng.py", "-A", ip_target, "-oJ", file_name])
 
             log = crealog.log_event()
             log.crealog(idprocess,
-                        "Update del record relativo al job "+str(id_j)+" riferito al campo eseguito_enum4linux della tabella job del DB modificato su ON")
+                        "Avvio del sottoprocesso enum4linux su iptarget:  " + str(
+                            ip_target) + " e generazione del file json di report " + str(file_name))
 
-            conn.commit()
-            enum4.close()
+            obj_enum4linux_json = enum4linux_read_json.enum4linux_read_json_class()
 
             log = crealog.log_event()
             log.crealog(idprocess,
-                        "Chiusura della connessione al DB")
+                        "Chiamata alla classe e alle funzioni del file enum4linux_read_son")
+
+            obj_enum4linux_json.enum4linux_read_json(id_j, start_job, file_name + '.json', start_scan)
+
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "Estrazione dal file report dei risultati relativi al job " + str(
+                            id_j) + " e inserimento nelle tabelle del DB")
+
+            eseguito_enum4linux = 'on'
+            try:
+                os.remove(file_name + ".json")
+
+                log = crealog.log_event()
+                log.crealog(idprocess,
+                            "Rimozione del file json di report:" + str(file_name))
+
+            except:
+                print("not remove Buffer")
+
+                log = crealog.log_event()
+                log.crealog(idprocess,
+                            "ERRRORE nella rimozione del file json di report")
+
+            fileusers = "userlarge.txt"
+            filepass = "passsmall.txt"
+
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "Chiamata alla classe e alle funzioni del file SMBRUTE")
+
+            bruteforce = SMBRUTE.smbbruteforce()
+            bruteforce.bruteforce(id_j, ip_target, fileusers, filepass, start_job)
+
+            log = crealog.log_event()
+            log.crealog(idprocess,
+                        "Processo di bruteforce sul target " + str(ip_target) + " concluso")
+
+            if eseguito_enum4linux == 'on':
+                enum4 = conn.cursor()
+
+                sql_update_query = """UPDATE job SET eseguito_enum4linux = %s WHERE id_job  = %s"""
+                input_data = ('on', id_j)
+                enum4.execute(sql_update_query, input_data)
+
+                log = crealog.log_event()
+                log.crealog(idprocess,
+                            "Update del record relativo al job " + str(
+                                id_j) + " riferito al campo eseguito_enum4linux della tabella job del DB modificato su ON")
+
+                conn.commit()
+                enum4.close()
+
+                log = crealog.log_event()
+                log.crealog(idprocess,
+                            "Chiusura della connessione al DB")
+
+
+
 
     enum4linuxqueryjob.close()
     conn.close()

@@ -7,7 +7,7 @@ import DB_connect
 idprocess = "enum4linux_read_json"
 class enum4linux_read_json_class:
 
-    def enum4linux_read_json(self, job_enum, start_job, file_json):
+    def enum4linux_read_json(self, job_enum, start_job, file_json, start_scan):
 
         # Database connection
         try:
@@ -25,6 +25,7 @@ class enum4linux_read_json_class:
         job = job_enum
         start_job = start_job
         file_json = file_json
+        start_scan = start_scan
 
         log = crealog.log_event()
         log.crealog(idprocess,
@@ -509,8 +510,8 @@ class enum4linux_read_json_class:
                                                                                                `native_os`, `native_lan_manager`, `platform_id`, `server_type`, `server_type_sring`, `domain_group`,                                                                      
                                                                                                `policy_password_history_length`, `policy_minimum_password_length`, `policy_maximum_password_age`,                                                                         
                                                                                                `policy_lockout_observation_window`, `policy_lockout_duration`, `policy_lockout_threshold`,                                                                                
-                                                                                               `policy_force_logoff_time`, `printers`) VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,               
-                                                                                           %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"""
+                                                                                               `policy_force_logoff_time`, `printers` , `start_scan`) VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,               
+                                                                                           %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"""
 
             # dati per la query
 
@@ -522,7 +523,7 @@ class enum4linux_read_json_class:
                 os_platform_id, os_server_type, os_server_type_string, groups, policy_password_history_length,
                 policy_minimun_password_length, policy_maximun_password_age,
                 policy_lockout_observation_window, policy_lockout_duration,
-                policy_lockout_threshold, policy_force_logoff_time, printers_enum)
+                policy_lockout_threshold, policy_force_logoff_time, printers_enum, start_scan)
 
             # invia query
 
