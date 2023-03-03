@@ -107,7 +107,7 @@ while True:
                     "Chiamata alla classe e alle funzioni del file SMBRUTE")
 
         bruteforce = SMBRUTE.smbbruteforce()
-        bruteforce.bruteforce(id_j, ip_target, fileusers, filepass)
+        bruteforce.bruteforce(id_j, ip_target, fileusers, filepass, start_job)
 
         log = crealog.log_event()
         log.crealog(idprocess,

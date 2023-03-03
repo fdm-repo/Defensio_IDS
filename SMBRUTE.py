@@ -10,10 +10,11 @@ import extrac_dir_file_bruteforce
 idprocess = "SMBRUTE"
 
 class smbbruteforce:
-    def bruteforce(self, id_j, ip, username, password):
+    def bruteforce(self, id_j, ip, username, password, start_time):
 
         id_job = id_j
         target = ip
+        start_scan = start_time
 
         log = crealog.log_event()
         log.crealog(idprocess,
@@ -127,8 +128,8 @@ class smbbruteforce:
 
                 cur_brute = conn_brute.cursor()
 
-                sql_update_query = """INSERT INTO`smb_bruteforce`(`id_bruteforce`, `id_job`, `ip_host` ,`user`, `password`) VALUES (NULL,%s,%s,%s,%s);"""
-                input_data = (id_job, target, u, p)
+                sql_update_query = """INSERT INTO`smb_bruteforce`(`id_bruteforce`, `id_job`, `ip_host` ,`user`, `password`, `start_scan`) VALUES (NULL,%s,%s,%s,%s,%s);"""
+                input_data = (id_job, target, u, p, start_scan)
 
                 log = crealog.log_event()
                 log.crealog(idprocess,
@@ -152,6 +153,6 @@ class smbbruteforce:
                 log.crealog(idprocess,
                             "Esecuzione della funzione parsing_sqlmap_report(id_j, u, p) ")
 
-                parsing_sqlmap.parsing_sqlmap_report(id_j, u, p)
+                parsing_sqlmap.parsing_sqlmap_report(id_j, u, p, start_scan)
 
         print("\n")

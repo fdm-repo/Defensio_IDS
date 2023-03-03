@@ -6,10 +6,12 @@ import DB_connect
 
 idprocess = "extrac_dir_file_bruteforce"
 class parsing_sqlmap():
-    def parsing_sqlmap_report(self, id_job, user, password):
+    def parsing_sqlmap_report(self, id_job, user, password, start_time):
         id_job = id_job
         user = user
         password = password
+        start_scan =start_time
+
 
         log = crealog.log_event()
         log.crealog(idprocess,
@@ -59,9 +61,9 @@ class parsing_sqlmap():
                 log.crealog(idprocess,
                             "Connessione al DB accettata")
 
-                sql_update_query = """INSERT INTO `smb_sharing_bruteforce`(`id_share_bruteforce`, `id_job`, `ip_host`, `username`, `password`,`nome_condivisione`, `diritti`, `file_dir`, `percorso`, `dimensione_file`) VALUES (NULL,%s,%s,%s,%s,%s,%s,%s,%s,%s);"""
+                sql_update_query = """INSERT INTO `smb_sharing_bruteforce`(`id_share_bruteforce`, `id_job`, `ip_host`, `username`, `password`,`nome_condivisione`, `diritti`, `file_dir`, `percorso`, `dimensione_file`, `start_scan`) VALUES (NULL,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);"""
                 input_data = (
-                id_job, ip_target, user, password, nome_condivisione, diritti, dir_file, percorso, dimensione)
+                id_job, ip_target, user, password, nome_condivisione, diritti, dir_file, percorso, dimensione,start_scan)
 
                 cur_brute_sharing.execute(sql_update_query, input_data)
                 conn_brute_sharing.commit()
