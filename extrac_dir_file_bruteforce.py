@@ -15,7 +15,7 @@ class parsing_sqlmap():
 
         log = crealog.log_event()
         log.crealog(idprocess,
-                    "Estrazione risultati bruteforce sqlmap del Job: "+str(id())+" User: "+str(user)+" Pass: "+password)
+                    "Estrazione risultati bruteforce sqlmap del Job: "+str(id_job)+" User: "+str(user)+" Pass: "+password)
 
 
         with open('report_brute_smb.csv', newline='') as csvfile:
