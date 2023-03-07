@@ -5,10 +5,27 @@ import time
 import os
 import DB_connect
 import crealog
+import sys
 
 timestamp_limit = ''
 
 idprocess = "IDS"
+
+try:
+    data = json.load(open("eng_conf.json"))
+except:
+    print("Engine vulnscan non inizializzato! eseguire: ./inizializzazione_engine.py ")
+    sys.exit(1)
+
+
+ip_exclude_ids = data['ip_no_suricata']
+
+
+
+
+
+
+
 
 while True:
 
@@ -44,6 +61,7 @@ while True:
                 if json_data[x]['timestamp'] > timestamp_limit:
                     if json_data[x]["event_type"] == 'alert':
                         print('+++++++++++++++++++++++ record +++++++++++++++++++++++++')
+                        print('IP exclude: '+str(ip_exclude_ids))
                         timestamp = json_data[x]['timestamp']
                         timestamp_limit = timestamp
 
@@ -73,33 +91,37 @@ while True:
                         severity = json_data[x]['alert']['severity']
                         print('Severity: ' + str(severity))
 
-                        # Database connection
-                        try:
-                            data = json.load(open("eng_conf.json"))
+                        if(src_ip == ip_exclude_ids or dest_ip == ip_exclude_ids) :
+                            print('Record NO insert cause EXCLUDE IP')
+                        else:
+                            # Database connection
+                            try:
+                                data = json.load(open("eng_conf.json"))
 
-                            connessione = DB_connect.database_connect()
-                            connDB = connessione.database_connection()
-                            suricataDB = connDB.cursor()
+                                connessione = DB_connect.database_connect()
+                                connDB = connessione.database_connection()
+                                suricataDB = connDB.cursor()
 
-                        except:
-                            print("suricata: errore connessione database")
+                            except:
+                                print("suricata: errore connessione database")
 
-                        id_asset = data['id_ass']
+                            id_asset = data['id_ass']
 
-                        sql_insert_record = "INSERT INTO `suricata_alert` (`id_result_alert`, `id_asset`, `timestamp`, `src_ip`, `src_port`, `dest_ip`, `dest_port`, `proto`, `action`, `gid`, `signature_id`, `rev`, `signature`, `category`, `severity`) VALUES (NULL,%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s );"
+                            sql_insert_record = "INSERT INTO `suricata_alert` (`id_result_alert`, `id_asset`, `timestamp`, `src_ip`, `src_port`, `dest_ip`, `dest_port`, `proto`, `action`, `gid`, `signature_id`, `rev`, `signature`, `category`, `severity`) VALUES (NULL,%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s );"
 
-                        input_data = (
-                            id_asset, timestamp, src_ip, src_port, dest_ip, dest_port, proto, action, gid, signature_id,
-                            rev,
-                            signature, category, severity)
-                        try:
-                            suricataDB.execute(sql_insert_record, input_data)
-                            connDB.commit()
-                        except:
-                            print("Record già presente")
+                            input_data = (
+                                id_asset, timestamp, src_ip, src_port, dest_ip, dest_port, proto, action, gid, signature_id,
+                                rev,
+                                signature, category, severity)
+                            try:
+                                suricataDB.execute(sql_insert_record, input_data)
+                                connDB.commit()
+                            except:
+                                print("Record già presente")
 
-                        suricataDB.close()
-                        connDB.close()
+                            suricataDB.close()
+                            connDB.close()
+
 
         log = crealog.log_event()
         log.crealog(idprocess,
