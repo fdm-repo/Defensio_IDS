@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 06, 2023 at 03:08 PM
+-- Generation Time: Mar 10, 2023 at 08:49 AM
 -- Server version: 10.6.7-MariaDB-2ubuntu1.1
 -- PHP Version: 8.1.2
 
@@ -82,16 +82,6 @@ CREATE TABLE `engines` (
   `active_share_scanner` varchar(20) DEFAULT NULL,
   `defensio_ATTIVO` varchar(5) NOT NULL DEFAULT 'off'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `engines`
---
-
-INSERT INTO `engines` (`id_engines_DB`, `identity`, `token`, `location`, `last_check_ND`, `last_check_VA`, `last_check_SS`, `last_check_WS`, `codeword`, `active_defensio`, `active_webscanner`, `active_openvas`, `active_suricata`, `active_share_scanner`, `defensio_ATTIVO`) VALUES
-(1, 'HomeAdry', 'wmEgi9sSxLIl', 'Istrana', '2023-03-05 23:35:12', '2023-03-05 23:35:15', '2023-03-05 23:49:53', '2023-03-05 23:35:22', '133', 'ERR_C2_OFF', 'ERR_C2_OFF', 'ERR_C2_OFF', 'ERR_C2_OFF', 'ERR_C2_OFF', 'on'),
-(2, 'fidem_soc', 'DIdXmNmU6Fbl', 'verona', '2023-01-04 16:37:11', '2023-01-04 16:37:05', NULL, NULL, '145', 'rKjxlhHZPDwT', 'DIdXmNmU6Fbl', 'DIdXmNmU6Fbl', NULL, NULL, 'off'),
-(3, 'fixAdry', '0LU7vMeBFOEG', 'Istrana', '2023-02-07 14:41:37', '2023-02-07 14:41:37', '2023-02-07 14:41:17', '2023-02-07 14:41:17', '144', 'ERR_C2_OFF', 'ERR_C2_OFF', 'ERR_C2_OFF', NULL, 'ERR_C2_OFF', 'off'),
-(34, 'VM_Istrana', 'aJLaKVZ2DM2W', 'Istrana', '2022-12-22 14:16:44', '2022-12-22 14:16:49', NULL, NULL, '33', '0YK8Q9CWLZfF', 'OS66Mpc3716A', 'OS66Mpc3716A', NULL, NULL, 'off');
 
 -- --------------------------------------------------------
 
@@ -768,7 +758,7 @@ ALTER TABLE `email_leak_target`
 -- AUTO_INCREMENT for table `engines`
 --
 ALTER TABLE `engines`
-  MODIFY `id_engines_DB` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id_engines_DB` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `host`
