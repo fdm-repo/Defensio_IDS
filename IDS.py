@@ -98,6 +98,11 @@ while True:
                         print('Severity: ' + str(severity))
 
                         if src_ip == prev_src_ip and dest_ip == prev_dest_ip and signature == prev_signature:
+                            print('___________________________________________________________________');
+                            print(' Record not inserted as it is a duplicate of the previous record.');
+                            print('___________________________________________________________________');
+                            time.sleep(1)
+                            os.system('clear')
                             # ignora il record corrente se i valori sono uguali ai precedenti
                             continue
 
@@ -106,7 +111,10 @@ while True:
                         prev_signature = signature
 
                         if(src_ip == ip_exclude_ids or dest_ip == ip_exclude_ids) :
-                            print('Record NO insert cause EXCLUDE IP')
+                            print('___________________________________________________________________');
+                            print('Record not inserted as host excluded by the administrator')
+                            print('___________________________________________________________________');
+
                         else:
                             # Database connection
                             try:
@@ -130,11 +138,16 @@ while True:
                             try:
                                 suricataDB.execute(sql_insert_record, input_data)
                                 connDB.commit()
+                                print('___________________________________________________________________');
+                                print('Record inserted in the database')
+                                print('___________________________________________________________________');
                             except:
                                 print("Record già presente")
 
                             suricataDB.close()
                             connDB.close()
+                        time.sleep(1)
+                        os.system('clear')
 
 
         log = crealog.log_event()
@@ -152,5 +165,5 @@ while True:
         time.sleep(5)
         os.system('clear')
     print('SURICATA ACTIVE....  Last record: ' + timestamp_limit + '...ZZZzzzz.....zzz...zz...z..')
-    time.sleep(5)
+    time.sleep(2)
     os.system('clear')
