@@ -57,6 +57,12 @@ while True:
         with open(file_json, 'r') as handle:
             json_data = [json.loads(line) for line in handle]
             lenght_file = len(json_data)
+
+            prev_src_ip = None
+            prev_dest_ip = None
+            prev_signature = None
+
+
             for x in range(lenght_file):
                 if json_data[x]['timestamp'] > timestamp_limit:
                     if json_data[x]["event_type"] == 'alert':
@@ -90,6 +96,14 @@ while True:
                         print('Category: ' + category)
                         severity = json_data[x]['alert']['severity']
                         print('Severity: ' + str(severity))
+
+                        if src_ip == prev_src_ip and dest_ip == prev_dest_ip and signature == prev_signature:
+                            # ignora il record corrente se i valori sono uguali ai precedenti
+                            continue
+
+                        prev_src_ip = src_ip
+                        prev_dest_ip = dest_ip
+                        prev_signature = signature
 
                         if(src_ip == ip_exclude_ids or dest_ip == ip_exclude_ids) :
                             print('Record NO insert cause EXCLUDE IP')
