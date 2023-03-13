@@ -101,7 +101,7 @@ while True:
                             print('___________________________________________________________________');
                             print(' Record not inserted as it is a duplicate of the previous record.');
                             print('___________________________________________________________________');
-                            time.sleep(1)
+                            time.sleep(0.2)
                             os.system('clear')
                             # ignora il record corrente se i valori sono uguali ai precedenti
                             continue
@@ -142,11 +142,14 @@ while True:
                                 print('Record inserted in the database')
                                 print('___________________________________________________________________');
                             except:
-                                print("Record già presente")
+                                print('___________________________________________________________________');
+                                print('Record duplicated in the database')
+                                print('___________________________________________________________________');
+
 
                             suricataDB.close()
                             connDB.close()
-                        time.sleep(1)
+                        time.sleep(0.2)
                         os.system('clear')
 
 
@@ -162,8 +165,8 @@ while True:
                     "Rimozione del file "+str(file_json))
 
         print('SURICATA ACTIVE....  Last record: ' + timestamp_limit + '...ZZZzzzz.....zzz...zz...z..')
-        time.sleep(5)
+        time.sleep(1)
         os.system('clear')
     print('SURICATA ACTIVE....  Last record: ' + timestamp_limit + '...ZZZzzzz.....zzz...zz...z..')
-    time.sleep(2)
+    time.sleep(0.5)
     os.system('clear')

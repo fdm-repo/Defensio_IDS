@@ -69,7 +69,7 @@ Thanks for using MariaDB!
 11) una volta importata la struttura del database, inserisci un record nella tabella engines relativa al nuovo sensore che si vuole abilitare (importante il valore codeword che identifica l'engine)
 12)tornando sulla shell di defensio eseguire sudo ./Installation.sh (installa tutte le dipendenze, arachni, portainer e openvas)
 13)eseguire ./C2.py (da root) e inserire l'user root, password (quella inserita al punto 6), indirizzo ip (127.0.0.1), porta 3306, database defensio, e id asset (il codeword inserito nella tabella engines)
-
+13a) nel caso procedura ./C2.py fallisca, riavviarla con ./inizializzazione_engine.py - utlizzare Y maiuscola
 
 14) installare suricata e modificare il file /etc/suricata/suricata.yaml  cambiando la denominazione dei file json
 
@@ -79,4 +79,66 @@ Thanks for using MariaDB!
       filename: eve-%Y-%m-%d-%H:%M.json
       rotate-interval: minute
 
+15)  aprire una nuova finestra terminale (non tab) spostarsi nella cartella defensio ed eseguire ./Sentinel.py
+16) scaricare il FE e decomprimerlo
+17) aprire una nuova finestra terminale spostarsi nella cartella del FE /assets/php ed editare il file sudo nano connect_DB.php. Per una installazione locale impostare:
+- servername 127.0.0.1
+editare i campi username e password inserendo le password di accesso a phpmyadmin, controllare che il nome del database sia defenso. Salvare ed uscire ctrl+x e poi invio
+18) spostarsi nuovamente nella cartella root del FE e copiare il contenuto della cartella fe nella directory apache con sudo cp -R * /var/www/html
+
+***steps da effettuare solo se presente IDS***
+
+19.1) installare dipendenze suricata
+sudo apt install -y build-essential libpcap-dev   \
+                libnet1-dev libyaml-0-2 libyaml-dev pkg-config zlib1g zlib1g-dev \
+                libcap-ng-dev libcap-ng0 make libmagic-dev         \
+                libgeoip-dev liblua5.1-dev libhiredis-dev libevent-dev \
+                python3-yaml rustc cargo libpcre2-dev
+
+19.2) aggiungere repo suricata ed installarlo
+sudo apt install -y software-properties-common
+sudo add-apt-repository ppa:oisf/suricata-stable (premere invio per continuare)
+sudo apt update
+sudo apt install -y suricata
+
+19.3) configurare rules
+sudo suricata-update
+sudo suricata-update update-sources
+sudo suricata-update list-sources
+sudo suricata-update enable-source stamus/lateral
+sudo suricata-update
+sudo suricata-update enable-source malsilo/win-malware
+sudo suricata-update
+sudo suricata-update enable-source tgreen/hunting
+sudo suricata-update
+sudo suricata-update enable-source etnetera/aggressive
+sudo suricata-update
+sudo suricata-update enable-source sslbl/ja3-fingerprints
+sudo suricata-update
+sudo suricata-update enable-source sslbl/ssl-fp-blacklist
+sudo suricata-update
+
+19.4) installare net-tools ed abilitare modalita promiscusa sulla scheda di rete dedicata al monitoring
+sudo apt install net-tools -y
+ip a
+per verificare mac address schede di rete e confrontarlo con la scehda di rete impostata per il mirroring in esxi (cliccare sulla VM ed esplodere il network adapter dedicato al mirroring)
+sudo ifconfig nomeschedarete promisc
+19.5)modificare il file configurazione suricata
+sudo nano /etc/suricata/suricata.yaml
+sostituendo i valori esistenti con
+(se uilizza nano premere ctrl+W per avviare la ricerca valore)
+  - eve-log:
+      enabled: yes
+      filetype: regular #regular|syslog|unix_dgram|unix_stream|redis
+      filename: eve-%Y-%m-%d-%H:%M.json
+      rotate-interval: minute
+sosituire nome scheda ethernet predefinito avviando nuovamente la ricerca all'interno del file per il valore eth0 e rimuovere commento dalla riga #threads
+
+af-packet:
+  - interface: ens192
+    # Number of receive threads. "auto" uses the number of cores
+       threads: auto
+
+salvare ed uscire e riavviare suricata con
+sudo systemctl restart suricata
 
