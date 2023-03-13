@@ -57,7 +57,7 @@ while True:
    _|_|_|  _|_|_|_|      _|_|_|      _|_|_|  _|_|_|        _|_|    _|_|_|  _|    _|    _|  
                                          _|                                                
                                      _|_|                                                  
-    Version 03/03/2023 n3TSh4d3 \n""")
+    Version OnlyIDS 13/03/2023 n3TSh4d3 \n""")
 
     try:
         data = json.load(open("eng_conf.json"))
@@ -83,63 +83,6 @@ while True:
 
     if status == 'on':
         
-        web_scanner = os.popen("pgrep -fx \"python3 ./WebScanner_engine.py\"").read()
-
-        if web_scanner == '':
-            web_scanner_token = "Disattivato"
-            print("Avvio processo WebScanner_engine.py")
-            subprocess.run(
-                ["gnome-terminal", "--title=WEB_SCANNER", "--", "bash", "-c", "sudo -u " + user_no_admin + " ./WebScanner_engine.py"])
-        else:
-            web_scanner_token = "Attivo"
-            print("Processo WebScanner_engine.py attivo con PID: " + str(web_scanner))
-
-        scheduling = os.popen("pgrep -fx \"python3 ./Scheduling.py\"").read()
-
-        if scheduling == '':
-            print("Avvio processo Scheduling.py")
-            subprocess.run(["gnome-terminal", "--title=SCHEDULING", "--", "bash", "-c", "sudo -u " + user_no_admin + " ./Scheduling.py"])
-        else:
-            print("Processo Scheduling.py attivo con PID: " + str(scheduling))
-
-        email_leak = os.popen("pgrep -fx \"python3 ./Email_Leaks.py\"").read()
-
-        if email_leak == '':
-            print("Avvio processo Email_Leaks.py")
-            subprocess.run(["gnome-terminal", "--title=EMAIL_LEAKS", "--", "bash", "-c", "sudo -u " + user_no_admin + " ./Email_Leaks.py"])
-        else:
-            print("Processo Email_Leaks.py attivo con PID: " + str(email_leak))
-
-        defensio_engine = os.popen("pgrep -fx \"python3 ./Defensio_engine.py\"").read()
-
-        if defensio_engine == '':
-            net_scanner_token = "Disattivato"
-            print("Avvio processo Defensio_engine.py")
-            subprocess.run(["gnome-terminal", "--title=NET_SCANNER", "--", "bash", "-c", "sudo ./Defensio_engine.py"])
-        else:
-            net_scanner_token = "Attivo"
-            print("Processo Defensio_engine.py attivo con PID: " + str(defensio_engine))
-
-        openvas_engine = os.popen("pgrep -fx \"python3 ./Openvas_engine.py\"").read()
-
-        if openvas_engine == '':
-            vuln_scanner_token = "Disattivato"
-            print("Avvio processo VulnScan_engine.py")
-            subprocess.run(["gnome-terminal", "--title=VULNS_SCANNER", "--", "bash", "-c", "sudo ./Openvas_engine.py"])
-        else:
-            vuln_scanner_token = "Attivo"
-            print("Processo VulnScan_engine.py attivo con PID: " + str(openvas_engine))
-
-        sharescanner_engine = os.popen("pgrep -fx \"python3 ./ShareScanner_engine.py\"").read()
-
-        if sharescanner_engine == '':
-            share_scanner_token = "Disattivato"
-            print("Avvio processo ShareScanner_engine.py")
-            subprocess.run(["gnome-terminal", "--title=SHARE_SCANNER", "--", "bash", "-c", "sudo ./ShareScanner_engine.py"])
-        else:
-            share_scanner_token = "Attivo"
-            print("Processo ShareScanner_engine.py attivo con PID: " + str(sharescanner_engine))
-
         IDS_engine = os.popen("pgrep -fx \"python3 ./IDS.py\"").read()
 
         if IDS_engine == '':
@@ -155,63 +98,13 @@ while True:
 
         c2_cur = c2_conn.cursor()
 
-        sql_update_query = """UPDATE engines SET active_defensio = %s, active_webscanner = %s,active_openvas = %s,active_share_scanner=%s, active_suricata = %s WHERE engines.codeword = %s; """
-        input_data = (net_scanner_token, web_scanner_token, vuln_scanner_token, share_scanner_token,ids_token , id_ass)
+        sql_update_query = """UPDATE engines SET active_suricata = %s WHERE engines.codeword = %s; """
+        input_data = (ids_token , id_ass)
         c2_cur.execute(sql_update_query, input_data)
         c2_conn.commit()
 
     elif status == 'off':
 
-
-        web_scanner = os.popen("pgrep -fx \"python3 ./WebScanner_engine.py\"").read()
-
-        if web_scanner != '':
-            print("Termina processo WebScanner_engine.py PID "+web_scanner)
-            web_scanner = int(web_scanner)
-            os.kill(web_scanner, signal.SIGKILL)
-
-
-        scheduling = os.popen("pgrep -fx \"python3 ./Scheduling.py\"").read()
-
-        if scheduling != '':
-            print("Termina processo Scheduling.py PID "+scheduling)
-            scheduling = int(scheduling)
-            os.kill(scheduling, signal.SIGKILL)
-
-
-        email_leak = os.popen("pgrep -fx \"python3 ./Email_Leaks.py\"").read()
-
-        if email_leak != '':
-            print("Termina processo Email_Leaks.py PID "+email_leak)
-            email_leak = int(email_leak)
-            os.kill(email_leak, signal.SIGKILL)
-
-
-        defensio_engine = os.popen("pgrep -fx \"python3 ./Defensio_engine.py\"").read()
-
-        if defensio_engine != '':
-
-            print("Termina processo Defensio_engine.py PID "+defensio_engine)
-            defensio_engine = int(defensio_engine)
-            os.kill(defensio_engine, signal.SIGKILL)
-
-
-        openvas_engine = os.popen("pgrep -fx \"python3 ./Openvas_engine.py\"").read()
-
-        if openvas_engine != '':
-
-            print("Termina processo VulnScan_engine.py PID "+openvas_engine)
-            openvas_engine = int(openvas_engine)
-            os.kill(openvas_engine, signal.SIGKILL)
-
-
-        sharescanner_engine = os.popen("pgrep -fx \"python3 ./ShareScanner_engine.py\"").read()
-
-        if sharescanner_engine != '':
-
-            print("termina processo ShareScanner_engine.py PID "+sharescanner_engine)
-            sharescanner_engine = int(sharescanner_engine)
-            os.kill(sharescanner_engine, signal.SIGKILL)
 
         IDS_engine = os.popen("pgrep -fx \"python3 ./IDS_engine.py\"").read()
 
@@ -227,8 +120,8 @@ while True:
 
         c2_cur = c2_conn.cursor()
 
-        sql_update_query = """UPDATE engines SET active_defensio = %s, active_webscanner = %s,active_openvas = %s,active_share_scanner=%s, active_suricata = %s WHERE engines.codeword = %s; """
-        input_data = (net_scanner_token, web_scanner_token, vuln_scanner_token, share_scanner_token, ids_token, id_ass)
+        sql_update_query = """UPDATE engines SET active_suricata = %s WHERE engines.codeword = %s; """
+        input_data = (ids_token, id_ass)
         c2_cur.execute(sql_update_query, input_data)
         c2_conn.commit()
 
