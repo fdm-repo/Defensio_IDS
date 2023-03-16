@@ -96,6 +96,34 @@ setInterval(updateSuricataStatus, 10000);
         #ids-status {
             display: inline;
         }
+           .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #ffffff;
+        text-align: center;
+        text-decoration: none;
+        background-color: #295a85;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Stile del bottone "Start" */
+    .btn-start {
+        background-color: #2a802b;
+    }
+
+    /* Stile del bottone "Stop" */
+    .btn-stop {
+        background-color: #9a2830;
+    }
+
+    /* Effetto hover sui bottoni */
+    .btn:hover {
+        background-color: #295a85;
+    }
 
 
     </style>
@@ -114,15 +142,15 @@ setInterval(updateSuricataStatus, 10000);
             <h1>Defensio IDS</h1>
             <h3>Status</h3><h4 id="ids-status"></h4>
             <br>
-
+            <br>
             <div>
-                <form action="/start" method="GET" style="display:inline-block;">
-                    <input type="submit" value="Start">
-                </form>
-                <form action="/stop" method="GET" style="display:inline-block;">
-                    <input type="submit" value="Stop">
-                </form>
-            </div>
+    <form action="/start" method="GET" style="display:inline-block;">
+        <input class="btn btn-start" type="submit" value="Start">
+    </form>
+    <form action="/stop" method="GET" style="display:inline-block;">
+        <input class="btn btn-stop" type="submit" value="Stop">
+    </form>
+</div>
             <hr>
 
             <h1>Suricata</h1>
@@ -130,10 +158,10 @@ setInterval(updateSuricataStatus, 10000);
             <br>
             <div>
                 <form action="/start_suricata" method="GET" style="display:inline-block;">
-                    <input type="submit" value="Start">
+                    <input class="btn btn-start" type="submit" value="Start">
                 </form>
                 <form action="/stop_suricata" method="GET" style="display:inline-block;">
-                    <input type="submit" value="Stop">
+                    <input class="btn btn-stop" type="submit" value="Stop">
                 </form>
             </div><hr>
         </div>
