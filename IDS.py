@@ -117,8 +117,8 @@ while True:
                             print('___________________________________________________________________');
                             print(' The record is not inserted because the signature is banned.');
                             print('___________________________________________________________________');
-                            time.sleep(0.2)
-                            os.system('clear')
+                            time.sleep(0.1)
+
                             continue
 
 
@@ -129,7 +129,7 @@ while True:
                             print(' Record not inserted as it is a duplicate of the previous record.');
                             print('___________________________________________________________________');
                             time.sleep(0.1)
-                            os.system('clear')
+
                             # ignora il record corrente se i valori sono uguali ai precedenti
                             continue
 
@@ -141,8 +141,8 @@ while True:
                             print('___________________________________________________________________');
                             print('Record not inserted as host excluded by the administrator')
                             print('___________________________________________________________________');
-                            time.sleep(0.2)
-                            os.system('clear')
+                            time.sleep(0.1)
+
                         else:
                             # Database connection
                             try:
@@ -177,8 +177,8 @@ while True:
 
                             suricataDB.close()
                             connDB.close()
-                        time.sleep(0.2)
-                        os.system('clear')
+                        time.sleep(0.1)
+
 
 
         log = crealog.log_event()

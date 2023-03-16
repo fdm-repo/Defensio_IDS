@@ -1,1000 +1,1000 @@
-2023-03-13 16:39:48 | Rimozione del file /var/log/suricata/eve-2023-03-13-16:38.json
-2023-03-13 16:40:40 | Apertura del file ('eve-2023-03-13-16:39.json', 1678722039.5570104)
-2023-03-13 16:40:46 | Caricamento degli alert sul DB completato.
-2023-03-13 16:40:46 | Rimozione del file /var/log/suricata/eve-2023-03-13-16:39.json
-2023-03-13 16:41:41 | Apertura del file ('eve-2023-03-13-16:40.json', 1678722099.6573849)
-2023-03-13 16:41:47 | Caricamento degli alert sul DB completato.
-2023-03-13 16:41:47 | Rimozione del file /var/log/suricata/eve-2023-03-13-16:40.json
-2023-03-13 16:42:41 | Apertura del file ('eve-2023-03-13-16:41.json', 1678722160.4257631)
-2023-03-13 16:42:46 | Caricamento degli alert sul DB completato.
-2023-03-13 16:42:46 | Rimozione del file /var/log/suricata/eve-2023-03-13-16:41.json
-2023-03-13 16:43:41 | Apertura del file ('eve-2023-03-13-16:42.json', 1678722220.99814)
-2023-03-13 16:43:46 | Caricamento degli alert sul DB completato.
-2023-03-13 16:43:46 | Rimozione del file /var/log/suricata/eve-2023-03-13-16:42.json
-2023-03-13 16:44:41 | Apertura del file ('eve-2023-03-13-16:43.json', 1678722280.6425111)
-2023-03-13 16:44:47 | Caricamento degli alert sul DB completato.
-2023-03-13 16:44:47 | Rimozione del file /var/log/suricata/eve-2023-03-13-16:43.json
-2023-03-13 16:45:41 | Apertura del file ('eve-2023-03-13-16:44.json', 1678722340.1941333)
-2023-03-13 16:45:48 | Caricamento degli alert sul DB completato.
-2023-03-13 16:45:48 | Rimozione del file /var/log/suricata/eve-2023-03-13-16:44.json
-2023-03-13 16:46:41 | Apertura del file ('eve-2023-03-13-16:45.json', 1678722400.1771314)
-2023-03-13 16:46:47 | Caricamento degli alert sul DB completato.
-2023-03-13 16:46:47 | Rimozione del file /var/log/suricata/eve-2023-03-13-16:45.json
-2023-03-13 16:47:41 | Apertura del file ('eve-2023-03-13-16:46.json', 1678722459.6082652)
-2023-03-13 16:47:49 | Caricamento degli alert sul DB completato.
-2023-03-13 16:47:49 | Rimozione del file /var/log/suricata/eve-2023-03-13-16:46.json
-2023-03-13 16:48:41 | Apertura del file ('eve-2023-03-13-16:47.json', 1678722520.443494)
-2023-03-13 16:48:46 | Caricamento degli alert sul DB completato.
-2023-03-13 16:48:46 | Rimozione del file /var/log/suricata/eve-2023-03-13-16:47.json
-2023-03-13 16:49:42 | Apertura del file ('eve-2023-03-13-16:48.json', 1678722580.4748352)
-2023-03-13 16:49:49 | Caricamento degli alert sul DB completato.
-2023-03-13 16:49:49 | Rimozione del file /var/log/suricata/eve-2023-03-13-16:48.json
-2023-03-13 16:50:41 | Apertura del file ('eve-2023-03-13-16:49.json', 1678722639.2382777)
-2023-03-13 16:50:49 | Caricamento degli alert sul DB completato.
-2023-03-13 16:50:49 | Rimozione del file /var/log/suricata/eve-2023-03-13-16:49.json
-2023-03-13 16:51:41 | Apertura del file ('eve-2023-03-13-16:50.json', 1678722700.0057821)
-2023-03-13 16:51:46 | Caricamento degli alert sul DB completato.
-2023-03-13 16:51:46 | Rimozione del file /var/log/suricata/eve-2023-03-13-16:50.json
-2023-03-13 16:52:41 | Apertura del file ('eve-2023-03-13-16:51.json', 1678722759.7173665)
-2023-03-13 16:52:46 | Caricamento degli alert sul DB completato.
-2023-03-13 16:52:46 | Rimozione del file /var/log/suricata/eve-2023-03-13-16:51.json
-2023-03-13 16:53:42 | Apertura del file ('eve-2023-03-13-16:52.json', 1678722820.2090094)
-2023-03-13 16:53:46 | Caricamento degli alert sul DB completato.
-2023-03-13 16:53:46 | Rimozione del file /var/log/suricata/eve-2023-03-13-16:52.json
-2023-03-13 16:54:41 | Apertura del file ('eve-2023-03-13-16:53.json', 1678722880.3047113)
-2023-03-13 16:54:47 | Caricamento degli alert sul DB completato.
-2023-03-13 16:54:47 | Rimozione del file /var/log/suricata/eve-2023-03-13-16:53.json
-2023-03-13 16:55:41 | Apertura del file ('eve-2023-03-13-16:54.json', 1678722940.4044635)
-2023-03-13 16:55:46 | Caricamento degli alert sul DB completato.
-2023-03-13 16:55:46 | Rimozione del file /var/log/suricata/eve-2023-03-13-16:54.json
-2023-03-13 16:56:41 | Apertura del file ('eve-2023-03-13-16:55.json', 1678722999.1722643)
-2023-03-13 16:56:46 | Caricamento degli alert sul DB completato.
-2023-03-13 16:56:46 | Rimozione del file /var/log/suricata/eve-2023-03-13-16:55.json
-2023-03-13 16:57:41 | Apertura del file ('eve-2023-03-13-16:56.json', 1678723058.604102)
-2023-03-13 16:57:46 | Caricamento degli alert sul DB completato.
-2023-03-13 16:57:46 | Rimozione del file /var/log/suricata/eve-2023-03-13-16:56.json
-2023-03-13 16:58:41 | Apertura del file ('eve-2023-03-13-16:57.json', 1678723118.035974)
-2023-03-13 16:58:48 | Caricamento degli alert sul DB completato.
-2023-03-13 16:58:48 | Rimozione del file /var/log/suricata/eve-2023-03-13-16:57.json
-2023-03-13 16:59:42 | Apertura del file ('eve-2023-03-13-16:58.json', 1678723179.4718742)
-2023-03-13 16:59:49 | Caricamento degli alert sul DB completato.
-2023-03-13 16:59:49 | Rimozione del file /var/log/suricata/eve-2023-03-13-16:58.json
-2023-03-13 17:00:43 | Apertura del file ('eve-2023-03-13-16:59.json', 1678723241.575803)
-2023-03-13 17:00:48 | Caricamento degli alert sul DB completato.
-2023-03-13 17:00:48 | Rimozione del file /var/log/suricata/eve-2023-03-13-16:59.json
-2023-03-13 17:01:42 | Apertura del file ('eve-2023-03-13-17:00.json', 1678723301.0077598)
-2023-03-13 17:01:48 | Caricamento degli alert sul DB completato.
-2023-03-13 17:01:48 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:00.json
-2023-03-13 17:02:43 | Apertura del file ('eve-2023-03-13-17:01.json', 1678723361.963738)
-2023-03-13 17:02:48 | Caricamento degli alert sul DB completato.
-2023-03-13 17:02:48 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:01.json
-2023-03-13 17:03:43 | Apertura del file ('eve-2023-03-13-17:02.json', 1678723421.207736)
-2023-03-13 17:03:48 | Caricamento degli alert sul DB completato.
-2023-03-13 17:03:48 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:02.json
-2023-03-13 17:04:43 | Apertura del file ('eve-2023-03-13-17:03.json', 1678723482.6437519)
-2023-03-13 17:04:48 | Caricamento degli alert sul DB completato.
-2023-03-13 17:04:48 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:03.json
-2023-03-13 17:05:43 | Apertura del file ('eve-2023-03-13-17:04.json', 1678723541.427782)
-2023-03-13 17:05:49 | Caricamento degli alert sul DB completato.
-2023-03-13 17:05:49 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:04.json
-2023-03-13 17:06:43 | Apertura del file ('eve-2023-03-13-17:05.json', 1678723601.5278268)
-2023-03-13 17:06:49 | Caricamento degli alert sul DB completato.
-2023-03-13 17:06:49 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:05.json
-2023-03-13 17:07:43 | Apertura del file ('eve-2023-03-13-17:06.json', 1678723662.2958846)
-2023-03-13 17:07:50 | Caricamento degli alert sul DB completato.
-2023-03-13 17:07:50 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:06.json
-2023-03-13 17:08:43 | Apertura del file ('eve-2023-03-13-17:07.json', 1678723722.3959525)
-2023-03-13 17:08:48 | Caricamento degli alert sul DB completato.
-2023-03-13 17:08:48 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:07.json
-2023-03-13 17:09:43 | Apertura del file ('eve-2023-03-13-17:08.json', 1678723782.5040302)
-2023-03-13 17:09:49 | Caricamento degli alert sul DB completato.
-2023-03-13 17:09:49 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:08.json
-2023-03-13 17:10:43 | Apertura del file ('eve-2023-03-13-17:09.json', 1678723842.7081168)
-2023-03-13 17:10:48 | Caricamento degli alert sul DB completato.
-2023-03-13 17:10:48 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:09.json
-2023-03-13 17:11:43 | Apertura del file ('eve-2023-03-13-17:10.json', 1678723902.0482094)
-2023-03-13 17:11:48 | Caricamento degli alert sul DB completato.
-2023-03-13 17:11:48 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:10.json
-2023-03-13 17:12:43 | Apertura del file ('eve-2023-03-13-17:11.json', 1678723962.1523101)
-2023-03-13 17:12:49 | Caricamento degli alert sul DB completato.
-2023-03-13 17:12:49 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:11.json
-2023-03-13 17:13:43 | Apertura del file ('eve-2023-03-13-17:12.json', 1678724020.248413)
-2023-03-13 17:13:46 | Caricamento degli alert sul DB completato.
-2023-03-13 17:13:46 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:12.json
-2023-03-13 17:14:43 | Apertura del file ('eve-2023-03-13-17:13.json', 1678724082.352529)
-2023-03-13 17:14:48 | Caricamento degli alert sul DB completato.
-2023-03-13 17:14:48 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:13.json
-2023-03-13 17:15:43 | Apertura del file ('eve-2023-03-13-17:14.json', 1678724142.460646)
-2023-03-13 17:15:48 | Caricamento degli alert sul DB completato.
-2023-03-13 17:15:48 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:14.json
-2023-03-13 17:16:44 | Apertura del file ('eve-2023-03-13-17:15.json', 1678724202.5567672)
-2023-03-13 17:16:48 | Caricamento degli alert sul DB completato.
-2023-03-13 17:16:48 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:15.json
-2023-03-13 17:17:43 | Apertura del file ('eve-2023-03-13-17:16.json', 1678724261.3248892)
-2023-03-13 17:17:50 | Caricamento degli alert sul DB completato.
-2023-03-13 17:17:50 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:16.json
-2023-03-13 17:18:43 | Apertura del file ('eve-2023-03-13-17:17.json', 1678724322.1010191)
-2023-03-13 17:18:50 | Caricamento degli alert sul DB completato.
-2023-03-13 17:18:50 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:17.json
-2023-03-13 17:19:43 | Apertura del file ('eve-2023-03-13-17:18.json', 1678724382.2015386)
-2023-03-13 17:19:49 | Caricamento degli alert sul DB completato.
-2023-03-13 17:19:49 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:18.json
-2023-03-13 17:20:44 | Apertura del file ('eve-2023-03-13-17:19.json', 1678724442.306567)
-2023-03-13 17:20:50 | Caricamento degli alert sul DB completato.
-2023-03-13 17:20:50 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:19.json
-2023-03-13 17:21:44 | Apertura del file ('eve-2023-03-13-17:20.json', 1678724503.0755205)
-2023-03-13 17:21:49 | Caricamento degli alert sul DB completato.
-2023-03-13 17:21:49 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:20.json
-2023-03-13 17:22:44 | Apertura del file ('eve-2023-03-13-17:21.json', 1678724561.3203619)
-2023-03-13 17:22:51 | Caricamento degli alert sul DB completato.
-2023-03-13 17:22:51 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:21.json
-2023-03-13 17:23:44 | Apertura del file ('eve-2023-03-13-17:22.json', 1678724623.2731876)
-2023-03-13 17:23:50 | Caricamento degli alert sul DB completato.
-2023-03-13 17:23:50 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:22.json
-2023-03-13 17:24:44 | Apertura del file ('eve-2023-03-13-17:23.json', 1678724683.3739278)
-2023-03-13 17:24:49 | Caricamento degli alert sul DB completato.
-2023-03-13 17:24:49 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:23.json
-2023-03-13 17:25:44 | Apertura del file ('eve-2023-03-13-17:24.json', 1678724743.4706151)
-2023-03-13 17:25:49 | Caricamento degli alert sul DB completato.
-2023-03-13 17:25:49 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:24.json
-2023-03-13 17:26:44 | Apertura del file ('eve-2023-03-13-17:25.json', 1678724803.5672553)
-2023-03-13 17:26:49 | Caricamento degli alert sul DB completato.
-2023-03-13 17:26:49 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:25.json
-2023-03-13 17:27:44 | Apertura del file ('eve-2023-03-13-17:26.json', 1678724863.0038471)
-2023-03-13 17:27:50 | Caricamento degli alert sul DB completato.
-2023-03-13 17:27:50 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:26.json
-2023-03-13 17:28:44 | Apertura del file ('eve-2023-03-13-17:27.json', 1678724923.1044083)
-2023-03-13 17:28:50 | Caricamento degli alert sul DB completato.
-2023-03-13 17:28:50 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:27.json
-2023-03-13 17:29:44 | Apertura del file ('eve-2023-03-13-17:28.json', 1678724982.7849329)
-2023-03-13 17:29:52 | Caricamento degli alert sul DB completato.
-2023-03-13 17:29:52 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:28.json
-2023-03-13 17:30:44 | Apertura del file ('eve-2023-03-13-17:29.json', 1678725043.8734396)
-2023-03-13 17:30:49 | Caricamento degli alert sul DB completato.
-2023-03-13 17:30:49 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:29.json
-2023-03-13 17:31:44 | Apertura del file ('eve-2023-03-13-17:30.json', 1678725101.397892)
-2023-03-13 17:31:49 | Caricamento degli alert sul DB completato.
-2023-03-13 17:31:49 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:30.json
-2023-03-13 17:32:44 | Apertura del file ('eve-2023-03-13-17:31.json', 1678725163.498356)
-2023-03-13 17:32:50 | Caricamento degli alert sul DB completato.
-2023-03-13 17:32:50 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:31.json
-2023-03-13 17:33:45 | Apertura del file ('eve-2023-03-13-17:32.json', 1678725223.5987844)
-2023-03-13 17:33:51 | Caricamento degli alert sul DB completato.
-2023-03-13 17:33:51 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:32.json
-2023-03-13 17:34:45 | Apertura del file ('eve-2023-03-13-17:33.json', 1678725284.407199)
-2023-03-13 17:34:51 | Caricamento degli alert sul DB completato.
-2023-03-13 17:34:51 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:33.json
-2023-03-13 17:35:45 | Apertura del file ('eve-2023-03-13-17:34.json', 1678725344.8835945)
-2023-03-13 17:35:51 | Caricamento degli alert sul DB completato.
-2023-03-13 17:35:51 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:34.json
-2023-03-13 17:36:45 | Apertura del file ('eve-2023-03-13-17:35.json', 1678725404.5759706)
-2023-03-13 17:36:51 | Caricamento degli alert sul DB completato.
-2023-03-13 17:36:51 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:35.json
-2023-03-13 17:37:45 | Apertura del file ('eve-2023-03-13-17:36.json', 1678725464.0123322)
-2023-03-13 17:37:50 | Caricamento degli alert sul DB completato.
-2023-03-13 17:37:50 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:36.json
-2023-03-13 17:38:45 | Apertura del file ('eve-2023-03-13-17:37.json', 1678725524.1086864)
-2023-03-13 17:38:51 | Caricamento degli alert sul DB completato.
-2023-03-13 17:38:51 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:37.json
-2023-03-13 17:39:45 | Apertura del file ('eve-2023-03-13-17:38.json', 1678725584.7450335)
-2023-03-13 17:40:10 | Caricamento degli alert sul DB completato.
-2023-03-13 17:40:10 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:38.json
-2023-03-13 17:40:46 | Apertura del file ('eve-2023-03-13-17:39.json', 1678725644.3053653)
-2023-03-13 17:40:59 | Caricamento degli alert sul DB completato.
-2023-03-13 17:40:59 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:39.json
-2023-03-13 17:41:45 | Apertura del file ('eve-2023-03-13-17:40.json', 1678725704.8656948)
-2023-03-13 17:42:10 | Caricamento degli alert sul DB completato.
-2023-03-13 17:42:10 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:40.json
-2023-03-13 17:42:46 | Apertura del file ('eve-2023-03-13-17:41.json', 1678725764.550012)
-2023-03-13 17:42:57 | Caricamento degli alert sul DB completato.
-2023-03-13 17:42:57 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:41.json
-2023-03-13 17:43:45 | Apertura del file ('eve-2023-03-13-17:42.json', 1678725824.6063251)
-2023-03-13 17:43:56 | Caricamento degli alert sul DB completato.
-2023-03-13 17:43:56 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:42.json
-2023-03-13 17:44:46 | Apertura del file ('eve-2023-03-13-17:43.json', 1678725883.3706257)
-2023-03-13 17:44:53 | Caricamento degli alert sul DB completato.
-2023-03-13 17:44:53 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:43.json
-2023-03-13 17:45:46 | Apertura del file ('eve-2023-03-13-17:44.json', 1678725945.8829403)
-2023-03-13 17:45:52 | Caricamento degli alert sul DB completato.
-2023-03-13 17:45:52 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:44.json
-2023-03-13 17:46:46 | Apertura del file ('eve-2023-03-13-17:45.json', 1678726004.2392297)
-2023-03-13 17:46:52 | Caricamento degli alert sul DB completato.
-2023-03-13 17:46:52 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:45.json
-2023-03-13 17:47:46 | Apertura del file ('eve-2023-03-13-17:46.json', 1678726065.3875287)
-2023-03-13 17:47:52 | Caricamento degli alert sul DB completato.
-2023-03-13 17:47:52 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:46.json
-2023-03-13 17:48:46 | Apertura del file ('eve-2023-03-13-17:47.json', 1678726125.1038172)
-2023-03-13 17:48:54 | Caricamento degli alert sul DB completato.
-2023-03-13 17:48:54 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:47.json
-2023-03-13 17:49:46 | Apertura del file ('eve-2023-03-13-17:48.json', 1678726185.3921053)
-2023-03-13 17:49:52 | Caricamento degli alert sul DB completato.
-2023-03-13 17:49:52 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:48.json
-2023-03-13 17:50:46 | Apertura del file ('eve-2023-03-13-17:49.json', 1678726245.3003888)
-2023-03-13 17:50:55 | Caricamento degli alert sul DB completato.
-2023-03-13 17:50:55 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:49.json
-2023-03-13 17:51:46 | Apertura del file ('eve-2023-03-13-17:50.json', 1678726305.4046705)
-2023-03-13 17:51:51 | Caricamento degli alert sul DB completato.
-2023-03-13 17:51:51 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:50.json
-2023-03-13 17:52:46 | Apertura del file ('eve-2023-03-13-17:51.json', 1678726363.4969409)
-2023-03-13 17:52:51 | Caricamento degli alert sul DB completato.
-2023-03-13 17:52:51 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:51.json
-2023-03-13 17:53:46 | Apertura del file ('eve-2023-03-13-17:52.json', 1678726425.3971927)
-2023-03-13 17:53:52 | Caricamento degli alert sul DB completato.
-2023-03-13 17:53:52 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:52.json
-2023-03-13 17:54:47 | Apertura del file ('eve-2023-03-13-17:53.json', 1678726484.3613663)
-2023-03-13 17:54:53 | Caricamento degli alert sul DB completato.
-2023-03-13 17:54:53 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:53.json
-2023-03-13 17:55:46 | Apertura del file ('eve-2023-03-13-17:54.json', 1678726545.4055543)
-2023-03-13 17:55:52 | Caricamento degli alert sul DB completato.
-2023-03-13 17:55:52 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:54.json
-2023-03-13 17:56:46 | Apertura del file ('eve-2023-03-13-17:55.json', 1678726604.5577438)
-2023-03-13 17:56:52 | Caricamento degli alert sul DB completato.
-2023-03-13 17:56:52 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:55.json
-2023-03-13 17:57:47 | Apertura del file ('eve-2023-03-13-17:56.json', 1678726665.9979475)
-2023-03-13 17:58:00 | Caricamento degli alert sul DB completato.
-2023-03-13 17:58:00 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:56.json
-2023-03-13 17:58:47 | Apertura del file ('eve-2023-03-13-17:57.json', 1678726725.4341502)
-2023-03-13 17:58:52 | Caricamento degli alert sul DB completato.
-2023-03-13 17:58:52 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:57.json
-2023-03-13 17:59:47 | Apertura del file ('eve-2023-03-13-17:58.json', 1678726785.778361)
-2023-03-13 17:59:53 | Caricamento degli alert sul DB completato.
-2023-03-13 17:59:53 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:58.json
-2023-03-13 18:00:47 | Apertura del file ('eve-2023-03-13-17:59.json', 1678726846.3065774)
-2023-03-13 18:00:53 | Caricamento degli alert sul DB completato.
-2023-03-13 18:00:53 | Rimozione del file /var/log/suricata/eve-2023-03-13-17:59.json
-2023-03-13 18:01:47 | Apertura del file ('eve-2023-03-13-18:00.json', 1678726906.4027963)
-2023-03-13 18:01:53 | Caricamento degli alert sul DB completato.
-2023-03-13 18:01:53 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:00.json
-2023-03-13 18:02:47 | Apertura del file ('eve-2023-03-13-18:01.json', 1678726966.0790172)
-2023-03-13 18:02:55 | Caricamento degli alert sul DB completato.
-2023-03-13 18:02:55 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:01.json
-2023-03-13 18:03:47 | Apertura del file ('eve-2023-03-13-18:02.json', 1678727026.6032443)
-2023-03-13 18:03:53 | Caricamento degli alert sul DB completato.
-2023-03-13 18:03:53 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:02.json
-2023-03-13 18:04:47 | Apertura del file ('eve-2023-03-13-18:03.json', 1678727086.0394704)
-2023-03-13 18:04:53 | Caricamento degli alert sul DB completato.
-2023-03-13 18:04:53 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:03.json
-2023-03-13 18:05:47 | Apertura del file ('eve-2023-03-13-18:04.json', 1678727146.3637023)
-2023-03-13 18:05:53 | Caricamento degli alert sul DB completato.
-2023-03-13 18:05:53 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:04.json
-2023-03-13 18:06:47 | Apertura del file ('eve-2023-03-13-18:05.json', 1678727206.239935)
-2023-03-13 18:06:54 | Caricamento degli alert sul DB completato.
-2023-03-13 18:06:54 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:05.json
-2023-03-13 18:07:48 | Apertura del file ('eve-2023-03-13-18:06.json', 1678727266.3361702)
-2023-03-13 18:07:53 | Caricamento degli alert sul DB completato.
-2023-03-13 18:07:53 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:06.json
-2023-03-13 18:08:47 | Apertura del file ('eve-2023-03-13-18:07.json', 1678727325.096402)
-2023-03-13 18:08:53 | Caricamento degli alert sul DB completato.
-2023-03-13 18:08:53 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:07.json
-2023-03-13 18:09:47 | Apertura del file ('eve-2023-03-13-18:08.json', 1678727386.532646)
-2023-03-13 18:09:53 | Caricamento degli alert sul DB completato.
-2023-03-13 18:09:53 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:08.json
-2023-03-13 18:10:47 | Apertura del file ('eve-2023-03-13-18:09.json', 1678727446.6328862)
-2023-03-13 18:10:53 | Caricamento degli alert sul DB completato.
-2023-03-13 18:10:53 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:09.json
-2023-03-13 18:11:47 | Apertura del file ('eve-2023-03-13-18:10.json', 1678727506.353126)
-2023-03-13 18:11:53 | Caricamento degli alert sul DB completato.
-2023-03-13 18:11:53 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:10.json
-2023-03-13 18:12:47 | Apertura del file ('eve-2023-03-13-18:11.json', 1678727565.5013647)
-2023-03-13 18:13:01 | Caricamento degli alert sul DB completato.
-2023-03-13 18:13:01 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:11.json
-2023-03-13 18:13:47 | Apertura del file ('eve-2023-03-13-18:12.json', 1678727626.2696111)
-2023-03-13 18:13:53 | Caricamento degli alert sul DB completato.
-2023-03-13 18:13:53 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:12.json
-2023-03-13 18:14:47 | Apertura del file ('eve-2023-03-13-18:13.json', 1678727683.5978441)
-2023-03-13 18:14:54 | Caricamento degli alert sul DB completato.
-2023-03-13 18:14:54 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:13.json
-2023-03-13 18:15:47 | Apertura del file ('eve-2023-03-13-18:14.json', 1678727746.9861028)
-2023-03-13 18:15:52 | Caricamento degli alert sul DB completato.
-2023-03-13 18:15:52 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:14.json
-2023-03-13 18:16:48 | Apertura del file ('eve-2023-03-13-18:15.json', 1678727806.5663466)
-2023-03-13 18:16:53 | Caricamento degli alert sul DB completato.
-2023-03-13 18:16:53 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:15.json
-2023-03-13 18:17:48 | Apertura del file ('eve-2023-03-13-18:16.json', 1678727867.334596)
-2023-03-13 18:17:53 | Caricamento degli alert sul DB completato.
-2023-03-13 18:17:53 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:16.json
-2023-03-13 18:18:48 | Apertura del file ('eve-2023-03-13-18:17.json', 1678727927.4388433)
-2023-03-13 18:18:53 | Caricamento degli alert sul DB completato.
-2023-03-13 18:18:53 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:17.json
-2023-03-13 18:19:48 | Apertura del file ('eve-2023-03-13-18:18.json', 1678727987.5430908)
-2023-03-13 18:19:53 | Caricamento degli alert sul DB completato.
-2023-03-13 18:19:53 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:18.json
-2023-03-13 18:20:48 | Apertura del file ('eve-2023-03-13-18:19.json', 1678728047.7673392)
-2023-03-13 18:20:53 | Caricamento degli alert sul DB completato.
-2023-03-13 18:20:53 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:19.json
-2023-03-13 18:21:48 | Apertura del file ('eve-2023-03-13-18:20.json', 1678728106.4075818)
-2023-03-13 18:21:54 | Caricamento degli alert sul DB completato.
-2023-03-13 18:21:54 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:20.json
-2023-03-13 18:22:49 | Apertura del file ('eve-2023-03-13-18:21.json', 1678728167.1718333)
-2023-03-13 18:22:54 | Caricamento degli alert sul DB completato.
-2023-03-13 18:22:54 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:21.json
-2023-03-13 18:23:48 | Apertura del file ('eve-2023-03-13-18:22.json', 1678728227.2720823)
-2023-03-13 18:23:55 | Caricamento degli alert sul DB completato.
-2023-03-13 18:23:55 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:22.json
-2023-03-13 18:24:49 | Apertura del file ('eve-2023-03-13-18:23.json', 1678728286.040326)
-2023-03-13 18:24:54 | Caricamento degli alert sul DB completato.
-2023-03-13 18:24:54 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:23.json
-2023-03-13 18:25:48 | Apertura del file ('eve-2023-03-13-18:24.json', 1678728347.912583)
-2023-03-13 18:25:53 | Caricamento degli alert sul DB completato.
-2023-03-13 18:25:53 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:24.json
-2023-03-13 18:26:48 | Apertura del file ('eve-2023-03-13-18:25.json', 1678728406.2448254)
-2023-03-13 18:26:54 | Caricamento degli alert sul DB completato.
-2023-03-13 18:26:54 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:25.json
-2023-03-13 18:27:49 | Apertura del file ('eve-2023-03-13-18:26.json', 1678728465.4970791)
-2023-03-13 18:28:02 | Caricamento degli alert sul DB completato.
-2023-03-13 18:28:02 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:26.json
-2023-03-13 18:28:49 | Apertura del file ('eve-2023-03-13-18:27.json', 1678728528.453382)
-2023-03-13 18:28:57 | Caricamento degli alert sul DB completato.
-2023-03-13 18:28:57 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:27.json
-2023-03-13 18:29:49 | Apertura del file ('eve-2023-03-13-18:28.json', 1678728588.5616674)
-2023-03-13 18:29:55 | Caricamento degli alert sul DB completato.
-2023-03-13 18:29:55 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:28.json
-2023-03-13 18:30:49 | Apertura del file ('eve-2023-03-13-18:29.json', 1678728647.9979467)
-2023-03-13 18:30:55 | Caricamento degli alert sul DB completato.
-2023-03-13 18:30:55 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:29.json
-2023-03-13 18:31:49 | Apertura del file ('eve-2023-03-13-18:30.json', 1678728707.4342234)
-2023-03-13 18:31:55 | Caricamento degli alert sul DB completato.
-2023-03-13 18:31:55 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:30.json
-2023-03-13 18:32:49 | Apertura del file ('eve-2023-03-13-18:31.json', 1678728768.202504)
-2023-03-13 18:32:55 | Caricamento degli alert sul DB completato.
-2023-03-13 18:32:55 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:31.json
-2023-03-13 18:33:49 | Apertura del file ('eve-2023-03-13-18:32.json', 1678728828.302779)
-2023-03-13 18:33:55 | Caricamento degli alert sul DB completato.
-2023-03-13 18:33:55 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:32.json
-2023-03-13 18:34:49 | Apertura del file ('eve-2023-03-13-18:33.json', 1678728888.975055)
-2023-03-13 18:34:59 | Caricamento degli alert sul DB completato.
-2023-03-13 18:34:59 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:33.json
-2023-03-13 18:35:49 | Apertura del file ('eve-2023-03-13-18:34.json', 1678728947.1753178)
-2023-03-13 18:35:56 | Caricamento degli alert sul DB completato.
-2023-03-13 18:35:56 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:34.json
-2023-03-13 18:36:49 | Apertura del file ('eve-2023-03-13-18:35.json', 1678729008.6075938)
-2023-03-13 18:36:57 | Caricamento degli alert sul DB completato.
-2023-03-13 18:36:57 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:35.json
-2023-03-13 18:37:49 | Apertura del file ('eve-2023-03-13-18:36.json', 1678729067.3798566)
-2023-03-13 18:37:56 | Caricamento degli alert sul DB completato.
-2023-03-13 18:37:56 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:36.json
-2023-03-13 18:38:49 | Apertura del file ('eve-2023-03-13-18:37.json', 1678729128.148127)
-2023-03-13 18:38:55 | Caricamento degli alert sul DB completato.
-2023-03-13 18:38:55 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:37.json
-2023-03-13 18:39:50 | Apertura del file ('eve-2023-03-13-18:38.json', 1678729188.2443936)
-2023-03-13 18:39:55 | Caricamento degli alert sul DB completato.
-2023-03-13 18:39:55 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:38.json
-2023-03-13 18:40:49 | Apertura del file ('eve-2023-03-13-18:39.json', 1678729248.3446589)
-2023-03-13 18:40:57 | Caricamento degli alert sul DB completato.
-2023-03-13 18:40:57 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:39.json
-2023-03-13 18:41:50 | Apertura del file ('eve-2023-03-13-18:40.json', 1678729308.4489236)
-2023-03-13 18:41:56 | Caricamento degli alert sul DB completato.
-2023-03-13 18:41:56 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:40.json
-2023-03-13 18:42:50 | Apertura del file ('eve-2023-03-13-18:41.json', 1678729369.5371919)
-2023-03-13 18:43:03 | Caricamento degli alert sul DB completato.
-2023-03-13 18:43:03 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:41.json
-2023-03-13 18:43:50 | Apertura del file ('eve-2023-03-13-18:42.json', 1678729429.9854565)
-2023-03-13 18:43:56 | Caricamento degli alert sul DB completato.
-2023-03-13 18:43:56 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:42.json
-2023-03-13 18:44:50 | Apertura del file ('eve-2023-03-13-18:43.json', 1678729489.5417168)
-2023-03-13 18:44:56 | Caricamento degli alert sul DB completato.
-2023-03-13 18:44:56 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:43.json
-2023-03-13 18:45:50 | Apertura del file ('eve-2023-03-13-18:44.json', 1678729549.5259783)
-2023-03-13 18:45:56 | Caricamento degli alert sul DB completato.
-2023-03-13 18:45:56 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:44.json
-2023-03-13 18:46:50 | Apertura del file ('eve-2023-03-13-18:45.json', 1678729609.63024)
-2023-03-13 18:46:56 | Caricamento degli alert sul DB completato.
-2023-03-13 18:46:56 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:45.json
-2023-03-13 18:47:50 | Apertura del file ('eve-2023-03-13-18:46.json', 1678729669.0704982)
-2023-03-13 18:47:57 | Caricamento degli alert sul DB completato.
-2023-03-13 18:47:57 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:46.json
-2023-03-13 18:48:50 | Apertura del file ('eve-2023-03-13-18:47.json', 1678729729.554761)
-2023-03-13 18:48:56 | Caricamento degli alert sul DB completato.
-2023-03-13 18:48:56 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:47.json
-2023-03-13 18:49:50 | Apertura del file ('eve-2023-03-13-18:48.json', 1678729789.2750196)
-2023-03-13 18:49:56 | Caricamento degli alert sul DB completato.
-2023-03-13 18:49:56 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:48.json
-2023-03-13 18:50:50 | Apertura del file ('eve-2023-03-13-18:49.json', 1678729849.5592806)
-2023-03-13 18:50:55 | Caricamento degli alert sul DB completato.
-2023-03-13 18:50:55 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:49.json
-2023-03-13 18:51:50 | Apertura del file ('eve-2023-03-13-18:50.json', 1678729909.4795399)
-2023-03-13 18:51:56 | Caricamento degli alert sul DB completato.
-2023-03-13 18:51:56 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:50.json
-2023-03-13 18:52:50 | Apertura del file ('eve-2023-03-13-18:51.json', 1678729969.5797997)
-2023-03-13 18:52:55 | Caricamento degli alert sul DB completato.
-2023-03-13 18:52:55 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:51.json
-2023-03-13 18:53:50 | Apertura del file ('eve-2023-03-13-18:52.json', 1678730029.1040566)
-2023-03-13 18:53:58 | Caricamento degli alert sul DB completato.
-2023-03-13 18:53:58 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:52.json
-2023-03-13 18:54:50 | Apertura del file ('eve-2023-03-13-18:53.json', 1678730089.5723176)
-2023-03-13 18:54:56 | Caricamento degli alert sul DB completato.
-2023-03-13 18:54:56 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:53.json
-2023-03-13 18:55:51 | Apertura del file ('eve-2023-03-13-18:54.json', 1678730149.7885773)
-2023-03-13 18:55:56 | Caricamento degli alert sul DB completato.
-2023-03-13 18:55:56 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:54.json
-2023-03-13 18:56:51 | Apertura del file ('eve-2023-03-13-18:55.json', 1678730209.6488354)
-2023-03-13 18:56:55 | Caricamento degli alert sul DB completato.
-2023-03-13 18:56:55 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:55.json
-2023-03-13 18:57:51 | Apertura del file ('eve-2023-03-13-18:56.json', 1678730270.077096)
-2023-03-13 18:58:04 | Caricamento degli alert sul DB completato.
-2023-03-13 18:58:04 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:56.json
-2023-03-13 18:58:51 | Apertura del file ('eve-2023-03-13-18:57.json', 1678730329.5813522)
-2023-03-13 18:58:57 | Caricamento degli alert sul DB completato.
-2023-03-13 18:58:57 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:57.json
-2023-03-13 18:59:51 | Apertura del file ('eve-2023-03-13-18:58.json', 1678730389.6096106)
-2023-03-13 18:59:57 | Caricamento degli alert sul DB completato.
-2023-03-13 18:59:57 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:58.json
-2023-03-13 19:00:51 | Apertura del file ('eve-2023-03-13-18:59.json', 1678730449.5858688)
-2023-03-13 19:00:57 | Caricamento degli alert sul DB completato.
-2023-03-13 19:00:57 | Rimozione del file /var/log/suricata/eve-2023-03-13-18:59.json
-2023-03-13 19:01:51 | Apertura del file ('eve-2023-03-13-19:00.json', 1678730510.4781275)
-2023-03-13 19:01:56 | Caricamento degli alert sul DB completato.
-2023-03-13 19:01:56 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:00.json
-2023-03-13 19:02:51 | Apertura del file ('eve-2023-03-13-19:01.json', 1678730570.5783622)
-2023-03-13 19:02:56 | Caricamento degli alert sul DB completato.
-2023-03-13 19:02:56 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:01.json
-2023-03-13 19:03:52 | Apertura del file ('eve-2023-03-13-19:02.json', 1678730630.0105963)
-2023-03-13 19:03:59 | Caricamento degli alert sul DB completato.
-2023-03-13 19:03:59 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:02.json
-2023-03-13 19:04:51 | Apertura del file ('eve-2023-03-13-19:03.json', 1678730690.110835)
-2023-03-13 19:04:57 | Caricamento degli alert sul DB completato.
-2023-03-13 19:04:57 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:03.json
-2023-03-13 19:05:52 | Apertura del file ('eve-2023-03-13-19:04.json', 1678730750.2110758)
-2023-03-13 19:05:57 | Caricamento degli alert sul DB completato.
-2023-03-13 19:05:57 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:04.json
-2023-03-13 19:06:51 | Apertura del file ('eve-2023-03-13-19:05.json', 1678730810.311318)
-2023-03-13 19:06:57 | Caricamento degli alert sul DB completato.
-2023-03-13 19:06:57 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:05.json
-2023-03-13 19:07:52 | Apertura del file ('eve-2023-03-13-19:06.json', 1678730868.4075534)
-2023-03-13 19:07:58 | Caricamento degli alert sul DB completato.
-2023-03-13 19:07:58 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:06.json
-2023-03-13 19:08:52 | Apertura del file ('eve-2023-03-13-19:07.json', 1678730931.1798093)
-2023-03-13 19:08:58 | Caricamento degli alert sul DB completato.
-2023-03-13 19:08:58 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:07.json
-2023-03-13 19:09:52 | Apertura del file ('eve-2023-03-13-19:08.json', 1678730990.6120527)
-2023-03-13 19:09:58 | Caricamento degli alert sul DB completato.
-2023-03-13 19:09:58 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:08.json
-2023-03-13 19:10:52 | Apertura del file ('eve-2023-03-13-19:09.json', 1678731051.3803024)
-2023-03-13 19:10:58 | Caricamento degli alert sul DB completato.
-2023-03-13 19:10:58 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:09.json
-2023-03-13 19:11:52 | Apertura del file ('eve-2023-03-13-19:10.json', 1678731111.4765503)
-2023-03-13 19:12:02 | Caricamento degli alert sul DB completato.
-2023-03-13 19:12:02 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:10.json
-2023-03-13 19:12:52 | Apertura del file ('eve-2023-03-13-19:11.json', 1678731169.616791)
-2023-03-13 19:13:01 | Caricamento degli alert sul DB completato.
-2023-03-13 19:13:01 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:11.json
-2023-03-13 19:13:52 | Apertura del file ('eve-2023-03-13-19:12.json', 1678731231.0090456)
-2023-03-13 19:14:01 | Caricamento degli alert sul DB completato.
-2023-03-13 19:14:01 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:12.json
-2023-03-13 19:14:53 | Apertura del file ('eve-2023-03-13-19:13.json', 1678731290.441293)
-2023-03-13 19:14:58 | Caricamento degli alert sul DB completato.
-2023-03-13 19:14:58 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:13.json
-2023-03-13 19:15:52 | Apertura del file ('eve-2023-03-13-19:14.json', 1678731351.2095463)
-2023-03-13 19:15:58 | Caricamento degli alert sul DB completato.
-2023-03-13 19:15:58 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:14.json
-2023-03-13 19:16:53 | Apertura del file ('eve-2023-03-13-19:15.json', 1678731410.6417944)
-2023-03-13 19:16:58 | Caricamento degli alert sul DB completato.
-2023-03-13 19:16:58 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:15.json
-2023-03-13 19:17:53 | Apertura del file ('eve-2023-03-13-19:16.json', 1678731469.4060404)
-2023-03-13 19:17:58 | Caricamento degli alert sul DB completato.
-2023-03-13 19:17:58 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:16.json
-2023-03-13 19:18:52 | Apertura del file ('eve-2023-03-13-19:17.json', 1678731530.338296)
-2023-03-13 19:18:58 | Caricamento degli alert sul DB completato.
-2023-03-13 19:18:58 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:17.json
-2023-03-13 19:19:53 | Apertura del file ('eve-2023-03-13-19:18.json', 1678731591.610553)
-2023-03-13 19:19:59 | Caricamento degli alert sul DB completato.
-2023-03-13 19:19:59 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:18.json
-2023-03-13 19:20:52 | Apertura del file ('eve-2023-03-13-19:19.json', 1678731651.0428028)
-2023-03-13 19:20:58 | Caricamento degli alert sul DB completato.
-2023-03-13 19:20:58 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:19.json
-2023-03-13 19:21:52 | Apertura del file ('eve-2023-03-13-19:20.json', 1678731711.1430557)
-2023-03-13 19:21:58 | Caricamento degli alert sul DB completato.
-2023-03-13 19:21:58 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:20.json
-2023-03-13 19:22:53 | Apertura del file ('eve-2023-03-13-19:21.json', 1678731771.2433088)
-2023-03-13 19:22:58 | Caricamento degli alert sul DB completato.
-2023-03-13 19:22:58 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:21.json
-2023-03-13 19:23:53 | Apertura del file ('eve-2023-03-13-19:22.json', 1678731830.555559)
-2023-03-13 19:23:59 | Caricamento degli alert sul DB completato.
-2023-03-13 19:23:59 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:22.json
-2023-03-13 19:24:53 | Apertura del file ('eve-2023-03-13-19:23.json', 1678731892.8358216)
-2023-03-13 19:24:59 | Caricamento degli alert sul DB completato.
-2023-03-13 19:24:59 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:23.json
-2023-03-13 19:25:53 | Apertura del file ('eve-2023-03-13-19:24.json', 1678731952.2120724)
-2023-03-13 19:25:59 | Caricamento degli alert sul DB completato.
-2023-03-13 19:25:59 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:24.json
-2023-03-13 19:26:53 | Apertura del file ('eve-2023-03-13-19:25.json', 1678732009.660315)
-2023-03-13 19:27:10 | Caricamento degli alert sul DB completato.
-2023-03-13 19:27:10 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:25.json
-2023-03-13 19:27:53 | Apertura del file ('eve-2023-03-13-19:26.json', 1678732071.0725746)
-2023-03-13 19:28:06 | Caricamento degli alert sul DB completato.
-2023-03-13 19:28:06 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:26.json
-2023-03-13 19:28:53 | Apertura del file ('eve-2023-03-13-19:27.json', 1678732132.5088344)
-2023-03-13 19:28:58 | Caricamento degli alert sul DB completato.
-2023-03-13 19:28:58 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:27.json
-2023-03-13 19:29:53 | Apertura del file ('eve-2023-03-13-19:28.json', 1678732192.6730888)
-2023-03-13 19:29:59 | Caricamento degli alert sul DB completato.
-2023-03-13 19:29:59 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:28.json
-2023-03-13 19:30:54 | Apertura del file ('eve-2023-03-13-19:29.json', 1678732252.04134)
-2023-03-13 19:31:00 | Caricamento degli alert sul DB completato.
-2023-03-13 19:31:00 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:29.json
-2023-03-13 19:31:53 | Apertura del file ('eve-2023-03-13-19:30.json', 1678732312.1415944)
-2023-03-13 19:32:00 | Caricamento degli alert sul DB completato.
-2023-03-13 19:32:00 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:30.json
-2023-03-13 19:32:53 | Apertura del file ('eve-2023-03-13-19:31.json', 1678732371.573846)
-2023-03-13 19:32:59 | Caricamento degli alert sul DB completato.
-2023-03-13 19:32:59 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:31.json
-2023-03-13 19:33:53 | Apertura del file ('eve-2023-03-13-19:32.json', 1678732432.3421035)
-2023-03-13 19:33:58 | Caricamento degli alert sul DB completato.
-2023-03-13 19:33:58 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:32.json
-2023-03-13 19:34:54 | Apertura del file ('eve-2023-03-13-19:33.json', 1678732492.4423583)
-2023-03-13 19:35:00 | Caricamento degli alert sul DB completato.
-2023-03-13 19:35:00 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:33.json
-2023-03-13 19:35:54 | Apertura del file ('eve-2023-03-13-19:34.json', 1678732553.6826134)
-2023-03-13 19:36:01 | Caricamento degli alert sul DB completato.
-2023-03-13 19:36:01 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:34.json
-2023-03-13 19:36:54 | Apertura del file ('eve-2023-03-13-19:35.json', 1678732613.310775)
-2023-03-13 19:37:01 | Caricamento degli alert sul DB completato.
-2023-03-13 19:37:01 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:35.json
-2023-03-13 19:37:54 | Apertura del file ('eve-2023-03-13-19:36.json', 1678732673.6869478)
-2023-03-13 19:37:59 | Caricamento degli alert sul DB completato.
-2023-03-13 19:37:59 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:36.json
-2023-03-13 19:38:54 | Apertura del file ('eve-2023-03-13-19:37.json', 1678732732.1751227)
-2023-03-13 19:39:00 | Caricamento degli alert sul DB completato.
-2023-03-13 19:39:00 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:37.json
-2023-03-13 19:39:54 | Apertura del file ('eve-2023-03-13-19:38.json', 1678732793.6953142)
-2023-03-13 19:40:00 | Caricamento degli alert sul DB completato.
-2023-03-13 19:40:00 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:38.json
-2023-03-13 19:40:54 | Apertura del file ('eve-2023-03-13-19:39.json', 1678732853.0435052)
-2023-03-13 19:40:59 | Caricamento degli alert sul DB completato.
-2023-03-13 19:40:59 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:39.json
-2023-03-13 19:41:55 | Apertura del file ('eve-2023-03-13-19:40.json', 1678732913.699706)
-2023-03-13 19:42:01 | Caricamento degli alert sul DB completato.
-2023-03-13 19:42:01 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:40.json
-2023-03-13 19:42:55 | Apertura del file ('eve-2023-03-13-19:41.json', 1678732973.2439084)
-2023-03-13 19:43:00 | Caricamento degli alert sul DB completato.
-2023-03-13 19:43:00 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:41.json
-2023-03-13 19:43:54 | Apertura del file ('eve-2023-03-13-19:42.json', 1678733033.704118)
-2023-03-13 19:44:01 | Caricamento degli alert sul DB completato.
-2023-03-13 19:44:01 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:42.json
-2023-03-13 19:44:54 | Apertura del file ('eve-2023-03-13-19:43.json', 1678733093.4443293)
-2023-03-13 19:44:59 | Caricamento degli alert sul DB completato.
-2023-03-13 19:44:59 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:43.json
-2023-03-13 19:45:55 | Apertura del file ('eve-2023-03-13-19:44.json', 1678733153.712546)
-2023-03-13 19:46:00 | Caricamento degli alert sul DB completato.
-2023-03-13 19:46:00 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:44.json
-2023-03-13 19:46:55 | Apertura del file ('eve-2023-03-13-19:45.json', 1678733212.3047595)
-2023-03-13 19:47:00 | Caricamento degli alert sul DB completato.
-2023-03-13 19:47:00 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:45.json
-2023-03-13 19:47:55 | Apertura del file ('eve-2023-03-13-19:46.json', 1678733274.408989)
-2023-03-13 19:48:02 | Caricamento degli alert sul DB completato.
-2023-03-13 19:48:02 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:46.json
-2023-03-13 19:48:55 | Apertura del file ('eve-2023-03-13-19:47.json', 1678733333.1772082)
-2023-03-13 19:49:00 | Caricamento degli alert sul DB completato.
-2023-03-13 19:49:00 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:47.json
-2023-03-13 19:49:55 | Apertura del file ('eve-2023-03-13-19:48.json', 1678733394.60544)
-2023-03-13 19:50:01 | Caricamento degli alert sul DB completato.
-2023-03-13 19:50:01 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:48.json
-2023-03-13 19:50:55 | Apertura del file ('eve-2023-03-13-19:49.json', 1678733454.041666)
-2023-03-13 19:51:02 | Caricamento degli alert sul DB completato.
-2023-03-13 19:51:02 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:49.json
-2023-03-13 19:51:55 | Apertura del file ('eve-2023-03-13-19:50.json', 1678733514.4338975)
-2023-03-13 19:52:18 | Caricamento degli alert sul DB completato.
-2023-03-13 19:52:18 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:50.json
-2023-03-13 19:52:55 | Apertura del file ('eve-2023-03-13-19:51.json', 1678733574.8741307)
-2023-03-13 19:53:00 | Caricamento degli alert sul DB completato.
-2023-03-13 19:53:00 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:51.json
-2023-03-13 19:53:55 | Apertura del file ('eve-2023-03-13-19:52.json', 1678733634.3383615)
-2023-03-13 19:54:00 | Caricamento degli alert sul DB completato.
-2023-03-13 19:54:00 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:52.json
-2023-03-13 19:54:55 | Apertura del file ('eve-2023-03-13-19:53.json', 1678733694.438596)
-2023-03-13 19:55:01 | Caricamento degli alert sul DB completato.
-2023-03-13 19:55:01 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:53.json
-2023-03-13 19:55:56 | Apertura del file ('eve-2023-03-13-19:54.json', 1678733754.5388315)
-2023-03-13 19:56:03 | Caricamento degli alert sul DB completato.
-2023-03-13 19:56:03 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:54.json
-2023-03-13 19:56:55 | Apertura del file ('eve-2023-03-13-19:55.json', 1678733814.6390681)
-2023-03-13 19:57:00 | Caricamento degli alert sul DB completato.
-2023-03-13 19:57:00 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:55.json
-2023-03-13 19:57:55 | Apertura del file ('eve-2023-03-13-19:56.json', 1678733874.0713027)
-2023-03-13 19:58:02 | Caricamento degli alert sul DB completato.
-2023-03-13 19:58:02 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:56.json
-2023-03-13 19:58:55 | Apertura del file ('eve-2023-03-13-19:57.json', 1678733934.171541)
-2023-03-13 19:59:01 | Caricamento degli alert sul DB completato.
-2023-03-13 19:59:01 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:57.json
-2023-03-13 19:59:55 | Apertura del file ('eve-2023-03-13-19:58.json', 1678733993.7477777)
-2023-03-13 20:00:01 | Caricamento degli alert sul DB completato.
-2023-03-13 20:00:01 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:58.json
-2023-03-13 20:00:55 | Apertura del file ('eve-2023-03-13-19:59.json', 1678734053.0360138)
-2023-03-13 20:01:01 | Caricamento degli alert sul DB completato.
-2023-03-13 20:01:01 | Rimozione del file /var/log/suricata/eve-2023-03-13-19:59.json
-2023-03-13 20:01:56 | Apertura del file ('eve-2023-03-13-20:00.json', 1678734113.7522562)
-2023-03-13 20:02:01 | Caricamento degli alert sul DB completato.
-2023-03-13 20:02:01 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:00.json
-2023-03-13 20:02:56 | Apertura del file ('eve-2023-03-13-20:01.json', 1678734175.2365022)
-2023-03-13 20:03:03 | Caricamento degli alert sul DB completato.
-2023-03-13 20:03:03 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:01.json
-2023-03-13 20:03:56 | Apertura del file ('eve-2023-03-13-20:02.json', 1678734235.3567433)
-2023-03-13 20:04:00 | Caricamento degli alert sul DB completato.
-2023-03-13 20:04:00 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:02.json
-2023-03-13 20:04:56 | Apertura del file ('eve-2023-03-13-20:03.json', 1678734295.4649844)
-2023-03-13 20:05:06 | Caricamento degli alert sul DB completato.
-2023-03-13 20:05:06 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:03.json
-2023-03-13 20:05:56 | Apertura del file ('eve-2023-03-13-20:04.json', 1678734354.245221)
-2023-03-13 20:06:09 | Caricamento degli alert sul DB completato.
-2023-03-13 20:06:09 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:04.json
-2023-03-13 20:06:56 | Apertura del file ('eve-2023-03-13-20:05.json', 1678734415.0254655)
-2023-03-13 20:07:02 | Caricamento degli alert sul DB completato.
-2023-03-13 20:07:02 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:05.json
-2023-03-13 20:07:56 | Apertura del file ('eve-2023-03-13-20:06.json', 1678734475.73371)
-2023-03-13 20:08:01 | Caricamento degli alert sul DB completato.
-2023-03-13 20:08:01 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:06.json
-2023-03-13 20:08:56 | Apertura del file ('eve-2023-03-13-20:07.json', 1678734535.2499502)
-2023-03-13 20:09:01 | Caricamento degli alert sul DB completato.
-2023-03-13 20:09:01 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:07.json
-2023-03-13 20:09:56 | Apertura del file ('eve-2023-03-13-20:08.json', 1678734595.3501928)
-2023-03-13 20:10:02 | Caricamento degli alert sul DB completato.
-2023-03-13 20:10:02 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:08.json
-2023-03-13 20:10:56 | Apertura del file ('eve-2023-03-13-20:09.json', 1678734655.46236)
-2023-03-13 20:11:01 | Caricamento degli alert sul DB completato.
-2023-03-13 20:11:01 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:09.json
-2023-03-13 20:11:56 | Apertura del file ('eve-2023-03-13-20:10.json', 1678734715.8025305)
-2023-03-13 20:12:01 | Caricamento degli alert sul DB completato.
-2023-03-13 20:12:01 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:10.json
-2023-03-13 20:12:57 | Apertura del file ('eve-2023-03-13-20:11.json', 1678734774.9507048)
-2023-03-13 20:13:02 | Caricamento degli alert sul DB completato.
-2023-03-13 20:13:02 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:11.json
-2023-03-13 20:13:57 | Apertura del file ('eve-2023-03-13-20:12.json', 1678734835.4108896)
-2023-03-13 20:14:02 | Caricamento degli alert sul DB completato.
-2023-03-13 20:14:02 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:12.json
-2023-03-13 20:14:57 | Apertura del file ('eve-2023-03-13-20:13.json', 1678734896.535082)
-2023-03-13 20:15:02 | Caricamento degli alert sul DB completato.
-2023-03-13 20:15:02 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:13.json
-2023-03-13 20:15:57 | Apertura del file ('eve-2023-03-13-20:14.json', 1678734956.6392765)
-2023-03-13 20:16:00 | Caricamento degli alert sul DB completato.
-2023-03-13 20:16:00 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:14.json
-2023-03-13 20:16:57 | Apertura del file ('eve-2023-03-13-20:15.json', 1678735016.075473)
-2023-03-13 20:17:02 | Caricamento degli alert sul DB completato.
-2023-03-13 20:17:02 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:15.json
-2023-03-13 20:17:57 | Apertura del file ('eve-2023-03-13-20:16.json', 1678735076.1796758)
-2023-03-13 20:18:04 | Caricamento degli alert sul DB completato.
-2023-03-13 20:18:04 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:16.json
-2023-03-13 20:18:57 | Apertura del file ('eve-2023-03-13-20:17.json', 1678735136.2798822)
-2023-03-13 20:19:01 | Caricamento degli alert sul DB completato.
-2023-03-13 20:19:01 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:17.json
-2023-03-13 20:19:57 | Apertura del file ('eve-2023-03-13-20:18.json', 1678735196.3840916)
-2023-03-13 20:20:05 | Caricamento degli alert sul DB completato.
-2023-03-13 20:20:05 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:18.json
-2023-03-13 20:20:57 | Apertura del file ('eve-2023-03-13-20:19.json', 1678735255.148299)
-2023-03-13 20:21:07 | Caricamento degli alert sul DB completato.
-2023-03-13 20:21:07 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:19.json
-2023-03-13 20:21:57 | Apertura del file ('eve-2023-03-13-20:20.json', 1678735316.5845187)
-2023-03-13 20:22:03 | Caricamento degli alert sul DB completato.
-2023-03-13 20:22:03 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:20.json
-2023-03-13 20:22:57 | Apertura del file ('eve-2023-03-13-20:21.json', 1678735376.0167332)
-2023-03-13 20:23:03 | Caricamento degli alert sul DB completato.
-2023-03-13 20:23:03 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:21.json
-2023-03-13 20:23:57 | Apertura del file ('eve-2023-03-13-20:22.json', 1678735436.1169522)
-2023-03-13 20:24:03 | Caricamento degli alert sul DB completato.
-2023-03-13 20:24:03 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:22.json
-2023-03-13 20:24:58 | Apertura del file ('eve-2023-03-13-20:23.json', 1678735496.6491745)
-2023-03-13 20:25:03 | Caricamento degli alert sul DB completato.
-2023-03-13 20:25:03 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:23.json
-2023-03-13 20:25:57 | Apertura del file ('eve-2023-03-13-20:24.json', 1678735556.333395)
-2023-03-13 20:26:01 | Caricamento degli alert sul DB completato.
-2023-03-13 20:26:01 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:24.json
-2023-03-13 20:26:57 | Apertura del file ('eve-2023-03-13-20:25.json', 1678735616.4336185)
-2023-03-13 20:27:03 | Caricamento degli alert sul DB completato.
-2023-03-13 20:27:03 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:25.json
-2023-03-13 20:27:57 | Apertura del file ('eve-2023-03-13-20:26.json', 1678735676.5378435)
-2023-03-13 20:28:03 | Caricamento degli alert sul DB completato.
-2023-03-13 20:28:03 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:26.json
-2023-03-13 20:28:57 | Apertura del file ('eve-2023-03-13-20:27.json', 1678735735.3100643)
-2023-03-13 20:29:03 | Caricamento degli alert sul DB completato.
-2023-03-13 20:29:03 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:27.json
-2023-03-13 20:29:57 | Apertura del file ('eve-2023-03-13-20:28.json', 1678735796.9942973)
-2023-03-13 20:30:02 | Caricamento degli alert sul DB completato.
-2023-03-13 20:30:02 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:28.json
-2023-03-13 20:30:57 | Apertura del file ('eve-2023-03-13-20:29.json', 1678735856.1865218)
-2023-03-13 20:31:05 | Caricamento degli alert sul DB completato.
-2023-03-13 20:31:05 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:29.json
-2023-03-13 20:31:57 | Apertura del file ('eve-2023-03-13-20:30.json', 1678735915.6227477)
-2023-03-13 20:32:02 | Caricamento degli alert sul DB completato.
-2023-03-13 20:32:02 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:30.json
-2023-03-13 20:32:58 | Apertura del file ('eve-2023-03-13-20:31.json', 1678735976.3949795)
-2023-03-13 20:33:03 | Caricamento degli alert sul DB completato.
-2023-03-13 20:33:03 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:31.json
-2023-03-13 20:33:57 | Apertura del file ('eve-2023-03-13-20:32.json', 1678736034.4952016)
-2023-03-13 20:34:03 | Caricamento degli alert sul DB completato.
-2023-03-13 20:34:03 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:32.json
-2023-03-13 20:34:57 | Apertura del file ('eve-2023-03-13-20:33.json', 1678736096.5994399)
-2023-03-13 20:35:10 | Caricamento degli alert sul DB completato.
-2023-03-13 20:35:10 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:33.json
-2023-03-13 20:35:57 | Apertura del file ('eve-2023-03-13-20:34.json', 1678736156.0316682)
-2023-03-13 20:36:03 | Caricamento degli alert sul DB completato.
-2023-03-13 20:36:03 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:34.json
-2023-03-13 20:36:57 | Apertura del file ('eve-2023-03-13-20:35.json', 1678736216.1318994)
-2023-03-13 20:37:03 | Caricamento degli alert sul DB completato.
-2023-03-13 20:37:03 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:35.json
-2023-03-13 20:37:57 | Apertura del file ('eve-2023-03-13-20:36.json', 1678736276.3081312)
-2023-03-13 20:38:03 | Caricamento degli alert sul DB completato.
-2023-03-13 20:38:03 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:36.json
-2023-03-13 20:38:58 | Apertura del file ('eve-2023-03-13-20:37.json', 1678736336.328363)
-2023-03-13 20:39:05 | Caricamento degli alert sul DB completato.
-2023-03-13 20:39:05 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:37.json
-2023-03-13 20:39:57 | Apertura del file ('eve-2023-03-13-20:38.json', 1678736395.0925903)
-2023-03-13 20:40:01 | Caricamento degli alert sul DB completato.
-2023-03-13 20:40:01 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:38.json
-2023-03-13 20:40:57 | Apertura del file ('eve-2023-03-13-20:39.json', 1678736456.528828)
-2023-03-13 20:41:02 | Caricamento degli alert sul DB completato.
-2023-03-13 20:41:02 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:39.json
-2023-03-13 20:41:59 | Apertura del file ('eve-2023-03-13-20:40.json', 1678736516.6290607)
-2023-03-13 20:42:05 | Caricamento degli alert sul DB completato.
-2023-03-13 20:42:05 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:40.json
-2023-03-13 20:42:59 | Apertura del file ('eve-2023-03-13-20:41.json', 1678736578.065299)
-2023-03-13 20:43:04 | Caricamento degli alert sul DB completato.
-2023-03-13 20:43:04 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:41.json
-2023-03-13 20:43:59 | Apertura del file ('eve-2023-03-13-20:42.json', 1678736636.1615245)
-2023-03-13 20:44:05 | Caricamento degli alert sul DB completato.
-2023-03-13 20:44:05 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:42.json
-2023-03-13 20:44:59 | Apertura del file ('eve-2023-03-13-20:43.json', 1678736697.873858)
-2023-03-13 20:45:06 | Caricamento degli alert sul DB completato.
-2023-03-13 20:45:06 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:43.json
-2023-03-13 20:45:59 | Apertura del file ('eve-2023-03-13-20:44.json', 1678736757.0301893)
-2023-03-13 20:46:02 | Caricamento degli alert sul DB completato.
-2023-03-13 20:46:02 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:44.json
-2023-03-13 20:46:59 | Apertura del file ('eve-2023-03-13-20:45.json', 1678736818.4705238)
-2023-03-13 20:47:04 | Caricamento degli alert sul DB completato.
-2023-03-13 20:47:04 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:45.json
-2023-03-13 20:47:59 | Apertura del file ('eve-2023-03-13-20:46.json', 1678736875.2348254)
-2023-03-13 20:48:06 | Caricamento degli alert sul DB completato.
-2023-03-13 20:48:06 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:46.json
-2023-03-13 20:48:59 | Apertura del file ('eve-2023-03-13-20:47.json', 1678736938.0111513)
-2023-03-13 20:49:04 | Caricamento degli alert sul DB completato.
-2023-03-13 20:49:04 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:47.json
-2023-03-13 20:49:59 | Apertura del file ('eve-2023-03-13-20:48.json', 1678736998.1114564)
-2023-03-13 20:50:13 | Caricamento degli alert sul DB completato.
-2023-03-13 20:50:13 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:48.json
-2023-03-13 20:50:59 | Apertura del file ('eve-2023-03-13-20:49.json', 1678737057.8917544)
-2023-03-13 20:51:05 | Caricamento degli alert sul DB completato.
-2023-03-13 20:51:05 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:49.json
-2023-03-13 20:52:00 | Apertura del file ('eve-2023-03-13-20:50.json', 1678737118.3160503)
-2023-03-13 20:52:05 | Caricamento degli alert sul DB completato.
-2023-03-13 20:52:05 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:50.json
-2023-03-13 20:52:59 | Apertura del file ('eve-2023-03-13-20:51.json', 1678737178.41234)
-2023-03-13 20:53:04 | Caricamento degli alert sul DB completato.
-2023-03-13 20:53:04 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:51.json
-2023-03-13 20:53:59 | Apertura del file ('eve-2023-03-13-20:52.json', 1678737237.1846194)
-2023-03-13 20:54:04 | Caricamento degli alert sul DB completato.
-2023-03-13 20:54:04 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:52.json
-2023-03-13 20:55:00 | Apertura del file ('eve-2023-03-13-20:53.json', 1678737298.6169078)
-2023-03-13 20:55:05 | Caricamento degli alert sul DB completato.
-2023-03-13 20:55:05 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:53.json
-2023-03-13 20:56:00 | Apertura del file ('eve-2023-03-13-20:55.json', 1678737357.3851805)
-2023-03-13 20:56:05 | Caricamento degli alert sul DB completato.
-2023-03-13 20:56:05 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:55.json
-2023-03-13 20:57:00 | Apertura del file ('eve-2023-03-13-20:56.json', 1678737419.4894655)
-2023-03-13 20:57:06 | Caricamento degli alert sul DB completato.
-2023-03-13 20:57:06 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:56.json
-2023-03-13 20:58:00 | Apertura del file ('eve-2023-03-13-20:57.json', 1678737478.253733)
-2023-03-13 20:58:05 | Caricamento degli alert sul DB completato.
-2023-03-13 20:58:05 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:57.json
-2023-03-13 20:59:00 | Apertura del file ('eve-2023-03-13-20:58.json', 1678737539.0260072)
-2023-03-13 20:59:05 | Caricamento degli alert sul DB completato.
-2023-03-13 20:59:05 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:58.json
-2023-03-13 21:00:00 | Apertura del file ('eve-2023-03-13-20:59.json', 1678737599.2822769)
-2023-03-13 21:00:06 | Caricamento degli alert sul DB completato.
-2023-03-13 21:00:06 | Rimozione del file /var/log/suricata/eve-2023-03-13-20:59.json
-2023-03-13 21:01:00 | Apertura del file ('eve-2023-03-13-21:00.json', 1678737658.2945395)
-2023-03-13 21:01:05 | Caricamento degli alert sul DB completato.
-2023-03-13 21:01:05 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:00.json
-2023-03-13 21:02:00 | Apertura del file ('eve-2023-03-13-21:01.json', 1678737719.3388095)
-2023-03-13 21:02:06 | Caricamento degli alert sul DB completato.
-2023-03-13 21:02:06 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:01.json
-2023-03-13 21:03:00 | Apertura del file ('eve-2023-03-13-21:02.json', 1678737779.451074)
-2023-03-13 21:03:07 | Caricamento degli alert sul DB completato.
-2023-03-13 21:03:07 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:02.json
-2023-03-13 21:04:01 | Apertura del file ('eve-2023-03-13-21:03.json', 1678737839.555337)
-2023-03-13 21:04:05 | Caricamento degli alert sul DB completato.
-2023-03-13 21:04:05 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:03.json
-2023-03-13 21:05:00 | Apertura del file ('eve-2023-03-13-21:04.json', 1678737899.6555989)
-2023-03-13 21:05:11 | Caricamento degli alert sul DB completato.
-2023-03-13 21:05:11 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:04.json
-2023-03-13 21:06:01 | Apertura del file ('eve-2023-03-13-21:05.json', 1678737959.087857)
-2023-03-13 21:06:05 | Caricamento degli alert sul DB completato.
-2023-03-13 21:06:05 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:05.json
-2023-03-13 21:07:00 | Apertura del file ('eve-2023-03-13-21:06.json', 1678738019.2081172)
-2023-03-13 21:07:06 | Caricamento degli alert sul DB completato.
-2023-03-13 21:07:06 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:06.json
-2023-03-13 21:08:01 | Apertura del file ('eve-2023-03-13-21:07.json', 1678738079.3203766)
-2023-03-13 21:08:07 | Caricamento degli alert sul DB completato.
-2023-03-13 21:08:07 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:07.json
-2023-03-13 21:09:01 | Apertura del file ('eve-2023-03-13-21:08.json', 1678738140.0926383)
-2023-03-13 21:09:05 | Caricamento degli alert sul DB completato.
-2023-03-13 21:09:05 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:08.json
-2023-03-13 21:10:01 | Apertura del file ('eve-2023-03-13-21:09.json', 1678738200.1968963)
-2023-03-13 21:10:06 | Caricamento degli alert sul DB completato.
-2023-03-13 21:10:06 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:09.json
-2023-03-13 21:11:01 | Apertura del file ('eve-2023-03-13-21:10.json', 1678738260.3051536)
-2023-03-13 21:11:05 | Caricamento degli alert sul DB completato.
-2023-03-13 21:11:05 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:10.json
-2023-03-13 21:12:01 | Apertura del file ('eve-2023-03-13-21:11.json', 1678738320.4174106)
-2023-03-13 21:12:08 | Caricamento degli alert sul DB completato.
-2023-03-13 21:12:08 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:11.json
-2023-03-13 21:13:01 | Apertura del file ('eve-2023-03-13-21:12.json', 1678738380.5336673)
-2023-03-13 21:13:07 | Caricamento degli alert sul DB completato.
-2023-03-13 21:13:07 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:12.json
-2023-03-13 21:14:01 | Apertura del file ('eve-2023-03-13-21:13.json', 1678738438.637915)
-2023-03-13 21:14:07 | Caricamento degli alert sul DB completato.
-2023-03-13 21:14:07 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:13.json
-2023-03-13 21:15:01 | Apertura del file ('eve-2023-03-13-21:14.json', 1678738500.0821764)
-2023-03-13 21:15:07 | Caricamento degli alert sul DB completato.
-2023-03-13 21:15:07 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:14.json
-2023-03-13 21:16:01 | Apertura del file ('eve-2023-03-13-21:15.json', 1678738559.518429)
-2023-03-13 21:16:07 | Caricamento degli alert sul DB completato.
-2023-03-13 21:16:07 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:15.json
-2023-03-13 21:17:01 | Apertura del file ('eve-2023-03-13-21:16.json', 1678738620.3186872)
-2023-03-13 21:17:07 | Caricamento degli alert sul DB completato.
-2023-03-13 21:17:07 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:16.json
-2023-03-13 21:18:01 | Apertura del file ('eve-2023-03-13-21:17.json', 1678738677.0989282)
-2023-03-13 21:18:08 | Caricamento degli alert sul DB completato.
-2023-03-13 21:18:08 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:17.json
-2023-03-13 21:19:01 | Apertura del file ('eve-2023-03-13-21:18.json', 1678738740.543178)
-2023-03-13 21:19:05 | Caricamento degli alert sul DB completato.
-2023-03-13 21:19:05 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:18.json
-2023-03-13 21:20:01 | Apertura del file ('eve-2023-03-13-21:19.json', 1678738800.6474092)
-2023-03-13 21:20:13 | Caricamento degli alert sul DB completato.
-2023-03-13 21:20:13 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:19.json
-2023-03-13 21:21:01 | Apertura del file ('eve-2023-03-13-21:20.json', 1678738860.08364)
-2023-03-13 21:21:04 | Caricamento degli alert sul DB completato.
-2023-03-13 21:21:04 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:20.json
-2023-03-13 21:22:02 | Apertura del file ('eve-2023-03-13-21:21.json', 1678738920.2758756)
-2023-03-13 21:22:07 | Caricamento degli alert sul DB completato.
-2023-03-13 21:22:07 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:21.json
-2023-03-13 21:23:01 | Apertura del file ('eve-2023-03-13-21:22.json', 1678738979.6201093)
-2023-03-13 21:23:09 | Caricamento degli alert sul DB completato.
-2023-03-13 21:23:09 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:22.json
-2023-03-13 21:24:01 | Apertura del file ('eve-2023-03-13-21:23.json', 1678739039.052345)
-2023-03-13 21:24:07 | Caricamento degli alert sul DB completato.
-2023-03-13 21:24:07 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:23.json
-2023-03-13 21:25:01 | Apertura del file ('eve-2023-03-13-21:24.json', 1678739100.4845898)
-2023-03-13 21:25:05 | Caricamento degli alert sul DB completato.
-2023-03-13 21:25:05 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:24.json
-2023-03-13 21:26:02 | Apertura del file ('eve-2023-03-13-21:25.json', 1678739160.6128309)
-2023-03-13 21:26:08 | Caricamento degli alert sul DB completato.
-2023-03-13 21:26:08 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:25.json
-2023-03-13 21:27:01 | Apertura del file ('eve-2023-03-13-21:26.json', 1678739220.533072)
-2023-03-13 21:27:07 | Caricamento degli alert sul DB completato.
-2023-03-13 21:27:07 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:26.json
-2023-03-13 21:28:01 | Apertura del file ('eve-2023-03-13-21:27.json', 1678739280.173313)
-2023-03-13 21:28:07 | Caricamento degli alert sul DB completato.
-2023-03-13 21:28:07 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:27.json
-2023-03-13 21:29:02 | Apertura del file ('eve-2023-03-13-21:28.json', 1678739338.2695484)
-2023-03-13 21:29:08 | Caricamento degli alert sul DB completato.
-2023-03-13 21:29:08 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:28.json
-2023-03-13 21:30:02 | Apertura del file ('eve-2023-03-13-21:29.json', 1678739400.381801)
-2023-03-13 21:30:07 | Caricamento degli alert sul DB completato.
-2023-03-13 21:30:07 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:29.json
-2023-03-13 21:31:02 | Apertura del file ('eve-2023-03-13-21:30.json', 1678739461.1580486)
-2023-03-13 21:31:08 | Caricamento degli alert sul DB completato.
-2023-03-13 21:31:08 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:30.json
-2023-03-13 21:32:02 | Apertura del file ('eve-2023-03-13-21:31.json', 1678739521.2742944)
-2023-03-13 21:32:08 | Caricamento degli alert sul DB completato.
-2023-03-13 21:32:08 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:31.json
-2023-03-13 21:33:02 | Apertura del file ('eve-2023-03-13-21:32.json', 1678739581.3865404)
-2023-03-13 21:33:06 | Caricamento degli alert sul DB completato.
-2023-03-13 21:33:06 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:32.json
-2023-03-13 21:34:02 | Apertura del file ('eve-2023-03-13-21:33.json', 1678739641.494787)
-2023-03-13 21:34:08 | Caricamento degli alert sul DB completato.
-2023-03-13 21:34:08 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:33.json
-2023-03-13 21:35:03 | Apertura del file ('eve-2023-03-13-21:34.json', 1678739701.603034)
-2023-03-13 21:35:08 | Caricamento degli alert sul DB completato.
-2023-03-13 21:35:08 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:34.json
-2023-03-13 21:36:03 | Apertura del file ('eve-2023-03-13-21:35.json', 1678739762.3872843)
-2023-03-13 21:36:08 | Caricamento degli alert sul DB completato.
-2023-03-13 21:36:08 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:35.json
-2023-03-13 21:37:03 | Apertura del file ('eve-2023-03-13-21:36.json', 1678739820.4995236)
-2023-03-13 21:37:09 | Caricamento degli alert sul DB completato.
-2023-03-13 21:37:09 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:36.json
-2023-03-13 21:38:03 | Apertura del file ('eve-2023-03-13-21:37.json', 1678739882.0317776)
-2023-03-13 21:38:09 | Caricamento degli alert sul DB completato.
-2023-03-13 21:38:09 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:37.json
-2023-03-13 21:39:03 | Apertura del file ('eve-2023-03-13-21:38.json', 1678739942.0360253)
-2023-03-13 21:39:09 | Caricamento degli alert sul DB completato.
-2023-03-13 21:39:09 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:38.json
-2023-03-13 21:40:03 | Apertura del file ('eve-2023-03-13-21:39.json', 1678740002.1402738)
-2023-03-13 21:40:07 | Caricamento degli alert sul DB completato.
-2023-03-13 21:40:07 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:39.json
-2023-03-13 21:41:03 | Apertura del file ('eve-2023-03-13-21:40.json', 1678740061.5805197)
-2023-03-13 21:41:08 | Caricamento degli alert sul DB completato.
-2023-03-13 21:41:08 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:40.json
-2023-03-13 21:42:03 | Apertura del file ('eve-2023-03-13-21:41.json', 1678740122.04077)
-2023-03-13 21:42:08 | Caricamento degli alert sul DB completato.
-2023-03-13 21:42:08 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:41.json
-2023-03-13 21:43:03 | Apertura del file ('eve-2023-03-13-21:42.json', 1678740182.4530203)
-2023-03-13 21:43:07 | Caricamento degli alert sul DB completato.
-2023-03-13 21:43:07 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:42.json
-2023-03-13 21:44:03 | Apertura del file ('eve-2023-03-13-21:43.json', 1678740242.0452673)
-2023-03-13 21:44:09 | Caricamento degli alert sul DB completato.
-2023-03-13 21:44:09 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:43.json
-2023-03-13 21:45:04 | Apertura del file ('eve-2023-03-13-21:44.json', 1678740302.6495185)
-2023-03-13 21:45:09 | Caricamento degli alert sul DB completato.
-2023-03-13 21:45:09 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:44.json
-2023-03-13 21:46:03 | Apertura del file ('eve-2023-03-13-21:45.json', 1678740362.049765)
-2023-03-13 21:46:08 | Caricamento degli alert sul DB completato.
-2023-03-13 21:46:08 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:45.json
-2023-03-13 21:47:03 | Apertura del file ('eve-2023-03-13-21:46.json', 1678740422.1900146)
-2023-03-13 21:47:10 | Caricamento degli alert sul DB completato.
-2023-03-13 21:47:10 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:46.json
-2023-03-13 21:48:04 | Apertura del file ('eve-2023-03-13-21:47.json', 1678740482.2902641)
-2023-03-13 21:48:10 | Caricamento degli alert sul DB completato.
-2023-03-13 21:48:10 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:47.json
-2023-03-13 21:49:03 | Apertura del file ('eve-2023-03-13-21:48.json', 1678740542.3905137)
-2023-03-13 21:49:08 | Caricamento degli alert sul DB completato.
-2023-03-13 21:49:08 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:48.json
-2023-03-13 21:50:03 | Apertura del file ('eve-2023-03-13-21:49.json', 1678740602.4987636)
-2023-03-13 21:50:08 | Caricamento degli alert sul DB completato.
-2023-03-13 21:50:08 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:49.json
-2023-03-13 21:51:03 | Apertura del file ('eve-2023-03-13-21:50.json', 1678740662.8670144)
-2023-03-13 21:51:08 | Caricamento degli alert sul DB completato.
-2023-03-13 21:51:08 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:50.json
-2023-03-13 21:52:03 | Apertura del file ('eve-2023-03-13-21:51.json', 1678740722.0712605)
-2023-03-13 21:52:09 | Caricamento degli alert sul DB completato.
-2023-03-13 21:52:09 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:51.json
-2023-03-13 21:53:03 | Apertura del file ('eve-2023-03-13-21:52.json', 1678740782.1397667)
-2023-03-13 21:53:07 | Caricamento degli alert sul DB completato.
-2023-03-13 21:53:07 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:52.json
-2023-03-13 21:54:04 | Apertura del file ('eve-2023-03-13-21:53.json', 1678740842.2443876)
-2023-03-13 21:54:12 | Caricamento degli alert sul DB completato.
-2023-03-13 21:54:12 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:53.json
-2023-03-13 21:55:03 | Apertura del file ('eve-2023-03-13-21:54.json', 1678740902.8369772)
-2023-03-13 21:55:08 | Caricamento degli alert sul DB completato.
-2023-03-13 21:55:08 | Rimozione del file /var/log/suricata/eve-2023-03-13-21:54.json
-2023-03-13 22:07:45 | Apertura del file ('eve-2023-03-13-22:00.json', 1678741262.9719222)
-2023-03-13 22:07:49 | Caricamento degli alert sul DB completato.
-2023-03-13 22:07:49 | Rimozione del file /var/log/suricata/eve-2023-03-13-22:00.json
-2023-03-13 22:07:50 | Apertura del file ('eve-2023-03-13-22:01.json', 1678741322.8763442)
-2023-03-13 22:07:57 | Caricamento degli alert sul DB completato.
-2023-03-13 22:07:57 | Rimozione del file /var/log/suricata/eve-2023-03-13-22:01.json
-2023-03-13 22:07:58 | Apertura del file ('eve-2023-03-13-22:02.json', 1678741382.5647507)
-2023-03-13 22:08:03 | Caricamento degli alert sul DB completato.
-2023-03-13 22:08:03 | Rimozione del file /var/log/suricata/eve-2023-03-13-22:02.json
-2023-03-13 22:08:04 | Apertura del file ('eve-2023-03-13-22:03.json', 1678741442.6531472)
-2023-03-13 22:08:10 | Caricamento degli alert sul DB completato.
-2023-03-13 22:08:10 | Rimozione del file /var/log/suricata/eve-2023-03-13-22:03.json
-2023-03-13 22:08:11 | Apertura del file ('eve-2023-03-13-22:04.json', 1678741502.097529)
-2023-03-13 22:08:15 | Caricamento degli alert sul DB completato.
-2023-03-13 22:08:15 | Rimozione del file /var/log/suricata/eve-2023-03-13-22:04.json
-2023-03-13 22:08:16 | Apertura del file ('eve-2023-03-13-22:05.json', 1678741562.105904)
-2023-03-13 22:08:20 | Caricamento degli alert sul DB completato.
-2023-03-13 22:08:20 | Rimozione del file /var/log/suricata/eve-2023-03-13-22:05.json
-2023-03-13 22:08:21 | Apertura del file ('eve-2023-03-13-22:06.json', 1678741621.5582674)
-2023-03-13 22:08:26 | Caricamento degli alert sul DB completato.
-2023-03-13 22:08:26 | Rimozione del file /var/log/suricata/eve-2023-03-13-22:06.json
-2023-03-13 22:08:28 | Apertura del file ('eve-2023-03-13-22:07.json', 1678741683.6626387)
-2023-03-13 22:08:33 | Caricamento degli alert sul DB completato.
-2023-03-13 22:08:33 | Rimozione del file /var/log/suricata/eve-2023-03-13-22:07.json
-2023-03-13 22:09:06 | Apertura del file ('eve-2023-03-13-22:08.json', 1678741744.438995)
-2023-03-13 22:09:12 | Caricamento degli alert sul DB completato.
-2023-03-13 22:09:12 | Rimozione del file /var/log/suricata/eve-2023-03-13-22:08.json
-2023-03-13 22:10:05 | Apertura del file ('eve-2023-03-13-22:09.json', 1678741802.5433292)
-2023-03-13 22:10:11 | Caricamento degli alert sul DB completato.
-2023-03-13 22:10:11 | Rimozione del file /var/log/suricata/eve-2023-03-13-22:09.json
-2023-03-13 22:11:06 | Apertura del file ('eve-2023-03-13-22:10.json', 1678741864.6436813)
-2023-03-13 22:11:10 | Caricamento degli alert sul DB completato.
-2023-03-13 22:11:10 | Rimozione del file /var/log/suricata/eve-2023-03-13-22:10.json
-2023-03-13 22:12:05 | Apertura del file ('eve-2023-03-13-22:11.json', 1678741924.0840132)
-2023-03-13 22:12:11 | Caricamento degli alert sul DB completato.
-2023-03-13 22:12:11 | Rimozione del file /var/log/suricata/eve-2023-03-13-22:11.json
-2023-03-13 22:13:05 | Apertura del file ('eve-2023-03-13-22:12.json', 1678741984.1843445)
-2023-03-13 22:13:10 | Caricamento degli alert sul DB completato.
-2023-03-13 22:13:10 | Rimozione del file /var/log/suricata/eve-2023-03-13-22:12.json
-2023-03-13 22:14:05 | Apertura del file ('eve-2023-03-13-22:13.json', 1678742044.292672)
-2023-03-13 22:14:10 | Caricamento degli alert sul DB completato.
-2023-03-13 22:14:10 | Rimozione del file /var/log/suricata/eve-2023-03-13-22:13.json
-2023-03-13 22:15:05 | Apertura del file ('eve-2023-03-13-22:14.json', 1678742103.056989)
-2023-03-13 22:15:07 | Caricamento degli alert sul DB completato.
-2023-03-13 22:15:07 | Rimozione del file /var/log/suricata/eve-2023-03-13-22:14.json
-2023-03-13 22:16:06 | Apertura del file ('eve-2023-03-13-22:15.json', 1678742164.4933171)
-2023-03-13 22:16:10 | Caricamento degli alert sul DB completato.
-2023-03-13 22:16:10 | Rimozione del file /var/log/suricata/eve-2023-03-13-22:15.json
-2023-03-13 22:17:06 | Apertura del file ('eve-2023-03-13-22:16.json', 1678742225.7576416)
-2023-03-13 22:17:10 | Caricamento degli alert sul DB completato.
-2023-03-13 22:17:10 | Rimozione del file /var/log/suricata/eve-2023-03-13-22:16.json
-2023-03-13 22:18:06 | Apertura del file ('eve-2023-03-13-22:17.json', 1678742284.1339483)
-2023-03-13 22:18:13 | Caricamento degli alert sul DB completato.
-2023-03-13 22:18:13 | Rimozione del file /var/log/suricata/eve-2023-03-13-22:17.json
+2023-03-16 15:29:33 | Apertura del file ('eve-2023-03-16-12:20.json', 1678965670.425646)
+2023-03-16 15:29:35 | Caricamento degli alert sul DB completato.
+2023-03-16 15:29:35 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:20.json
+2023-03-16 15:29:37 | Apertura del file ('eve-2023-03-16-12:21.json', 1678965730.5057921)
+2023-03-16 15:29:40 | Caricamento degli alert sul DB completato.
+2023-03-16 15:29:40 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:21.json
+2023-03-16 15:29:41 | Apertura del file ('eve-2023-03-16-12:22.json', 1678965790.6299376)
+2023-03-16 15:29:43 | Caricamento degli alert sul DB completato.
+2023-03-16 15:29:43 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:22.json
+2023-03-16 15:29:44 | Apertura del file ('eve-2023-03-16-12:23.json', 1678965851.3980842)
+2023-03-16 15:29:47 | Caricamento degli alert sul DB completato.
+2023-03-16 15:29:47 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:23.json
+2023-03-16 15:29:49 | Apertura del file ('eve-2023-03-16-12:24.json', 1678965909.5182238)
+2023-03-16 15:29:51 | Caricamento degli alert sul DB completato.
+2023-03-16 15:29:51 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:24.json
+2023-03-16 15:29:53 | Apertura del file ('eve-2023-03-16-12:25.json', 1678965971.8303728)
+2023-03-16 15:29:54 | Caricamento degli alert sul DB completato.
+2023-03-16 15:29:54 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:25.json
+2023-03-16 15:29:55 | Apertura del file ('eve-2023-03-16-12:26.json', 1678966033.0385187)
+2023-03-16 15:29:57 | Caricamento degli alert sul DB completato.
+2023-03-16 15:29:57 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:26.json
+2023-03-16 15:29:59 | Apertura del file ('eve-2023-03-16-12:27.json', 1678966093.1466618)
+2023-03-16 15:30:01 | Caricamento degli alert sul DB completato.
+2023-03-16 15:30:01 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:27.json
+2023-03-16 15:30:02 | Apertura del file ('eve-2023-03-16-12:28.json', 1678966153.2468042)
+2023-03-16 15:30:04 | Caricamento degli alert sul DB completato.
+2023-03-16 15:30:04 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:28.json
+2023-03-16 15:30:05 | Apertura del file ('eve-2023-03-16-12:29.json', 1678966210.5268683)
+2023-03-16 15:30:07 | Caricamento degli alert sul DB completato.
+2023-03-16 15:30:07 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:29.json
+2023-03-16 15:30:08 | Apertura del file ('eve-2023-03-16-12:30.json', 1678966269.9107528)
+2023-03-16 15:30:10 | Caricamento degli alert sul DB completato.
+2023-03-16 15:30:10 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:30.json
+2023-03-16 15:30:11 | Apertura del file ('eve-2023-03-16-12:31.json', 1678966333.5546563)
+2023-03-16 15:30:14 | Caricamento degli alert sul DB completato.
+2023-03-16 15:30:14 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:31.json
+2023-03-16 15:30:16 | Apertura del file ('eve-2023-03-16-12:32.json', 1678966393.6545877)
+2023-03-16 15:30:17 | Caricamento degli alert sul DB completato.
+2023-03-16 15:30:17 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:32.json
+2023-03-16 15:30:19 | Apertura del file ('eve-2023-03-16-12:33.json', 1678966451.086541)
+2023-03-16 15:30:21 | Caricamento degli alert sul DB completato.
+2023-03-16 15:30:21 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:33.json
+2023-03-16 15:30:22 | Apertura del file ('eve-2023-03-16-12:34.json', 1678966512.5225084)
+2023-03-16 15:30:24 | Caricamento degli alert sul DB completato.
+2023-03-16 15:30:24 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:34.json
+2023-03-16 15:30:26 | Apertura del file ('eve-2023-03-16-12:35.json', 1678966572.6224923)
+2023-03-16 15:30:27 | Caricamento degli alert sul DB completato.
+2023-03-16 15:30:27 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:35.json
+2023-03-16 15:30:29 | Apertura del file ('eve-2023-03-16-12:36.json', 1678966630.30649)
+2023-03-16 15:30:31 | Caricamento degli alert sul DB completato.
+2023-03-16 15:30:31 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:36.json
+2023-03-16 15:30:33 | Apertura del file ('eve-2023-03-16-12:37.json', 1678966692.4424999)
+2023-03-16 15:30:34 | Caricamento degli alert sul DB completato.
+2023-03-16 15:30:34 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:37.json
+2023-03-16 15:30:36 | Apertura del file ('eve-2023-03-16-12:38.json', 1678966754.5545218)
+2023-03-16 15:30:38 | Caricamento degli alert sul DB completato.
+2023-03-16 15:30:38 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:38.json
+2023-03-16 15:30:39 | Apertura del file ('eve-2023-03-16-12:39.json', 1678966813.026552)
+2023-03-16 15:30:41 | Caricamento degli alert sul DB completato.
+2023-03-16 15:30:41 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:39.json
+2023-03-16 15:30:43 | Apertura del file ('eve-2023-03-16-12:40.json', 1678966874.5585923)
+2023-03-16 15:30:45 | Caricamento degli alert sul DB completato.
+2023-03-16 15:30:45 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:40.json
+2023-03-16 15:30:46 | Apertura del file ('eve-2023-03-16-12:41.json', 1678966934.5586398)
+2023-03-16 15:30:48 | Caricamento degli alert sul DB completato.
+2023-03-16 15:30:48 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:41.json
+2023-03-16 15:30:50 | Apertura del file ('eve-2023-03-16-12:42.json', 1678966994.5666938)
+2023-03-16 15:30:53 | Caricamento degli alert sul DB completato.
+2023-03-16 15:30:53 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:42.json
+2023-03-16 15:30:54 | Apertura del file ('eve-2023-03-16-12:43.json', 1678967054.0907533)
+2023-03-16 15:30:56 | Caricamento degli alert sul DB completato.
+2023-03-16 15:30:56 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:43.json
+2023-03-16 15:30:58 | Apertura del file ('eve-2023-03-16-12:44.json', 1678967114.5708194)
+2023-03-16 15:31:00 | Caricamento degli alert sul DB completato.
+2023-03-16 15:31:00 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:44.json
+2023-03-16 15:31:01 | Apertura del file ('eve-2023-03-16-12:45.json', 1678967174.2908893)
+2023-03-16 15:31:03 | Caricamento degli alert sul DB completato.
+2023-03-16 15:31:03 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:45.json
+2023-03-16 15:31:05 | Apertura del file ('eve-2023-03-16-12:46.json', 1678967234.574964)
+2023-03-16 15:31:07 | Caricamento degli alert sul DB completato.
+2023-03-16 15:31:07 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:46.json
+2023-03-16 15:31:08 | Apertura del file ('eve-2023-03-16-12:47.json', 1678967292.4910395)
+2023-03-16 15:31:10 | Caricamento degli alert sul DB completato.
+2023-03-16 15:31:10 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:47.json
+2023-03-16 15:31:11 | Apertura del file ('eve-2023-03-16-12:48.json', 1678967354.595124)
+2023-03-16 15:31:13 | Caricamento degli alert sul DB completato.
+2023-03-16 15:31:13 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:48.json
+2023-03-16 15:31:16 | Apertura del file ('eve-2023-03-16-12:49.json', 1678967413.363207)
+2023-03-16 15:31:18 | Caricamento degli alert sul DB completato.
+2023-03-16 15:31:18 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:49.json
+2023-03-16 15:31:20 | Apertura del file ('eve-2023-03-16-12:50.json', 1678967474.587296)
+2023-03-16 15:31:22 | Caricamento degli alert sul DB completato.
+2023-03-16 15:31:22 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:50.json
+2023-03-16 15:31:23 | Apertura del file ('eve-2023-03-16-12:51.json', 1678967535.5673873)
+2023-03-16 15:31:25 | Caricamento degli alert sul DB completato.
+2023-03-16 15:31:25 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:51.json
+2023-03-16 15:31:27 | Apertura del file ('eve-2023-03-16-12:52.json', 1678967594.6394777)
+2023-03-16 15:31:29 | Caricamento degli alert sul DB completato.
+2023-03-16 15:31:29 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:52.json
+2023-03-16 15:31:30 | Apertura del file ('eve-2023-03-16-12:53.json', 1678967655.0995722)
+2023-03-16 15:31:31 | Caricamento degli alert sul DB completato.
+2023-03-16 15:31:31 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:53.json
+2023-03-16 15:31:33 | Apertura del file ('eve-2023-03-16-12:54.json', 1678967714.6036665)
+2023-03-16 15:31:36 | Caricamento degli alert sul DB completato.
+2023-03-16 15:31:36 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:54.json
+2023-03-16 15:31:37 | Apertura del file ('eve-2023-03-16-12:55.json', 1678967775.3357646)
+2023-03-16 15:31:39 | Caricamento degli alert sul DB completato.
+2023-03-16 15:31:39 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:55.json
+2023-03-16 15:31:40 | Apertura del file ('eve-2023-03-16-12:56.json', 1678967835.399863)
+2023-03-16 15:31:42 | Caricamento degli alert sul DB completato.
+2023-03-16 15:31:42 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:56.json
+2023-03-16 15:31:44 | Apertura del file ('eve-2023-03-16-12:57.json', 1678967894.1639602)
+2023-03-16 15:31:46 | Caricamento degli alert sul DB completato.
+2023-03-16 15:31:46 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:57.json
+2023-03-16 15:31:47 | Apertura del file ('eve-2023-03-16-12:58.json', 1678967954.6120613)
+2023-03-16 15:31:49 | Caricamento degli alert sul DB completato.
+2023-03-16 15:31:49 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:58.json
+2023-03-16 15:31:50 | Apertura del file ('eve-2023-03-16-12:59.json', 1678968014.3641622)
+2023-03-16 15:31:52 | Caricamento degli alert sul DB completato.
+2023-03-16 15:31:52 | Rimozione del file /var/log/suricata/eve-2023-03-16-12:59.json
+2023-03-16 15:31:54 | Apertura del file ('eve-2023-03-16-13:00.json', 1678968074.6202648)
+2023-03-16 15:31:56 | Caricamento degli alert sul DB completato.
+2023-03-16 15:31:56 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:00.json
+2023-03-16 15:31:57 | Apertura del file ('eve-2023-03-16-13:01.json', 1678968135.2403686)
+2023-03-16 15:31:59 | Caricamento degli alert sul DB completato.
+2023-03-16 15:31:59 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:01.json
+2023-03-16 15:32:00 | Apertura del file ('eve-2023-03-16-13:02.json', 1678968194.6244712)
+2023-03-16 15:32:02 | Caricamento degli alert sul DB completato.
+2023-03-16 15:32:02 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:02.json
+2023-03-16 15:32:04 | Apertura del file ('eve-2023-03-16-13:03.json', 1678968256.1126199)
+2023-03-16 15:32:05 | Caricamento degli alert sul DB completato.
+2023-03-16 15:32:05 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:03.json
+2023-03-16 15:32:06 | Apertura del file ('eve-2023-03-16-13:04.json', 1678968314.6288981)
+2023-03-16 15:32:08 | Caricamento degli alert sul DB completato.
+2023-03-16 15:32:08 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:04.json
+2023-03-16 15:32:10 | Apertura del file ('eve-2023-03-16-13:05.json', 1678968375.645171)
+2023-03-16 15:32:12 | Caricamento degli alert sul DB completato.
+2023-03-16 15:32:12 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:05.json
+2023-03-16 15:32:14 | Apertura del file ('eve-2023-03-16-13:06.json', 1678968436.4134269)
+2023-03-16 15:32:16 | Caricamento degli alert sul DB completato.
+2023-03-16 15:32:16 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:06.json
+2023-03-16 15:32:17 | Apertura del file ('eve-2023-03-16-13:07.json', 1678968494.5136583)
+2023-03-16 15:32:19 | Caricamento degli alert sul DB completato.
+2023-03-16 15:32:19 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:07.json
+2023-03-16 15:32:21 | Apertura del file ('eve-2023-03-16-13:08.json', 1678968555.0218875)
+2023-03-16 15:32:23 | Caricamento degli alert sul DB completato.
+2023-03-16 15:32:23 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:08.json
+2023-03-16 15:32:24 | Apertura del file ('eve-2023-03-16-13:09.json', 1678968614.0461004)
+2023-03-16 15:32:26 | Caricamento degli alert sul DB completato.
+2023-03-16 15:32:26 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:09.json
+2023-03-16 15:32:28 | Apertura del file ('eve-2023-03-16-13:10.json', 1678968674.6423094)
+2023-03-16 15:32:29 | Caricamento degli alert sul DB completato.
+2023-03-16 15:32:29 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:10.json
+2023-03-16 15:32:31 | Apertura del file ('eve-2023-03-16-13:11.json', 1678968732.6185012)
+2023-03-16 15:32:33 | Caricamento degli alert sul DB completato.
+2023-03-16 15:32:33 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:11.json
+2023-03-16 15:32:34 | Apertura del file ('eve-2023-03-16-13:12.json', 1678968795.0186996)
+2023-03-16 15:32:36 | Caricamento degli alert sul DB completato.
+2023-03-16 15:32:36 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:12.json
+2023-03-16 15:32:38 | Apertura del file ('eve-2023-03-16-13:13.json', 1678968853.114878)
+2023-03-16 15:32:39 | Caricamento degli alert sul DB completato.
+2023-03-16 15:32:39 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:13.json
+2023-03-16 15:32:40 | Apertura del file ('eve-2023-03-16-13:14.json', 1678968914.6550605)
+2023-03-16 15:32:42 | Caricamento degli alert sul DB completato.
+2023-03-16 15:32:42 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:14.json
+2023-03-16 15:32:44 | Apertura del file ('eve-2023-03-16-13:15.json', 1678968972.9072282)
+2023-03-16 15:32:46 | Caricamento degli alert sul DB completato.
+2023-03-16 15:32:46 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:15.json
+2023-03-16 15:32:47 | Apertura del file ('eve-2023-03-16-13:16.json', 1678969036.0914052)
+2023-03-16 15:32:49 | Caricamento degli alert sul DB completato.
+2023-03-16 15:32:49 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:16.json
+2023-03-16 15:32:50 | Apertura del file ('eve-2023-03-16-13:17.json', 1678969093.0275605)
+2023-03-16 15:32:53 | Caricamento degli alert sul DB completato.
+2023-03-16 15:32:53 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:17.json
+2023-03-16 15:32:55 | Apertura del file ('eve-2023-03-16-13:18.json', 1678969157.8637333)
+2023-03-16 15:32:57 | Caricamento degli alert sul DB completato.
+2023-03-16 15:32:57 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:18.json
+2023-03-16 15:32:58 | Apertura del file ('eve-2023-03-16-13:19.json', 1678969217.0558877)
+2023-03-16 15:33:00 | Caricamento degli alert sul DB completato.
+2023-03-16 15:33:00 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:19.json
+2023-03-16 15:33:02 | Apertura del file ('eve-2023-03-16-13:20.json', 1678969274.672035)
+2023-03-16 15:33:03 | Caricamento degli alert sul DB completato.
+2023-03-16 15:33:03 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:20.json
+2023-03-16 15:33:04 | Apertura del file ('eve-2023-03-16-13:21.json', 1678969337.2561924)
+2023-03-16 15:33:06 | Caricamento degli alert sul DB completato.
+2023-03-16 15:33:06 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:21.json
+2023-03-16 15:33:08 | Apertura del file ('eve-2023-03-16-13:22.json', 1678969397.3563414)
+2023-03-16 15:33:09 | Caricamento degli alert sul DB completato.
+2023-03-16 15:33:09 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:22.json
+2023-03-16 15:33:10 | Apertura del file ('eve-2023-03-16-13:23.json', 1678969455.4564831)
+2023-03-16 15:33:12 | Caricamento degli alert sul DB completato.
+2023-03-16 15:33:12 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:23.json
+2023-03-16 15:33:15 | Apertura del file ('eve-2023-03-16-13:24.json', 1678969514.684626)
+2023-03-16 15:33:17 | Caricamento degli alert sul DB completato.
+2023-03-16 15:33:17 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:24.json
+2023-03-16 15:33:18 | Apertura del file ('eve-2023-03-16-13:25.json', 1678969575.6527715)
+2023-03-16 15:33:20 | Caricamento degli alert sul DB completato.
+2023-03-16 15:33:20 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:25.json
+2023-03-16 15:33:22 | Apertura del file ('eve-2023-03-16-13:26.json', 1678969637.0889163)
+2023-03-16 15:33:24 | Caricamento degli alert sul DB completato.
+2023-03-16 15:33:24 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:26.json
+2023-03-16 15:33:25 | Apertura del file ('eve-2023-03-16-13:27.json', 1678969694.5170507)
+2023-03-16 15:33:27 | Caricamento degli alert sul DB completato.
+2023-03-16 15:33:27 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:27.json
+2023-03-16 15:33:28 | Apertura del file ('eve-2023-03-16-13:28.json', 1678969757.2891963)
+2023-03-16 15:33:31 | Caricamento degli alert sul DB completato.
+2023-03-16 15:33:31 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:28.json
+2023-03-16 15:33:32 | Apertura del file ('eve-2023-03-16-13:29.json', 1678969816.0533314)
+2023-03-16 15:33:34 | Caricamento degli alert sul DB completato.
+2023-03-16 15:33:34 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:29.json
+2023-03-16 15:33:35 | Apertura del file ('eve-2023-03-16-13:30.json', 1678969877.489472)
+2023-03-16 15:33:37 | Caricamento degli alert sul DB completato.
+2023-03-16 15:33:37 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:30.json
+2023-03-16 15:33:39 | Apertura del file ('eve-2023-03-16-13:31.json', 1678969937.5896084)
+2023-03-16 15:33:41 | Caricamento degli alert sul DB completato.
+2023-03-16 15:33:41 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:31.json
+2023-03-16 15:33:42 | Apertura del file ('eve-2023-03-16-13:32.json', 1678969995.0217383)
+2023-03-16 15:33:44 | Caricamento degli alert sul DB completato.
+2023-03-16 15:33:44 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:32.json
+2023-03-16 15:33:45 | Apertura del file ('eve-2023-03-16-13:33.json', 1678970058.7098815)
+2023-03-16 15:33:47 | Caricamento degli alert sul DB completato.
+2023-03-16 15:33:47 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:33.json
+2023-03-16 15:33:50 | Apertura del file ('eve-2023-03-16-13:34.json', 1678970117.2300127)
+2023-03-16 15:33:52 | Caricamento degli alert sul DB completato.
+2023-03-16 15:33:52 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:34.json
+2023-03-16 15:33:53 | Apertura del file ('eve-2023-03-16-13:35.json', 1678970178.7141497)
+2023-03-16 15:33:54 | Caricamento degli alert sul DB completato.
+2023-03-16 15:33:54 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:35.json
+2023-03-16 15:33:55 | Apertura del file ('eve-2023-03-16-13:36.json', 1678970236.1462774)
+2023-03-16 15:33:57 | Caricamento degli alert sul DB completato.
+2023-03-16 15:33:57 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:36.json
+2023-03-16 15:33:59 | Apertura del file ('eve-2023-03-16-13:37.json', 1678970298.7184162)
+2023-03-16 15:34:01 | Caricamento degli alert sul DB completato.
+2023-03-16 15:34:01 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:37.json
+2023-03-16 15:34:02 | Apertura del file ('eve-2023-03-16-13:38.json', 1678970358.3056881)
+2023-03-16 15:34:04 | Caricamento degli alert sul DB completato.
+2023-03-16 15:34:04 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:38.json
+2023-03-16 15:34:05 | Apertura del file ('eve-2023-03-16-13:39.json', 1678970418.7248986)
+2023-03-16 15:34:07 | Caricamento degli alert sul DB completato.
+2023-03-16 15:34:07 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:39.json
+2023-03-16 15:34:09 | Apertura del file ('eve-2023-03-16-13:40.json', 1678970474.7282422)
+2023-03-16 15:34:11 | Caricamento degli alert sul DB completato.
+2023-03-16 15:34:11 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:40.json
+2023-03-16 15:34:12 | Apertura del file ('eve-2023-03-16-13:41.json', 1678970538.7315707)
+2023-03-16 15:34:15 | Caricamento degli alert sul DB completato.
+2023-03-16 15:34:15 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:41.json
+2023-03-16 15:34:17 | Apertura del file ('eve-2023-03-16-13:42.json', 1678970594.731045)
+2023-03-16 15:34:19 | Caricamento degli alert sul DB completato.
+2023-03-16 15:34:19 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:42.json
+2023-03-16 15:34:20 | Apertura del file ('eve-2023-03-16-13:43.json', 1678970658.7385063)
+2023-03-16 15:34:21 | Caricamento degli alert sul DB completato.
+2023-03-16 15:34:21 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:43.json
+2023-03-16 15:34:22 | Apertura del file ('eve-2023-03-16-13:44.json', 1678970714.8140833)
+2023-03-16 15:34:24 | Caricamento degli alert sul DB completato.
+2023-03-16 15:34:24 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:44.json
+2023-03-16 15:34:25 | Apertura del file ('eve-2023-03-16-13:45.json', 1678970778.74565)
+2023-03-16 15:34:27 | Caricamento degli alert sul DB completato.
+2023-03-16 15:34:27 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:45.json
+2023-03-16 15:34:29 | Apertura del file ('eve-2023-03-16-13:46.json', 1678970834.953308)
+2023-03-16 15:34:31 | Caricamento degli alert sul DB completato.
+2023-03-16 15:34:31 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:46.json
+2023-03-16 15:34:32 | Apertura del file ('eve-2023-03-16-13:47.json', 1678970898.7529585)
+2023-03-16 15:34:34 | Caricamento degli alert sul DB completato.
+2023-03-16 15:34:34 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:47.json
+2023-03-16 15:34:35 | Apertura del file ('eve-2023-03-16-13:48.json', 1678970959.324661)
+2023-03-16 15:34:37 | Caricamento degli alert sul DB completato.
+2023-03-16 15:34:37 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:48.json
+2023-03-16 15:34:38 | Apertura del file ('eve-2023-03-16-13:49.json', 1678971018.7803972)
+2023-03-16 15:34:40 | Caricamento degli alert sul DB completato.
+2023-03-16 15:34:40 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:49.json
+2023-03-16 15:34:41 | Apertura del file ('eve-2023-03-16-13:50.json', 1678971078.188159)
+2023-03-16 15:34:43 | Caricamento degli alert sul DB completato.
+2023-03-16 15:34:43 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:50.json
+2023-03-16 15:34:44 | Apertura del file ('eve-2023-03-16-13:51.json', 1678971138.7599392)
+2023-03-16 15:34:47 | Caricamento degli alert sul DB completato.
+2023-03-16 15:34:47 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:51.json
+2023-03-16 15:34:48 | Apertura del file ('eve-2023-03-16-13:52.json', 1678971198.387743)
+2023-03-16 15:34:51 | Caricamento degli alert sul DB completato.
+2023-03-16 15:34:51 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:52.json
+2023-03-16 15:34:52 | Apertura del file ('eve-2023-03-16-13:53.json', 1678971259.2995608)
+2023-03-16 15:34:53 | Caricamento degli alert sul DB completato.
+2023-03-16 15:34:53 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:53.json
+2023-03-16 15:34:55 | Apertura del file ('eve-2023-03-16-13:54.json', 1678971318.5953994)
+2023-03-16 15:34:57 | Caricamento degli alert sul DB completato.
+2023-03-16 15:34:57 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:54.json
+2023-03-16 15:34:58 | Apertura del file ('eve-2023-03-16-13:55.json', 1678971378.77125)
+2023-03-16 15:35:00 | Caricamento degli alert sul DB completato.
+2023-03-16 15:35:00 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:55.json
+2023-03-16 15:35:01 | Apertura del file ('eve-2023-03-16-13:56.json', 1678971438.127115)
+2023-03-16 15:35:03 | Caricamento degli alert sul DB completato.
+2023-03-16 15:35:03 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:56.json
+2023-03-16 15:35:05 | Apertura del file ('eve-2023-03-16-13:57.json', 1678971498.7749887)
+2023-03-16 15:35:07 | Caricamento degli alert sul DB completato.
+2023-03-16 15:35:07 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:57.json
+2023-03-16 15:35:09 | Apertura del file ('eve-2023-03-16-13:58.json', 1678971556.326878)
+2023-03-16 15:35:10 | Caricamento degli alert sul DB completato.
+2023-03-16 15:35:10 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:58.json
+2023-03-16 15:35:12 | Apertura del file ('eve-2023-03-16-13:59.json', 1678971619.0947669)
+2023-03-16 15:35:14 | Caricamento degli alert sul DB completato.
+2023-03-16 15:35:14 | Rimozione del file /var/log/suricata/eve-2023-03-16-13:59.json
+2023-03-16 15:35:16 | Apertura del file ('eve-2023-03-16-14:00.json', 1678971679.1946688)
+2023-03-16 15:35:17 | Caricamento degli alert sul DB completato.
+2023-03-16 15:35:17 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:00.json
+2023-03-16 15:35:19 | Apertura del file ('eve-2023-03-16-14:01.json', 1678971738.7865782)
+2023-03-16 15:35:21 | Caricamento degli alert sul DB completato.
+2023-03-16 15:35:21 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:01.json
+2023-03-16 15:35:22 | Apertura del file ('eve-2023-03-16-14:02.json', 1678971798.0504944)
+2023-03-16 15:35:24 | Caricamento degli alert sul DB completato.
+2023-03-16 15:35:24 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:02.json
+2023-03-16 15:35:25 | Apertura del file ('eve-2023-03-16-14:03.json', 1678971860.1584125)
+2023-03-16 15:35:27 | Caricamento degli alert sul DB completato.
+2023-03-16 15:35:27 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:03.json
+2023-03-16 15:35:29 | Apertura del file ('eve-2023-03-16-14:04.json', 1678971916.1543431)
+2023-03-16 15:35:31 | Caricamento degli alert sul DB completato.
+2023-03-16 15:35:31 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:04.json
+2023-03-16 15:35:32 | Apertura del file ('eve-2023-03-16-14:05.json', 1678971979.02227)
+2023-03-16 15:35:34 | Caricamento degli alert sul DB completato.
+2023-03-16 15:35:34 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:05.json
+2023-03-16 15:35:36 | Apertura del file ('eve-2023-03-16-14:06.json', 1678972036.286207)
+2023-03-16 15:35:38 | Caricamento degli alert sul DB completato.
+2023-03-16 15:35:38 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:06.json
+2023-03-16 15:35:39 | Apertura del file ('eve-2023-03-16-14:07.json', 1678972100.55814)
+2023-03-16 15:35:41 | Caricamento degli alert sul DB completato.
+2023-03-16 15:35:41 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:07.json
+2023-03-16 15:35:43 | Apertura del file ('eve-2023-03-16-14:08.json', 1678972156.4100847)
+2023-03-16 15:35:45 | Caricamento degli alert sul DB completato.
+2023-03-16 15:35:45 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:08.json
+2023-03-16 15:35:46 | Apertura del file ('eve-2023-03-16-14:09.json', 1678972218.806026)
+2023-03-16 15:35:48 | Caricamento degli alert sul DB completato.
+2023-03-16 15:35:48 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:09.json
+2023-03-16 15:35:50 | Apertura del file ('eve-2023-03-16-14:10.json', 1678972280.7459702)
+2023-03-16 15:35:52 | Caricamento degli alert sul DB completato.
+2023-03-16 15:35:52 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:10.json
+2023-03-16 15:35:54 | Apertura del file ('eve-2023-03-16-14:11.json', 1678972340.2979188)
+2023-03-16 15:35:56 | Caricamento degli alert sul DB completato.
+2023-03-16 15:35:56 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:11.json
+2023-03-16 15:35:57 | Apertura del file ('eve-2023-03-16-14:12.json', 1678972399.065274)
+2023-03-16 15:36:00 | Caricamento degli alert sul DB completato.
+2023-03-16 15:36:00 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:12.json
+2023-03-16 15:36:01 | Apertura del file ('eve-2023-03-16-14:13.json', 1678972460.4975524)
+2023-03-16 15:36:04 | Caricamento degli alert sul DB completato.
+2023-03-16 15:36:04 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:13.json
+2023-03-16 15:36:07 | Apertura del file ('eve-2023-03-16-14:14.json', 1678972519.2612453)
+2023-03-16 15:36:09 | Caricamento degli alert sul DB completato.
+2023-03-16 15:36:09 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:14.json
+2023-03-16 15:36:10 | Apertura del file ('eve-2023-03-16-14:15.json', 1678972578.8246336)
+2023-03-16 15:36:13 | Caricamento degli alert sul DB completato.
+2023-03-16 15:36:13 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:15.json
+2023-03-16 15:36:14 | Apertura del file ('eve-2023-03-16-14:16.json', 1678972640.131789)
+2023-03-16 15:36:17 | Caricamento degli alert sul DB completato.
+2023-03-16 15:36:17 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:16.json
+2023-03-16 15:36:19 | Apertura del file ('eve-2023-03-16-14:17.json', 1678972700.230592)
+2023-03-16 15:36:21 | Caricamento degli alert sul DB completato.
+2023-03-16 15:36:21 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:17.json
+2023-03-16 15:36:23 | Apertura del file ('eve-2023-03-16-14:18.json', 1678972759.6651125)
+2023-03-16 15:36:25 | Caricamento degli alert sul DB completato.
+2023-03-16 15:36:25 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:18.json
+2023-03-16 15:36:27 | Apertura del file ('eve-2023-03-16-14:19.json', 1678972819.0954106)
+2023-03-16 15:36:39 | Apertura del file ('eve-2023-03-16-14:19.json', 1678972819.0954106)
+2023-03-16 15:36:41 | Caricamento degli alert sul DB completato.
+2023-03-16 15:36:41 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:19.json
+2023-03-16 15:36:43 | Apertura del file ('eve-2023-03-16-14:20.json', 1678972877.2334666)
+2023-03-16 15:36:45 | Caricamento degli alert sul DB completato.
+2023-03-16 15:36:45 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:20.json
+2023-03-16 15:36:47 | Apertura del file ('eve-2023-03-16-14:21.json', 1678972940.6355171)
+2023-03-16 15:36:49 | Caricamento degli alert sul DB completato.
+2023-03-16 15:36:49 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:21.json
+2023-03-16 15:36:51 | Apertura del file ('eve-2023-03-16-14:22.json', 1678973001.401315)
+2023-03-16 15:36:54 | Caricamento degli alert sul DB completato.
+2023-03-16 15:36:54 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:22.json
+2023-03-16 15:36:55 | Apertura del file ('eve-2023-03-16-14:23.json', 1678973059.494898)
+2023-03-16 15:36:57 | Caricamento degli alert sul DB completato.
+2023-03-16 15:36:57 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:23.json
+2023-03-16 15:36:58 | Apertura del file ('eve-2023-03-16-14:24.json', 1678973121.60046)
+2023-03-16 15:37:00 | Caricamento degli alert sul DB completato.
+2023-03-16 15:37:00 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:24.json
+2023-03-16 15:37:02 | Apertura del file ('eve-2023-03-16-14:25.json', 1678973178.8537936)
+2023-03-16 15:37:04 | Caricamento degli alert sul DB completato.
+2023-03-16 15:37:04 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:25.json
+2023-03-16 15:37:05 | Apertura del file ('eve-2023-03-16-14:26.json', 1678973241.1351414)
+2023-03-16 15:37:07 | Caricamento degli alert sul DB completato.
+2023-03-16 15:37:07 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:26.json
+2023-03-16 15:37:09 | Apertura del file ('eve-2023-03-16-14:27.json', 1678973299.2323124)
+2023-03-16 15:37:11 | Caricamento degli alert sul DB completato.
+2023-03-16 15:37:11 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:27.json
+2023-03-16 15:37:13 | Apertura del file ('eve-2023-03-16-14:28.json', 1678973357.7574172)
+2023-03-16 15:37:15 | Caricamento degli alert sul DB completato.
+2023-03-16 15:37:15 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:28.json
+2023-03-16 15:37:17 | Apertura del file ('eve-2023-03-16-14:29.json', 1678973420.0985205)
+2023-03-16 15:37:19 | Caricamento degli alert sul DB completato.
+2023-03-16 15:37:19 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:29.json
+2023-03-16 15:37:21 | Apertura del file ('eve-2023-03-16-14:30.json', 1678973480.1995206)
+2023-03-16 15:39:19 | Apertura del file ('eve-2023-03-16-14:30.json', 1678973480.1995206)
+2023-03-16 15:39:21 | Caricamento degli alert sul DB completato.
+2023-03-16 15:39:21 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:30.json
+2023-03-16 15:39:22 | Apertura del file ('eve-2023-03-16-14:31.json', 1678973541.6324852)
+2023-03-16 15:39:25 | Caricamento degli alert sul DB completato.
+2023-03-16 15:39:25 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:31.json
+2023-03-16 15:39:26 | Apertura del file ('eve-2023-03-16-14:32.json', 1678973601.0693693)
+2023-03-16 15:39:29 | Caricamento degli alert sul DB completato.
+2023-03-16 15:39:29 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:32.json
+2023-03-16 15:39:30 | Apertura del file ('eve-2023-03-16-14:33.json', 1678973660.5022106)
+2023-03-16 15:39:34 | Caricamento degli alert sul DB completato.
+2023-03-16 15:39:34 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:33.json
+2023-03-16 15:39:35 | Apertura del file ('eve-2023-03-16-14:34.json', 1678973722.8750525)
+2023-03-16 15:39:37 | Caricamento degli alert sul DB completato.
+2023-03-16 15:39:37 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:34.json
+2023-03-16 15:39:39 | Apertura del file ('eve-2023-03-16-14:35.json', 1678973782.403821)
+2023-03-16 15:39:41 | Caricamento degli alert sul DB completato.
+2023-03-16 15:39:41 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:35.json
+2023-03-16 15:39:42 | Apertura del file ('eve-2023-03-16-14:36.json', 1678973842.884571)
+2023-03-16 15:39:45 | Caricamento degli alert sul DB completato.
+2023-03-16 15:39:45 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:36.json
+2023-03-16 15:39:46 | Apertura del file ('eve-2023-03-16-14:37.json', 1678973901.5772722)
+2023-03-16 15:39:48 | Caricamento degli alert sul DB completato.
+2023-03-16 15:39:48 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:37.json
+2023-03-16 15:39:50 | Apertura del file ('eve-2023-03-16-14:38.json', 1678973962.88998)
+2023-03-16 15:39:53 | Caricamento degli alert sul DB completato.
+2023-03-16 15:39:53 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:38.json
+2023-03-16 15:39:55 | Apertura del file ('eve-2023-03-16-14:39.json', 1678974021.1746318)
+2023-03-16 15:39:58 | Caricamento degli alert sul DB completato.
+2023-03-16 15:39:58 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:39.json
+2023-03-16 15:39:59 | Apertura del file ('eve-2023-03-16-14:40.json', 1678974082.8913023)
+2023-03-16 15:40:02 | Caricamento degli alert sul DB completato.
+2023-03-16 15:40:02 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:40.json
+2023-03-16 15:40:03 | Apertura del file ('eve-2023-03-16-14:41.json', 1678974142.7439353)
+2023-03-16 15:40:06 | Caricamento degli alert sul DB completato.
+2023-03-16 15:40:06 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:41.json
+2023-03-16 15:40:07 | Apertura del file ('eve-2023-03-16-14:42.json', 1678974202.9005563)
+2023-03-16 15:40:09 | Caricamento degli alert sul DB completato.
+2023-03-16 15:40:09 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:42.json
+2023-03-16 15:40:10 | Apertura del file ('eve-2023-03-16-14:43.json', 1678974262.177155)
+2023-03-16 15:40:12 | Caricamento degli alert sul DB completato.
+2023-03-16 15:40:12 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:43.json
+2023-03-16 15:40:14 | Apertura del file ('eve-2023-03-16-14:44.json', 1678974322.9057562)
+2023-03-16 15:40:17 | Caricamento degli alert sul DB completato.
+2023-03-16 15:40:17 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:44.json
+2023-03-16 15:40:18 | Apertura del file ('eve-2023-03-16-14:45.json', 1678974381.3823247)
+2023-03-16 15:40:20 | Caricamento degli alert sul DB completato.
+2023-03-16 15:40:20 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:45.json
+2023-03-16 15:40:22 | Apertura del file ('eve-2023-03-16-14:46.json', 1678974442.9081163)
+2023-03-16 15:40:24 | Caricamento degli alert sul DB completato.
+2023-03-16 15:40:24 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:46.json
+2023-03-16 15:40:26 | Apertura del file ('eve-2023-03-16-14:47.json', 1678974502.5768433)
+2023-03-16 15:40:28 | Caricamento degli alert sul DB completato.
+2023-03-16 15:40:28 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:47.json
+2023-03-16 15:40:30 | Apertura del file ('eve-2023-03-16-14:48.json', 1678974562.9179025)
+2023-03-16 15:40:32 | Caricamento degli alert sul DB completato.
+2023-03-16 15:40:32 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:48.json
+2023-03-16 15:40:34 | Apertura del file ('eve-2023-03-16-14:49.json', 1678974622.1113384)
+2023-03-16 15:40:36 | Caricamento degli alert sul DB completato.
+2023-03-16 15:40:36 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:49.json
+2023-03-16 15:40:37 | Apertura del file ('eve-2023-03-16-14:50.json', 1678974682.9209983)
+2023-03-16 15:40:39 | Caricamento degli alert sul DB completato.
+2023-03-16 15:40:39 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:50.json
+2023-03-16 15:40:40 | Apertura del file ('eve-2023-03-16-14:51.json', 1678974739.3150659)
+2023-03-16 15:40:42 | Caricamento degli alert sul DB completato.
+2023-03-16 15:40:42 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:51.json
+2023-03-16 15:40:44 | Apertura del file ('eve-2023-03-16-14:52.json', 1678974803.0771253)
+2023-03-16 15:40:46 | Caricamento degli alert sul DB completato.
+2023-03-16 15:40:46 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:52.json
+2023-03-16 15:40:47 | Apertura del file ('eve-2023-03-16-14:53.json', 1678974861.1715586)
+2023-03-16 15:40:49 | Caricamento degli alert sul DB completato.
+2023-03-16 15:40:49 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:53.json
+2023-03-16 15:40:50 | Apertura del file ('eve-2023-03-16-14:54.json', 1678974923.5180664)
+2023-03-16 15:40:52 | Caricamento degli alert sul DB completato.
+2023-03-16 15:40:52 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:54.json
+2023-03-16 15:40:54 | Apertura del file ('eve-2023-03-16-14:55.json', 1678974983.372798)
+2023-03-16 15:40:56 | Caricamento degli alert sul DB completato.
+2023-03-16 15:40:56 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:55.json
+2023-03-16 15:40:57 | Apertura del file ('eve-2023-03-16-14:56.json', 1678975042.9356773)
+2023-03-16 15:40:59 | Caricamento degli alert sul DB completato.
+2023-03-16 15:40:59 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:56.json
+2023-03-16 15:41:00 | Apertura del file ('eve-2023-03-16-14:57.json', 1678975101.5666971)
+2023-03-16 15:41:02 | Caricamento degli alert sul DB completato.
+2023-03-16 15:41:02 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:57.json
+2023-03-16 15:41:03 | Apertura del file ('eve-2023-03-16-14:58.json', 1678975162.9417872)
+2023-03-16 15:41:06 | Caricamento degli alert sul DB completato.
+2023-03-16 15:41:06 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:58.json
+2023-03-16 15:41:07 | Apertura del file ('eve-2023-03-16-14:59.json', 1678975219.8810377)
+2023-03-16 15:41:09 | Caricamento degli alert sul DB completato.
+2023-03-16 15:41:09 | Rimozione del file /var/log/suricata/eve-2023-03-16-14:59.json
+2023-03-16 15:41:10 | Apertura del file ('eve-2023-03-16-15:00.json', 1678975282.948302)
+2023-03-16 15:41:12 | Caricamento degli alert sul DB completato.
+2023-03-16 15:41:12 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:00.json
+2023-03-16 15:41:14 | Apertura del file ('eve-2023-03-16-15:01.json', 1678975341.2997003)
+2023-03-16 15:41:16 | Caricamento degli alert sul DB completato.
+2023-03-16 15:41:16 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:01.json
+2023-03-16 15:41:17 | Apertura del file ('eve-2023-03-16-15:02.json', 1678975402.9511373)
+2023-03-16 15:41:19 | Caricamento degli alert sul DB completato.
+2023-03-16 15:41:19 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:02.json
+2023-03-16 15:41:20 | Apertura del file ('eve-2023-03-16-15:03.json', 1678975464.1746442)
+2023-03-16 15:41:22 | Caricamento degli alert sul DB completato.
+2023-03-16 15:41:22 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:03.json
+2023-03-16 15:41:24 | Apertura del file ('eve-2023-03-16-15:04.json', 1678975524.278217)
+2023-03-16 15:41:26 | Caricamento degli alert sul DB completato.
+2023-03-16 15:41:26 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:04.json
+2023-03-16 15:41:27 | Apertura del file ('eve-2023-03-16-15:05.json', 1678975584.3818398)
+2023-03-16 15:41:29 | Caricamento degli alert sul DB completato.
+2023-03-16 15:41:29 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:05.json
+2023-03-16 15:41:31 | Apertura del file ('eve-2023-03-16-15:06.json', 1678975644.481507)
+2023-03-16 15:41:33 | Caricamento degli alert sul DB completato.
+2023-03-16 15:41:33 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:06.json
+2023-03-16 15:41:34 | Apertura del file ('eve-2023-03-16-15:07.json', 1678975704.5892136)
+2023-03-16 15:41:36 | Caricamento degli alert sul DB completato.
+2023-03-16 15:41:36 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:07.json
+2023-03-16 15:41:38 | Apertura del file ('eve-2023-03-16-15:08.json', 1678975762.9689624)
+2023-03-16 15:41:40 | Caricamento degli alert sul DB completato.
+2023-03-16 15:41:40 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:08.json
+2023-03-16 15:41:41 | Apertura del file ('eve-2023-03-16-15:09.json', 1678975824.5007296)
+2023-03-16 15:41:43 | Caricamento degli alert sul DB completato.
+2023-03-16 15:41:43 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:09.json
+2023-03-16 15:41:44 | Apertura del file ('eve-2023-03-16-15:10.json', 1678975882.9765353)
+2023-03-16 15:41:46 | Caricamento degli alert sul DB completato.
+2023-03-16 15:41:46 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:10.json
+2023-03-16 15:41:48 | Apertura del file ('eve-2023-03-16-15:11.json', 1678975940.7003665)
+2023-03-16 15:41:50 | Caricamento degli alert sul DB completato.
+2023-03-16 15:41:50 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:11.json
+2023-03-16 15:41:52 | Apertura del file ('eve-2023-03-16-15:12.json', 1678976003.096207)
+2023-03-16 15:41:55 | Caricamento degli alert sul DB completato.
+2023-03-16 15:41:55 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:12.json
+2023-03-16 15:41:56 | Apertura del file ('eve-2023-03-16-15:13.json', 1678976063.4200728)
+2023-03-16 15:41:59 | Caricamento degli alert sul DB completato.
+2023-03-16 15:41:59 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:13.json
+2023-03-16 15:42:01 | Apertura del file ('eve-2023-03-16-15:14.json', 1678976122.9839575)
+2023-03-16 15:42:03 | Caricamento degli alert sul DB completato.
+2023-03-16 15:42:03 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:14.json
+2023-03-16 15:42:05 | Apertura del file ('eve-2023-03-16-15:15.json', 1678976184.071855)
+2023-03-16 15:42:07 | Caricamento degli alert sul DB completato.
+2023-03-16 15:42:07 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:15.json
+2023-03-16 15:42:08 | Apertura del file ('eve-2023-03-16-15:16.json', 1678976243.5037692)
+2023-03-16 15:42:11 | Caricamento degli alert sul DB completato.
+2023-03-16 15:42:11 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:16.json
+2023-03-16 15:42:12 | Apertura del file ('eve-2023-03-16-15:17.json', 1678976305.603692)
+2023-03-16 15:42:15 | Caricamento degli alert sul DB completato.
+2023-03-16 15:42:15 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:17.json
+2023-03-16 15:42:17 | Apertura del file ('eve-2023-03-16-15:18.json', 1678976364.3716297)
+2023-03-16 15:42:19 | Caricamento degli alert sul DB completato.
+2023-03-16 15:42:19 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:18.json
+2023-03-16 15:42:21 | Apertura del file ('eve-2023-03-16-15:19.json', 1678976425.1395752)
+2023-03-16 15:42:23 | Caricamento degli alert sul DB completato.
+2023-03-16 15:42:23 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:19.json
+2023-03-16 15:42:25 | Apertura del file ('eve-2023-03-16-15:20.json', 1678976485.2378397)
+2023-03-16 15:42:27 | Caricamento degli alert sul DB completato.
+2023-03-16 15:42:27 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:20.json
+2023-03-16 15:42:29 | Apertura del file ('eve-2023-03-16-15:21.json', 1678976545.3375397)
+2023-03-16 15:42:31 | Caricamento degli alert sul DB completato.
+2023-03-16 15:42:31 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:21.json
+2023-03-16 15:42:33 | Apertura del file ('eve-2023-03-16-15:22.json', 1678976603.0047536)
+2023-03-16 15:42:35 | Caricamento degli alert sul DB completato.
+2023-03-16 15:42:35 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:22.json
+2023-03-16 15:42:37 | Apertura del file ('eve-2023-03-16-15:23.json', 1678976665.5359077)
+2023-03-16 15:42:39 | Caricamento degli alert sul DB completato.
+2023-03-16 15:42:39 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:23.json
+2023-03-16 15:42:41 | Apertura del file ('eve-2023-03-16-15:24.json', 1678976723.0065365)
+2023-03-16 15:42:43 | Caricamento degli alert sul DB completato.
+2023-03-16 15:42:43 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:24.json
+2023-03-16 15:42:45 | Apertura del file ('eve-2023-03-16-15:25.json', 1678976785.0691168)
+2023-03-16 15:42:48 | Caricamento degli alert sul DB completato.
+2023-03-16 15:42:48 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:25.json
+2023-03-16 15:42:49 | Apertura del file ('eve-2023-03-16-15:26.json', 1678976843.0153103)
+2023-03-16 15:42:52 | Caricamento degli alert sul DB completato.
+2023-03-16 15:42:52 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:26.json
+2023-03-16 15:42:54 | Apertura del file ('eve-2023-03-16-15:27.json', 1678976904.5974388)
+2023-03-16 15:42:57 | Caricamento degli alert sul DB completato.
+2023-03-16 15:42:57 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:27.json
+2023-03-16 15:42:58 | Apertura del file ('eve-2023-03-16-15:28.json', 1678976963.3632963)
+2023-03-16 15:43:00 | Caricamento degli alert sul DB completato.
+2023-03-16 15:43:00 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:28.json
+2023-03-16 15:43:02 | Apertura del file ('eve-2023-03-16-15:29.json', 1678977024.1290588)
+2023-03-16 15:43:04 | Caricamento degli alert sul DB completato.
+2023-03-16 15:43:04 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:29.json
+2023-03-16 15:43:06 | Apertura del file ('eve-2023-03-16-15:30.json', 1678977085.562695)
+2023-03-16 15:43:08 | Caricamento degli alert sul DB completato.
+2023-03-16 15:43:08 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:30.json
+2023-03-16 15:43:10 | Apertura del file ('eve-2023-03-16-15:31.json', 1678977144.3241386)
+2023-03-16 15:43:12 | Caricamento degli alert sul DB completato.
+2023-03-16 15:43:12 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:31.json
+2023-03-16 15:43:14 | Apertura del file ('eve-2023-03-16-15:32.json', 1678977206.4295497)
+2023-03-16 15:43:16 | Caricamento degli alert sul DB completato.
+2023-03-16 15:43:16 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:32.json
+2023-03-16 15:43:18 | Apertura del file ('eve-2023-03-16-15:33.json', 1678977262.5187337)
+2023-03-16 15:43:20 | Caricamento degli alert sul DB completato.
+2023-03-16 15:43:20 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:33.json
+2023-03-16 15:43:23 | Apertura del file ('eve-2023-03-16-15:34.json', 1678977324.6199555)
+2023-03-16 15:43:26 | Caricamento degli alert sul DB completato.
+2023-03-16 15:43:26 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:34.json
+2023-03-16 15:43:27 | Apertura del file ('eve-2023-03-16-15:35.json', 1678977382.2930157)
+2023-03-16 15:43:30 | Caricamento degli alert sul DB completato.
+2023-03-16 15:43:30 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:35.json
+2023-03-16 15:43:31 | Apertura del file ('eve-2023-03-16-15:36.json', 1678977445.4861042)
+2023-03-16 15:43:34 | Caricamento degli alert sul DB completato.
+2023-03-16 15:43:34 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:36.json
+2023-03-16 15:43:35 | Apertura del file ('eve-2023-03-16-15:37.json', 1678977505.5910764)
+2023-03-16 15:43:38 | Caricamento degli alert sul DB completato.
+2023-03-16 15:43:38 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:37.json
+2023-03-16 15:43:40 | Apertura del file ('eve-2023-03-16-15:38.json', 1678977566.3640037)
+2023-03-16 15:43:42 | Caricamento degli alert sul DB completato.
+2023-03-16 15:43:42 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:38.json
+2023-03-16 15:43:44 | Apertura del file ('eve-2023-03-16-15:39.json', 1678977626.4648721)
+2023-03-16 15:43:46 | Caricamento degli alert sul DB completato.
+2023-03-16 15:43:46 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:39.json
+2023-03-16 15:43:48 | Apertura del file ('eve-2023-03-16-15:40.json', 1678977686.5656972)
+2023-03-16 15:43:50 | Caricamento degli alert sul DB completato.
+2023-03-16 15:43:50 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:40.json
+2023-03-16 15:43:51 | Apertura del file ('eve-2023-03-16-15:41.json', 1678977746.662484)
+2023-03-16 15:43:54 | Caricamento degli alert sul DB completato.
+2023-03-16 15:43:54 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:41.json
+2023-03-16 15:43:55 | Apertura del file ('eve-2023-03-16-15:42.json', 1678977804.0952039)
+2023-03-16 15:43:58 | Caricamento degli alert sul DB completato.
+2023-03-16 15:43:58 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:42.json
+2023-03-16 15:44:27 | Apertura del file ('eve-2023-03-16-15:43.json', 1678977866.1919513)
+2023-03-16 15:44:30 | Caricamento degli alert sul DB completato.
+2023-03-16 15:44:30 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:43.json
+2023-03-16 15:45:29 | Apertura del file ('eve-2023-03-16-15:44.json', 1678977923.0646102)
+2023-03-16 15:45:31 | Caricamento degli alert sul DB completato.
+2023-03-16 15:45:31 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:44.json
+2023-03-16 15:46:27 | Apertura del file ('eve-2023-03-16-15:45.json', 1678977983.057282)
+2023-03-16 15:46:30 | Caricamento degli alert sul DB completato.
+2023-03-16 15:46:30 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:45.json
+2023-03-16 15:47:28 | Apertura del file ('eve-2023-03-16-15:46.json', 1678978045.1579547)
+2023-03-16 15:47:30 | Caricamento degli alert sul DB completato.
+2023-03-16 15:47:30 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:46.json
+2023-03-16 15:48:29 | Apertura del file ('eve-2023-03-16-15:47.json', 1678978107.0706053)
+2023-03-16 15:48:31 | Caricamento degli alert sul DB completato.
+2023-03-16 15:48:31 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:47.json
+2023-03-16 15:49:29 | Apertura del file ('eve-2023-03-16-15:48.json', 1678978167.3592217)
+2023-03-16 15:49:30 | Caricamento degli alert sul DB completato.
+2023-03-16 15:49:30 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:48.json
+2023-03-16 15:50:29 | Apertura del file ('eve-2023-03-16-15:49.json', 1678978227.0758173)
+2023-03-16 15:50:31 | Caricamento degli alert sul DB completato.
+2023-03-16 15:50:31 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:49.json
+2023-03-16 15:51:29 | Apertura del file ('eve-2023-03-16-15:50.json', 1678978283.3803668)
+2023-03-16 15:51:38 | Caricamento degli alert sul DB completato.
+2023-03-16 15:51:38 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:50.json
+2023-03-16 15:52:29 | Apertura del file ('eve-2023-03-16-15:51.json', 1678978347.084976)
+2023-03-16 15:52:31 | Caricamento degli alert sul DB completato.
+2023-03-16 15:52:31 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:51.json
+2023-03-16 15:53:29 | Apertura del file ('eve-2023-03-16-15:52.json', 1678978407.0895388)
+2023-03-16 15:53:31 | Caricamento degli alert sul DB completato.
+2023-03-16 15:53:31 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:52.json
+2023-03-16 15:54:29 | Apertura del file ('eve-2023-03-16-15:53.json', 1678978467.0900924)
+2023-03-16 15:54:31 | Caricamento degli alert sul DB completato.
+2023-03-16 15:54:31 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:53.json
+2023-03-16 15:55:30 | Apertura del file ('eve-2023-03-16-15:54.json', 1678978525.2857316)
+2023-03-16 15:55:32 | Caricamento degli alert sul DB completato.
+2023-03-16 15:55:32 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:54.json
+2023-03-16 15:56:29 | Apertura del file ('eve-2023-03-16-15:55.json', 1678978587.0922709)
+2023-03-16 16:11:25 | Apertura del file ('eve-2023-03-16-15:55.json', 1678978587.0922709)
+2023-03-16 16:11:27 | Caricamento degli alert sul DB completato.
+2023-03-16 16:11:27 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:55.json
+2023-03-16 16:11:28 | Apertura del file ('eve-2023-03-16-15:56.json', 1678978643.8070927)
+2023-03-16 16:11:31 | Caricamento degli alert sul DB completato.
+2023-03-16 16:11:31 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:56.json
+2023-03-16 16:11:32 | Apertura del file ('eve-2023-03-16-15:57.json', 1678978707.6019323)
+2023-03-16 16:11:34 | Caricamento degli alert sul DB completato.
+2023-03-16 16:11:34 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:57.json
+2023-03-16 16:11:35 | Apertura del file ('eve-2023-03-16-15:58.json', 1678978767.0369911)
+2023-03-16 16:11:37 | Caricamento degli alert sul DB completato.
+2023-03-16 16:11:37 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:58.json
+2023-03-16 16:11:39 | Apertura del file ('eve-2023-03-16-15:59.json', 1678978827.1041613)
+2023-03-16 16:11:40 | Caricamento degli alert sul DB completato.
+2023-03-16 16:11:40 | Rimozione del file /var/log/suricata/eve-2023-03-16-15:59.json
+2023-03-16 16:11:41 | Apertura del file ('eve-2023-03-16-16:00.json', 1678978888.523425)
+2023-03-16 16:16:24 | Apertura del file ('eve-2023-03-16-16:00.json', 1678978888.523425)
+2023-03-16 16:16:26 | Caricamento degli alert sul DB completato.
+2023-03-16 16:16:26 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:00.json
+2023-03-16 16:16:28 | Apertura del file ('eve-2023-03-16-16:01.json', 1678978947.110817)
+2023-03-16 16:16:29 | Caricamento degli alert sul DB completato.
+2023-03-16 16:16:29 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:01.json
+2023-03-16 16:16:31 | Apertura del file ('eve-2023-03-16-16:02.json', 1678979007.4382758)
+2023-03-16 16:16:33 | Caricamento degli alert sul DB completato.
+2023-03-16 16:16:33 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:02.json
+2023-03-16 16:16:35 | Apertura del file ('eve-2023-03-16-16:03.json', 1678979068.2938082)
+2023-03-16 16:16:40 | Caricamento degli alert sul DB completato.
+2023-03-16 16:16:40 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:03.json
+2023-03-16 16:16:41 | Apertura del file ('eve-2023-03-16-16:04.json', 1678979128.3134153)
+2023-03-16 16:16:43 | Caricamento degli alert sul DB completato.
+2023-03-16 16:16:43 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:04.json
+2023-03-16 16:16:44 | Apertura del file ('eve-2023-03-16-16:05.json', 1678979187.1250887)
+2023-03-16 16:16:46 | Caricamento degli alert sul DB completato.
+2023-03-16 16:16:46 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:05.json
+2023-03-16 16:16:47 | Apertura del file ('eve-2023-03-16-16:06.json', 1678979246.504811)
+2023-03-16 16:16:49 | Caricamento degli alert sul DB completato.
+2023-03-16 16:16:49 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:06.json
+2023-03-16 16:16:50 | Apertura del file ('eve-2023-03-16-16:07.json', 1678979307.2725754)
+2023-03-16 16:16:53 | Caricamento degli alert sul DB completato.
+2023-03-16 16:16:53 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:07.json
+2023-03-16 16:16:54 | Apertura del file ('eve-2023-03-16-16:08.json', 1678979366.040389)
+2023-03-16 16:16:56 | Caricamento degli alert sul DB completato.
+2023-03-16 16:16:56 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:08.json
+2023-03-16 16:16:57 | Apertura del file ('eve-2023-03-16-16:09.json', 1678979427.4802327)
+2023-03-16 16:16:59 | Caricamento degli alert sul DB completato.
+2023-03-16 16:16:59 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:09.json
+2023-03-16 16:17:00 | Apertura del file ('eve-2023-03-16-16:10.json', 1678979488.7561119)
+2023-03-16 16:17:02 | Caricamento degli alert sul DB completato.
+2023-03-16 16:17:02 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:10.json
+2023-03-16 16:17:04 | Apertura del file ('eve-2023-03-16-16:11.json', 1678979548.3480241)
+2023-03-16 16:17:06 | Caricamento degli alert sul DB completato.
+2023-03-16 16:17:06 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:11.json
+2023-03-16 16:17:08 | Apertura del file ('eve-2023-03-16-16:12.json', 1678979608.4519622)
+2023-03-16 16:17:10 | Caricamento degli alert sul DB completato.
+2023-03-16 16:17:10 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:12.json
+2023-03-16 16:17:11 | Apertura del file ('eve-2023-03-16-16:13.json', 1678979667.1479244)
+2023-03-16 16:17:13 | Caricamento degli alert sul DB completato.
+2023-03-16 16:17:13 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:13.json
+2023-03-16 16:17:14 | Apertura del file ('eve-2023-03-16-16:14.json', 1678979728.6599064)
+2023-03-16 16:17:16 | Caricamento degli alert sul DB completato.
+2023-03-16 16:17:16 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:14.json
+2023-03-16 16:17:19 | Apertura del file ('eve-2023-03-16-16:15.json', 1678979787.8559074)
+2023-03-16 16:17:21 | Caricamento degli alert sul DB completato.
+2023-03-16 16:17:21 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:15.json
+2023-03-16 16:17:30 | Apertura del file ('eve-2023-03-16-16:16.json', 1678979846.1919243)
+2023-03-16 16:17:33 | Caricamento degli alert sul DB completato.
+2023-03-16 16:17:33 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:16.json
+2023-03-16 16:18:30 | Apertura del file ('eve-2023-03-16-16:17.json', 1678979908.2999575)
+2023-03-16 16:18:34 | Caricamento degli alert sul DB completato.
+2023-03-16 16:18:34 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:17.json
+2023-03-16 16:19:31 | Apertura del file ('eve-2023-03-16-16:18.json', 1678979967.4880023)
+2023-03-16 16:19:35 | Caricamento degli alert sul DB completato.
+2023-03-16 16:19:35 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:18.json
+2023-03-16 16:21:13 | Apertura del file ('eve-2023-03-16-16:19.json', 1678980028.5120604)
+2023-03-16 16:21:15 | Caricamento degli alert sul DB completato.
+2023-03-16 16:21:16 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:19.json
+2023-03-16 16:21:31 | Apertura del file ('eve-2023-03-16-16:20.json', 1678980089.280129)
+2023-03-16 16:21:33 | Caricamento degli alert sul DB completato.
+2023-03-16 16:21:33 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:20.json
+2023-03-16 16:22:31 | Apertura del file ('eve-2023-03-16-16:21.json', 1678980148.0442042)
+2023-03-16 16:22:33 | Caricamento degli alert sul DB completato.
+2023-03-16 16:22:33 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:21.json
+2023-03-16 16:23:31 | Apertura del file ('eve-2023-03-16-16:22.json', 1678980206.1442862)
+2023-03-16 16:24:46 | Apertura del file ('eve-2023-03-16-16:22.json', 1678980206.1442862)
+2023-03-16 16:24:49 | Caricamento degli alert sul DB completato.
+2023-03-16 16:24:49 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:22.json
+2023-03-16 16:24:50 | Apertura del file ('eve-2023-03-16-16:23.json', 1678980267.5843804)
+2023-03-16 16:24:51 | Caricamento degli alert sul DB completato.
+2023-03-16 16:24:51 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:23.json
+2023-03-16 16:26:22 | Apertura del file ('eve-2023-03-16-16:24.json', 1678980325.684476)
+2023-03-16 16:26:24 | Caricamento degli alert sul DB completato.
+2023-03-16 16:26:24 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:24.json
+2023-03-16 16:26:31 | Apertura del file ('eve-2023-03-16-16:25.json', 1678980387.1845827)
+2023-03-16 16:26:33 | Caricamento degli alert sul DB completato.
+2023-03-16 16:26:33 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:25.json
+2023-03-16 16:27:31 | Apertura del file ('eve-2023-03-16-16:26.json', 1678980445.8286896)
+2023-03-16 16:27:33 | Caricamento degli alert sul DB completato.
+2023-03-16 16:27:33 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:26.json
+2023-03-16 16:28:32 | Apertura del file ('eve-2023-03-16-16:27.json', 1678980509.3248103)
+2023-03-16 16:28:33 | Caricamento degli alert sul DB completato.
+2023-03-16 16:28:33 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:27.json
+2023-03-16 16:29:32 | Apertura del file ('eve-2023-03-16-16:28.json', 1678980569.4232585)
+2023-03-16 16:29:34 | Caricamento degli alert sul DB completato.
+2023-03-16 16:29:34 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:28.json
+2023-03-16 16:30:30 | Apertura del file ('eve-2023-03-16-16:29.json', 1678980629.5230243)
+2023-03-16 16:30:32 | Caricamento degli alert sul DB completato.
+2023-03-16 16:30:32 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:29.json
+2023-03-16 16:31:32 | Apertura del file ('eve-2023-03-16-16:30.json', 1678980687.6233377)
+2023-03-16 16:31:42 | Apertura del file ('eve-2023-03-16-16:30.json', 1678980687.6233377)
+2023-03-16 16:31:45 | Caricamento degli alert sul DB completato.
+2023-03-16 16:31:45 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:30.json
+2023-03-16 16:32:32 | Apertura del file ('eve-2023-03-16-16:31.json', 1678980747.1999269)
+2023-03-16 16:32:34 | Caricamento degli alert sul DB completato.
+2023-03-16 16:32:34 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:31.json
+2023-03-16 16:33:32 | Apertura del file ('eve-2023-03-16-16:32.json', 1678980810.5006676)
+2023-03-16 16:33:46 | Apertura del file ('eve-2023-03-16-16:32.json', 1678980810.5006676)
+2023-03-16 16:33:50 | Caricamento degli alert sul DB completato.
+2023-03-16 16:33:50 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:32.json
+2023-03-16 16:34:31 | Apertura del file ('eve-2023-03-16-16:33.json', 1678980867.266029)
+2023-03-16 16:34:35 | Caricamento degli alert sul DB completato.
+2023-03-16 16:34:35 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:33.json
+2023-03-16 16:35:31 | Apertura del file ('eve-2023-03-16-16:34.json', 1678980930.4633718)
+2023-03-16 16:35:42 | Apertura del file ('eve-2023-03-16-16:34.json', 1678980930.4633718)
+2023-03-16 16:35:44 | Caricamento degli alert sul DB completato.
+2023-03-16 16:35:44 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:34.json
+2023-03-16 16:36:32 | Apertura del file ('eve-2023-03-16-16:35.json', 1678980990.141104)
+2023-03-16 16:36:35 | Caricamento degli alert sul DB completato.
+2023-03-16 16:36:35 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:35.json
+2023-03-16 16:37:32 | Apertura del file ('eve-2023-03-16-16:36.json', 1678981046.5031536)
+2023-03-16 16:37:34 | Caricamento degli alert sul DB completato.
+2023-03-16 16:37:34 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:36.json
+2023-03-16 16:38:31 | Apertura del file ('eve-2023-03-16-16:37.json', 1678981108.345204)
+2023-03-16 16:38:33 | Caricamento degli alert sul DB completato.
+2023-03-16 16:38:33 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:37.json
+2023-03-16 16:39:32 | Apertura del file ('eve-2023-03-16-16:38.json', 1678981170.4594247)
+2023-03-16 16:39:34 | Caricamento degli alert sul DB completato.
+2023-03-16 16:39:34 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:38.json
+2023-03-16 16:40:32 | Apertura del file ('eve-2023-03-16-16:39.json', 1678981230.557854)
+2023-03-16 16:40:34 | Caricamento degli alert sul DB completato.
+2023-03-16 16:40:34 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:39.json
+2023-03-16 16:41:32 | Apertura del file ('eve-2023-03-16-16:40.json', 1678981289.3244457)
+2023-03-16 16:41:34 | Caricamento degli alert sul DB completato.
+2023-03-16 16:41:34 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:40.json
+2023-03-16 16:42:32 | Apertura del file ('eve-2023-03-16-16:41.json', 1678981347.2271683)
+2023-03-16 16:42:33 | Caricamento degli alert sul DB completato.
+2023-03-16 16:42:33 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:41.json
+2023-03-16 16:43:32 | Apertura del file ('eve-2023-03-16-16:42.json', 1678981409.5299022)
+2023-03-16 16:43:34 | Caricamento degli alert sul DB completato.
+2023-03-16 16:43:34 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:42.json
+2023-03-16 16:44:38 | Apertura del file ('eve-2023-03-16-16:43.json', 1678981467.232819)
+2023-03-16 16:44:40 | Caricamento degli alert sul DB completato.
+2023-03-16 16:44:40 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:43.json
+2023-03-16 16:45:32 | Apertura del file ('eve-2023-03-16-16:44.json', 1678981527.0317771)
+2023-03-16 16:45:34 | Caricamento degli alert sul DB completato.
+2023-03-16 16:45:34 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:44.json
+2023-03-16 17:03:06 | Apertura del file ('eve-2023-03-16-16:45.json', 1678981587.2348022)
+2023-03-16 17:03:08 | Caricamento degli alert sul DB completato.
+2023-03-16 17:03:08 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:45.json
+2023-03-16 17:03:09 | Apertura del file ('eve-2023-03-16-16:46.json', 1678981651.2418377)
+2023-03-16 17:03:11 | Caricamento degli alert sul DB completato.
+2023-03-16 17:03:11 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:46.json
+2023-03-16 17:03:13 | Apertura del file ('eve-2023-03-16-16:47.json', 1678981709.3810186)
+2023-03-16 17:03:18 | Caricamento degli alert sul DB completato.
+2023-03-16 17:03:18 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:47.json
+2023-03-16 17:03:19 | Apertura del file ('eve-2023-03-16-16:48.json', 1678981771.2482004)
+2023-03-16 17:03:21 | Caricamento degli alert sul DB completato.
+2023-03-16 17:03:21 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:48.json
+2023-03-16 17:03:23 | Apertura del file ('eve-2023-03-16-16:49.json', 1678981829.591473)
+2023-03-16 17:03:24 | Caricamento degli alert sul DB completato.
+2023-03-16 17:03:24 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:49.json
+2023-03-16 17:03:26 | Apertura del file ('eve-2023-03-16-16:50.json', 1678981891.2507465)
+2023-03-16 17:03:28 | Caricamento degli alert sul DB completato.
+2023-03-16 17:03:28 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:50.json
+2023-03-16 17:03:29 | Apertura del file ('eve-2023-03-16-16:51.json', 1678981950.4580846)
+2023-03-16 17:03:31 | Caricamento degli alert sul DB completato.
+2023-03-16 17:03:31 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:51.json
+2023-03-16 17:03:33 | Apertura del file ('eve-2023-03-16-16:52.json', 1678982011.2614377)
+2023-03-16 17:03:35 | Caricamento degli alert sul DB completato.
+2023-03-16 17:03:35 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:52.json
+2023-03-16 17:03:36 | Apertura del file ('eve-2023-03-16-16:53.json', 1678982071.3288271)
+2023-03-16 17:03:38 | Caricamento degli alert sul DB completato.
+2023-03-16 17:03:38 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:53.json
+2023-03-16 17:03:39 | Apertura del file ('eve-2023-03-16-16:54.json', 1678982131.2642434)
+2023-03-16 17:03:41 | Caricamento degli alert sul DB completato.
+2023-03-16 17:03:41 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:54.json
+2023-03-16 17:03:42 | Apertura del file ('eve-2023-03-16-16:55.json', 1678982187.7837136)
+2023-03-16 17:03:44 | Caricamento degli alert sul DB completato.
+2023-03-16 17:03:44 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:55.json
+2023-03-16 17:03:46 | Apertura del file ('eve-2023-03-16-16:56.json', 1678982251.2711399)
+2023-03-16 17:03:48 | Caricamento degli alert sul DB completato.
+2023-03-16 17:03:48 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:56.json
+2023-03-16 17:03:49 | Apertura del file ('eve-2023-03-16-16:57.json', 1678982307.906645)
+2023-03-16 17:03:51 | Caricamento degli alert sul DB completato.
+2023-03-16 17:03:51 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:57.json
+2023-03-16 17:03:53 | Apertura del file ('eve-2023-03-16-16:58.json', 1678982371.2741082)
+2023-03-16 17:03:54 | Caricamento degli alert sul DB completato.
+2023-03-16 17:03:54 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:58.json
+2023-03-16 17:03:55 | Apertura del file ('eve-2023-03-16-16:59.json', 1678982431.2776144)
+2023-03-16 17:03:58 | Caricamento degli alert sul DB completato.
+2023-03-16 17:03:58 | Rimozione del file /var/log/suricata/eve-2023-03-16-16:59.json
+2023-03-16 17:04:00 | Apertura del file ('eve-2023-03-16-17:00.json', 1678982491.3811324)
+2023-03-16 17:04:01 | Caricamento degli alert sul DB completato.
+2023-03-16 17:04:01 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:00.json
+2023-03-16 17:04:02 | Apertura del file ('eve-2023-03-16-17:01.json', 1678982551.5766609)
+2023-03-16 17:04:04 | Caricamento degli alert sul DB completato.
+2023-03-16 17:04:04 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:01.json
+2023-03-16 17:04:06 | Apertura del file ('eve-2023-03-16-17:02.json', 1678982611.282451)
+2023-03-16 17:18:25 | Apertura del file ('eve-2023-03-16-17:02.json', 1678982611.282451)
+2023-03-16 17:18:31 | Caricamento degli alert sul DB completato.
+2023-03-16 17:18:31 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:02.json
+2023-03-16 17:18:33 | Apertura del file ('eve-2023-03-16-17:03.json', 1678982672.8584414)
+2023-03-16 17:18:35 | Caricamento degli alert sul DB completato.
+2023-03-16 17:18:35 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:03.json
+2023-03-16 17:18:37 | Apertura del file ('eve-2023-03-16-17:04.json', 1678982731.525275)
+2023-03-16 17:18:39 | Caricamento degli alert sul DB completato.
+2023-03-16 17:18:39 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:04.json
+2023-03-16 17:18:40 | Apertura del file ('eve-2023-03-16-17:05.json', 1678982791.2195342)
+2023-03-16 17:18:42 | Caricamento degli alert sul DB completato.
+2023-03-16 17:18:42 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:05.json
+2023-03-16 17:18:43 | Apertura del file ('eve-2023-03-16-17:06.json', 1678982851.329207)
+2023-03-16 17:18:46 | Caricamento degli alert sul DB completato.
+2023-03-16 17:18:46 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:06.json
+2023-03-16 17:18:47 | Apertura del file ('eve-2023-03-16-17:07.json', 1678982908.590087)
+2023-03-16 17:18:49 | Caricamento degli alert sul DB completato.
+2023-03-16 17:18:49 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:07.json
+2023-03-16 17:18:51 | Apertura del file ('eve-2023-03-16-17:08.json', 1678982972.8990266)
+2023-03-16 17:18:53 | Caricamento degli alert sul DB completato.
+2023-03-16 17:18:53 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:08.json
+2023-03-16 17:18:54 | Apertura del file ('eve-2023-03-16-17:09.json', 1678983029.6149597)
+2023-03-16 17:18:56 | Caricamento degli alert sul DB completato.
+2023-03-16 17:18:56 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:09.json
+2023-03-16 17:18:57 | Apertura del file ('eve-2023-03-16-17:10.json', 1678983092.3869028)
+2023-03-16 17:18:59 | Caricamento degli alert sul DB completato.
+2023-03-16 17:18:59 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:10.json
+2023-03-16 17:19:01 | Apertura del file ('eve-2023-03-16-17:11.json', 1678983151.1502464)
+2023-03-16 17:19:03 | Caricamento degli alert sul DB completato.
+2023-03-16 17:19:03 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:11.json
+2023-03-16 17:19:04 | Apertura del file ('eve-2023-03-16-17:12.json', 1678983211.31336)
+2023-03-16 17:19:06 | Caricamento degli alert sul DB completato.
+2023-03-16 17:19:06 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:12.json
+2023-03-16 17:19:07 | Apertura del file ('eve-2023-03-16-17:13.json', 1678983272.8362563)
+2023-03-16 17:19:09 | Caricamento degli alert sul DB completato.
+2023-03-16 17:19:09 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:13.json
+2023-03-16 17:19:11 | Apertura del file ('eve-2023-03-16-17:14.json', 1678983332.1228025)
+2023-03-16 17:19:13 | Caricamento degli alert sul DB completato.
+2023-03-16 17:19:13 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:14.json
+2023-03-16 17:19:15 | Apertura del file ('eve-2023-03-16-17:15.json', 1678983389.1170483)
+2023-03-16 17:19:17 | Caricamento degli alert sul DB completato.
+2023-03-16 17:19:17 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:15.json
+2023-03-16 17:19:18 | Apertura del file ('eve-2023-03-16-17:16.json', 1678983452.9953566)
+2023-03-16 17:19:20 | Caricamento degli alert sul DB completato.
+2023-03-16 17:19:20 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:16.json
+2023-03-16 17:19:23 | Apertura del file ('eve-2023-03-16-17:17.json', 1678983512.993346)
+2023-03-16 17:19:28 | Caricamento degli alert sul DB completato.
+2023-03-16 17:19:28 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:17.json
+2023-03-16 17:19:47 | Apertura del file ('eve-2023-03-16-17:18.json', 1678983573.5991993)
+2023-03-16 17:19:50 | Caricamento degli alert sul DB completato.
+2023-03-16 17:19:50 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:18.json
+2023-03-16 17:20:35 | Apertura del file ('eve-2023-03-16-17:19.json', 1678983629.3927822)
+2023-03-16 17:20:37 | Caricamento degli alert sul DB completato.
+2023-03-16 17:20:37 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:19.json
+2023-03-16 17:21:35 | Apertura del file ('eve-2023-03-16-17:20.json', 1678983693.3984683)
+2023-03-16 17:21:37 | Caricamento degli alert sul DB completato.
+2023-03-16 17:21:37 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:20.json
+2023-03-16 17:22:35 | Apertura del file ('eve-2023-03-16-17:21.json', 1678983752.1639078)
+2023-03-16 17:22:37 | Caricamento degli alert sul DB completato.
+2023-03-16 17:22:37 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:21.json
+2023-03-16 17:23:35 | Apertura del file ('eve-2023-03-16-17:22.json', 1678983811.59727)
+2023-03-16 17:23:37 | Caricamento degli alert sul DB completato.
+2023-03-16 17:23:37 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:22.json
+2023-03-16 17:24:35 | Apertura del file ('eve-2023-03-16-17:23.json', 1678983873.6466024)
+2023-03-16 17:24:38 | Caricamento degli alert sul DB completato.
+2023-03-16 17:24:38 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:23.json
+2023-03-16 17:25:35 | Apertura del file ('eve-2023-03-16-17:24.json', 1678983933.1278033)
+2023-03-16 17:25:38 | Caricamento degli alert sul DB completato.
+2023-03-16 17:25:38 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:24.json
+2023-03-16 17:26:35 | Apertura del file ('eve-2023-03-16-17:25.json', 1678983993.2289493)
+2023-03-16 17:26:37 | Caricamento degli alert sul DB completato.
+2023-03-16 17:26:37 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:25.json
+2023-03-16 17:27:35 | Apertura del file ('eve-2023-03-16-17:26.json', 1678984053.9980466)
+2023-03-16 17:27:38 | Caricamento degli alert sul DB completato.
+2023-03-16 17:27:38 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:26.json
+2023-03-16 17:28:35 | Apertura del file ('eve-2023-03-16-17:27.json', 1678984113.427067)
+2023-03-16 17:28:38 | Caricamento degli alert sul DB completato.
+2023-03-16 17:28:38 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:27.json
+2023-03-16 17:29:35 | Apertura del file ('eve-2023-03-16-17:28.json', 1678984173.5480516)
+2023-03-16 17:29:37 | Caricamento degli alert sul DB completato.
+2023-03-16 17:29:37 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:28.json
+2023-03-16 17:30:36 | Apertura del file ('eve-2023-03-16-17:29.json', 1678984230.0929391)
+2023-03-16 17:30:38 | Caricamento degli alert sul DB completato.
+2023-03-16 17:30:38 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:29.json
+2023-03-16 17:31:36 | Apertura del file ('eve-2023-03-16-17:30.json', 1678984291.361863)
+2023-03-16 17:31:38 | Caricamento degli alert sul DB completato.
+2023-03-16 17:31:38 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:30.json
+2023-03-16 17:32:35 | Apertura del file ('eve-2023-03-16-17:31.json', 1678984351.1547306)
+2023-03-16 17:32:37 | Caricamento degli alert sul DB completato.
+2023-03-16 17:32:37 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:31.json
+2023-03-16 17:33:36 | Apertura del file ('eve-2023-03-16-17:32.json', 1678984411.3635743)
+2023-03-16 17:33:42 | Caricamento degli alert sul DB completato.
+2023-03-16 17:33:42 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:32.json
+2023-03-16 17:34:36 | Apertura del file ('eve-2023-03-16-17:33.json', 1678984473.560418)
+2023-03-16 17:34:38 | Caricamento degli alert sul DB completato.
+2023-03-16 17:34:38 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:33.json
+2023-03-16 17:35:36 | Apertura del file ('eve-2023-03-16-17:34.json', 1678984533.4772067)
+2023-03-16 17:35:38 | Caricamento degli alert sul DB completato.
+2023-03-16 17:35:38 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:34.json
+2023-03-16 17:36:36 | Apertura del file ('eve-2023-03-16-17:35.json', 1678984591.5779517)
+2023-03-16 17:36:38 | Caricamento degli alert sul DB completato.
+2023-03-16 17:36:38 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:35.json
+2023-03-16 17:37:36 | Apertura del file ('eve-2023-03-16-17:36.json', 1678984651.3780167)
+2023-03-16 17:37:39 | Caricamento degli alert sul DB completato.
+2023-03-16 17:37:39 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:36.json
+2023-03-16 17:38:35 | Apertura del file ('eve-2023-03-16-17:37.json', 1678984711.10953)
+2023-03-16 17:38:38 | Caricamento degli alert sul DB completato.
+2023-03-16 17:38:38 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:37.json
+2023-03-16 17:39:36 | Apertura del file ('eve-2023-03-16-17:38.json', 1678984773.5773656)
+2023-03-16 17:39:38 | Caricamento degli alert sul DB completato.
+2023-03-16 17:39:38 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:38.json
+2023-03-16 17:40:36 | Apertura del file ('eve-2023-03-16-17:39.json', 1678984834.6457572)
+2023-03-16 17:40:38 | Caricamento degli alert sul DB completato.
+2023-03-16 17:40:38 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:39.json
+2023-03-16 17:41:37 | Apertura del file ('eve-2023-03-16-17:40.json', 1678984891.4027684)
+2023-03-16 17:41:39 | Caricamento degli alert sul DB completato.
+2023-03-16 17:41:39 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:40.json
+2023-03-16 17:42:35 | Apertura del file ('eve-2023-03-16-17:41.json', 1678984954.1918256)
+2023-03-16 17:42:37 | Caricamento degli alert sul DB completato.
+2023-03-16 17:42:37 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:41.json
+2023-03-16 17:43:36 | Apertura del file ('eve-2023-03-16-17:42.json', 1678985013.6093545)
+2023-03-16 17:43:38 | Caricamento degli alert sul DB completato.
+2023-03-16 17:43:38 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:42.json
+2023-03-16 17:44:36 | Apertura del file ('eve-2023-03-16-17:43.json', 1678985074.375107)
+2023-03-16 17:44:38 | Caricamento degli alert sul DB completato.
+2023-03-16 17:44:38 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:43.json
+2023-03-16 17:45:36 | Apertura del file ('eve-2023-03-16-17:44.json', 1678985131.401227)
+2023-03-16 17:45:38 | Caricamento degli alert sul DB completato.
+2023-03-16 17:45:38 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:44.json
+2023-03-16 17:46:37 | Apertura del file ('eve-2023-03-16-17:45.json', 1678985195.3993518)
+2023-03-16 17:46:39 | Caricamento degli alert sul DB completato.
+2023-03-16 17:46:39 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:45.json
+2023-03-16 17:47:37 | Apertura del file ('eve-2023-03-16-17:46.json', 1678985254.0098283)
+2023-03-16 17:47:41 | Caricamento degli alert sul DB completato.
+2023-03-16 17:47:41 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:46.json
+2023-03-16 17:48:37 | Apertura del file ('eve-2023-03-16-17:47.json', 1678985315.4404078)
+2023-03-16 17:48:41 | Caricamento degli alert sul DB completato.
+2023-03-16 17:48:41 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:47.json
+2023-03-16 17:49:37 | Apertura del file ('eve-2023-03-16-17:48.json', 1678985374.2031994)
+2023-03-16 17:49:38 | Caricamento degli alert sul DB completato.
+2023-03-16 17:49:38 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:48.json
+2023-03-16 17:50:37 | Apertura del file ('eve-2023-03-16-17:49.json', 1678985435.6420755)
+2023-03-16 17:50:39 | Caricamento degli alert sul DB completato.
+2023-03-16 17:50:39 | Rimozione del file /var/log/suricata/eve-2023-03-16-17:49.json
+2023-03-16 17:51:37 | Apertura del file ('eve-2023-03-16-17:50.json', 1678985491.5611632)

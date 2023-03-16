@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IDS Status</title>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+        var outputArray = [];
+
+        socket.on('connect', function () {
+            console.log('SocketIO connected');
+        });
+
+        socket.on('message', function (data) {
+            outputArray.push(data);
+            if (outputArray.length > 40) {
+                outputArray.shift();
+            }
+            var outputHtml = '';
+            for (var i = 0; i < outputArray.length; i++) {
+                outputHtml += '<p>' + outputArray[i] + '</p>';
+            }
+            $('#output').html(outputHtml);
+        });
+
+        socket.on('disconnect', function () {
+            console.log('SocketIO disconnected');
+        });
+
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $.getJSON("/eng_conf.json", function (data) {
+                $("#user_db").text(data.user_db);
+                $("#password_db").text(data.password_db);
+                $("#host_db").text(data.host_db);
+                $("#port_db").text(data.port_db);
+                $("#database").text(data.database);
+                $("#id_ass").text(data.id_ass);
+                $("#user_no_root").text(data.user_no_root);
+                $("#ip_no_suricata").text(data.ip_no_suricata);
+            }).fail(function () {
+                alert("Errore nel caricamento del file JSON.");
+            });
+        });
+
+
+    </script>
+    <script>
+        function updateIdsStatus() {
+    // effettua una richiesta GET al server Flask per verificare lo stato IDS
+    fetch('/status')
+        .then(response => response.text())
+        .then(text => {
+            // aggiorna il valore dello stato IDS nella pagina web
+            document.getElementById('ids-status').innerHTML = text;
+        });
+    }
+
+// aggiorna lo stato IDS ogni 10 secondi
+setInterval(updateIdsStatus, 10000);
+
+    </script>
+        <script>
+        function updateSuricataStatus() {
+    // effettua una richiesta GET al server Flask per verificare lo stato IDS
+    fetch('/status_suricata')
+        .then(response => response.text())
+        .then(text => {
+            // aggiorna il valore dello stato IDS nella pagina web
+            document.getElementById('suricata-status').innerHTML = text;
+        });
+    }
+
+// aggiorna lo stato IDS ogni 10 secondi
+setInterval(updateSuricataStatus, 10000);
+
+    </script>
+
+    <style>
+        #output {
+            max-height: 1000px;
+            overflow-y: auto;
+            font-size: 12px;
+            line-height: 0.6;
+        }
+
+        ul li span {
+            color: #1f71bb;
+            font-size: 18px;
+        }
+        #ids-status {
+            display: inline;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">IDS Status</a></li>
+        <li><a data-toggle="tab" href="#menu1">Output</a></li>
+        <li><a data-toggle="tab" href="#menu2">Engine Details</a></li>
+
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="home">
+            <h1>Defensio IDS</h1>
+            <h3>Status</h3><h4 id="ids-status"></h4>
+            <br>
+
+            <div>
+                <form action="/start" method="GET" style="display:inline-block;">
+                    <input type="submit" value="Start">
+                </form>
+                <form action="/stop" method="GET" style="display:inline-block;">
+                    <input type="submit" value="Stop">
+                </form>
+            </div>
+            <hr>
+
+            <h1>Suricata</h1>
+            <h3>Status</h3><h4 id="suricata-status"></h4>
+            <br>
+            <div>
+                <form action="/start_suricata" method="GET" style="display:inline-block;">
+                    <input type="submit" value="Start">
+                </form>
+                <form action="/stop_suricata" method="GET" style="display:inline-block;">
+                    <input type="submit" value="Stop">
+                </form>
+            </div><hr>
+        </div>
+        <div class="tab-pane fade" id="menu1">
+            <h1>Output</h1>
+            <div id="output"></div>
+        </div>
+        <div class="tab-pane fade" id="menu2">
+            <h2>Engine Details</h2>
+            <ul>
+                <li>User DB: <span id="user_db"></span></li>
+                <li>Password DB: <span id="password_db"></span></li>
+                <li>Host DB: <span id="host_db"></span></li>
+                <li>Port DB: <span id="port_db"></span></li>
+                <li>Database: <span id="database"></span></li>
+                <li>ID ASS: <span id="id_ass"></span></li>
+                <li>User no root: <span id="user_no_root"></span></li>
+                <li>IP no Suricata: <span id="ip_no_suricata"></span></li>
+            </ul>
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
+
+
+
